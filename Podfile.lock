@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.8.1)
+  - Cache (5.2.0)
+  - QRCodeReader.swift (10.0.0)
+  - ReachabilitySwift (4.3.0)
+  - SwiftyRSA (1.5.0):
+    - SwiftyRSA/ObjC (= 1.5.0)
+  - SwiftyRSA/ObjC (1.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Cache
+  - QRCodeReader.swift
+  - ReachabilitySwift
+  - SwiftyRSA
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Cache
+    - QRCodeReader.swift
+    - ReachabilitySwift
+    - SwiftyRSA
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
+  QRCodeReader.swift: 74d0378eb0c7807828552b49626bbc8307495aee
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
+
+PODFILE CHECKSUM: 53d33aa430d89c56f025746706b1a1b1d68b6d54
+
+COCOAPODS: 1.6.1

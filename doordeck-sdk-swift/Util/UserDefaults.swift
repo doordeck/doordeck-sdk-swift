@@ -1,0 +1,18 @@
+//
+//  UserDefaults.swift
+//  doordeck-sdk-swift
+//
+//  Created by Marwan on 02/04/2019.
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
+import UIKit
+
+extension UserDefaults {
+    func getDarkUI() -> Bool {
+        guard let granted = Foundation.UserDefaults(suiteName: "group.com.doordeck.ios")?.bool(forKey: "darkUI") else {
+            return true
+        }
+        return granted
+    }
+}

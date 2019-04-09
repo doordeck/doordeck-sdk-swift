@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Entry View Controller-->
+        <scene sceneID="4Fx-42-WKk">
+            <objects>
+                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4B-ip-Ybg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0WN-ce-jaP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cyE-gX-bLg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bd7-4b-rJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3292" y="1648"/>
+        </scene>
+        <!--Bottom View Controller-->
+        <scene sceneID="Dsg-rc-ccz">
+            <objects>
+                <viewController restorationIdentifier="bottomViewNFC" storyboardIdentifier="bottomViewNFC" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5D-u4-FUB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nfcIOS" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-4E-wrq">
+                                <rect key="frame" x="112.5" y="36" width="150" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EVB-gm-TNL"/>
+                                    <constraint firstAttribute="height" constant="86" id="Fba-Xj-CaE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKQ-Xj-AQn">
+                                <rect key="frame" x="16" y="140" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="nfo-BI-lD1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <connections>
+                                    <action selector="nfcScanClicked:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="Jh0-5g-wMg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rfO-S6-25y" secondAttribute="bottom" id="3Wr-h2-nSF"/>
+                            <constraint firstItem="qMV-4E-wrq" firstAttribute="centerX" secondItem="Ur5-gg-LR5" secondAttribute="centerX" id="6He-dN-sHI"/>
+                            <constraint firstItem="rfO-S6-25y" firstAttribute="top" secondItem="F5D-u4-FUB" secondAttribute="top" id="I5B-AU-VRS"/>
+                            <constraint firstItem="fKQ-Xj-AQn" firstAttribute="leading" secondItem="Ur5-gg-LR5" secondAttribute="leading" constant="16" id="O9v-HC-lGd"/>
+                            <constraint firstItem="qMV-4E-wrq" firstAttribute="top" secondItem="F5D-u4-FUB" secondAttribute="top" constant="36" id="Rf1-Qb-W6T"/>
+                            <constraint firstItem="Ur5-gg-LR5" firstAttribute="trailing" secondItem="fKQ-Xj-AQn" secondAttribute="trailing" constant="16" id="T5n-Zl-Ji2"/>
+                            <constraint firstItem="fKQ-Xj-AQn" firstAttribute="top" secondItem="qMV-4E-wrq" secondAttribute="bottom" constant="18" id="haF-eX-hQg"/>
+                            <constraint firstItem="rfO-S6-25y" firstAttribute="leading" secondItem="Ur5-gg-LR5" secondAttribute="leading" id="p7Z-KB-J4u"/>
+                            <constraint firstItem="rfO-S6-25y" firstAttribute="trailing" secondItem="Ur5-gg-LR5" secondAttribute="trailing" id="wPL-qd-h1U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ur5-gg-LR5"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="200"/>
+                    <connections>
+                        <outlet property="bottomLabel" destination="fKQ-Xj-AQn" id="ZcS-Np-N6T"/>
+                        <outlet property="nfcScan" destination="rfO-S6-25y" id="D1f-V7-bAX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaE-3X-jMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3852" y="2266"/>
+        </scene>
+        <!--Bottom View ControllerQR-->
+        <scene sceneID="Wlp-4j-NmA">
+            <objects>
+                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVG-TD-7Xb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pvn-rM-Gf1"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOJ-4T-s4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2924" y="2285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lum-Ne-JA0">
+            <objects>
+                <navigationController storyboardIdentifier="QuickEntry" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xCp-1D-0yT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pFH-RT-h4C">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3xy-cO-xXT" kind="relationship" relationship="rootViewController" id="8qK-T9-HHU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYQ-HZ-nF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3292" y="842"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nfcIOS" width="100" height="100"/>
+    </resources>
+</document>

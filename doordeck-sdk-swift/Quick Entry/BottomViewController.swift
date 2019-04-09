@@ -1,0 +1,131 @@
+import UIKit
+import CoreNFC
+
+protocol quickEntryDelegate {
+    func lockDetected(_ UUID: String)
+    func showQRCode()
+//    func checkQuickEntryChoice()
+}
+
+@available(iOS 11, *)
+class BottomViewController: UIViewController {
+    
+    @IBOutlet weak var nfcScan: UIButton!
+    @IBOutlet weak var bottomLabel: UILabel!
+    var delegate: quickEntryDelegate?
+    var payloads = [NFCNDEFPayload]()
+    var session: NFCNDEFReaderSession?
+    var showNFCBool = true
+    
+    override func viewDidLoad() {
+        bottomLabel.attributedText = NSAttributedString.doorStandard(AppStrings.NFCScanMessage, colour: .doorGrey())
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(resetShowNFC), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showNFC()
+    }
+    
+    @objc func resetShowNFC() {
+        session?.invalidate()
+        showNFCBool = true
+    }
+    
+    @IBAction func nfcScanClicked(_ sender: Any) {
+        showNFCBool = true
+        showNFC()
+    }
+    
+    @objc func showNFC() {
+        if showNFCBool {
+            session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
+            session?.begin()
+            showNFCBool = false
+        }
+    }
+}
+@available(iOS 11, *)
+extension BottomViewController: NFCNDEFReaderSessionDelegate {
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        guard let readerError = error as? NFCReaderError else {
+            return
+        }
+        switch readerError.code {
+        case .readerSessionInvalidationErrorFirstNDEFTagRead, .readerSessionInvalidationErrorUserCanceled:
+            break
+        default:
+            Util().onMain {
+                //error
+            }
+        }
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        if let message = messages.first {
+            payloads = message.records
+            NFCDetected(message.records)
+        }
+    }
+    
+    func NFCDetected(_ payloads: [NFCNDEFPayload]) {
+        
+        session?.invalidate()
+        for payload in payloads {
+            let record = payload
+            let payloadTemp = String(data: record.payload, encoding: .utf8) ?? "No payload"
+            
+            if payloadTemp.count == 39 {
+                
+                let stripped = String(payloadTemp.dropFirst(3))
+                print(.NFC, object: "payload \(stripped)")
+                delegate?.lockDetected(stripped)
+            }
+        }
+        
+    }
+}
+
+@available(iOS 11, *)
+extension NFCNDEFPayload {
+    
+    var fullDescription: String {
+        var description = "TNF (TypeNameFormat): \(typeDescription)\n"
+        
+        let payload = String(data: self.payload, encoding: .utf8) ?? "No payload"
+        let type = String(data: self.type, encoding: .utf8) ?? "No type"
+        let identifier = String(data: self.identifier, encoding: .utf8) ?? "No identifier"
+        
+        description += "Payload: \(payload)\n"
+        description += "Type: \(type)\n"
+        description += "Identifier: \(identifier)\n"
+        
+        return description.replacingOccurrences(of: "\0", with: "")
+    }
+    
+    var typeDescription: String {
+        switch typeNameFormat {
+        case .nfcWellKnown:
+            return String(data: type, encoding: .utf8) ?? "Invalid data"
+        case .absoluteURI:
+            return String(data: payload, encoding: .utf8) ?? "Invalid data"
+        case .media:
+            if let type = String(data: type, encoding: .utf8) {
+                return "Media type: " + type
+            }
+            return "Invalid data"
+        case .nfcExternal:
+            return "NFC External type"
+        case .unknown:
+            return "Unknown type"
+        case .unchanged:
+            return "Unchanged type"
+        case .empty:
+            return "Invalid data"
+        }
+    }
+}
+

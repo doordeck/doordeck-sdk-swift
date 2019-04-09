@@ -1,0 +1,1867 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023E0D0662A2A8D9EB3695D11C1BDC3C /* Storage+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E781A16851BF16878C0CD6BF2A905 /* Storage+Transform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0312EF66BFBF738EDB4B114865DD74F8 /* AsyncStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A406A7BE39C0269B188C9A4133FB3 /* AsyncStorage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		045631E32A93B4BE50CE2941BB051B4B /* MemoryConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386F5A7211E1AE3A4F39B11FAE39D0F8 /* MemoryConfig.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		04D9334D6D9A2F2C05E63C71C6030B35 /* Pods-doordeck-sdk-swiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD52D16B1063C07CFF3BBB2A02AA0DF /* Pods-doordeck-sdk-swiftTests-dummy.m */; };
+		061E0914927E44AB270DAB81FDCD658D /* ExpirationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D19028396F77BFEC5A17F60B0EBD94 /* ExpirationMode.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		09369883A939A86D0CF866C9B1EB8949 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F007FBD2F0D1753C86854E39D1EF0073 /* Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F4BAE1CD9F3CB3674EEEA2C5842A965 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3E45C54950965F7B9CE34BA0401581 /* AVFoundation.framework */; };
+		0F7B69CB77A42B49D078035FA581FE6A /* SwiftyRSA.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B0BA4661CE4DF8CA3A4C489F694154 /* SwiftyRSA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17030B1A2E22AECC4ABAB640F861DC89 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A254F8375FAEAB7BCBF170710BFEB26 /* Message.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		17A75ED269F895BE170F3E190B9ACDE9 /* TransformerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1EFE9E650CD8533B524981A9FB7DC /* TransformerFactory.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1AAAFE5E2F10076BB7714B90D0ADAA9C /* Asn1Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076AE88FCD452F3ACD759CC949527DC /* Asn1Parser.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1CB3B1C942F8C4E330903BF32E1A0130 /* KeyObservationRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D9D25F8A7637A4332E0BB0D74F1468 /* KeyObservationRegistry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		212BD7648867FF685D506899752509A1 /* Pods-doordeck-sdk-swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA88D1A1D6E774DE66A4926C2137FCBB /* Pods-doordeck-sdk-swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		240B9397F73CCBDC537707F9BC7A4511 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28B502FB1095265ED69EF0BC794EC7 /* SessionDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2C18A5DF93B6B263736213B94684A55D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A2B49E48FC51474448AE75C91065D6 /* SystemConfiguration.framework */; };
+		2D466CE6D91A39E651FA6AF708A2A801 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E34D6B27C44603EA67E5D632752095 /* Request.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2E91E6215410B4D348162C8D31CE7CAF /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E677118733DF87984EA99350BFAC7F38 /* QRCodeReaderView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3103F0EB03335F8873ED5F3FF65032F0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189EBB6D59DEC5C509F660C82D9787B /* Validation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3478F496B7BCC513BF312368933E6C43 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8266363BD1302FF07FD3F26CAAF4996B /* Key.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		36C39354A5F4C70119FC2519A104A001 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2737DD8AC3A487915A13A9268B6AF617 /* QRCodeReader.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3B45520096FAA2DD993A190CD7E7A7D1 /* Cache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F01F4225773FCCF14A5BEA0F8510C /* Cache-dummy.m */; };
+		3BD1DAFE1F3E6C9E4EB0F2099B6D6FA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+		3D5DE3E54C9BC64610B168B684132CB1 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11A79D8725FCC1AA6E65848EC82032 /* QRCodeReaderViewControllerBuilder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		409523081C49492DEEC6EF57FCF0DCE2 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8BDAB374EB328CDE9331539F8E8992 /* DiskStorage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4131149580995BD1D66C6221F487A3C3 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B51DE5C0DBB95172164C0EFDF48145 /* SessionManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		439C2EF5A6D1E80E865563016704D167 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+		456D35F0C289EB078390B2E080547C68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+		4B85D3B3E54105FC07AB960F336D94A3 /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F6B9F1158BA00F068B242DF8646E13 /* StorageError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4CD5867A5E0A8B4EDBEC1557907114AE /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C71542B2687DF630FADAFFD6D1E788 /* MD5.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4DAB232D242CF9F73918909734DB8CFE /* MemoryCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19C156C2F0661B148EB8964D84674A /* MemoryCapsule.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		50304BD6B3AD29436879A45C33D10195 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501D989E420D1DC76E869B06EE89511 /* JSONDecoder+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5257F96980C8CE0C6ADA232B77F7E90F /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863E614A25E39FDA1D81F367CF7A9B4 /* ParameterEncoding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		538ED2B707D3F407BD93E0F2B87894A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+		546F54EE4CC26F273FC30845100574FB /* SwiftyRSAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5715251AE00DD23C171F0203041E7E1A /* SwiftyRSAError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		55B631A4562DFD9E10E2EE77F0C036FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+		57741B8C3C9EA7DFDE997A103E8056CE /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA093A20E785808A678F380282D4D0AF /* DataSerializer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		599405FCA74D263548B11811472F4680 /* ObservationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1D20EB657BD74EE066B90264E87DB /* ObservationToken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B3C54D6CA47E67D0173D4998D5DA84D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F288351EC7DE4DFB34636D1FC6034B39 /* Alamofire-dummy.m */; };
+		5B501EEADB471B2BB4E736A0B0BC63F3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF148BAF136202154CD505D6806EE442 /* Entry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5E3C260E2AD9E9B12A40A97E8F5B98A3 /* DiskConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340EE470483A53F0C4BE47C85D5648E /* DiskConfig.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		63CF87653743DA3AF7062B40D42EF9B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+		6BDD4A8B539F679716CE38D9673A3BC7 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B48C086EBF031CAAACA481A442713 /* Optional+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6EF25BEEA542D871A19EB8E72F548093 /* NSData+SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647AC0BE6FF023906CFB75A872470D4 /* NSData+SHA.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7365FD63A89D0F66C595256355900917 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6E92E59043522131FED89FE4CF7DA /* TaskDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		737957307DD5891DEB9057AA9545D7EB /* SwiftyRSA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DF886953A27D384A1500299EEE71D6 /* SwiftyRSA-dummy.m */; };
+		75435545DC0832CD1DCDDEFE7BDB4D51 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660770759C6288AE88E5F1C524DA5BB9 /* QRCodeReaderViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B29B5AE63CFED6D96BCD01F75BB4253 /* JSONArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20FC674397EEED93BB665A98FC7EA4 /* JSONArrayWrapper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7E50A224C3D8523CA32F5F00474D10C6 /* Cache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FCC6F349E5C9FB7DD87AE313D247949 /* Cache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		816D8F658A00AB47546F72A655192183 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BB4CD6F07B30642A16BCB9E7C5A38B /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8286D921D81F7BA1AEDB7185194EDC9A /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC1D42BCE2B6E0913AA6EC3072F3F1 /* MultipartFormData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8585189D0D8BF1302138ACCA1D8D8A41 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7233C0BA27BA198DC58B891D4639285 /* Notifications.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		869E92807F1EC3BAA4B8BCC8F11B8350 /* Pods-doordeck-sdk-swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 996B37974D073888D8A07FE27F2F5ECE /* Pods-doordeck-sdk-swift-dummy.m */; };
+		86E6427AA85C16852CAD2D75F71BCD71 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27A8FE53CDFFF429314CA9260FF503 /* Storage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		875F0AA1754462B9078A88DD3CD8937B /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDCEAE48A5D640A6FFD3C063400EE8B /* QRCodeReader.swift-dummy.m */; };
+		8C82A0DC43F539E8961EE089DA2F55E2 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2038AADC0F2B8A6A1596756FD486151 /* AFError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E094528799BEF0D70D1D5CB5BED192D /* StorageAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0EED3325BFF8F9CB95BD9420D1DCA /* StorageAware.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8EFA99BB09988E20A1519BF8FDEEF23D /* NSData+SHA.h in Headers */ = {isa = PBXBuildFile; fileRef = 466F59251FC0F41CEE5DD200832C74FE /* NSData+SHA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F1E604ECA40B9826697775301054EFF /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D484AD880F6B4F121B8503834400C1B /* ReaderOverlayView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8F59C8A4F285ED52258747A8EB537D34 /* Expiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB302B5BECF12D33A3F8694CAD154A /* Expiry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FE27501801E0411BFE6D41EA3EAA00D /* SwiftyRSA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B111858AF0AE416D92809FC3144EA3 /* SwiftyRSA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93B86E7677061308E5D602D4AE89BAF2 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE5A998F31F6C627301561CA711FC04 /* Response.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9408F84B968564C8085F9717DA02B066 /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3F57848EF1F803BA6A613215DD655 /* QRCodeReaderViewContainer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		95495EB7E1B1025B17297932750C7653 /* StorageObservationRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008B4500A50E0470B6CB60763020FABF /* StorageObservationRegistry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		958B9D757C3616B5DDB8909115BA6642 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF80BE0D578E610F5CE73B4D3CC0848 /* Transformer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		97BDE26FD6A9F63699DF31AA5507C86F /* ImageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79B384B54A0A36F4D5159931666887 /* ImageWrapper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		980501A2BF77B6BD654CB772CA83F666 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B781E98375D610929F09F3717F641E /* NetworkReachabilityManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B898DB5018B43AEB65DD007F6C853C6 /* ReachabilitySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB2A32EA7484A912A352C4D55F197018 /* ReachabilitySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A56BA8FD33388B5E1FED8A6BBC532987 /* ReachabilitySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1231D9553B09C553BC690D335CD0350F /* ReachabilitySwift-dummy.m */; };
+		A9025D91AFD62CE76239279DA42CA02A /* SyncStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAFDC95257648AEC3790DB50203E600 /* SyncStorage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A98160A42873E7CCBB9B6FD376BE6777 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D39500C3A9F99CBADBD1F40E812EC5 /* Types.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AE7F080813163D730BB2D1899EA20288 /* SwiftyRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823C70781419A6F6DFF24F2E72BB375E /* SwiftyRSA.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AFAB55A289AABD40510980BD1D7A3AD8 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD18F7D7479F3D0ACFF7B5725FEE61 /* MemoryStorage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B1779E04F707EF4D9C9FD0D3A465017D /* JSONDictionaryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5C0CFB9F0D39E4EC4BED6C0A51736 /* JSONDictionaryWrapper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B51EFF8A2B738E5D899C32DD63B62659 /* HybridStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C667AF0BBB995626DBFFE29A088F30A9 /* HybridStorage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCFF1FF6A67DB69C2F82F2FE71D6B4DC /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFDD253057221EAD2A53C62928952315 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45845C94EFEF293074601DEA0F91B82D /* ServerTrustPolicy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C17DFB4333EA3268C637B143CFD6FB40 /* ClearMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BDD9FFF9977DED49D4E0EADDD2F0FF /* ClearMessage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C4A10D7374C6934A2E23DAA9A6B39804 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5323DE281D783546316FD39CC3F93AA /* PublicKey.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C64BABF01457281644CDF7BCAEE91412 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A2288C4C469F619FC6AD3E466A07D /* ToggleTorchButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C8AC227323B281DB6C211DF37B75406B /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDFF0DDD8B9F56333BBC75DC8E132B9 /* SwitchCameraButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CA258E440DC4A57730289CCF19E98B65 /* SwiftyRSA+ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0021A4D2E3E8BDC35708E95F01855 /* SwiftyRSA+ObjC.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CBC1C29DA81E2D3C67EAF5FBE657881F /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957141E841B433139CC930590671AF7F /* Signature.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CC72C8C0E8185A844BEBD8EBC4CC150B /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EC0D5A327A02F07F0A71E87C41685 /* PrivateKey.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CECC6AF149A293B5CAF7E85CDE31C703 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00B4C1C7FF131D7FBD5B3B40A990E6 /* QRCodeReaderResult.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D0A28826916584B0ED2DD4F43C1146D8 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F60758D4E183B8E27E1F6599E8A67 /* ResponseSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D654F916111BBECF57D0502292D2461A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF25829D13E990837805A2B7B76BDED2 /* Timeline.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D8FF6521F8E2A581D171534A9CD47961 /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC650A6B9ABFBD5199D2A10AB05EEB /* QRCodeReaderViewControllerDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E57DEAC3AF1009254132B861275C5B29 /* EncryptedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFD18C026DC30DB083698816115065 /* EncryptedMessage.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E923748187889885AB95126D62C07FEF /* TypeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7139513877587403DEB8BCFFF7E2773 /* TypeWrapper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EA6177B2D6517BF6EEA29B4723F711EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12841B9ABAC71B51173A9C04F320BA /* Security.framework */; };
+		EBFA17EC9CAFF941CA20304E643FF6D0 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DA70EB3B93B42FD919D9E0D6979073 /* UIImage+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF9C1F6AACE326A7E188D2CA0EDAC49A /* Pods-doordeck-sdk-swiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C741B9510163119A6C165EE2436940E4 /* Pods-doordeck-sdk-swiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F19653B53E672F88C33FA32D1554657D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8771F300183A8DF15CDEEA2B5A71A4A9 /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F1B43076C5E4AA3100AF90E970127D82 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9388DF1A92DA9E22EAEEFB43A5D251 /* DispatchQueue+Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F2F216699E6D90296A36D354B9703130 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14830ACD0F93E31D3F643244EDA7C20B /* Reachability.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F5177BDDE47081944C5C7E6081265F83 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6158DB63475464377B2A1179650CA953 /* Date+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F73A6C4046FD992FBC223EA2989AD97D /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75630CE046DA9743B88C6224A783B6A0 /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD02710FF149EAEF2B67B5AC2ECC6CFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0305DCDCDBE95EC0FC8B1C8E901DF003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E6E2E3B1CF69C0B294855DD33A2B012;
+			remoteInfo = QRCodeReader.swift;
+		};
+		077033A5395F4A4C5D4B659147A9D0AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2ADA774B703AD2D9E7EF946B166F0C4;
+			remoteInfo = SwiftyRSA;
+		};
+		1D924BC9DF5A14D22BE61ADECBCEBC44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2ADA774B703AD2D9E7EF946B166F0C4;
+			remoteInfo = SwiftyRSA;
+		};
+		215CC212A2BE92FBC7A58AF6A61FA421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B3094B61EEC4E1691D60AEC7B54BE8;
+			remoteInfo = ReachabilitySwift;
+		};
+		3B5455507917DE2784A8E6A7C964AE0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B3094B61EEC4E1691D60AEC7B54BE8;
+			remoteInfo = ReachabilitySwift;
+		};
+		58BA315B8FE32DB90DCDE6F0CE9B2080 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDE4F4A0029CD419EC12F69669401CB;
+			remoteInfo = Cache;
+		};
+		765324DAA9DC565A84EAAA1C7F3A27AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3383968E74B5371B20BB519B170DC7FD;
+			remoteInfo = Alamofire;
+		};
+		839D0D5B1F593DE2D55E6D516BF8860F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E6E2E3B1CF69C0B294855DD33A2B012;
+			remoteInfo = QRCodeReader.swift;
+		};
+		92F7EA92F991379F6EBC37E7FEEAC230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3383968E74B5371B20BB519B170DC7FD;
+			remoteInfo = Alamofire;
+		};
+		E0F6DD5CDF4E79B7D58C969AC799627E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCDE4F4A0029CD419EC12F69669401CB;
+			remoteInfo = Cache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008B4500A50E0470B6CB60763020FABF /* StorageObservationRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageObservationRegistry.swift; path = Source/Shared/Storage/StorageObservationRegistry.swift; sourceTree = "<group>"; };
+		025A2288C4C469F619FC6AD3E466A07D /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
+		0A254F8375FAEAB7BCBF170710BFEB26 /* Message.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Source/Message.swift; sourceTree = "<group>"; };
+		0DD52D16B1063C07CFF3BBB2A02AA0DF /* Pods-doordeck-sdk-swiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-doordeck-sdk-swiftTests-dummy.m"; sourceTree = "<group>"; };
+		110C075C9937AEA1097E66252850AB80 /* Pods-doordeck-sdk-swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-doordeck-sdk-swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		118A406A7BE39C0269B188C9A4133FB3 /* AsyncStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncStorage.swift; path = Source/Shared/Storage/AsyncStorage.swift; sourceTree = "<group>"; };
+		1231D9553B09C553BC690D335CD0350F /* ReachabilitySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReachabilitySwift-dummy.m"; sourceTree = "<group>"; };
+		14830ACD0F93E31D3F643244EDA7C20B /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Sources/Reachability.swift; sourceTree = "<group>"; };
+		1B4C5890A2712B9A4CE0B9D29FADCBEC /* ReachabilitySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReachabilitySwift.modulemap; sourceTree = "<group>"; };
+		1D28B502FB1095265ED69EF0BC794EC7 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		1EDD867C192F4E0D8145E2ADA82FB299 /* Cache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cache.framework; path = Cache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC5E4E5123BFFBD806BD735385EBD0D /* ReachabilitySwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReachabilitySwift-prefix.pch"; sourceTree = "<group>"; };
+		1FCC6F349E5C9FB7DD87AE313D247949 /* Cache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cache-umbrella.h"; sourceTree = "<group>"; };
+		2282B9AA87688FF7DD376B44AF88F9F5 /* Pods-doordeck-sdk-swiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-doordeck-sdk-swiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		247A9980821B7B1626EF659C363AF91A /* Pods-doordeck-sdk-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-doordeck-sdk-swift.release.xcconfig"; sourceTree = "<group>"; };
+		25A5773161E96ED132E2E3525DB4F8F4 /* Cache-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cache-Info.plist"; sourceTree = "<group>"; };
+		2737DD8AC3A487915A13A9268B6AF617 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
+		2B2EC0D5A327A02F07F0A71E87C41685 /* PrivateKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrivateKey.swift; path = Source/PrivateKey.swift; sourceTree = "<group>"; };
+		2D4CC7AC6EC4F4AA32A1E4566207E487 /* Pods-doordeck-sdk-swiftTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-doordeck-sdk-swiftTests-Info.plist"; sourceTree = "<group>"; };
+		2F6EC62C5EF44EB80BF482C40E36C2DB /* Pods-doordeck-sdk-swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-doordeck-sdk-swift-Info.plist"; sourceTree = "<group>"; };
+		31B51DE5C0DBB95172164C0EFDF48145 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		321D4D3A7C625FBE087E1A079E6A4573 /* SwiftyRSA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyRSA.modulemap; sourceTree = "<group>"; };
+		3863E614A25E39FDA1D81F367CF7A9B4 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		386F5A7211E1AE3A4F39B11FAE39D0F8 /* MemoryConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryConfig.swift; path = Source/Shared/Configuration/MemoryConfig.swift; sourceTree = "<group>"; };
+		39CBA7BC89250D5E16EB26BE6D414DC3 /* Pods-doordeck-sdk-swiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-doordeck-sdk-swiftTests.modulemap"; sourceTree = "<group>"; };
+		3EEA6A2F92061EBAC72E0485EFB41F16 /* Cache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cache.modulemap; sourceTree = "<group>"; };
+		3FA0DFC8968252FF09F1CD723FC8CA08 /* SwiftyRSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyRSA.framework; path = SwiftyRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4220A40D3A51B5A93FDD140FB5535D51 /* Pods-doordeck-sdk-swift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-doordeck-sdk-swift-acknowledgements.plist"; sourceTree = "<group>"; };
+		43003F69FF68DACF5056ECCECAA6A5B1 /* Pods-doordeck-sdk-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-doordeck-sdk-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		43B8C4BAEA404BC5FF3ABCA11829A4BC /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		4501D989E420D1DC76E869B06EE89511 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "JSONDecoder+Extensions.swift"; path = "Source/Shared/Extensions/JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		45845C94EFEF293074601DEA0F91B82D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		466F59251FC0F41CEE5DD200832C74FE /* NSData+SHA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SHA.h"; path = "Source/NSData+SHA.h"; sourceTree = "<group>"; };
+		46E1D20EB657BD74EE066B90264E87DB /* ObservationToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservationToken.swift; path = Source/Shared/Library/ObservationToken.swift; sourceTree = "<group>"; };
+		473C541F905E580EA529504F542C1513 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability.framework; path = ReachabilitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4834CC01EE3F4D35390A3FB98F051318 /* Pods-doordeck-sdk-swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-doordeck-sdk-swiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		48E1E44F7E9C85FC492D693C7759D149 /* Pods-doordeck-sdk-swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-doordeck-sdk-swift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4BE5A998F31F6C627301561CA711FC04 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		55D19028396F77BFEC5A17F60B0EBD94 /* ExpirationMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpirationMode.swift; path = Source/Shared/Library/ExpirationMode.swift; sourceTree = "<group>"; };
+		5715251AE00DD23C171F0203041E7E1A /* SwiftyRSAError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyRSAError.swift; path = Source/SwiftyRSAError.swift; sourceTree = "<group>"; };
+		57D79B96094A71F030984B0C22B7FBDC /* ReachabilitySwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReachabilitySwift.xcconfig; sourceTree = "<group>"; };
+		58B111858AF0AE416D92809FC3144EA3 /* SwiftyRSA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyRSA-umbrella.h"; sourceTree = "<group>"; };
+		5B5F01F4225773FCCF14A5BEA0F8510C /* Cache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cache-dummy.m"; sourceTree = "<group>"; };
+		5D8BDAB374EB328CDE9331539F8E8992 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Source/Shared/Storage/DiskStorage.swift; sourceTree = "<group>"; };
+		5FF0EED3325BFF8F9CB95BD9420D1DCA /* StorageAware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageAware.swift; path = Source/Shared/Storage/StorageAware.swift; sourceTree = "<group>"; };
+		60E4477FC6DED1FCD1B0E2E801B797AA /* SwiftyRSA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyRSA-prefix.pch"; sourceTree = "<group>"; };
+		6158DB63475464377B2A1179650CA953 /* Date+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "Source/Shared/Extensions/Date+Extensions.swift"; sourceTree = "<group>"; };
+		61D39500C3A9F99CBADBD1F40E812EC5 /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Types.swift; path = Source/Shared/Library/Types.swift; sourceTree = "<group>"; };
+		6340EE470483A53F0C4BE47C85D5648E /* DiskConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskConfig.swift; path = Source/Shared/Configuration/DiskConfig.swift; sourceTree = "<group>"; };
+		660770759C6288AE88E5F1C524DA5BB9 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		669E9615105E9986B8232B8B1B002E3B /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
+		66DF886953A27D384A1500299EEE71D6 /* SwiftyRSA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyRSA-dummy.m"; sourceTree = "<group>"; };
+		67C843DBE6D2096283A9B7BA955FD337 /* SwiftyRSA.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyRSA.xcconfig; sourceTree = "<group>"; };
+		6A621CF200A6D76301DE770E456DD118 /* Pods_doordeck_sdk_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_doordeck_sdk_swift.framework; path = "Pods-doordeck-sdk-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BBC1D42BCE2B6E0913AA6EC3072F3F1 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		6F863927D9E2CE2A8A8B9DE4F94C90CF /* Pods-doordeck-sdk-swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-doordeck-sdk-swift.modulemap"; sourceTree = "<group>"; };
+		72CD18F7D7479F3D0ACFF7B5725FEE61 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Source/Shared/Storage/MemoryStorage.swift; sourceTree = "<group>"; };
+		73BB4CD6F07B30642A16BCB9E7C5A38B /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		74EC650A6B9ABFBD5199D2A10AB05EEB /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerDelegate.swift; path = Sources/QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		75630CE046DA9743B88C6224A783B6A0 /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
+		76A2B49E48FC51474448AE75C91065D6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		7B31D566A74A80C59688FF70F8206448 /* SwiftyRSA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyRSA-Info.plist"; sourceTree = "<group>"; };
+		7C9388DF1A92DA9E22EAEEFB43A5D251 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		7CDCEAE48A5D640A6FFD3C063400EE8B /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
+		7D484AD880F6B4F121B8503834400C1B /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
+		8189EBB6D59DEC5C509F660C82D9787B /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		81BDD9FFF9977DED49D4E0EADDD2F0FF /* ClearMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClearMessage.swift; path = Source/ClearMessage.swift; sourceTree = "<group>"; };
+		823C70781419A6F6DFF24F2E72BB375E /* SwiftyRSA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyRSA.swift; path = Source/SwiftyRSA.swift; sourceTree = "<group>"; };
+		8266363BD1302FF07FD3F26CAAF4996B /* Key.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Key.swift; path = Source/Key.swift; sourceTree = "<group>"; };
+		83B0BA4661CE4DF8CA3A4C489F694154 /* SwiftyRSA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyRSA.h; path = Source/SwiftyRSA.h; sourceTree = "<group>"; };
+		849B48C086EBF031CAAACA481A442713 /* Optional+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+Extension.swift"; path = "Source/Shared/Library/Optional+Extension.swift"; sourceTree = "<group>"; };
+		86B781E98375D610929F09F3717F641E /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		86D3F57848EF1F803BA6A613215DD655 /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewContainer.swift; path = Sources/QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
+		86D9D25F8A7637A4332E0BB0D74F1468 /* KeyObservationRegistry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyObservationRegistry.swift; path = Source/Shared/Storage/KeyObservationRegistry.swift; sourceTree = "<group>"; };
+		8771F300183A8DF15CDEEA2B5A71A4A9 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Shared/Library/Result.swift; sourceTree = "<group>"; };
+		8A27A8FE53CDFFF429314CA9260FF503 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Source/Shared/Storage/Storage.swift; sourceTree = "<group>"; };
+		8F6F60758D4E183B8E27E1F6599E8A67 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		92C6E92E59043522131FED89FE4CF7DA /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		9315FFE9D3FC510DD0C926C15A6701A0 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		957141E841B433139CC930590671AF7F /* Signature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signature.swift; path = Source/Signature.swift; sourceTree = "<group>"; };
+		9647AC0BE6FF023906CFB75A872470D4 /* NSData+SHA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SHA.m"; path = "Source/NSData+SHA.m"; sourceTree = "<group>"; };
+		996B37974D073888D8A07FE27F2F5ECE /* Pods-doordeck-sdk-swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-doordeck-sdk-swift-dummy.m"; sourceTree = "<group>"; };
+		99D92BBC0F26A664A5B3998B19260AC2 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
+		9A39B098128F3A1E79A3C3A9163D4D83 /* Pods-doordeck-sdk-swiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-doordeck-sdk-swiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9AA53B6C7C2FC43C581BA43B2CB9F381 /* QRCodeReader.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QRCodeReader.swift-Info.plist"; sourceTree = "<group>"; };
+		9ABFD18C026DC30DB083698816115065 /* EncryptedMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EncryptedMessage.swift; path = Source/EncryptedMessage.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3A1C2CF402AA7BE87B73B46B3133F55 /* Pods-doordeck-sdk-swiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-doordeck-sdk-swiftTests-frameworks.sh"; sourceTree = "<group>"; };
+		A4DA70EB3B93B42FD919D9E0D6979073 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Source/iOS/UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		ABF80BE0D578E610F5CE73B4D3CC0848 /* Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transformer.swift; path = Source/Shared/Library/Transformer.swift; sourceTree = "<group>"; };
+		AF00B4C1C7FF131D7FBD5B3B40A990E6 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = Sources/QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		AF20FC674397EEED93BB665A98FC7EA4 /* JSONArrayWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONArrayWrapper.swift; path = Source/Shared/Library/JSONArrayWrapper.swift; sourceTree = "<group>"; };
+		B076AE88FCD452F3ACD759CC949527DC /* Asn1Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asn1Parser.swift; path = Source/Asn1Parser.swift; sourceTree = "<group>"; };
+		B3F5C0CFB9F0D39E4EC4BED6C0A51736 /* JSONDictionaryWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONDictionaryWrapper.swift; path = Source/Shared/Library/JSONDictionaryWrapper.swift; sourceTree = "<group>"; };
+		B6F0021A4D2E3E8BDC35708E95F01855 /* SwiftyRSA+ObjC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyRSA+ObjC.swift"; path = "Source/SwiftyRSA+ObjC.swift"; sourceTree = "<group>"; };
+		B7139513877587403DEB8BCFFF7E2773 /* TypeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeWrapper.swift; path = Source/Shared/Library/TypeWrapper.swift; sourceTree = "<group>"; };
+		BA093A20E785808A678F380282D4D0AF /* DataSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataSerializer.swift; path = Source/Shared/Library/DataSerializer.swift; sourceTree = "<group>"; };
+		BC19C156C2F0661B148EB8964D84674A /* MemoryCapsule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryCapsule.swift; path = Source/Shared/Library/MemoryCapsule.swift; sourceTree = "<group>"; };
+		BCFF1FF6A67DB69C2F82F2FE71D6B4DC /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		C5323DE281D783546316FD39CC3F93AA /* PublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublicKey.swift; path = Source/PublicKey.swift; sourceTree = "<group>"; };
+		C649D6BF2D11DF94B8EE5E66901C2A77 /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
+		C667AF0BBB995626DBFFE29A088F30A9 /* HybridStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HybridStorage.swift; path = Source/Shared/Storage/HybridStorage.swift; sourceTree = "<group>"; };
+		C741B9510163119A6C165EE2436940E4 /* Pods-doordeck-sdk-swiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-doordeck-sdk-swiftTests-umbrella.h"; sourceTree = "<group>"; };
+		C8FBAE07E841FC5112D37B3CDB1999EA /* Pods_doordeck_sdk_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_doordeck_sdk_swiftTests.framework; path = "Pods-doordeck-sdk-swiftTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3E45C54950965F7B9CE34BA0401581 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		CE11A79D8725FCC1AA6E65848EC82032 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
+		D0B1EFE9E650CD8533B524981A9FB7DC /* TransformerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformerFactory.swift; path = Source/Shared/Library/TransformerFactory.swift; sourceTree = "<group>"; };
+		D2E34D6B27C44603EA67E5D632752095 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		D6226B10E1B51590988206B925ED63BE /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		D796344F4D6C4B463080919C9583586B /* Cache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cache.xcconfig; sourceTree = "<group>"; };
+		D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DA88D1A1D6E774DE66A4926C2137FCBB /* Pods-doordeck-sdk-swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-doordeck-sdk-swift-umbrella.h"; sourceTree = "<group>"; };
+		DB2A32EA7484A912A352C4D55F197018 /* ReachabilitySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReachabilitySwift-umbrella.h"; sourceTree = "<group>"; };
+		DC2FBCBAC9AF2D3F9111249C77CD8E89 /* ReachabilitySwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ReachabilitySwift-Info.plist"; sourceTree = "<group>"; };
+		DF25829D13E990837805A2B7B76BDED2 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		E4AB302B5BECF12D33A3F8694CAD154A /* Expiry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expiry.swift; path = Source/Shared/Library/Expiry.swift; sourceTree = "<group>"; };
+		E64E781A16851BF16878C0CD6BF2A905 /* Storage+Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Storage+Transform.swift"; path = "Source/Shared/Storage/Storage+Transform.swift"; sourceTree = "<group>"; };
+		E677118733DF87984EA99350BFAC7F38 /* QRCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderView.swift; path = Sources/QRCodeReaderView.swift; sourceTree = "<group>"; };
+		E7233C0BA27BA198DC58B891D4639285 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		E8C71542B2687DF630FADAFFD6D1E788 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Source/Shared/Library/MD5.swift; sourceTree = "<group>"; };
+		ED85263270A1661A43769E6829EF9D7E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF12841B9ABAC71B51173A9C04F320BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		EF148BAF136202154CD505D6806EE442 /* Entry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = Source/Shared/Library/Entry.swift; sourceTree = "<group>"; };
+		EFDFF0DDD8B9F56333BBC75DC8E132B9 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
+		F007FBD2F0D1753C86854E39D1EF0073 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		F1F6B9F1158BA00F068B242DF8646E13 /* StorageError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageError.swift; path = Source/Shared/Library/StorageError.swift; sourceTree = "<group>"; };
+		F2038AADC0F2B8A6A1596756FD486151 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		F288351EC7DE4DFB34636D1FC6034B39 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		F4C7A7CAC0C8EFEA8369C9BE13EC0D1B /* Cache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cache-prefix.pch"; sourceTree = "<group>"; };
+		F8D6E371D987E37A28B6C421BCDE5FDB /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		FA79B384B54A0A36F4D5159931666887 /* ImageWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageWrapper.swift; path = Source/Shared/Library/ImageWrapper.swift; sourceTree = "<group>"; };
+		FC4223ABA36F86A3BDA482FAAF36A75B /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCodeReader.framework; path = QRCodeReader.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDAFDC95257648AEC3790DB50203E600 /* SyncStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncStorage.swift; path = Source/Shared/Storage/SyncStorage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		195B6AF9CCE059E9420ECD4285F7836E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4BAE1CD9F3CB3674EEEA2C5842A965 /* AVFoundation.framework in Frameworks */,
+				FD02710FF149EAEF2B67B5AC2ECC6CFD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		412EF3772C7B836BF219EEC8A4C00FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456D35F0C289EB078390B2E080547C68 /* Foundation.framework in Frameworks */,
+				EA6177B2D6517BF6EEA29B4723F711EA /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78ABF65356E3F2ABA49260292B7DECC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63CF87653743DA3AF7062B40D42EF9B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F594957C39EAD1ED31CCFC4489798D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				439C2EF5A6D1E80E865563016704D167 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B318C4FF9F6F8112FDE31ED624F58319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538ED2B707D3F407BD93E0F2B87894A8 /* Foundation.framework in Frameworks */,
+				2C18A5DF93B6B263736213B94684A55D /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BD6FE7F853EA7E1ACB871F9429A763 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B631A4562DFD9E10E2EE77F0C036FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD1DAFE1F3E6C9E4EB0F2099B6D6FA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07FAE49E585FBF9F3A3C2D104724D097 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				F2038AADC0F2B8A6A1596756FD486151 /* AFError.swift */,
+				F007FBD2F0D1753C86854E39D1EF0073 /* Alamofire.swift */,
+				7C9388DF1A92DA9E22EAEEFB43A5D251 /* DispatchQueue+Alamofire.swift */,
+				6BBC1D42BCE2B6E0913AA6EC3072F3F1 /* MultipartFormData.swift */,
+				86B781E98375D610929F09F3717F641E /* NetworkReachabilityManager.swift */,
+				E7233C0BA27BA198DC58B891D4639285 /* Notifications.swift */,
+				3863E614A25E39FDA1D81F367CF7A9B4 /* ParameterEncoding.swift */,
+				D2E34D6B27C44603EA67E5D632752095 /* Request.swift */,
+				4BE5A998F31F6C627301561CA711FC04 /* Response.swift */,
+				8F6F60758D4E183B8E27E1F6599E8A67 /* ResponseSerialization.swift */,
+				73BB4CD6F07B30642A16BCB9E7C5A38B /* Result.swift */,
+				45845C94EFEF293074601DEA0F91B82D /* ServerTrustPolicy.swift */,
+				1D28B502FB1095265ED69EF0BC794EC7 /* SessionDelegate.swift */,
+				31B51DE5C0DBB95172164C0EFDF48145 /* SessionManager.swift */,
+				92C6E92E59043522131FED89FE4CF7DA /* TaskDelegate.swift */,
+				DF25829D13E990837805A2B7B76BDED2 /* Timeline.swift */,
+				8189EBB6D59DEC5C509F660C82D9787B /* Validation.swift */,
+				CC01338CD023F724CD36FF8491840CBB /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		20E950988B858B755DC375B64042B8F5 /* Pods-doordeck-sdk-swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				39CBA7BC89250D5E16EB26BE6D414DC3 /* Pods-doordeck-sdk-swiftTests.modulemap */,
+				2282B9AA87688FF7DD376B44AF88F9F5 /* Pods-doordeck-sdk-swiftTests-acknowledgements.markdown */,
+				9A39B098128F3A1E79A3C3A9163D4D83 /* Pods-doordeck-sdk-swiftTests-acknowledgements.plist */,
+				0DD52D16B1063C07CFF3BBB2A02AA0DF /* Pods-doordeck-sdk-swiftTests-dummy.m */,
+				A3A1C2CF402AA7BE87B73B46B3133F55 /* Pods-doordeck-sdk-swiftTests-frameworks.sh */,
+				2D4CC7AC6EC4F4AA32A1E4566207E487 /* Pods-doordeck-sdk-swiftTests-Info.plist */,
+				C741B9510163119A6C165EE2436940E4 /* Pods-doordeck-sdk-swiftTests-umbrella.h */,
+				110C075C9937AEA1097E66252850AB80 /* Pods-doordeck-sdk-swiftTests.debug.xcconfig */,
+				4834CC01EE3F4D35390A3FB98F051318 /* Pods-doordeck-sdk-swiftTests.release.xcconfig */,
+			);
+			name = "Pods-doordeck-sdk-swiftTests";
+			path = "Target Support Files/Pods-doordeck-sdk-swiftTests";
+			sourceTree = "<group>";
+		};
+		2CD7E2B5408139DA6485D3A155CE9A1E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				48E2C6F9EA21D7FAB92F99AA9CA7EAB8 /* Pods-doordeck-sdk-swift */,
+				20E950988B858B755DC375B64042B8F5 /* Pods-doordeck-sdk-swiftTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2DE937330BFCAEC34B2F605308E391DD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B4C5890A2712B9A4CE0B9D29FADCBEC /* ReachabilitySwift.modulemap */,
+				57D79B96094A71F030984B0C22B7FBDC /* ReachabilitySwift.xcconfig */,
+				1231D9553B09C553BC690D335CD0350F /* ReachabilitySwift-dummy.m */,
+				DC2FBCBAC9AF2D3F9111249C77CD8E89 /* ReachabilitySwift-Info.plist */,
+				1FC5E4E5123BFFBD806BD735385EBD0D /* ReachabilitySwift-prefix.pch */,
+				DB2A32EA7484A912A352C4D55F197018 /* ReachabilitySwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ReachabilitySwift";
+			sourceTree = "<group>";
+		};
+		341D1E06BA6F57FAAF7E851F5B9D8A38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07FAE49E585FBF9F3A3C2D104724D097 /* Alamofire */,
+				508DA5705509072A705EDC292309DCC3 /* Cache */,
+				89D19C23B6A0B21708F6F15629A714B0 /* QRCodeReader.swift */,
+				622155B7D6B3106DAEB75EED38E0CA50 /* ReachabilitySwift */,
+				E12288077724AB714C9C7CB7AAD0B63B /* SwiftyRSA */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		48E2C6F9EA21D7FAB92F99AA9CA7EAB8 /* Pods-doordeck-sdk-swift */ = {
+			isa = PBXGroup;
+			children = (
+				6F863927D9E2CE2A8A8B9DE4F94C90CF /* Pods-doordeck-sdk-swift.modulemap */,
+				48E1E44F7E9C85FC492D693C7759D149 /* Pods-doordeck-sdk-swift-acknowledgements.markdown */,
+				4220A40D3A51B5A93FDD140FB5535D51 /* Pods-doordeck-sdk-swift-acknowledgements.plist */,
+				996B37974D073888D8A07FE27F2F5ECE /* Pods-doordeck-sdk-swift-dummy.m */,
+				2F6EC62C5EF44EB80BF482C40E36C2DB /* Pods-doordeck-sdk-swift-Info.plist */,
+				DA88D1A1D6E774DE66A4926C2137FCBB /* Pods-doordeck-sdk-swift-umbrella.h */,
+				43003F69FF68DACF5056ECCECAA6A5B1 /* Pods-doordeck-sdk-swift.debug.xcconfig */,
+				247A9980821B7B1626EF659C363AF91A /* Pods-doordeck-sdk-swift.release.xcconfig */,
+			);
+			name = "Pods-doordeck-sdk-swift";
+			path = "Target Support Files/Pods-doordeck-sdk-swift";
+			sourceTree = "<group>";
+		};
+		508DA5705509072A705EDC292309DCC3 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				118A406A7BE39C0269B188C9A4133FB3 /* AsyncStorage.swift */,
+				BA093A20E785808A678F380282D4D0AF /* DataSerializer.swift */,
+				6158DB63475464377B2A1179650CA953 /* Date+Extensions.swift */,
+				6340EE470483A53F0C4BE47C85D5648E /* DiskConfig.swift */,
+				5D8BDAB374EB328CDE9331539F8E8992 /* DiskStorage.swift */,
+				EF148BAF136202154CD505D6806EE442 /* Entry.swift */,
+				55D19028396F77BFEC5A17F60B0EBD94 /* ExpirationMode.swift */,
+				E4AB302B5BECF12D33A3F8694CAD154A /* Expiry.swift */,
+				C667AF0BBB995626DBFFE29A088F30A9 /* HybridStorage.swift */,
+				FA79B384B54A0A36F4D5159931666887 /* ImageWrapper.swift */,
+				AF20FC674397EEED93BB665A98FC7EA4 /* JSONArrayWrapper.swift */,
+				4501D989E420D1DC76E869B06EE89511 /* JSONDecoder+Extensions.swift */,
+				B3F5C0CFB9F0D39E4EC4BED6C0A51736 /* JSONDictionaryWrapper.swift */,
+				86D9D25F8A7637A4332E0BB0D74F1468 /* KeyObservationRegistry.swift */,
+				E8C71542B2687DF630FADAFFD6D1E788 /* MD5.swift */,
+				BC19C156C2F0661B148EB8964D84674A /* MemoryCapsule.swift */,
+				386F5A7211E1AE3A4F39B11FAE39D0F8 /* MemoryConfig.swift */,
+				72CD18F7D7479F3D0ACFF7B5725FEE61 /* MemoryStorage.swift */,
+				46E1D20EB657BD74EE066B90264E87DB /* ObservationToken.swift */,
+				849B48C086EBF031CAAACA481A442713 /* Optional+Extension.swift */,
+				8771F300183A8DF15CDEEA2B5A71A4A9 /* Result.swift */,
+				8A27A8FE53CDFFF429314CA9260FF503 /* Storage.swift */,
+				E64E781A16851BF16878C0CD6BF2A905 /* Storage+Transform.swift */,
+				5FF0EED3325BFF8F9CB95BD9420D1DCA /* StorageAware.swift */,
+				F1F6B9F1158BA00F068B242DF8646E13 /* StorageError.swift */,
+				008B4500A50E0470B6CB60763020FABF /* StorageObservationRegistry.swift */,
+				FDAFDC95257648AEC3790DB50203E600 /* SyncStorage.swift */,
+				ABF80BE0D578E610F5CE73B4D3CC0848 /* Transformer.swift */,
+				D0B1EFE9E650CD8533B524981A9FB7DC /* TransformerFactory.swift */,
+				61D39500C3A9F99CBADBD1F40E812EC5 /* Types.swift */,
+				B7139513877587403DEB8BCFFF7E2773 /* TypeWrapper.swift */,
+				A4DA70EB3B93B42FD919D9E0D6979073 /* UIImage+Extensions.swift */,
+				58D8BAC358DB452A2C489A97512DCBB0 /* Support Files */,
+			);
+			name = Cache;
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		566C0AD6DF7DCC99A84EA76331FD5E83 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				321D4D3A7C625FBE087E1A079E6A4573 /* SwiftyRSA.modulemap */,
+				67C843DBE6D2096283A9B7BA955FD337 /* SwiftyRSA.xcconfig */,
+				66DF886953A27D384A1500299EEE71D6 /* SwiftyRSA-dummy.m */,
+				7B31D566A74A80C59688FF70F8206448 /* SwiftyRSA-Info.plist */,
+				60E4477FC6DED1FCD1B0E2E801B797AA /* SwiftyRSA-prefix.pch */,
+				58B111858AF0AE416D92809FC3144EA3 /* SwiftyRSA-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyRSA";
+			sourceTree = "<group>";
+		};
+		584D419F1D741BC791A5418E16F2493E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C649D6BF2D11DF94B8EE5E66901C2A77 /* QRCodeReader.swift.modulemap */,
+				99D92BBC0F26A664A5B3998B19260AC2 /* QRCodeReader.swift.xcconfig */,
+				7CDCEAE48A5D640A6FFD3C063400EE8B /* QRCodeReader.swift-dummy.m */,
+				9AA53B6C7C2FC43C581BA43B2CB9F381 /* QRCodeReader.swift-Info.plist */,
+				669E9615105E9986B8232B8B1B002E3B /* QRCodeReader.swift-prefix.pch */,
+				75630CE046DA9743B88C6224A783B6A0 /* QRCodeReader.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QRCodeReader.swift";
+			sourceTree = "<group>";
+		};
+		58D8BAC358DB452A2C489A97512DCBB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EEA6A2F92061EBAC72E0485EFB41F16 /* Cache.modulemap */,
+				D796344F4D6C4B463080919C9583586B /* Cache.xcconfig */,
+				5B5F01F4225773FCCF14A5BEA0F8510C /* Cache-dummy.m */,
+				25A5773161E96ED132E2E3525DB4F8F4 /* Cache-Info.plist */,
+				F4C7A7CAC0C8EFEA8369C9BE13EC0D1B /* Cache-prefix.pch */,
+				1FCC6F349E5C9FB7DD87AE313D247949 /* Cache-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cache";
+			sourceTree = "<group>";
+		};
+		622155B7D6B3106DAEB75EED38E0CA50 /* ReachabilitySwift */ = {
+			isa = PBXGroup;
+			children = (
+				14830ACD0F93E31D3F643244EDA7C20B /* Reachability.swift */,
+				2DE937330BFCAEC34B2F605308E391DD /* Support Files */,
+			);
+			name = ReachabilitySwift;
+			path = ReachabilitySwift;
+			sourceTree = "<group>";
+		};
+		7F68EB12A4380526EBAD7E5DF41409FB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E45C54950965F7B9CE34BA0401581 /* AVFoundation.framework */,
+				D7B53EF92234B50EA03D078DAEEE47EE /* Foundation.framework */,
+				EF12841B9ABAC71B51173A9C04F320BA /* Security.framework */,
+				76A2B49E48FC51474448AE75C91065D6 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		89D19C23B6A0B21708F6F15629A714B0 /* QRCodeReader.swift */ = {
+			isa = PBXGroup;
+			children = (
+				2737DD8AC3A487915A13A9268B6AF617 /* QRCodeReader.swift */,
+				AF00B4C1C7FF131D7FBD5B3B40A990E6 /* QRCodeReaderResult.swift */,
+				E677118733DF87984EA99350BFAC7F38 /* QRCodeReaderView.swift */,
+				86D3F57848EF1F803BA6A613215DD655 /* QRCodeReaderViewContainer.swift */,
+				660770759C6288AE88E5F1C524DA5BB9 /* QRCodeReaderViewController.swift */,
+				CE11A79D8725FCC1AA6E65848EC82032 /* QRCodeReaderViewControllerBuilder.swift */,
+				74EC650A6B9ABFBD5199D2A10AB05EEB /* QRCodeReaderViewControllerDelegate.swift */,
+				7D484AD880F6B4F121B8503834400C1B /* ReaderOverlayView.swift */,
+				EFDFF0DDD8B9F56333BBC75DC8E132B9 /* SwitchCameraButton.swift */,
+				025A2288C4C469F619FC6AD3E466A07D /* ToggleTorchButton.swift */,
+				584D419F1D741BC791A5418E16F2493E /* Support Files */,
+			);
+			name = QRCodeReader.swift;
+			path = QRCodeReader.swift;
+			sourceTree = "<group>";
+		};
+		8E9760E4D71B68184D8A8905563502AE /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0021A4D2E3E8BDC35708E95F01855 /* SwiftyRSA+ObjC.swift */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F68EB12A4380526EBAD7E5DF41409FB /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC01338CD023F724CD36FF8491840CBB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9315FFE9D3FC510DD0C926C15A6701A0 /* Alamofire.modulemap */,
+				F8D6E371D987E37A28B6C421BCDE5FDB /* Alamofire.xcconfig */,
+				F288351EC7DE4DFB34636D1FC6034B39 /* Alamofire-dummy.m */,
+				D6226B10E1B51590988206B925ED63BE /* Alamofire-Info.plist */,
+				43B8C4BAEA404BC5FF3ABCA11829A4BC /* Alamofire-prefix.pch */,
+				BCFF1FF6A67DB69C2F82F2FE71D6B4DC /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				341D1E06BA6F57FAAF7E851F5B9D8A38 /* Pods */,
+				EDE4B7D0A2EFD5A27F1301E3ABF8F53C /* Products */,
+				2CD7E2B5408139DA6485D3A155CE9A1E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E12288077724AB714C9C7CB7AAD0B63B /* SwiftyRSA */ = {
+			isa = PBXGroup;
+			children = (
+				B076AE88FCD452F3ACD759CC949527DC /* Asn1Parser.swift */,
+				81BDD9FFF9977DED49D4E0EADDD2F0FF /* ClearMessage.swift */,
+				9ABFD18C026DC30DB083698816115065 /* EncryptedMessage.swift */,
+				8266363BD1302FF07FD3F26CAAF4996B /* Key.swift */,
+				0A254F8375FAEAB7BCBF170710BFEB26 /* Message.swift */,
+				466F59251FC0F41CEE5DD200832C74FE /* NSData+SHA.h */,
+				9647AC0BE6FF023906CFB75A872470D4 /* NSData+SHA.m */,
+				2B2EC0D5A327A02F07F0A71E87C41685 /* PrivateKey.swift */,
+				C5323DE281D783546316FD39CC3F93AA /* PublicKey.swift */,
+				957141E841B433139CC930590671AF7F /* Signature.swift */,
+				83B0BA4661CE4DF8CA3A4C489F694154 /* SwiftyRSA.h */,
+				823C70781419A6F6DFF24F2E72BB375E /* SwiftyRSA.swift */,
+				5715251AE00DD23C171F0203041E7E1A /* SwiftyRSAError.swift */,
+				8E9760E4D71B68184D8A8905563502AE /* ObjC */,
+				566C0AD6DF7DCC99A84EA76331FD5E83 /* Support Files */,
+			);
+			name = SwiftyRSA;
+			path = SwiftyRSA;
+			sourceTree = "<group>";
+		};
+		EDE4B7D0A2EFD5A27F1301E3ABF8F53C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED85263270A1661A43769E6829EF9D7E /* Alamofire.framework */,
+				1EDD867C192F4E0D8145E2ADA82FB299 /* Cache.framework */,
+				6A621CF200A6D76301DE770E456DD118 /* Pods_doordeck_sdk_swift.framework */,
+				C8FBAE07E841FC5112D37B3CDB1999EA /* Pods_doordeck_sdk_swiftTests.framework */,
+				FC4223ABA36F86A3BDA482FAAF36A75B /* QRCodeReader.framework */,
+				473C541F905E580EA529504F542C1513 /* Reachability.framework */,
+				3FA0DFC8968252FF09F1CD723FC8CA08 /* SwiftyRSA.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		023A9868AEABD0156ADDBEE1B4175173 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B898DB5018B43AEB65DD007F6C853C6 /* ReachabilitySwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9C0B4BB47A0D95113449FF3D3868DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFA99BB09988E20A1519BF8FDEEF23D /* NSData+SHA.h in Headers */,
+				8FE27501801E0411BFE6D41EA3EAA00D /* SwiftyRSA-umbrella.h in Headers */,
+				0F7B69CB77A42B49D078035FA581FE6A /* SwiftyRSA.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BA5E1EAC96BF2B435FE3853CDE4795 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E50A224C3D8523CA32F5F00474D10C6 /* Cache-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B95E6ED156932F2241E9196A104D16C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212BD7648867FF685D506899752509A1 /* Pods-doordeck-sdk-swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5BF814276B030159A9712EDCA7A0789 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9C1F6AACE326A7E188D2CA0EDAC49A /* Pods-doordeck-sdk-swiftTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0EB60F218752FC3D79D15E918966472 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F73A6C4046FD992FBC223EA2989AD97D /* QRCodeReader.swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		142096137792AA61C49224108116D6D8 /* Pods-doordeck-sdk-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C415FB607DADABAC61940507474FACAC /* Build configuration list for PBXNativeTarget "Pods-doordeck-sdk-swift" */;
+			buildPhases = (
+				8B95E6ED156932F2241E9196A104D16C /* Headers */,
+				BF853A595C8E29158E287834BDFA6AAB /* Sources */,
+				B5BD6FE7F853EA7E1ACB871F9429A763 /* Frameworks */,
+				1BA0423890B4825DCD89A0A40818BD96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA626DAFE52AEA062EC437BCCAF686B5 /* PBXTargetDependency */,
+				6C1FB7280F7AACF8EE8C3B4DA78F0330 /* PBXTargetDependency */,
+				906ED05C887DB4F971E49F0CD4F4AB05 /* PBXTargetDependency */,
+				A3E562C9AC7C0528ADD7A8DC069C83A6 /* PBXTargetDependency */,
+				4EEB08D54711E86660D5B08BCF26DDCE /* PBXTargetDependency */,
+			);
+			name = "Pods-doordeck-sdk-swift";
+			productName = "Pods-doordeck-sdk-swift";
+			productReference = 6A621CF200A6D76301DE770E456DD118 /* Pods_doordeck_sdk_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3383968E74B5371B20BB519B170DC7FD /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */,
+				D5AA45D825A16470CF437028AA29D88C /* Sources */,
+				F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */,
+				28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = ED85263270A1661A43769E6829EF9D7E /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		72B3094B61EEC4E1691D60AEC7B54BE8 /* ReachabilitySwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C6CF77404E9CDB3C5AEB6D3B701745 /* Build configuration list for PBXNativeTarget "ReachabilitySwift" */;
+			buildPhases = (
+				023A9868AEABD0156ADDBEE1B4175173 /* Headers */,
+				E7C119BFDE767C48D2D0B3ED012631B0 /* Sources */,
+				B318C4FF9F6F8112FDE31ED624F58319 /* Frameworks */,
+				62BD9215FA5EE227A24A6C7592C5B843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReachabilitySwift;
+			productName = ReachabilitySwift;
+			productReference = 473C541F905E580EA529504F542C1513 /* Reachability.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E6E2E3B1CF69C0B294855DD33A2B012 /* QRCodeReader.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40D7451E31AA283D518901268CA0AB50 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
+			buildPhases = (
+				F0EB60F218752FC3D79D15E918966472 /* Headers */,
+				6EA664709782160AF6C3DCC072956CDB /* Sources */,
+				195B6AF9CCE059E9420ECD4285F7836E /* Frameworks */,
+				51A4C718E5C1F7F278A3B2BE7E270EC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QRCodeReader.swift;
+			productName = QRCodeReader.swift;
+			productReference = FC4223ABA36F86A3BDA482FAAF36A75B /* QRCodeReader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1E23C72F8249A9DCCED876CFA80EA75 /* Pods-doordeck-sdk-swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC434AC460FEEFC34917A2F6E541045C /* Build configuration list for PBXNativeTarget "Pods-doordeck-sdk-swiftTests" */;
+			buildPhases = (
+				C5BF814276B030159A9712EDCA7A0789 /* Headers */,
+				97398FF608133FED5D0EED9B20B74462 /* Sources */,
+				78ABF65356E3F2ABA49260292B7DECC8 /* Frameworks */,
+				803A96C8B7A3F1DFF43EAD829B5BF80F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				571D887C887BFA6AD939D9AC625193FB /* PBXTargetDependency */,
+				60297C2062B92A749810C0A28F391B0C /* PBXTargetDependency */,
+				C49BFCBAAD264C1DFC36733D0B860672 /* PBXTargetDependency */,
+				192F57A60AAF06F7AABD45602E78B789 /* PBXTargetDependency */,
+				FEEBAB7D7FEDFB37759279D0E7387718 /* PBXTargetDependency */,
+			);
+			name = "Pods-doordeck-sdk-swiftTests";
+			productName = "Pods-doordeck-sdk-swiftTests";
+			productReference = C8FBAE07E841FC5112D37B3CDB1999EA /* Pods_doordeck_sdk_swiftTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CCDE4F4A0029CD419EC12F69669401CB /* Cache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FECA19279552E2348D289BD9C01DDE5 /* Build configuration list for PBXNativeTarget "Cache" */;
+			buildPhases = (
+				62BA5E1EAC96BF2B435FE3853CDE4795 /* Headers */,
+				A0E4948E1E74A0BFF39051031810D78C /* Sources */,
+				87F594957C39EAD1ED31CCFC4489798D /* Frameworks */,
+				3D70CD15A6BE7002AA3F2E5A732AA3B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cache;
+			productName = Cache;
+			productReference = 1EDD867C192F4E0D8145E2ADA82FB299 /* Cache.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2ADA774B703AD2D9E7EF946B166F0C4 /* SwiftyRSA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA57C7D6600748D8D17EFD13A5485D6F /* Build configuration list for PBXNativeTarget "SwiftyRSA" */;
+			buildPhases = (
+				1C9C0B4BB47A0D95113449FF3D3868DE /* Headers */,
+				01FB8CE89C3388D2393D0FDEFEBA1F84 /* Sources */,
+				412EF3772C7B836BF219EEC8A4C00FEB /* Frameworks */,
+				4606427D798DFDF6511730D0F37A7602 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyRSA;
+			productName = SwiftyRSA;
+			productReference = 3FA0DFC8968252FF09F1CD723FC8CA08 /* SwiftyRSA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = EDE4B7D0A2EFD5A27F1301E3ABF8F53C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3383968E74B5371B20BB519B170DC7FD /* Alamofire */,
+				CCDE4F4A0029CD419EC12F69669401CB /* Cache */,
+				142096137792AA61C49224108116D6D8 /* Pods-doordeck-sdk-swift */,
+				B1E23C72F8249A9DCCED876CFA80EA75 /* Pods-doordeck-sdk-swiftTests */,
+				8E6E2E3B1CF69C0B294855DD33A2B012 /* QRCodeReader.swift */,
+				72B3094B61EEC4E1691D60AEC7B54BE8 /* ReachabilitySwift */,
+				D2ADA774B703AD2D9E7EF946B166F0C4 /* SwiftyRSA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BA0423890B4825DCD89A0A40818BD96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D70CD15A6BE7002AA3F2E5A732AA3B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4606427D798DFDF6511730D0F37A7602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A4C718E5C1F7F278A3B2BE7E270EC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62BD9215FA5EE227A24A6C7592C5B843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		803A96C8B7A3F1DFF43EAD829B5BF80F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01FB8CE89C3388D2393D0FDEFEBA1F84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAAFE5E2F10076BB7714B90D0ADAA9C /* Asn1Parser.swift in Sources */,
+				C17DFB4333EA3268C637B143CFD6FB40 /* ClearMessage.swift in Sources */,
+				E57DEAC3AF1009254132B861275C5B29 /* EncryptedMessage.swift in Sources */,
+				3478F496B7BCC513BF312368933E6C43 /* Key.swift in Sources */,
+				17030B1A2E22AECC4ABAB640F861DC89 /* Message.swift in Sources */,
+				6EF25BEEA542D871A19EB8E72F548093 /* NSData+SHA.m in Sources */,
+				CC72C8C0E8185A844BEBD8EBC4CC150B /* PrivateKey.swift in Sources */,
+				C4A10D7374C6934A2E23DAA9A6B39804 /* PublicKey.swift in Sources */,
+				CBC1C29DA81E2D3C67EAF5FBE657881F /* Signature.swift in Sources */,
+				CA258E440DC4A57730289CCF19E98B65 /* SwiftyRSA+ObjC.swift in Sources */,
+				737957307DD5891DEB9057AA9545D7EB /* SwiftyRSA-dummy.m in Sources */,
+				AE7F080813163D730BB2D1899EA20288 /* SwiftyRSA.swift in Sources */,
+				546F54EE4CC26F273FC30845100574FB /* SwiftyRSAError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EA664709782160AF6C3DCC072956CDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36C39354A5F4C70119FC2519A104A001 /* QRCodeReader.swift in Sources */,
+				875F0AA1754462B9078A88DD3CD8937B /* QRCodeReader.swift-dummy.m in Sources */,
+				CECC6AF149A293B5CAF7E85CDE31C703 /* QRCodeReaderResult.swift in Sources */,
+				2E91E6215410B4D348162C8D31CE7CAF /* QRCodeReaderView.swift in Sources */,
+				9408F84B968564C8085F9717DA02B066 /* QRCodeReaderViewContainer.swift in Sources */,
+				75435545DC0832CD1DCDDEFE7BDB4D51 /* QRCodeReaderViewController.swift in Sources */,
+				3D5DE3E54C9BC64610B168B684132CB1 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				D8FF6521F8E2A581D171534A9CD47961 /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				8F1E604ECA40B9826697775301054EFF /* ReaderOverlayView.swift in Sources */,
+				C8AC227323B281DB6C211DF37B75406B /* SwitchCameraButton.swift in Sources */,
+				C64BABF01457281644CDF7BCAEE91412 /* ToggleTorchButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97398FF608133FED5D0EED9B20B74462 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D9334D6D9A2F2C05E63C71C6030B35 /* Pods-doordeck-sdk-swiftTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0E4948E1E74A0BFF39051031810D78C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0312EF66BFBF738EDB4B114865DD74F8 /* AsyncStorage.swift in Sources */,
+				3B45520096FAA2DD993A190CD7E7A7D1 /* Cache-dummy.m in Sources */,
+				57741B8C3C9EA7DFDE997A103E8056CE /* DataSerializer.swift in Sources */,
+				F5177BDDE47081944C5C7E6081265F83 /* Date+Extensions.swift in Sources */,
+				5E3C260E2AD9E9B12A40A97E8F5B98A3 /* DiskConfig.swift in Sources */,
+				409523081C49492DEEC6EF57FCF0DCE2 /* DiskStorage.swift in Sources */,
+				5B501EEADB471B2BB4E736A0B0BC63F3 /* Entry.swift in Sources */,
+				061E0914927E44AB270DAB81FDCD658D /* ExpirationMode.swift in Sources */,
+				8F59C8A4F285ED52258747A8EB537D34 /* Expiry.swift in Sources */,
+				B51EFF8A2B738E5D899C32DD63B62659 /* HybridStorage.swift in Sources */,
+				97BDE26FD6A9F63699DF31AA5507C86F /* ImageWrapper.swift in Sources */,
+				7B29B5AE63CFED6D96BCD01F75BB4253 /* JSONArrayWrapper.swift in Sources */,
+				50304BD6B3AD29436879A45C33D10195 /* JSONDecoder+Extensions.swift in Sources */,
+				B1779E04F707EF4D9C9FD0D3A465017D /* JSONDictionaryWrapper.swift in Sources */,
+				1CB3B1C942F8C4E330903BF32E1A0130 /* KeyObservationRegistry.swift in Sources */,
+				4CD5867A5E0A8B4EDBEC1557907114AE /* MD5.swift in Sources */,
+				4DAB232D242CF9F73918909734DB8CFE /* MemoryCapsule.swift in Sources */,
+				045631E32A93B4BE50CE2941BB051B4B /* MemoryConfig.swift in Sources */,
+				AFAB55A289AABD40510980BD1D7A3AD8 /* MemoryStorage.swift in Sources */,
+				599405FCA74D263548B11811472F4680 /* ObservationToken.swift in Sources */,
+				6BDD4A8B539F679716CE38D9673A3BC7 /* Optional+Extension.swift in Sources */,
+				F19653B53E672F88C33FA32D1554657D /* Result.swift in Sources */,
+				023E0D0662A2A8D9EB3695D11C1BDC3C /* Storage+Transform.swift in Sources */,
+				86E6427AA85C16852CAD2D75F71BCD71 /* Storage.swift in Sources */,
+				8E094528799BEF0D70D1D5CB5BED192D /* StorageAware.swift in Sources */,
+				4B85D3B3E54105FC07AB960F336D94A3 /* StorageError.swift in Sources */,
+				95495EB7E1B1025B17297932750C7653 /* StorageObservationRegistry.swift in Sources */,
+				A9025D91AFD62CE76239279DA42CA02A /* SyncStorage.swift in Sources */,
+				958B9D757C3616B5DDB8909115BA6642 /* Transformer.swift in Sources */,
+				17A75ED269F895BE170F3E190B9ACDE9 /* TransformerFactory.swift in Sources */,
+				A98160A42873E7CCBB9B6FD376BE6777 /* Types.swift in Sources */,
+				E923748187889885AB95126D62C07FEF /* TypeWrapper.swift in Sources */,
+				EBFA17EC9CAFF941CA20304E643FF6D0 /* UIImage+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF853A595C8E29158E287834BDFA6AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869E92807F1EC3BAA4B8BCC8F11B8350 /* Pods-doordeck-sdk-swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5AA45D825A16470CF437028AA29D88C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C82A0DC43F539E8961EE089DA2F55E2 /* AFError.swift in Sources */,
+				5B3C54D6CA47E67D0173D4998D5DA84D /* Alamofire-dummy.m in Sources */,
+				09369883A939A86D0CF866C9B1EB8949 /* Alamofire.swift in Sources */,
+				F1B43076C5E4AA3100AF90E970127D82 /* DispatchQueue+Alamofire.swift in Sources */,
+				8286D921D81F7BA1AEDB7185194EDC9A /* MultipartFormData.swift in Sources */,
+				980501A2BF77B6BD654CB772CA83F666 /* NetworkReachabilityManager.swift in Sources */,
+				8585189D0D8BF1302138ACCA1D8D8A41 /* Notifications.swift in Sources */,
+				5257F96980C8CE0C6ADA232B77F7E90F /* ParameterEncoding.swift in Sources */,
+				2D466CE6D91A39E651FA6AF708A2A801 /* Request.swift in Sources */,
+				93B86E7677061308E5D602D4AE89BAF2 /* Response.swift in Sources */,
+				D0A28826916584B0ED2DD4F43C1146D8 /* ResponseSerialization.swift in Sources */,
+				816D8F658A00AB47546F72A655192183 /* Result.swift in Sources */,
+				BFDD253057221EAD2A53C62928952315 /* ServerTrustPolicy.swift in Sources */,
+				240B9397F73CCBDC537707F9BC7A4511 /* SessionDelegate.swift in Sources */,
+				4131149580995BD1D66C6221F487A3C3 /* SessionManager.swift in Sources */,
+				7365FD63A89D0F66C595256355900917 /* TaskDelegate.swift in Sources */,
+				D654F916111BBECF57D0502292D2461A /* Timeline.swift in Sources */,
+				3103F0EB03335F8873ED5F3FF65032F0 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C119BFDE767C48D2D0B3ED012631B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2F216699E6D90296A36D354B9703130 /* Reachability.swift in Sources */,
+				A56BA8FD33388B5E1FED8A6BBC532987 /* ReachabilitySwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		192F57A60AAF06F7AABD45602E78B789 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReachabilitySwift;
+			target = 72B3094B61EEC4E1691D60AEC7B54BE8 /* ReachabilitySwift */;
+			targetProxy = 3B5455507917DE2784A8E6A7C964AE0A /* PBXContainerItemProxy */;
+		};
+		4EEB08D54711E86660D5B08BCF26DDCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyRSA;
+			target = D2ADA774B703AD2D9E7EF946B166F0C4 /* SwiftyRSA */;
+			targetProxy = 1D924BC9DF5A14D22BE61ADECBCEBC44 /* PBXContainerItemProxy */;
+		};
+		571D887C887BFA6AD939D9AC625193FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 3383968E74B5371B20BB519B170DC7FD /* Alamofire */;
+			targetProxy = 765324DAA9DC565A84EAAA1C7F3A27AF /* PBXContainerItemProxy */;
+		};
+		60297C2062B92A749810C0A28F391B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cache;
+			target = CCDE4F4A0029CD419EC12F69669401CB /* Cache */;
+			targetProxy = 58BA315B8FE32DB90DCDE6F0CE9B2080 /* PBXContainerItemProxy */;
+		};
+		6C1FB7280F7AACF8EE8C3B4DA78F0330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cache;
+			target = CCDE4F4A0029CD419EC12F69669401CB /* Cache */;
+			targetProxy = E0F6DD5CDF4E79B7D58C969AC799627E /* PBXContainerItemProxy */;
+		};
+		906ED05C887DB4F971E49F0CD4F4AB05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = 8E6E2E3B1CF69C0B294855DD33A2B012 /* QRCodeReader.swift */;
+			targetProxy = 0305DCDCDBE95EC0FC8B1C8E901DF003 /* PBXContainerItemProxy */;
+		};
+		A3E562C9AC7C0528ADD7A8DC069C83A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReachabilitySwift;
+			target = 72B3094B61EEC4E1691D60AEC7B54BE8 /* ReachabilitySwift */;
+			targetProxy = 215CC212A2BE92FBC7A58AF6A61FA421 /* PBXContainerItemProxy */;
+		};
+		C49BFCBAAD264C1DFC36733D0B860672 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = 8E6E2E3B1CF69C0B294855DD33A2B012 /* QRCodeReader.swift */;
+			targetProxy = 839D0D5B1F593DE2D55E6D516BF8860F /* PBXContainerItemProxy */;
+		};
+		FA626DAFE52AEA062EC437BCCAF686B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 3383968E74B5371B20BB519B170DC7FD /* Alamofire */;
+			targetProxy = 92F7EA92F991379F6EBC37E7FEEAC230 /* PBXContainerItemProxy */;
+		};
+		FEEBAB7D7FEDFB37759279D0E7387718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyRSA;
+			target = D2ADA774B703AD2D9E7EF946B166F0C4 /* SwiftyRSA */;
+			targetProxy = 077033A5395F4A4C5D4B659147A9D0AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E66A8A6CF176C01091342EE8E053C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4834CC01EE3F4D35390A3FB98F051318 /* Pods-doordeck-sdk-swiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3048B0C5C704DFFF688DA57F5380ED58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		37ECBB053BAD4AFA6A562C6F58D666E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C843DBE6D2096283A9B7BA955FD337 /* SwiftyRSA.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BE7D28BD53E06C66444116368D9E40B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C843DBE6D2096283A9B7BA955FD337 /* SwiftyRSA.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyRSA/SwiftyRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyRSA/SwiftyRSA.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyRSA;
+				PRODUCT_NAME = SwiftyRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3DFF72544295D813DAFA032C83294212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D796344F4D6C4B463080919C9583586B /* Cache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cache/Cache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cache/Cache-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cache/Cache.modulemap";
+				PRODUCT_MODULE_NAME = Cache;
+				PRODUCT_NAME = Cache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		56DAF98E59C51E165C4EAEDECFDF4E8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D92BBC0F26A664A5B3998B19260AC2 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_MODULE_NAME = QRCodeReader;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59BC2847441E8D6A412D4D0D8E8E4166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D92BBC0F26A664A5B3998B19260AC2 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_MODULE_NAME = QRCodeReader;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5B0C8287D755FD95091CF35D87FB8B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		85434C152C7A87099DF15325E59AEF77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D79B96094A71F030984B0C22B7FBDC /* ReachabilitySwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8EEF9B5CECBE995B659828CE9CBDEBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 247A9980821B7B1626EF659C363AF91A /* Pods-doordeck-sdk-swift.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		93CDBA621A59C57A14BF3CB94E986146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D796344F4D6C4B463080919C9583586B /* Cache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cache/Cache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cache/Cache-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cache/Cache.modulemap";
+				PRODUCT_MODULE_NAME = Cache;
+				PRODUCT_NAME = Cache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9CF36E6AA46D597086D835E1724A4D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D6E371D987E37A28B6C421BCDE5FDB /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B914025A518B53556696F19D8D477057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D6E371D987E37A28B6C421BCDE5FDB /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C12E512B02E2968CD4CA69B999FE67D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43003F69FF68DACF5056ECCECAA6A5B1 /* Pods-doordeck-sdk-swift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CCBB2CB63B98F63FBAD6911F43D497BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110C075C9937AEA1097E66252850AB80 /* Pods-doordeck-sdk-swiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F5547500B1657E2CE9C5C561AD3475B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D79B96094A71F030984B0C22B7FBDC /* ReachabilitySwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40D7451E31AA283D518901268CA0AB50 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56DAF98E59C51E165C4EAEDECFDF4E8E /* Debug */,
+				59BC2847441E8D6A412D4D0D8E8E4166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B0C8287D755FD95091CF35D87FB8B2D /* Debug */,
+				3048B0C5C704DFFF688DA57F5380ED58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FECA19279552E2348D289BD9C01DDE5 /* Build configuration list for PBXNativeTarget "Cache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DFF72544295D813DAFA032C83294212 /* Debug */,
+				93CDBA621A59C57A14BF3CB94E986146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C6CF77404E9CDB3C5AEB6D3B701745 /* Build configuration list for PBXNativeTarget "ReachabilitySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85434C152C7A87099DF15325E59AEF77 /* Debug */,
+				F5547500B1657E2CE9C5C561AD3475B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C415FB607DADABAC61940507474FACAC /* Build configuration list for PBXNativeTarget "Pods-doordeck-sdk-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C12E512B02E2968CD4CA69B999FE67D7 /* Debug */,
+				8EEF9B5CECBE995B659828CE9CBDEBCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC434AC460FEEFC34917A2F6E541045C /* Build configuration list for PBXNativeTarget "Pods-doordeck-sdk-swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCBB2CB63B98F63FBAD6911F43D497BB /* Debug */,
+				1E66A8A6CF176C01091342EE8E053C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA57C7D6600748D8D17EFD13A5485D6F /* Build configuration list for PBXNativeTarget "SwiftyRSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37ECBB053BAD4AFA6A562C6F58D666E6 /* Debug */,
+				3BE7D28BD53E06C66444116368D9E40B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B914025A518B53556696F19D8D477057 /* Debug */,
+				9CF36E6AA46D597086D835E1724A4D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
