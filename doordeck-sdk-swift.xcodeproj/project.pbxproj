@@ -199,16 +199,16 @@
 		593B1CBD2244FB3200BE5E67 /* doordeck-sdk-swift */ = {
 			isa = PBXGroup;
 			children = (
+				593B1CBE2244FB3200BE5E67 /* doordeck_sdk_swift.h */,
+				59B4456A224D137200555081 /* InitializeDoordeck.swift */,
 				593B1CD922452B0300BE5E67 /* Aux */,
 				59654A77225F4E7F00C7B478 /* Dependencies */,
-				59B4456A224D137200555081 /* InitializeDoordeck.swift */,
 				593B1CD522451E8900BE5E67 /* Lock */,
 				593B1CD82245285900BE5E67 /* Network */,
 				5966A60F224A9BED008C4665 /* Security */,
 				593B1CDC22452B5300BE5E67 /* Styles */,
 				59B44581224D551700555081 /* Quick Entry */,
 				593B1CEE2246639600BE5E67 /* Util */,
-				593B1CBE2244FB3200BE5E67 /* doordeck_sdk_swift.h */,
 				593B1CBF2244FB3200BE5E67 /* Info.plist */,
 			);
 			path = "doordeck-sdk-swift";

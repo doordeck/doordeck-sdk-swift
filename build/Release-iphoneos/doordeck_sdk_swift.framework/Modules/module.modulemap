@@ -1,0 +1,11 @@
+framework module doordeck_sdk_swift {
+  umbrella header "doordeck_sdk_swift.h"
+
+  export *
+  module * { export * }
+}
+
+module doordeck_sdk_swift.Swift {
+    header "doordeck_sdk_swift-Swift.h"
+    requires objc
+}

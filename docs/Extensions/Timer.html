@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Timer Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Timer" class="dashAnchor"></a>
+    <a title="Timer Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">doordeck_sdk_swift Docs</a> (13% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">doordeck_sdk_swift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Timer Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AFRequest.html">AFRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/APIClient.html">APIClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/APIClient/error.html">– error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/APIClient/deviceStatus.html">– deviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BottomViewController.html">BottomViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BottomViewControllerQR.html">BottomViewControllerQR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Doordeck.html">Doordeck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Doordeck/ReaderType.html">– ReaderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Doordeck/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Header.html">Header</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Header/HeaderType.html">– HeaderType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Header/version.html">– version</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JsonHelper.html">JsonHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeychainHelper.html">KeychainHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockDevice.html">LockDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockDevice/currentUnlockProgress.html">– currentUnlockProgress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockDevice/lockSizeOptions.html">– lockSizeOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockManager.html">LockManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockManager/deviceError.html">– deviceError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LockUnlockViewController.html">LockUnlockViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QuickEntryViewController.html">QuickEntryViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReachabilityHelper.html">ReachabilityHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Site.html">Site</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SodiumHelper.html">SodiumHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TokenHelper.html">TokenHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TokenHelper/TokenType.html">– TokenType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TokenHelper/ChangePassword.html">– ChangePassword</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Util.html">Util</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WhereAmI.html">WhereAmI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/cacheHelper.html">cacheHelper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/doordeckNotifications.html">doordeckNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Fonts.html">Fonts</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/KeychainError.html">KeychainError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PrintChannel.html">PrintChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WAIGeocoderResponse.html">WAIGeocoderResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WAILocationAuthorization.html">WAILocationAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WAILocationProfile.html">WAILocationProfile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WAILocationResponse.html">WAILocationResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NFCNDEFPayload.html">NFCNDEFPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification.html">NSNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSNotification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Timer.html">Timer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIApplication.html">UIApplication</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice/BatteryState.html">– BatteryState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UUID.html">UUID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UserDefaults.html">UserDefaults</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:18doordeck_sdk_swift5print_6objectyAA12PrintChannelO_yptF">print(_:object:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:18doordeck_sdk_swift15whatIsThisPlaceyyyAA19WAIGeocoderResponseOcF">whatIsThisPlace(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:18doordeck_sdk_swift8whereAmIyyyAA19WAILocationResponseOcF">whereAmI(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DoordeckProtocol.html">DoordeckProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeychainHelperProtocol.html">KeychainHelperProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationProfile.html">LocationProfile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/quickEntryDelegate.html">quickEntryDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AppStrings.html">AppStrings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AuthTokenClass.html">AuthTokenClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LocationServices.html">LocationServices</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryManager.html">QueryManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SiteLocation.html">SiteLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/URLManager.html">URLManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VisitorPass.html">VisitorPass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/lockUnlockScreen.html">lockUnlockScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/lockUnlockScreen/executionOrigin.html">– executionOrigin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/shareableLocks.html">shareableLocks</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18doordeck_sdk_swift22WAIAuthorizationResulta">WAIAuthorizationResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18doordeck_sdk_swift17WAILocationUpdatea">WAILocationUpdate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:18doordeck_sdk_swift31WAIReversGeocodedLocationResulta">WAIReversGeocodedLocationResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Timer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Timer</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Schedule%20timers"></a>
+                <a name="//apple_ref/swift/Section/Schedule timers" class="dashAnchor"></a>
+                <a href="#/Schedule%20timers">
+                  <h3 class="section-name">Schedule timers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE5afteryABSd_yyctFZ"></a>
+                    <a name="//apple_ref/swift/Method/after(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE5afteryABSd_yyctFZ">after(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create and schedule a timer that will call <code>block</code> once after the specified time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">after</span><span class="p">(</span><span class="n">_</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Timer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE5everyyABSd_yyctFZ"></a>
+                    <a name="//apple_ref/swift/Method/every(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE5everyyABSd_yyctFZ">every(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create and schedule a timer that will call <code>block</code> repeatedly in specified time intervals.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">every</span><span class="p">(</span><span class="n">_</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Timer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE5everyyABSd_yABctFZ"></a>
+                    <a name="//apple_ref/swift/Method/every(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE5everyyABSd_yABctFZ">every(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create and schedule a timer that will call <code>block</code> repeatedly in specified time intervals.
+(This variant also passes the timer instance to the block)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@nonobjc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">every</span><span class="p">(</span><span class="n">_</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Timer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Timer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Create%20timers%20without%20scheduling"></a>
+                <a name="//apple_ref/swift/Section/Create timers without scheduling" class="dashAnchor"></a>
+                <a href="#/Create%20timers%20without%20scheduling">
+                  <h3 class="section-name">Create timers without scheduling</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE3new5after_ABSd_yyctFZ"></a>
+                    <a name="//apple_ref/swift/Method/new(after:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE3new5after_ABSd_yyctFZ">new(after:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a timer that will call <code>block</code> once after the specified time.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The timer won&rsquo;t fire until it&rsquo;s scheduled on the run loop.
+    Use <code>NSTimer.after</code> to create and schedule a timer in one step.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The <code>new</code> class function is a workaround for a crashing bug when using convenience initializers (rdar://18720947)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">new</span><span class="p">(</span><span class="n">after</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Timer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE3new5every_ABSd_yyctFZ"></a>
+                    <a name="//apple_ref/swift/Method/new(every:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE3new5every_ABSd_yyctFZ">new(every:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a timer that will call <code>block</code> repeatedly in specified time intervals.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The timer won&rsquo;t fire until it&rsquo;s scheduled on the run loop.
+    Use <code>NSTimer.every</code> to create and schedule a timer in one step.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The <code>new</code> class function is a workaround for a crashing bug when using convenience initializers (rdar://18720947)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">new</span><span class="p">(</span><span class="n">every</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Timer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE3new5every_ABSd_yABctFZ"></a>
+                    <a name="//apple_ref/swift/Method/new(every:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE3new5every_ABSd_yABctFZ">new(every:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a timer that will call <code>block</code> repeatedly in specified time intervals.
+(This variant also passes the timer instance to the block)</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The timer won&rsquo;t fire until it&rsquo;s scheduled on the run loop.
+    Use <code>NSTimer.every</code> to create and schedule a timer in one step.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The <code>new</code> class function is a workaround for a crashing bug when using convenience initializers (rdar://18720947)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@nonobjc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">new</span><span class="p">(</span><span class="n">every</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Timer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Timer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Manual%20scheduling"></a>
+                <a name="//apple_ref/swift/Section/Manual scheduling" class="dashAnchor"></a>
+                <a href="#/Manual%20scheduling">
+                  <h3 class="section-name">Manual scheduling</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSTimerC18doordeck_sdk_swiftE5start7runLoop5modesySo05NSRunG0C_So0iG4ModeadtF"></a>
+                    <a name="//apple_ref/swift/Method/start(runLoop:modes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSTimerC18doordeck_sdk_swiftE5start7runLoop5modesySo05NSRunG0C_So0iG4ModeadtF">start(runLoop:modes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Schedule this timer on the run loop</p>
+
+<p>By default, the timer is scheduled on the current run loop for the default mode.
+Specify <code>runLoop</code> or <code>modes</code> to override these defaults.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">runLoop</span><span class="p">:</span> <span class="kt">RunLoop</span> <span class="o">=</span> <span class="o">.</span><span class="n">current</span><span class="p">,</span> <span class="nv">modes</span><span class="p">:</span> <span class="kt">RunLoop</span><span class="o">.</span><span class="kt">Mode</span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/doordeck/doordeck-sdk-swift" target="_blank" rel="external">Doordeck</a>. All rights reserved. (Last updated: 2019-04-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
