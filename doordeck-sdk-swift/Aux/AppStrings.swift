@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Strings used by Doordeck.
 struct AppStrings {
     static let error: String = NSLocalizedString("Error", comment: "")
     static let ok: String = NSLocalizedString("OK", comment: "")
@@ -25,10 +26,10 @@ struct AppStrings {
     static let unlockSuccess: String = NSLocalizedString("Unlock success", comment: "")
     static let unlockFail: String = NSLocalizedString("Unlock failed", comment: "")
     static let gpsFailed: String = NSLocalizedString("GPS failed", comment: "")
-    static let gpsSucess: String = NSLocalizedString("GPS sucess", comment: "")
+    static let gpssuccess: String = NSLocalizedString("GPS success", comment: "")
     static let gpsSearching: String = NSLocalizedString("GPS searching", comment: "")
     static let gpsUnauthorized: String = NSLocalizedString("GPS usage is unauthorised", comment: "")
-    static let timeWindowSucess: String = NSLocalizedString("Timer sucess", comment: "")
+    static let timeWindowsuccess: String = NSLocalizedString("Timer success", comment: "")
     static let timeWindowFailed: String = NSLocalizedString("Timer failed", comment: "")
     static let other: String = NSLocalizedString("Other errors", comment: "")
     
@@ -52,14 +53,14 @@ struct AppStrings {
             return AppStrings.unlockFail
         case .gpsFailed:
             return AppStrings.gpsFailed
-        case .gpsSucess:
-            return AppStrings.gpsSucess
+        case .gpssuccess:
+            return AppStrings.gpssuccess
         case .gpsSearching:
             return AppStrings.gpsSearching
         case .gpsUnauthorized:
             return AppStrings.gpsUnauthorized
-        case .timeWindowSucess:
-            return AppStrings.timeWindowSucess
+        case .timeWindowsuccess:
+            return AppStrings.timeWindowsuccess
         case .timeWindowFailed:
             return AppStrings.timeWindowFailed
         case .other:

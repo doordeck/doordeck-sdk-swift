@@ -18,7 +18,7 @@ class TokenHelper {
         self.token = token
     }
     
-    func tokenActive (_ sucess:() -> Void , fail: () -> Void) {
+    func tokenActive (_ success:() -> Void , fail: () -> Void) {
         
         self.decrypt() { (tokenDecrypt, error) in
             
@@ -27,7 +27,7 @@ class TokenHelper {
                 return
             }
             if self.tokenStillActive(tokenDecrypt!) {
-                sucess()
+                success()
             } else {
                 fail()
             }

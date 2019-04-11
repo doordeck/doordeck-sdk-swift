@@ -1,6 +1,7 @@
 import Foundation
 
 
+/// A site can have a location associated with it
 struct SiteLocation {
     var enabled = false
     var latitude: Double = 0.0
@@ -8,6 +9,7 @@ struct SiteLocation {
     var radius = 0
 }
 
+/// This is the site object class, this is nit currently used in the SDK
 class Site {
     
     var pinnedLocks: [LockDevice]  {

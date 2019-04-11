@@ -14,7 +14,7 @@
     <a title="deviceError Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html">doordeck_sdk_swift Docs</a> (13% documented)</p>
+        <p><a href="../../index.html">doordeck_sdk_swift Docs</a> (16% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -293,7 +293,22 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>possible errors for the lock</p>
+
+<ul>
+<li>unsuccessfull: Unsuccessfull error on unlock</li>
+<li>deviceAlreadyUnlocked: Device has already been unlocked and has not locked yet</li>
+<li>deviceAlreadyLocked: Device has already been locked</li>
+<li>gpsDenied: The device does not have permission to access the GPS</li>
+<li>gpsNotDetermined: GPS caanot be obtined</li>
+<li>gpsFailedPosition: The GPS lock has timed out or failed</li>
+<li>gpsOutsideArea: Outside the permitted area to unlock this device</li>
+<li>deviceVistorPassEarly: The visitor pass is not yet active</li>
+<li>deviceVistorPassExpired: The visitor pass has expired</li>
+<li>invalidToken: The Token used in invalid</li>
+<li>invalidDevice: The device is invalid</li>
+<li>invalidData: The data returned by the server is invalid</li>
+</ul>
 
           </section>
           <section class="section task-group-section">

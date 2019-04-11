@@ -9,14 +9,31 @@
 import Foundation
 import UIKit
 
+/**
+ Backgrounds colour for Light (Light Grey) and Dark (primary dark blue)
+ 
+ - Parameters:
+ - Used for all backgrounds
+ - Dark: primary dark blue
+ - Light: Light Grey
+ - Returns: UIColor
+ */
 protocol DoordeckProtocol {
     func newAuthTokenRequired() -> AuthTokenClass
     func unlockSuccessful()
 }
 
 
+/**
+ `Doordeck` is the main class initialised by the application object.
+ We recommend this is initialised as soon as possible, the `Initialize` method, we will start the necessary checks to check verifying the AuthToken.
+ If you do not pre initialise Doordeck this will done when the user unlocks a lock.
+ */
 public class Doordeck {
     
+    /**
+     The reader type is the Quick scan option, if the application wishes to override the default, if an option is chosen that is not supported it will be ignored.
+     */
     public enum ReaderType {
         case automatic
         case nfc
@@ -37,6 +54,10 @@ public class Doordeck {
     fileprivate var apiClient: APIClient!
     fileprivate var sodium: SodiumHelper!
     
+
+    /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server,
+    ///
+    /// - Parameter token: AuthTokenClass contains user Auth Token.
     public init(_ token: AuthTokenClass) {
         self.token = token
         let header = Header().createSDKAuthHeader(.v1, token: token)
@@ -44,6 +65,8 @@ public class Doordeck {
         self.sodium = SodiumHelper(token)
     }
     
+
+    /// Use this method to pre-initialise the server checks, this will make unlocking faster.
     public func Initialize() {
         checkTokenIsValid({ [weak self] in
             self?.currentState = .authenticated
@@ -54,42 +77,68 @@ public class Doordeck {
         }
     }
     
-    public func showUnlockScreen(_ readerType: ReaderType = ReaderType.automatic, sucess:@escaping () -> Void , fail: @escaping () -> Void)  {
+    /// will start unlock procedure.
+    ///
+    /// - Parameters:
+    ///   - readerType: Reader type can be specified to .nfc or .QR Or automatic
+    ///   - success: This is called on success of device unlock
+    ///   - fail: This is called on fail device unlock
+    public func showUnlockScreen(_ readerType: ReaderType = ReaderType.automatic, success:@escaping () -> Void , fail: @escaping () -> Void)  {
         self.readerType = readerType
         switch currentState {
         case .authenticated:
-            preInitializeShowUnlock(sucess, fail: fail)
+            preInitializeShowUnlock(success, fail: fail)
             break
             
         case .notAuthenticated:
-            initializeShowUnlock(sucess, fail: fail)
+            initializeShowUnlock(success, fail: fail)
             break
             
         case .verificationRequired :
-            showVerificationScreen(sucess, fail: fail)
+            showVerificationScreen(success, fail: fail)
             break
         }
     }
     
-    fileprivate func showVerificationScreen (_ sucess:() -> Void , fail: () -> Void) {
+    /// Will be called, if the state of the app is .verificationRequired, this will mean the user will get a 2FA request
+    ///
+    /// - Parameters:
+    ///   - success: called on success
+    ///   - fail: called on failure
+    fileprivate func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
         
     }
     
-    fileprivate func preInitializeShowUnlock (_ sucess:() -> Void , fail: () -> Void) {
-        sucess()
-        self.showUnlockScreenSucess()
+    /// Show Doordeck reader and unlock UI, authentications have been completed
+    ///
+    /// - Parameters:
+    ///   - success: called on success
+    ///   - fail: called on failure
+    fileprivate func preInitializeShowUnlock (_ success:() -> Void , fail: () -> Void) {
+        success()
+        self.showUnlockScreensuccess()
     }
     
-    fileprivate func initializeShowUnlock (_ sucess:@escaping () -> Void , fail: @escaping () -> Void) {
+    
+    /// Check if token is valid followed by unlock reader.
+    ///
+    /// - Parameters:
+    ///   - success: called on success
+    ///   - fail: called on failure
+    fileprivate func initializeShowUnlock (_ success:@escaping () -> Void , fail: @escaping () -> Void) {
         checkTokenIsValid({ [weak self] in
-            sucess()
-            self?.showUnlockScreenSucess()
+            success()
+            self?.showUnlockScreensuccess()
         }) { [weak self] in
             fail()
             self?.updateAuthToken(self?.delegate?.newAuthTokenRequired())
         }
     }
     
+    
+    /// If a token is invalid the delegate will request a new token from the host app.
+    ///
+    /// - Parameter token: new AuthTokenClass from the Host application
     fileprivate func updateAuthToken (_ token: AuthTokenClass?) {
         guard let tokenTemp: AuthTokenClass = token else { return }
         self.token = tokenTemp
@@ -98,7 +147,8 @@ public class Doordeck {
         self.sodium = SodiumHelper(self.token)
     }
     
-    fileprivate func showUnlockScreenSucess () {
+    /// Show unlock reader, this will be added to the top view controller.
+    fileprivate func showUnlockScreensuccess () {
         guard let view:UIViewController = UIApplication.topViewController() else { return }
         let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
         let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
@@ -110,10 +160,15 @@ public class Doordeck {
         view.present(navigationController, animated: true, completion: nil)
     }
     
-    fileprivate func checkTokenIsValid(_ sucess:@escaping () -> Void , fail: @escaping () -> Void) {
+    /// Check if a token is valid, the date of expiry is first checked on device, the device then sends the key to the server on success of token check.
+    ///
+    /// - Parameters:
+    ///   - success: Sucess
+    ///   - fail: Token is invalid or out of date, or the key has not been sent to the server
+    fileprivate func checkTokenIsValid(_ success:@escaping () -> Void , fail: @escaping () -> Void) {
         TokenHelper(token).tokenActive( { [weak self] in
             self?.sendKeyToServer({
-                sucess()
+                success()
             }, fail: {
                 fail()
             })
@@ -122,8 +177,13 @@ public class Doordeck {
         }
     }
     
-    fileprivate func sendKeyToServer(_ sucess:@escaping () -> Void , fail: @escaping () -> Void) {
-        
+    /// Send the key to the server. The key is created if it does not exist and sent to the server
+    /// if it does exist the key is retrived and sent to the server.
+    ///
+    /// - Parameters:
+    ///   - success: sucess
+    ///   - fail: fail could mean an error retrieving the key or sending it to the server.
+    fileprivate func sendKeyToServer(_ success:@escaping () -> Void , fail: @escaping () -> Void) {
         guard let publicKey = sodium.getKeyPair() else {
             fail()
             return
@@ -134,7 +194,7 @@ public class Doordeck {
                 fail()
                 self?.currentState = .notAuthenticated
             } else {
-                sucess()
+                success()
                 self?.currentState = .authenticated
             }
             

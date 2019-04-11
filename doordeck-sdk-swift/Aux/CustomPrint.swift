@@ -29,6 +29,12 @@ fileprivate func debug () -> Bool {
 #endif
 }
 
+/// print function to replace apples built in ones, channels allow you to silence certain aspects of the print
+/// on anything but debug all the print is disabled.
+///
+/// - Parameters:
+///   - channel: specify a print channel to all print only important output
+///   - object: the object you would like to print to the console
 func print(_ channel: PrintChannel, object: Any) {
     if debug() {
         var printOut: Bool = false

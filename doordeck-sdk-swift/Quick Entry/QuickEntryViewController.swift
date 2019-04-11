@@ -104,7 +104,7 @@ extension QuickEntryViewController: quickEntryDelegate {
     
     
     func showLockVerificationScreen(_ UUID: String, autoUnlock:Bool = false) {
-        lockMan.findLock(UUID, sucess: { [weak self] (lock) in
+        lockMan.findLock(UUID, success: { [weak self] (lock) in
             self?.showLockScreen(lock)
         }) {
             //to-do need to do something 

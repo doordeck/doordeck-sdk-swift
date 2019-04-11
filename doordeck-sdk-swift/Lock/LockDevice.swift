@@ -29,10 +29,10 @@ class LockDevice {
         case unlockSuccess
         case unlockFail
         case gpsFailed
-        case gpsSucess
+        case gpssuccess
         case gpsSearching
         case gpsUnauthorized
-        case timeWindowSucess
+        case timeWindowsuccess
         case timeWindowFailed
         case other
     }
@@ -190,7 +190,7 @@ class LockDevice {
         update(status)
     }
     
-    fileprivate func GPSCheck(_ Sucess: @escaping () -> Void, fail : @escaping (LockManager.deviceError) -> Void) {
+    fileprivate func GPSCheck(_ success: @escaping () -> Void, fail : @escaping (LockManager.deviceError) -> Void) {
         if let locServices = locationServices {
             if locServices.enabled == true {
                 deviceStatusUpdate(.gpsSearching)
@@ -226,8 +226,8 @@ class LockDevice {
                         let lockLocation = CLLocation(latitude: locServices.latitude, longitude: locServices.longitude)
                         let distance = watchLocation.distance(from: lockLocation)
                         if (distance < Double(locServices.radius)) {
-                            self.deviceStatusUpdate(.gpsSucess)
-                            Sucess()
+                            self.deviceStatusUpdate(.gpssuccess)
+                            success()
                         } else {
                             self.deviceStatusUpdate(.gpsFailed)
                             fail(.gpsOutsideArea)
@@ -245,10 +245,10 @@ class LockDevice {
                     }
                 }
             } else {
-                Sucess()
+                success()
             }
         } else {
-            Sucess()
+            success()
         }
     }
     

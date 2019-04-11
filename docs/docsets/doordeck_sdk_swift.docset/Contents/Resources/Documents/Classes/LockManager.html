@@ -14,7 +14,7 @@
     <a title="LockManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">doordeck_sdk_swift Docs</a> (13% documented)</p>
+        <p><a href="../index.html">doordeck_sdk_swift Docs</a> (16% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -293,7 +293,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The lock manager will help with organising, finding and updating locks</p>
 
           </section>
           <section class="section task-group-section">
@@ -312,7 +312,22 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>possible errors for the lock</p>
+
+<ul>
+<li>unsuccessfull: Unsuccessfull error on unlock</li>
+<li>deviceAlreadyUnlocked: Device has already been unlocked and has not locked yet</li>
+<li>deviceAlreadyLocked: Device has already been locked</li>
+<li>gpsDenied: The device does not have permission to access the GPS</li>
+<li>gpsNotDetermined: GPS caanot be obtined</li>
+<li>gpsFailedPosition: The GPS lock has timed out or failed</li>
+<li>gpsOutsideArea: Outside the permitted area to unlock this device</li>
+<li>deviceVistorPassEarly: The visitor pass is not yet active</li>
+<li>deviceVistorPassExpired: The visitor pass has expired</li>
+<li>invalidToken: The Token used in invalid</li>
+<li>invalidDevice: The device is invalid</li>
+<li>invalidData: The data returned by the server is invalid</li>
+</ul>
 
                         <a href="../Classes/LockManager/deviceError.html" class="slightly-smaller">See more</a>
                       </div>
@@ -367,7 +382,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>init of the Lock manager, a api class needs to be passed in</p>
 
                       </div>
                       <div class="declaration">
@@ -378,15 +393,34 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiClient</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Api class needs to passed in</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:18doordeck_sdk_swift11LockManagerC04findD0_6sucess4failySS_yAA0D6DeviceCcyyctF"></a>
-                    <a name="//apple_ref/swift/Method/findLock(_:sucess:fail:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:18doordeck_sdk_swift11LockManagerC04findD0_6sucess4failySS_yAA0D6DeviceCcyyctF">findLock(_:sucess:fail:)</a>
+                    <a name="/s:18doordeck_sdk_swift11LockManagerC04findD0_7success4failySS_yAA0D6DeviceCcyyctF"></a>
+                    <a name="//apple_ref/swift/Method/findLock(_:success:fail:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18doordeck_sdk_swift11LockManagerC04findD0_7success4failySS_yAA0D6DeviceCcyyctF">findLock(_:success:fail:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -394,7 +428,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Find a lock from the UUID of a <q>Tile</q></p>
 
                       </div>
                       <div class="declaration">
@@ -402,10 +436,53 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">findLock</span><span class="p">(</span><span class="n">_</span> <span class="nv">uuid</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-              <span class="nv">sucess</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/LockDevice.html">LockDevice</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+              <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/LockDevice.html">LockDevice</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
               <span class="nv">fail</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uuid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UUID of the devie</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The lock has been found</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fail</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The lock has not been found</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
