@@ -10,7 +10,7 @@ struct shareableLocks {
 /// The lock manager will help with organising, finding and updating locks
 class LockManager {
     
-    /// possible errors for the lock
+    /// possible errors for the device
     ///
     /// - unsuccessfull: Unsuccessfull error on unlock
     /// - deviceAlreadyUnlocked: Device has already been unlocked and has not locked yet

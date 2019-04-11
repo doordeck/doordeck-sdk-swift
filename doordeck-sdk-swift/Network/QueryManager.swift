@@ -15,6 +15,12 @@ struct QueryManager {
     private static let inviteCode = "inviteCode"
     private static let ephemeralKey = "ephemeralKey"
     
+    /// Login Query
+    ///
+    /// - Parameters:
+    ///   - email: user email
+    ///   - password: user passwors
+    /// - Returns: Query object
     static func login (_ email: String,
                        password: String) -> [String: AnyObject] {
         
@@ -24,11 +30,22 @@ struct QueryManager {
         ]
     }
     
+    /// User public key Query
+    ///
+    /// - Parameter key: Key as a base64 string
+    /// - Returns: Query object
     static func registerKey (_ key: String) -> [String: AnyObject] {
         
         return [ self.ephemeralKey: key as AnyObject ]
     }
     
+    /// Register new user
+    ///
+    /// - Parameters:
+    ///   - email: email address
+    ///   - password: password
+    ///   - displayName: display name of user
+    /// - Returns: Query object
     static func register (_ email: String,
                           password: String,
                           displayName: String) -> [String: AnyObject] {
@@ -40,6 +57,14 @@ struct QueryManager {
         ]
     }
     
+    /// register invitation
+    ///
+    /// - Parameters:
+    ///   - email: email
+    ///   - password: password
+    ///   - displayName: display name of user
+    ///   - inviteCode: invite code
+    /// - Returns: Query object
     static func registerInvitation (_ email: String,
                                     password: String,
                                     displayName: String,
@@ -53,6 +78,12 @@ struct QueryManager {
         ]
     }
     
+    /// Change password
+    ///
+    /// - Parameters:
+    ///   - oldPassword: old pass
+    ///   - newPassword: new password
+    /// - Returns: Query object
     static func changePassword (_ oldPassword: String,
                                 newPassword: String) -> [String: AnyObject] {
         
@@ -62,11 +93,22 @@ struct QueryManager {
         ]
     }
     
+    /// Update user display name
+    ///
+    /// - Parameter displayName: dispaly name
+    /// - Returns: Query object
     static func updateDisplayName (_ displayName: String) -> [String: AnyObject] {
         
         return [ self.displayName: displayName as AnyObject ]
     }
     
+    /// Add lock
+    ///
+    /// - Parameters:
+    ///   - name: name
+    ///   - key: key
+    ///   - time: time
+    /// - Returns: Query object
     static func addLock (_ name: String,
                          key: String,
                          time: Int) -> [String: AnyObject] {
@@ -78,6 +120,13 @@ struct QueryManager {
         ]
     }
     
+    /// update device details
+    ///
+    /// - Parameters:
+    ///   - name: name
+    ///   - favourite: favorite device
+    ///   - colour: colour
+    /// - Returns: Query object
     static func updateLock (_ name: String,
                             favourite: Bool,
                             colour: String) -> [String: AnyObject] {
@@ -89,6 +138,10 @@ struct QueryManager {
         ]
     }
     
+    /// update lock name
+    ///
+    /// - Parameter name: name
+    /// - Returns: Query object
     static func updateLockName (_ name: String) -> [String: AnyObject] {
         
         return [ self.name: name as AnyObject ]
@@ -129,6 +182,12 @@ class Header {
     fileprivate let origin = "origin"
     fileprivate let v2 = "application/vnd.doordeck.api-v2+json"
     
+    /// create SDK header that would contain whats needed
+    ///
+    /// - Parameters:
+    ///   - version: header version
+    ///   - token: token
+    /// - Returns: Header object
     func createSDKAuthHeader(_ version: version,
                              token: AuthTokenClass) -> [String : String] {
         
@@ -140,6 +199,9 @@ class Header {
         
     }
     
+    /// Get token
+    ///
+    /// - Returns: returns empty dictoinary on failure other wise header
     func getAuthSDK() -> [String : String] {
         guard let authToken = token?.getToken() else {
             return [:]
@@ -147,6 +209,10 @@ class Header {
         return [self.authorization: "\(self.bearer) \(authToken)" ]
     }
     
+    /// Api version
+    ///
+    /// - Parameter version: version
+    /// - Returns: returns header
     func addVersion (_ version: version) -> [String : String] {
         switch version {
         case .v1 :

@@ -23,6 +23,11 @@ class APIClient {
     fileprivate var tokenHelper: TokenHelper!
     fileprivate var afrequest: AFRequest!
     
+    /// init for Api class both a header and a Token has to be passed in
+    ///
+    /// - Parameters:
+    ///   - header: the header containing token and
+    ///   - token: Auth Token
     init(_ header: [String: String],
          token: AuthTokenClass) {
         
@@ -32,6 +37,11 @@ class APIClient {
         self.afrequest = AFRequest()
     }
     
+    /// Register the users public key from device
+    ///
+    /// - Parameters:
+    ///   - key: The String represention of the public key in base64
+    ///   - completion: completion call back with error
     func registrationWithKey(_ key: String,
                              completion: @escaping ([String:AnyObject]?, APIClient.error?) -> Void) {
         
@@ -49,6 +59,11 @@ class APIClient {
         }
     }
     
+    /// Find a device from the UUID of a tile
+    ///
+    /// - Parameters:
+    ///   - uuid: UUID of the device
+    ///   - completion: completion call back with error
     func getDeviceForTile (_ uuid:String,
                            completion: @escaping ([String:AnyObject]?, APIClient.error?) -> Void) {
         
@@ -70,6 +85,12 @@ class APIClient {
         }
     }
     
+    /// Update the colour of the lock, this is not currenly used by the SDK
+    ///
+    /// - Parameters:
+    ///   - device: lock device object
+    ///   - colour: new hex colour
+    ///   - completion: completion call back with error
     func updateLockColour (_ device: LockDevice,
                            colour: String,
                            completion: @escaping ([AnyObject]?, APIClient.error?) -> Void) {
@@ -92,6 +113,12 @@ class APIClient {
         }
     }
     
+    /// Unlock device or Lock device
+    ///
+    /// - Parameters:
+    ///   - device: Device object
+    ///   - control: The call does support both lock and unlock but we currenly only use unlock
+    ///   - completion: completion call back with error
     func lockUnlock (_ device: LockDevice,
                      control: (APIClient.deviceStatus),
                      completion: @escaping ([AnyObject]?, APIClient.error?) -> Void) {
@@ -108,6 +135,12 @@ class APIClient {
         
     }
     
+    /// Device unlcok call after check
+    ///
+    /// - Parameters:
+    ///   - device: Device object
+    ///   - control: The call does support both lock and unlock but we currenly only use unlock
+    ///   - completion: completion call back with error
     fileprivate func deviceControl (_ device: LockDevice,
                                     operation: [String: Any],
                                     completion: @escaping ([AnyObject]?, APIClient.error?) -> Void) {
@@ -180,6 +213,13 @@ class APIClient {
         
     }
     
+    /// Complete request after sanity check on the data has been performed
+    ///
+    /// - Parameters:
+    ///   - URL: URL string
+    ///   - data: The Data
+    ///   - rootKey: The root of the data if different
+    ///   - completion: completion call back with error
     fileprivate func requestCompletion<T>(_ URL: String?,
                                           data: AnyObject,
                                           rootKey: String?,
