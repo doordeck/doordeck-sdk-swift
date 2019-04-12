@@ -14,7 +14,7 @@
     <a title="TokenHelper Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">doordeck_sdk_swift Docs</a> (22% documented)</p>
+        <p><a href="../index.html">doordeck_sdk_swift Docs</a> (25% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -340,7 +340,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Change password call from the server</p>
+
+<ul>
+<li>no: Do not change password</li>
+<li>newUser: New user, change password</li>
+<li>forceChange: Force change password of the user</li>
+</ul>
 
                         <a href="../Classes/TokenHelper/ChangePassword.html" class="slightly-smaller">See more</a>
                       </div>
@@ -368,7 +374,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Init with AuthTokenClass</p>
 
                       </div>
                       <div class="declaration">
@@ -378,6 +384,25 @@
                           <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt"><a href="../Structs/AuthTokenClass.html">AuthTokenClass</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AuthTokenClass</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -395,7 +420,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Check if the token is still active</p>
 
                       </div>
                       <div class="declaration">
@@ -405,6 +430,37 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tokenActive</span><span class="p">(</span><span class="n">_</span> <span class="nv">success</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">fail</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the token is active</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fail</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the token is not active</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -422,7 +478,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Return the UserID from the AuthTokenClass</p>
 
                       </div>
                       <div class="declaration">
@@ -432,6 +488,10 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">returnUserID</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>return the UserID</p>
                       </div>
                     </section>
                   </div>
@@ -449,7 +509,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Return the users email from Auth Token</p>
 
                       </div>
                       <div class="declaration">
@@ -459,6 +519,10 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">returnUserEmail</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Email from Authtoken</p>
                       </div>
                     </section>
                   </div>
@@ -476,7 +540,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Get the user session from the Auth token</p>
 
                       </div>
                       <div class="declaration">
@@ -486,6 +550,10 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">returnUserSession</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Session</p>
                       </div>
                     </section>
                   </div>
@@ -503,7 +571,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Create token body</p>
 
                       </div>
                       <div class="declaration">
@@ -514,6 +582,29 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Token dictionary</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>return base64 token body</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -522,7 +613,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/doordeck/doordeck-sdk-swift" target="_blank" rel="external">Doordeck</a>. All rights reserved. (Last updated: 2019-04-11)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/doordeck/doordeck-sdk-swift" target="_blank" rel="external">Doordeck</a>. All rights reserved. (Last updated: 2019-04-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

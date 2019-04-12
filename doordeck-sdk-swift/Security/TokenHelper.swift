@@ -6,6 +6,11 @@ class TokenHelper {
         case authToken
     }
     
+    /// Change password call from the server
+    ///
+    /// - no: Do not change password
+    /// - newUser: New user, change password
+    /// - forceChange: Force change password of the user
     enum ChangePassword {
         case no
         case newUser
@@ -14,10 +19,19 @@ class TokenHelper {
     
     fileprivate var token: AuthTokenClass!
     
+    
+    /// Init with AuthTokenClass
+    ///
+    /// - Parameter token: AuthTokenClass
     init(_ token: AuthTokenClass) {
         self.token = token
     }
     
+    /// Check if the token is still active
+    ///
+    /// - Parameters:
+    ///   - success: the token is active
+    ///   - fail: the token is not active
     func tokenActive (_ success:() -> Void , fail: () -> Void) {
         
         self.decrypt() { (tokenDecrypt, error) in
@@ -35,18 +49,31 @@ class TokenHelper {
         
     }
     
+    /// Return the UserID from the AuthTokenClass
+    ///
+    /// - Returns: return the UserID
     func returnUserID () -> String? {
         return returnTokenElement(key: "sub")
     }
     
+    /// Return the users email from Auth Token
+    ///
+    /// - Returns: Email from Authtoken
     func returnUserEmail () -> String? {
         return returnTokenElement(key: "email")
     }
     
+    /// Get the user session from the Auth token
+    ///
+    /// - Returns: Session
     func returnUserSession () -> String? {
         return returnTokenElement(key: "session")
     }
     
+    /// Return the Element from the token
+    ///
+    /// - Parameter key: String of the element
+    /// - Returns: return the value for key
     private func returnTokenElement (key: String) -> String? {
         var element = ""
         
@@ -61,11 +88,18 @@ class TokenHelper {
         return element
     }
     
+    /// Create token body
+    ///
+    /// - Parameter token: Token dictionary
+    /// - Returns: return base64 token body
     func createTokenBody (_ token: [String:Any]) -> String {
         let payload = JsonHelper().jsonEncodeDictionary(token as NSDictionary)
         return payload.toBase64()
     }
     
+    /// Decrypt base64 token into dictionary
+    ///
+    /// - Parameter completion: return token as dictionary
     private func decrypt (_ completion: ([String:Any]?, Error?) -> Void) {
     
         let token = self.token.getToken()
@@ -80,6 +114,10 @@ class TokenHelper {
         }
     }
     
+    /// Check if the token is still active and alive
+    ///
+    /// - Parameter token: token
+    /// - Returns: returns if the token is alive
     private func tokenStillActive (_ token: [String:Any]) -> Bool {
         print(PrintChannel.token, object: token["exp"] as Any)
         guard token["exp"] != nil else {

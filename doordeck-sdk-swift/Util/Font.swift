@@ -1,6 +1,19 @@
 import Foundation
 import UIKit
 
+/// Fonts used by Doordeck
+///
+/// - doorRegularFont: Regular
+/// - doorBoldFont: Bold
+/// - doorMediumFont: Medium
+/// - doorLightFont: Light
+/// - doorCondensedBlackFont: Condensed Black
+/// - doorCondensedBoldFont: Condensed Bold
+/// - doorLightItalicFont: Light Italic
+/// - doorUltraLightItalicFont: Ultra Light Italic
+/// - doorUltraLightFont: Ultra Light
+/// - doorBoldItalicFont: Bold Italic
+/// - doorItalicFont: Italic
 enum Fonts: String {
     case doorRegularFont = "HelveticaNeue"
     case doorBoldFont = "HelveticaNeue-Bold"

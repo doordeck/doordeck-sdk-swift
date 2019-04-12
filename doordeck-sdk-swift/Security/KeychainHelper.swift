@@ -13,16 +13,25 @@ enum KeychainError: Error {
     case unhandledError(status: OSStatus)
 }
 
+/// Keychain Helper protocal
 protocol KeychainHelperProtocol {
     func saveKey(_ key: String) throws
     func loadKey() -> String?
 }
 
+/// Keychain helper
 class KeychainHelper: KeychainHelperProtocol {
     private var name: String!
     private var tag: String!
     private var service: String!
     
+    
+    /// init
+    ///
+    /// - Parameters:
+    ///   - service: Service string
+    ///   - name: name string
+    ///   - tag: tag string
     init(_ service: String,
          name: String,
          tag: String) {
@@ -32,6 +41,11 @@ class KeychainHelper: KeychainHelperProtocol {
         self.tag = tag
     }
     
+    
+    /// Save key to the keychian and allow it to be shared through icloud of user
+    ///
+    /// - Parameter key: combined key as base64
+    /// - Throws: can throw and error
     func saveKey(_ key: String) throws {
         
         guard let keyData = key.data(using: .utf8) else {
@@ -76,6 +90,9 @@ class KeychainHelper: KeychainHelperProtocol {
         
     }
     
+    /// search keychian for the key
+    ///
+    /// - Returns: retrun key if available
     func loadKey() -> String? {
         
         guard let tagData = tag.data(using: .utf8) else {
