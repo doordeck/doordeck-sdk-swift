@@ -8,10 +8,10 @@ s.summary = "Doordeck allows you to unlock your access control doors via your ph
 s.requires_arc = true
 
 # 2
-s.version = "0.0.1"
+s.version = "0.0.2"
 
 # 3
-s.license = { :type => "MIT", :file => "LICENSE" }
+s.license = { :type => "Apache", :file => "LICENSE" }
 
 # 4 - Replace with your name and e-mail address
 s.author = { "Doordeck" => "support@doordeck.com" }
