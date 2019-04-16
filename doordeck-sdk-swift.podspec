@@ -6,7 +6,7 @@ spec.name = "doordeck-sdk-swift"
 spec.summary = "Doordeck allows you to unlock your access control doors via your phone, visit Doordeck.com for more details"
 spec.requires_arc = true
 
-spec.version = "0.0.2"
+spec.version = "0.0.3"
 
 spec.license = { :type => "Apache", :file => "LICENSE" }
 
