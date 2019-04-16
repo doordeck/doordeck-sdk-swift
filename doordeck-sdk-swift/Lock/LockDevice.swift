@@ -1,7 +1,6 @@
 import Foundation
 import UIKit
 import CoreLocation
-import WhereAmI
 
 struct VisitorPass {
     var tempLock = false

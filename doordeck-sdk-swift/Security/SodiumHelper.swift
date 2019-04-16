@@ -69,7 +69,7 @@ class SodiumHelper {
     func getPublicKey (_ key: String) -> String {
         let bytes = stringTobytes(key)
         if bytes.count == 64 {
-            return bytesToString(bytes.suffix(32))
+            return bytesToString(Array(bytes.suffix(32)))
         } else {
             return ""
         }
@@ -82,7 +82,7 @@ class SodiumHelper {
     func getPrivateKey (_ key: String) -> String {
         let bytes = stringTobytes(key)
         if bytes.count == 64 {
-            return bytesToString(bytes.prefix(32))
+            return bytesToString(Array(bytes.prefix(32)))
         } else {
             return ""
         }
