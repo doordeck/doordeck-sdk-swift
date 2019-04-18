@@ -23,8 +23,7 @@ protocol KeychainHelperProtocol {
 class KeychainHelper: KeychainHelperProtocol {
     private var name: String!
     private var tag: String!
-    private var service: String!
-    
+  
     
     /// init
     ///
@@ -32,12 +31,11 @@ class KeychainHelper: KeychainHelperProtocol {
     ///   - service: Service string
     ///   - name: name string
     ///   - tag: tag string
-    init(_ service: String,
-         name: String,
+    init(_ name: String,
          tag: String) {
-        
-        self.service = service
-        self.name = name
+      
+      
+      self.name = name
         self.tag = tag
     }
     
@@ -56,10 +54,6 @@ class KeychainHelper: KeychainHelperProtocol {
             fatalError("Tag can't be convert to expected object")
         }
 
-        guard let serviceData = service.data(using: .utf8) else {
-            fatalError("Tag can't be convert to expected object")
-        }
-
         guard let nameData = name.data(using: .utf8) else {
             fatalError("Tag can't be convert to expected object")
         }
@@ -67,8 +61,7 @@ class KeychainHelper: KeychainHelperProtocol {
         // 1
         let attributes: [String: Any] = [kSecClass as String: kSecClassKey,
                                          kSecAttrApplicationTag as String: tagData,
-                                         kSecAttrService as String: serviceData,
-                                         kSecAttrAccount as String: nameData,
+                                         kSecAttrApplicationLabel as String: nameData,
                                          kSecAttrCanSign as String: true,
                                          kSecAttrCanDecrypt as String: true,
                                          kSecAttrCanEncrypt as String: true,
@@ -99,10 +92,6 @@ class KeychainHelper: KeychainHelperProtocol {
             fatalError("Tag can't be convert to expected object")
         }
         
-        guard let serviceData = service.data(using: .utf8) else {
-            fatalError("Tag can't be convert to expected object")
-        }
-        
         guard let nameData = name.data(using: .utf8) else {
             fatalError("Tag can't be convert to expected object")
         }
@@ -110,8 +99,7 @@ class KeychainHelper: KeychainHelperProtocol {
         // 1
         let attributes: [String: Any] = [kSecClass as String: kSecClassKey,
                                          kSecAttrApplicationTag as String: tagData,
-                                         kSecAttrService as String: serviceData,
-                                         kSecAttrAccount as String: nameData,
+                                         kSecAttrApplicationLabel as String: nameData,
                                          kSecMatchLimit as String: kSecMatchLimitOne,
                                          kSecReturnData as String: true]
         
