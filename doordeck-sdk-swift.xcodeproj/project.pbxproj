@@ -40,8 +40,6 @@
 		593B1D2922468EEA00BE5E67 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B1D1A22468EE900BE5E67 /* JsonHelper.swift */; };
 		593B1D2B22468EEA00BE5E67 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B1D1C22468EEA00BE5E67 /* DateExtension.swift */; };
 		593B1D302246977300BE5E67 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B1D2F2246977300BE5E67 /* StringExtension.swift */; };
-		59654A75225EC07D00C7B478 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59654A74225EC07D00C7B478 /* Sodium.framework */; };
-		59654A76225EC07D00C7B478 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59654A74225EC07D00C7B478 /* Sodium.framework */; };
 		59654A7B225F4E7F00C7B478 /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59654A79225F4E7F00C7B478 /* WhereAmI.swift */; };
 		59654A7C225F4E7F00C7B478 /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59654A79225F4E7F00C7B478 /* WhereAmI.swift */; };
 		59654A7D225F4E7F00C7B478 /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59654A7A225F4E7F00C7B478 /* LocationProfile.swift */; };
@@ -113,7 +111,6 @@
 		593B1D1A22468EE900BE5E67 /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		593B1D1C22468EEA00BE5E67 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		593B1D2F2246977300BE5E67 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		59654A74225EC07D00C7B478 /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sodium.framework; sourceTree = "<group>"; };
 		59654A79225F4E7F00C7B478 /* WhereAmI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereAmI.swift; sourceTree = "<group>"; };
 		59654A7A225F4E7F00C7B478 /* LocationProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProfile.swift; sourceTree = "<group>"; };
 		5966A6092249AA22008C4665 /* URLManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManagerTests.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB97990A67F712AB267BF46A /* Pods_doordeck_sdk_swift.framework in Frameworks */,
-				59654A75225EC07D00C7B478 /* Sodium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				593B1CC52244FB3300BE5E67 /* doordeck_sdk_swift.framework in Frameworks */,
-				59654A76225EC07D00C7B478 /* Sodium.framework in Frameworks */,
 				CAB464F0F4AA1C05E0998A98 /* Pods_doordeck_sdk_swiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +335,6 @@
 		7462FF2056A61920FFE55B28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				59654A74225EC07D00C7B478 /* Sodium.framework */,
 				97BE39B7C897DAE9B0C832E2 /* Pods_doordeck_sdk_swift.framework */,
 				84A92B2BDDB367B06A1EBEA1 /* Pods_doordeck_sdk_swiftTests.framework */,
 			);
@@ -489,24 +483,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
-				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

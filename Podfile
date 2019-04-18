@@ -9,6 +9,7 @@ target "doordeck-sdk-swift" do
   pod "Alamofire"
   pod "SwiftyRSA"
   pod "Cache"
+  pod "Sodium", :git => "https://github.com/Westacular/swift-sodium.git", :branch => "fix_xcode10.2"
 end
 
 target "doordeck-sdk-swiftTests" do
