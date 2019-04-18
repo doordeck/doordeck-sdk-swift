@@ -40,6 +40,11 @@ public class Doordeck {
         case qr
     }
     
+    /// Current state of Doordeck
+    ///
+    /// - authenticated: The auth token has been autheticated
+    /// - verificationRequired: verification is required from the user, this means the used key has changed
+    /// - notAuthenticated: The auhtoken has not been validated with the server. 
     enum State {
         case authenticated
         case verificationRequired
