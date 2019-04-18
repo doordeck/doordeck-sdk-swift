@@ -18,7 +18,7 @@ import UIKit
  - Light: Light Grey
  - Returns: UIColor
  */
-protocol DoordeckProtocol {
+public protocol DoordeckProtocol {
     func newAuthTokenRequired() -> AuthTokenClass
     func unlockSuccessful()
 }
@@ -51,9 +51,8 @@ public class Doordeck {
         case notAuthenticated
     }
     
-    
+    public var delegate: DoordeckProtocol?
     fileprivate var token: AuthTokenClass
-    fileprivate var delegate: DoordeckProtocol?
     fileprivate var readerType: ReaderType = ReaderType.automatic
     fileprivate var currentState: State = State.notAuthenticated
     fileprivate var apiClient: APIClient!

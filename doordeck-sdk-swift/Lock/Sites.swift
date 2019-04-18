@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 
 /// A site can have a location associated with it
