@@ -11,7 +11,6 @@ import Sodium
 
 class SodiumHelper {
     fileprivate let sodium = Sodium()
-    fileprivate let service = "signingKey"
     fileprivate let name = "Doordeck"
     fileprivate var token: AuthTokenClass!
     fileprivate var tokenHelper: TokenHelper!
@@ -45,7 +44,7 @@ class SodiumHelper {
         if combinByteKey.count == 64 {
             let combinedKey = bytesToString(combinByteKey)
             if let email = tokenHelper.returnUserEmail() {
-                let keychain = KeychainHelper(self.service, name: self.name, tag: email)
+                let keychain = KeychainHelper(self.name, tag: email)
                 do {
                     try keychain.saveKey(combinedKey)
                     return getPublicKey(combinedKey)
@@ -93,7 +92,7 @@ class SodiumHelper {
     /// - Returns: combined base64 key
     private func getKeyPairFromKeychain() -> String? {
         if let email = tokenHelper.returnUserEmail() {
-            let keychain = KeychainHelper(self.service, name: self.name, tag: email)
+            let keychain = KeychainHelper(self.name, tag: email)
             return keychain.loadKey()
         } else {
             return nil
