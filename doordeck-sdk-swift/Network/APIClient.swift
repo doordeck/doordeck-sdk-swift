@@ -9,8 +9,9 @@ class APIClient {
         case invalidData(data: AnyObject?)
         case network(networkError: NSError)
         case invalidAuthToken
-        case noInternet
         case twoFactorAuthenticationNeeded
+        case noInternet
+        
     }
     
     enum deviceStatus {
@@ -156,7 +157,7 @@ class APIClient {
         var userID = ""
         guard let pemCert: String = "" //SecuritySinglton.shared.getPemCert()
             else { return completion (nil, APIClient.error.invalidAuthToken) }
-    
+        
         
         if userID.count < 30 {
             return completion(nil, error.invalidAuthToken)
@@ -193,9 +194,7 @@ class APIClient {
             print(PrintChannel.token, object: "fudgedToken \(fudgedToken)")
             
             let URL = "\(URLManager.lockContol(device.ID))"
-            let endTime = Date().timeIntervalSince1970.millisecond
-            let timeDifference = endTime - startTime
-            
+            let endTime = Date().timeIntervalSince1970.millisecond            
             
             AFRequest().request(URL,
                                 method: .post,

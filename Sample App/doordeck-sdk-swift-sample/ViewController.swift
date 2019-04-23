@@ -43,6 +43,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: DoordeckProtocol {
+    func verificationNeeded() {
+        
+    }
+    
     func newAuthTokenRequired() -> AuthTokenClass {
         return AuthTokenClass(self.token)
     }
@@ -50,6 +54,7 @@ extension ViewController: DoordeckProtocol {
     func unlockSuccessful() {
         
     }
+    
     
     
 }

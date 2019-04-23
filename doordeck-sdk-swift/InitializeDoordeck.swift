@@ -20,6 +20,7 @@ import UIKit
  */
 public protocol DoordeckProtocol {
     func newAuthTokenRequired() -> AuthTokenClass
+    func verificationNeeded()
     func unlockSuccessful()
 }
 
@@ -58,7 +59,7 @@ public class Doordeck {
     fileprivate var apiClient: APIClient!
     fileprivate var sodium: SodiumHelper!
     
-
+    
     /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server,
     ///
     /// - Parameter token: AuthTokenClass contains user Auth Token.
@@ -69,15 +70,20 @@ public class Doordeck {
         self.sodium = SodiumHelper(token)
     }
     
-
+    
     /// Use this method to pre-initialise the server checks, this will make unlocking faster.
     public func Initialize() {
-        checkTokenIsValid({ [weak self] in
-            self?.currentState = .authenticated
-            
-        }) { [weak self] in
-            self?.currentState = .notAuthenticated
-            self?.updateAuthToken(self?.delegate?.newAuthTokenRequired())
+        checkTokenIsValid { [weak self] (currentState) in
+            switch currentState {
+            case .authenticated:
+                break
+            case .notAuthenticated:
+                self?.updateAuthToken(self?.delegate?.newAuthTokenRequired())
+                break
+            case .verificationRequired:
+                self?.delegate?.verificationNeeded()
+                break
+            }
         }
     }
     
@@ -110,7 +116,15 @@ public class Doordeck {
     ///   - success: called on success
     ///   - fail: called on failure
     fileprivate func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
+        success()
+        guard let view:UIViewController = UIApplication.topViewController() else { return }
+        let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryBoard", bundle: nil)
+        let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
+        vc.delegate = self.delegate
+        vc.apiClient = self.apiClient
         
+        let navigationController = UINavigationController(rootViewController: vc)
+        view.present(navigationController, animated: true, completion: nil)
     }
     
     /// Show Doordeck reader and unlock UI, authentications have been completed
@@ -120,7 +134,7 @@ public class Doordeck {
     ///   - fail: called on failure
     fileprivate func preInitializeShowUnlock (_ success:() -> Void , fail: () -> Void) {
         success()
-        self.showUnlockScreensuccess()
+        self.showUnlockScreenSuccess()
     }
     
     
@@ -130,12 +144,21 @@ public class Doordeck {
     ///   - success: called on success
     ///   - fail: called on failure
     fileprivate func initializeShowUnlock (_ success:@escaping () -> Void , fail: @escaping () -> Void) {
-        checkTokenIsValid({ [weak self] in
-            success()
-            self?.showUnlockScreensuccess()
-        }) { [weak self] in
-            fail()
-            self?.updateAuthToken(self?.delegate?.newAuthTokenRequired())
+        checkTokenIsValid { [weak self] (currentState) in
+            switch currentState {
+            case .authenticated:
+                success()
+                self?.showUnlockScreenSuccess()
+                break
+            case .notAuthenticated:
+                fail()
+                self?.updateAuthToken(self?.delegate?.newAuthTokenRequired())
+                break
+            case .verificationRequired:
+                fail()
+                self?.delegate?.verificationNeeded()
+                break
+            }
         }
     }
     
@@ -152,7 +175,7 @@ public class Doordeck {
     }
     
     /// Show unlock reader, this will be added to the top view controller.
-    fileprivate func showUnlockScreensuccess () {
+    fileprivate func showUnlockScreenSuccess () {
         guard let view:UIViewController = UIApplication.topViewController() else { return }
         let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
         let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
@@ -169,15 +192,24 @@ public class Doordeck {
     /// - Parameters:
     ///   - success: Sucess
     ///   - fail: Token is invalid or out of date, or the key has not been sent to the server
-    fileprivate func checkTokenIsValid(_ success:@escaping () -> Void , fail: @escaping () -> Void) {
+    fileprivate func checkTokenIsValid(_ completion:@escaping (_ state: State) -> Void) {
         TokenHelper(token).tokenActive( { [weak self] in
-            self?.sendKeyToServer({
-                success()
-            }, fail: {
-                fail()
+            self?.sendKeyToServer({ (currentState) in
+                switch currentState {
+                case .authenticated:
+                    completion(.authenticated)
+                    break
+                case .notAuthenticated:
+                    completion(.notAuthenticated)
+                    break
+                case .verificationRequired:
+                    completion(.verificationRequired)
+                    break
+                }
             })
         }) {
-            fail()
+            self.currentState = .notAuthenticated
+            completion(.notAuthenticated)
         }
     }
     
@@ -185,24 +217,27 @@ public class Doordeck {
     /// if it does exist the key is retrived and sent to the server.
     ///
     /// - Parameters:
-    ///   - success: sucess
-    ///   - fail: fail could mean an error retrieving the key or sending it to the server.
-    fileprivate func sendKeyToServer(_ success:@escaping () -> Void , fail: @escaping () -> Void) {
+    ///   - success: Completion will return if that was sucessful or the issue
+    fileprivate func sendKeyToServer(_ completion:@escaping (_ state: State) -> Void) {
         guard let publicKey = sodium.getPublicKey() else {
-            fail()
+            self.currentState = .notAuthenticated
+            completion(.notAuthenticated)
             return
         }
         
         apiClient.registrationWithKey(publicKey) { [weak self]  (Json, error) in
             if error != nil {
-                if error == APIClient.error.twoFactorAuthenticationNeeded {
-                    
+                if let authError = error, case .twoFactorAuthenticationNeeded = authError {
+                    self?.currentState = .verificationRequired
+                    completion(.verificationRequired)
+                } else {
+                    self?.currentState = .notAuthenticated
+                    completion(.notAuthenticated)
                 }
-                fail()
-                self?.currentState = .notAuthenticated
+                
             } else {
-                success()
                 self?.currentState = .authenticated
+                completion(.authenticated)
             }
             
         }

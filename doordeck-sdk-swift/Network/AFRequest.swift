@@ -109,7 +109,7 @@ class AFRequest {
             
             switch(statusCode) {
                 
-            case 200:
+            case 200, 201, 202, 203, 204:
                 
                 
                 if result.isSuccess {
@@ -127,6 +127,12 @@ class AFRequest {
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
                 
                 doordeckNotifications().logout()
+                
+            case 423:
+                print(PrintChannel.error,
+                      object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
+                onError?(APIClient.error.twoFactorAuthenticationNeeded)
+                
             default:
                 
                 print(PrintChannel.error,

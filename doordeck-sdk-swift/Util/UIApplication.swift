@@ -70,6 +70,8 @@ extension UIDevice.BatteryState: CustomStringConvertible {
             return "Charging"
         case .full:
             return "Full"
+        @unknown default:
+            return "Unknown"
         }
     }
 }

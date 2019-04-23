@@ -52,7 +52,9 @@
 		59029C752268C0DB009FAE5C /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4C2268C0DA009FAE5C /* AppStrings.swift */; };
 		59029C762268C0DB009FAE5C /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4D2268C0DA009FAE5C /* DeviceHelper.swift */; };
 		59029C772268C0DB009FAE5C /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4E2268C0DA009FAE5C /* CustomPrint.swift */; };
+		59C3B6CF226F709400699F29 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C3B6CE226F709400699F29 /* VerificationViewController.swift */; };
 		59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */; };
+		59FCBE4B226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FCBE4A226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +105,9 @@
 		59029C4C2268C0DA009FAE5C /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		59029C4D2268C0DA009FAE5C /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		59029C4E2268C0DA009FAE5C /* CustomPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
+		59C3B6CE226F709400699F29 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotCommit.swift; sourceTree = "<group>"; };
+		59FCBE4A226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerificationStoryBoard.storyboard; sourceTree = "<group>"; };
 		7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift-sample.debug.xcconfig"; path = "Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,14 +178,15 @@
 			isa = PBXGroup;
 			children = (
 				59029C412268C0DA009FAE5C /* InitializeDoordeck.swift */,
-				59029C1C2268C0DA009FAE5C /* Util */,
-				59029C2A2268C0DA009FAE5C /* Security */,
-				59029C2F2268C0DA009FAE5C /* Network */,
-				59029C372268C0DA009FAE5C /* Lock */,
+				59029C4B2268C0DA009FAE5C /* Aux */,
 				59029C3B2268C0DA009FAE5C /* Dependencies */,
+				59029C372268C0DA009FAE5C /* Lock */,
+				59029C2F2268C0DA009FAE5C /* Network */,
+				59029C2A2268C0DA009FAE5C /* Security */,
 				59029C3F2268C0DA009FAE5C /* Styles */,
 				59029C422268C0DA009FAE5C /* Quick Entry */,
-				59029C4B2268C0DA009FAE5C /* Aux */,
+				59029C1C2268C0DA009FAE5C /* Util */,
+				59FCBE49226F66A600D7BFA5 /* Verification Screen */,
 			);
 			name = "doordeck-sdk-swift";
 			path = "../../doordeck-sdk-swift";
@@ -297,6 +302,15 @@
 			path = Aux;
 			sourceTree = "<group>";
 		};
+		59FCBE49226F66A600D7BFA5 /* Verification Screen */ = {
+			isa = PBXGroup;
+			children = (
+				59C3B6CE226F709400699F29 /* VerificationViewController.swift */,
+				59FCBE4A226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard */,
+			);
+			path = "Verification Screen";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +373,7 @@
 			files = (
 				59029C652268C0DB009FAE5C /* AmazonRootCA1.cer in Resources */,
 				59029C142268B638009FAE5C /* LaunchScreen.storyboard in Resources */,
+				59FCBE4B226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard in Resources */,
 				59029C712268C0DB009FAE5C /* QuickEntryStoryboard.storyboard in Resources */,
 				59029C112268B638009FAE5C /* Assets.xcassets in Resources */,
 				59029C0F2268B636009FAE5C /* Main.storyboard in Resources */,
@@ -417,6 +432,7 @@
 			files = (
 				59029C612268C0DB009FAE5C /* AuthTokenClass.swift in Sources */,
 				59029C512268C0DA009FAE5C /* SwiftyTimer.swift in Sources */,
+				59C3B6CF226F709400699F29 /* VerificationViewController.swift in Sources */,
 				59029C682268C0DB009FAE5C /* Sites.swift in Sources */,
 				59029C542268C0DA009FAE5C /* NotificationCenter.swift in Sources */,
 				59029C722268C0DB009FAE5C /* QuickEntryViewController.swift in Sources */,
