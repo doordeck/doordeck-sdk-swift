@@ -79,6 +79,11 @@ class AFRequest {
                 
                 doordeckNotifications().logout()
                 
+            case 423:
+                print(PrintChannel.error,
+                      object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
+                onError?(APIClient.error.twoFactorAuthenticationNeeded)
+                
             default:
                 
                 print(PrintChannel.error,

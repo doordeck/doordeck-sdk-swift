@@ -52,6 +52,7 @@
 		59029C752268C0DB009FAE5C /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4C2268C0DA009FAE5C /* AppStrings.swift */; };
 		59029C762268C0DB009FAE5C /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4D2268C0DA009FAE5C /* DeviceHelper.swift */; };
 		59029C772268C0DB009FAE5C /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4E2268C0DA009FAE5C /* CustomPrint.swift */; };
+		59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		59029C4C2268C0DA009FAE5C /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		59029C4D2268C0DA009FAE5C /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		59029C4E2268C0DA009FAE5C /* CustomPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
+		59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotCommit.swift; sourceTree = "<group>"; };
 		7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift-sample.debug.xcconfig"; path = "Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 				59029C1B2268C0DA009FAE5C /* doordeck-sdk-swift */,
 				59029C092268B636009FAE5C /* AppDelegate.swift */,
 				59029C0B2268B636009FAE5C /* ViewController.swift */,
+				59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */,
 				59029C0D2268B636009FAE5C /* Main.storyboard */,
 				59029C102268B638009FAE5C /* Assets.xcassets */,
 				59029C122268B638009FAE5C /* LaunchScreen.storyboard */,
@@ -170,13 +173,13 @@
 		59029C1B2268C0DA009FAE5C /* doordeck-sdk-swift */ = {
 			isa = PBXGroup;
 			children = (
+				59029C412268C0DA009FAE5C /* InitializeDoordeck.swift */,
 				59029C1C2268C0DA009FAE5C /* Util */,
 				59029C2A2268C0DA009FAE5C /* Security */,
 				59029C2F2268C0DA009FAE5C /* Network */,
 				59029C372268C0DA009FAE5C /* Lock */,
 				59029C3B2268C0DA009FAE5C /* Dependencies */,
 				59029C3F2268C0DA009FAE5C /* Styles */,
-				59029C412268C0DA009FAE5C /* InitializeDoordeck.swift */,
 				59029C422268C0DA009FAE5C /* Quick Entry */,
 				59029C4B2268C0DA009FAE5C /* Aux */,
 			);
@@ -422,6 +425,7 @@
 				59029C642268C0DB009FAE5C /* APIClient.swift in Sources */,
 				59029C592268C0DA009FAE5C /* UIApplication.swift in Sources */,
 				59029C6A2268C0DB009FAE5C /* LockDevice.swift in Sources */,
+				59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */,
 				59029C532268C0DA009FAE5C /* CacheHelper.swift in Sources */,
 				59029C622268C0DB009FAE5C /* AFRequest.swift in Sources */,
 				59029C5B2268C0DB009FAE5C /* DateExtension.swift in Sources */,

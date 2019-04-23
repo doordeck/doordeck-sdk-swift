@@ -188,13 +188,16 @@ public class Doordeck {
     ///   - success: sucess
     ///   - fail: fail could mean an error retrieving the key or sending it to the server.
     fileprivate func sendKeyToServer(_ success:@escaping () -> Void , fail: @escaping () -> Void) {
-        guard let publicKey = sodium.getKeyPair() else {
+        guard let publicKey = sodium.getPublicKey() else {
             fail()
             return
         }
         
         apiClient.registrationWithKey(publicKey) { [weak self]  (Json, error) in
             if error != nil {
+                if error == APIClient.error.twoFactorAuthenticationNeeded {
+                    
+                }
                 fail()
                 self?.currentState = .notAuthenticated
             } else {

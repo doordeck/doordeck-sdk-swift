@@ -10,6 +10,7 @@ class APIClient {
         case network(networkError: NSError)
         case invalidAuthToken
         case noInternet
+        case twoFactorAuthenticationNeeded
     }
     
     enum deviceStatus {
@@ -53,6 +54,11 @@ class APIClient {
                             headers: self.header,
                             jsonReply: false,
                             onSuccess: { (jsonData) in
+                                
+                                self.requestCompletion(URL,
+                                                       data: jsonData,
+                                                       rootKey: nil,
+                                                       completion: completion)
                                 
         }) { (error) in
             completion(nil, error)

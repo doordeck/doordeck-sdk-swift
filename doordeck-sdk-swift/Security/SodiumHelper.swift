@@ -26,7 +26,7 @@ class SodiumHelper {
     /// Return
     ///
     /// - Returns: Returns Public key of the private public key pair
-    func getKeyPair() -> String? {
+    func getPublicKey() -> String? {
         if let keyPair = getKeyPairFromKeychain() {
             return getPublicKey(keyPair)
         } else {
@@ -104,7 +104,7 @@ class SodiumHelper {
     /// - Parameter bytes: key as bytes
     /// - Returns: Key
     private func bytesToString (_ bytes: [UInt8]) -> String {
-        return sodium.utils.bin2base64(bytes, variant: .URLSAFE_NO_PADDING)!
+        return sodium.utils.bin2base64(bytes, variant: .ORIGINAL)!
     }
     
     /// Converts base64 to bytes
@@ -112,7 +112,7 @@ class SodiumHelper {
     /// - Parameter key: key as a string
     /// - Returns: key
     private func stringTobytes (_ key: String) -> [UInt8] {
-        return sodium.utils.base642bin(key, variant: .URLSAFE_NO_PADDING, ignore: " \n")!
+        return sodium.utils.base642bin(key, variant: .ORIGINAL, ignore: " \n")!
     }
     
 }

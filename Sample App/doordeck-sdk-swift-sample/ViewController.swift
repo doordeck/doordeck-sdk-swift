@@ -10,22 +10,36 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let token = ""
+    let token = MyToken().token
+    
+    var doordeck:Doordeck?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let token = AuthTokenClass(self.token)
+        doordeck = Doordeck(token)
+        doordeck?.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let token = AuthTokenClass(self.token)
-        let doordeck = Doordeck(token)
-        doordeck.delegate = self
-        doordeck.Initialize()
+
     }
 
-
+    @IBAction func initButton(_ sender: Any) {
+        doordeck?.Initialize()
+    }
+    
+    @IBAction func showUnlockButton(_ sender: Any) {
+        doordeck?.showUnlockScreen(success: {
+            
+        }, fail: {
+            
+        })
+    }
+    
+    
 }
 
 extension ViewController: DoordeckProtocol {
