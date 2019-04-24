@@ -118,7 +118,7 @@ public class Doordeck {
     fileprivate func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
         success()
         guard let view:UIViewController = UIApplication.topViewController() else { return }
-        let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryBoard", bundle: nil)
+        let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
         let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
         vc.delegate = self.delegate
         vc.apiClient = self.apiClient

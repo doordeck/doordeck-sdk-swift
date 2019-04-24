@@ -54,7 +54,7 @@
 		59029C772268C0DB009FAE5C /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C4E2268C0DA009FAE5C /* CustomPrint.swift */; };
 		59C3B6CF226F709400699F29 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C3B6CE226F709400699F29 /* VerificationViewController.swift */; };
 		59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */; };
-		59FCBE4B226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FCBE4A226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard */; };
+		59FCBE4B226F6EB500D7BFA5 /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FCBE4A226F6EB500D7BFA5 /* VerificationStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +107,7 @@
 		59029C4E2268C0DA009FAE5C /* CustomPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
 		59C3B6CE226F709400699F29 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotCommit.swift; sourceTree = "<group>"; };
-		59FCBE4A226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerificationStoryBoard.storyboard; sourceTree = "<group>"; };
+		59FCBE4A226F6EB500D7BFA5 /* VerificationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerificationStoryboard.storyboard; sourceTree = "<group>"; };
 		7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift-sample.debug.xcconfig"; path = "Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -306,7 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				59C3B6CE226F709400699F29 /* VerificationViewController.swift */,
-				59FCBE4A226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard */,
+				59FCBE4A226F6EB500D7BFA5 /* VerificationStoryboard.storyboard */,
 			);
 			path = "Verification Screen";
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 			files = (
 				59029C652268C0DB009FAE5C /* AmazonRootCA1.cer in Resources */,
 				59029C142268B638009FAE5C /* LaunchScreen.storyboard in Resources */,
-				59FCBE4B226F6EB500D7BFA5 /* VerificationStoryBoard.storyboard in Resources */,
+				59FCBE4B226F6EB500D7BFA5 /* VerificationStoryboard.storyboard in Resources */,
 				59029C712268C0DB009FAE5C /* QuickEntryStoryboard.storyboard in Resources */,
 				59029C112268B638009FAE5C /* Assets.xcassets in Resources */,
 				59029C0F2268B636009FAE5C /* Main.storyboard in Resources */,
@@ -635,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAF26EV36B;
 				INFOPLIST_FILE = "doordeck-sdk-swift-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAF26EV36B;
 				INFOPLIST_FILE = "doordeck-sdk-swift-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

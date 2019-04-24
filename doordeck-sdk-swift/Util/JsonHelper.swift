@@ -28,7 +28,12 @@ class JsonHelper{
     func jsonEncodeDictionary (_ dict: NSDictionary) -> String {
         let json: Data?
         do {
-            json = try JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
+            if #available(iOS 11.0, *) {
+                json = try JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
+            } else {
+                let sortedKeys = (dict.allKeys as! [String]).sorted(by: <)
+                json = try JSONSerialization.data(withJSONObject: sortedKeys, options: [.prettyPrinted])
+            }
         } catch _ {
             json = nil
         }
@@ -65,6 +70,6 @@ class JsonHelper{
             jsonResult = nil
         }
         
-        return jsonResult
+        return jsonResult as Any
     }
 }

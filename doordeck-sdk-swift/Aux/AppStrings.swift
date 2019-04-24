@@ -16,6 +16,9 @@ struct AppStrings {
     static let NFCScanMessage: String = NSLocalizedString("Click to NFC Scan.", comment: "")
     static let dismiss: String = NSLocalizedString("Dismiss", comment: "")
     
+    // verification Screen
+    static let verification: String = NSLocalizedString("Enter the verification code that has been sent to you", comment: "")
+    
     // lock updates
     static let lockInitilized: String = NSLocalizedString("Lock initilised", comment: "")
     static let lockConnecting: String = NSLocalizedString("Connecting to lock", comment: "")
