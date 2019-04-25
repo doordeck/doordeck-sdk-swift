@@ -6,10 +6,10 @@ A sample app has been provided to show how to integrate with Doordeck.
 
 
 
-## Step 1
+## Step 1 - import Dependencies 
 Import [doordeck-sdk-swift](https://github.com/doordeck/doordeck-sdk-swift/tree/master/doordeck-sdk-swift) into your project. I would suggest adding this to a separate folder, within your project.
 
-## Step 2
+## Step 2 - install pods 
 Add the following pods to your project 
 ```
   pod "QRCodeReader.swift", "~> 10.0"
@@ -22,7 +22,7 @@ Add the following pods to your project
 
 Sodium does not currently work with Xcode 10, please use this fix, until Sodium is updated.
 
-## Step 3
+## Step 3 - add permissions
 Add the following to your project plist.
 
 ```
@@ -35,7 +35,7 @@ Add the following to your project plist.
 The Camera permission is needed for the QR code reader, the NFC is needed for the NFC reader. The GPS permissions are used for GPS geofenced locks. 
 Please make sure adequate descriptions are added to the keys, as they will be seen by the end user 
 
-## Step 4
+## Step 4 - Doordeck delegate and Auth Token
 Initialise doordeck, Doordeck expect the host app to pass an AuthToken that will be used to authenticate the user. 
 Use AuthTokenClass when submitting an AuthToken to Doordeck.
 You then need to set the delegate to a class.
@@ -45,7 +45,7 @@ You then need to set the delegate to a class.
         doordeck?.delegate  = self
 ```
 
-## Step 5
+## Step 5 - Protocol confirmation 
 Conform to DoordeckProtocal, These methods can be used to keep the app up to date.
 
 ```
@@ -65,13 +65,13 @@ extension ViewController: DoordeckProtocol {
 }
 ```
 
-## Step 6
+## Step 6 - inisalize Doordeck 
 We recommend that the host app first calls doordeck initialise, this will speed up the unlock process.
 ```
 doordeck?.Initialize()
 ```
 
-## Step 7
+## Step 7 - Unlock
 Unlock a door
 
 ```
