@@ -65,7 +65,7 @@ extension ViewController: DoordeckProtocol {
 }
 ```
 
-## Step 6 - inisalize Doordeck 
+## Step 6 - Initialise Doordeck 
 We recommend that the host app first calls doordeck initialise, this will speed up the unlock process.
 ```
 doordeck?.Initialize()
