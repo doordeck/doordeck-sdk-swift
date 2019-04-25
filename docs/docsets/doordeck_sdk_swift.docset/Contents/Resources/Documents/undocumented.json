@@ -1926,27 +1926,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/AuthTokenClass.swift",
-      "line": 11,
-      "symbol": "AuthTokenClass",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/AuthTokenClass.swift",
-      "line": 14,
-      "symbol": "AuthTokenClass.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/AuthTokenClass.swift",
-      "line": 18,
-      "symbol": "AuthTokenClass.getToken()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
       "line": 12,
       "symbol": "KeychainError",
@@ -1962,50 +1941,15 @@
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 16,
-      "symbol": "KeychainHelperProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 17,
+      "line": 18,
       "symbol": "KeychainHelperProtocol.saveKey(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 18,
+      "line": 19,
       "symbol": "KeychainHelperProtocol.loadKey()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 21,
-      "symbol": "KeychainHelper",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 26,
-      "symbol": "KeychainHelper.init(_:name:tag:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 35,
-      "symbol": "KeychainHelper.saveKey(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/KeychainHelper.swift",
-      "line": 79,
-      "symbol": "KeychainHelper.loadKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2046,72 +1990,23 @@
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 9,
-      "symbol": "TokenHelper.ChangePassword",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 10,
+      "line": 15,
       "symbol": "TokenHelper.ChangePassword.no",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 11,
+      "line": 16,
       "symbol": "TokenHelper.ChangePassword.newUser",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 12,
+      "line": 17,
       "symbol": "TokenHelper.ChangePassword.forceChange",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 17,
-      "symbol": "TokenHelper.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 21,
-      "symbol": "TokenHelper.tokenActive(_:fail:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 38,
-      "symbol": "TokenHelper.returnUserID()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 42,
-      "symbol": "TokenHelper.returnUserEmail()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 46,
-      "symbol": "TokenHelper.returnUserSession()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift",
-      "line": 64,
-      "symbol": "TokenHelper.createTokenBody(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -2326,84 +2221,77 @@
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 4,
-      "symbol": "Fonts",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 5,
+      "line": 18,
       "symbol": "Fonts.doorRegularFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 6,
+      "line": 19,
       "symbol": "Fonts.doorBoldFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 7,
+      "line": 20,
       "symbol": "Fonts.doorMediumFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 8,
+      "line": 21,
       "symbol": "Fonts.doorLightFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 9,
+      "line": 22,
       "symbol": "Fonts.doorCondensedBlackFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 10,
+      "line": 23,
       "symbol": "Fonts.doorCondensedBoldFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 11,
+      "line": 24,
       "symbol": "Fonts.doorLightItalicFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 12,
+      "line": 25,
       "symbol": "Fonts.doorUltraLightItalicFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 13,
+      "line": 26,
       "symbol": "Fonts.doorUltraLightFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 14,
+      "line": 27,
       "symbol": "Fonts.doorBoldItalicFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/Font.swift",
-      "line": 15,
+      "line": 28,
       "symbol": "Fonts.doorItalicFont",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"

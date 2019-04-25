@@ -38,111 +38,118 @@
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 20,
-      "symbol": "AppStrings.lockInitilized",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
-      "line": 21,
-      "symbol": "AppStrings.lockConnecting",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
-      "line": 22,
-      "symbol": "AppStrings.lockConnected",
+      "symbol": "AppStrings.verification",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 23,
-      "symbol": "AppStrings.lockDisconnected",
+      "symbol": "AppStrings.lockInitilized",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 24,
-      "symbol": "AppStrings.lockOffline",
+      "symbol": "AppStrings.lockConnecting",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 25,
-      "symbol": "AppStrings.lockUnlocked",
+      "symbol": "AppStrings.lockConnected",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 26,
-      "symbol": "AppStrings.unlockSuccess",
+      "symbol": "AppStrings.lockDisconnected",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 27,
-      "symbol": "AppStrings.unlockFail",
+      "symbol": "AppStrings.lockOffline",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 28,
-      "symbol": "AppStrings.gpsFailed",
+      "symbol": "AppStrings.lockUnlocked",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 29,
-      "symbol": "AppStrings.gpssuccess",
+      "symbol": "AppStrings.unlockSuccess",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 30,
-      "symbol": "AppStrings.gpsSearching",
+      "symbol": "AppStrings.unlockFail",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 31,
-      "symbol": "AppStrings.gpsUnauthorized",
+      "symbol": "AppStrings.gpsFailed",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 32,
-      "symbol": "AppStrings.timeWindowsuccess",
+      "symbol": "AppStrings.gpssuccess",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 33,
-      "symbol": "AppStrings.timeWindowFailed",
+      "symbol": "AppStrings.gpsSearching",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 34,
-      "symbol": "AppStrings.other",
+      "symbol": "AppStrings.gpsUnauthorized",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
+      "line": 35,
+      "symbol": "AppStrings.timeWindowsuccess",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
       "line": 36,
+      "symbol": "AppStrings.timeWindowFailed",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
+      "line": 37,
+      "symbol": "AppStrings.other",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Aux/AppStrings.swift",
+      "line": 39,
       "symbol": "AppStrings.messageForLockProgress(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -281,265 +288,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 30,
-      "symbol": "LocationProfile.distanceFilter",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 31,
-      "symbol": "LocationProfile.desiredAccuracy",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 32,
-      "symbol": "LocationProfile.horizontalAccuracy",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 44,
-      "symbol": "WAILocationProfile.default",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 45,
-      "symbol": "WAILocationProfile.low",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 46,
-      "symbol": "WAILocationProfile.medium",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 47,
-      "symbol": "WAILocationProfile.high",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 52,
-      "symbol": "WAILocationProfile.distanceFilter",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 66,
-      "symbol": "WAILocationProfile.desiredAccuracy",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/LocationProfile.swift",
-      "line": 80,
-      "symbol": "WAILocationProfile.horizontalAccuracy",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": null,
-      "symbol": "WhereAmI",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 32,
-      "symbol": "WAILocationAuthorization.alwaysAuthorization",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 33,
-      "symbol": "WAILocationAuthorization.inUseAuthorization",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 44,
-      "symbol": "WAILocationResponse.locationUpdated(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 45,
-      "symbol": "WAILocationResponse.locationFail(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 46,
-      "symbol": "WAILocationResponse.unauthorized",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 58,
-      "symbol": "WAIGeocoderResponse.success(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 59,
-      "symbol": "WAIGeocoderResponse.failure(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 60,
-      "symbol": "WAIGeocoderResponse.placeNotFound",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 61,
-      "symbol": "WAIGeocoderResponse.unauthorized",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 64,
-      "symbol": "WAIAuthorizationResult",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 65,
-      "symbol": "WAILocationUpdate",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 66,
-      "symbol": "WAIReversGeocodedLocationResult",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 70,
-      "symbol": "WhereAmI",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 73,
-      "symbol": "WhereAmI.sharedInstance",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 75,
-      "symbol": "WhereAmI.locationManager",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 78,
-      "symbol": "WhereAmI.horizontalAccuracy",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 79,
-      "symbol": "WhereAmI.continuousUpdate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 80,
-      "symbol": "WhereAmI.locationAuthorization",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 81,
-      "symbol": "WhereAmI.locationPrecision",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 89,
-      "symbol": "WhereAmI.authorizationHandler",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 90,
-      "symbol": "WhereAmI.locationUpdateHandler",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 125,
-      "symbol": "WhereAmI.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 256,
-      "symbol": "WhereAmI.deinit",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 267,
-      "symbol": "WhereAmI.locationManager(_:didChangeAuthorization:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 279,
-      "symbol": "WhereAmI.locationManager(_:didFailWithError:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Dependencies/WhereAmI/WhereAmI.swift",
-      "line": 283,
-      "symbol": "WhereAmI.locationManager(_:didUpdateLocations:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
       "line": 22,
       "symbol": "DoordeckProtocol.newAuthTokenRequired()",
@@ -549,461 +297,468 @@
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
       "line": 23,
+      "symbol": "DoordeckProtocol.verificationNeeded()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
+      "line": 24,
       "symbol": "DoordeckProtocol.unlockSuccessful()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 38,
+      "line": 39,
       "symbol": "Doordeck.ReaderType.automatic",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 39,
+      "line": 40,
       "symbol": "Doordeck.ReaderType.nfc",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 40,
+      "line": 41,
       "symbol": "Doordeck.ReaderType.qr",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 43,
-      "symbol": "Doordeck.State",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 44,
+      "line": 50,
       "symbol": "Doordeck.State.authenticated",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 45,
+      "line": 51,
       "symbol": "Doordeck.State.verificationRequired",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
-      "line": 46,
+      "line": 52,
       "symbol": "Doordeck.State.notAuthenticated",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift",
+      "line": 55,
+      "symbol": "Doordeck.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 6,
+      "line": 5,
       "symbol": "VisitorPass",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 7,
+      "line": 6,
       "symbol": "VisitorPass.tempLock",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 8,
+      "line": 7,
       "symbol": "VisitorPass.startDate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 9,
+      "line": 8,
       "symbol": "VisitorPass.endDate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 12,
+      "line": 11,
       "symbol": "LocationServices",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 13,
+      "line": 12,
       "symbol": "LocationServices.accuracy",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 14,
+      "line": 13,
       "symbol": "LocationServices.enabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 15,
+      "line": 14,
       "symbol": "LocationServices.latitude",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 16,
+      "line": 15,
       "symbol": "LocationServices.longitude",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 17,
+      "line": 16,
       "symbol": "LocationServices.radius",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 20,
+      "line": 19,
       "symbol": "LockDevice",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 22,
+      "line": 21,
       "symbol": "LockDevice.currentUnlockProgress",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 23,
+      "line": 22,
       "symbol": "LockDevice.currentUnlockProgress.lockInitilized",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 24,
+      "line": 23,
       "symbol": "LockDevice.currentUnlockProgress.lockConnecting",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 25,
+      "line": 24,
       "symbol": "LockDevice.currentUnlockProgress.lockConnected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 26,
+      "line": 25,
       "symbol": "LockDevice.currentUnlockProgress.lockDisconnected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 27,
+      "line": 26,
       "symbol": "LockDevice.currentUnlockProgress.lockOffline",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 28,
+      "line": 27,
       "symbol": "LockDevice.currentUnlockProgress.lockUnlocked",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 29,
+      "line": 28,
       "symbol": "LockDevice.currentUnlockProgress.unlockSuccess",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 30,
+      "line": 29,
       "symbol": "LockDevice.currentUnlockProgress.unlockFail",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 31,
+      "line": 30,
       "symbol": "LockDevice.currentUnlockProgress.gpsFailed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 32,
+      "line": 31,
       "symbol": "LockDevice.currentUnlockProgress.gpssuccess",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 33,
+      "line": 32,
       "symbol": "LockDevice.currentUnlockProgress.gpsSearching",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 34,
+      "line": 33,
       "symbol": "LockDevice.currentUnlockProgress.gpsUnauthorized",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 35,
+      "line": 34,
       "symbol": "LockDevice.currentUnlockProgress.timeWindowsuccess",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 36,
+      "line": 35,
       "symbol": "LockDevice.currentUnlockProgress.timeWindowFailed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 37,
+      "line": 36,
       "symbol": "LockDevice.currentUnlockProgress.other",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 40,
+      "line": 39,
       "symbol": "LockDevice.lockSizeOptions",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 41,
+      "line": 40,
       "symbol": "LockDevice.lockSizeOptions.large",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 42,
+      "line": 41,
       "symbol": "LockDevice.lockSizeOptions.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 43,
+      "line": 42,
       "symbol": "LockDevice.lockSizeOptions.small",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 47,
+      "line": 46,
       "symbol": "LockDevice.ID",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 48,
+      "line": 47,
       "symbol": "LockDevice.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 49,
+      "line": 48,
       "symbol": "LockDevice.admin",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 50,
+      "line": 49,
       "symbol": "LockDevice.locked",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 51,
+      "line": 50,
       "symbol": "LockDevice.connected",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 52,
+      "line": 51,
       "symbol": "LockDevice.unlockTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 53,
+      "line": 52,
       "symbol": "LockDevice.favourite",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 54,
+      "line": 53,
       "symbol": "LockDevice.colour",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 55,
+      "line": 54,
       "symbol": "LockDevice.tiles",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 57,
+      "line": 56,
       "symbol": "LockDevice.currentlyLocked",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 58,
+      "line": 57,
       "symbol": "LockDevice.expireTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 59,
+      "line": 58,
       "symbol": "LockDevice.visitorLock",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 60,
+      "line": 59,
       "symbol": "LockDevice.locationServices",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 62,
+      "line": 61,
       "symbol": "LockDevice.indexPath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 64,
+      "line": 63,
       "symbol": "LockDevice.locksize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 66,
+      "line": 65,
       "symbol": "LockDevice.countDownTimer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 67,
+      "line": 66,
       "symbol": "LockDevice.countDownTime",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 69,
+      "line": 68,
       "symbol": "LockDevice.gpsCountDownTimer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 71,
+      "line": 70,
       "symbol": "LockDevice.completion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 72,
+      "line": 71,
       "symbol": "LockDevice.progress",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 73,
+      "line": 72,
       "symbol": "LockDevice.lockStatus",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 74,
+      "line": 73,
       "symbol": "LockDevice.reset",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 76,
+      "line": 75,
       "symbol": "LockDevice.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 80,
+      "line": 79,
       "symbol": "LockDevice.populateFromJson(_:index:locksize:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 174,
+      "line": 173,
       "symbol": "LockDevice.deviceConnect(_:progress:currentLockStatus:reset:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 255,
+      "line": 254,
       "symbol": "LockDevice.deviceUnlock(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Lock/LockDevice.swift",
-      "line": 380,
+      "line": 379,
       "symbol": "LockDevice.updateColour(hexColour:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1234,28 +989,28 @@
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/AFRequest.swift",
-      "line": 96,
+      "line": 101,
       "symbol": "AFRequest.handleResponse(_:response:result:onSuccess:onError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/AFRequest.swift",
-      "line": 140,
+      "line": 151,
       "symbol": "AFRequest.serverTrustPolicy()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/AFRequest.swift",
-      "line": 149,
+      "line": 160,
       "symbol": "AFRequest.cancelAllRequests()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/AFRequest.swift",
-      "line": 163,
+      "line": 174,
       "symbol": "AFRequest.request(_:method:params:encoding:headers:jsonReply:onSuccess:onError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1319,27 +1074,34 @@
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/APIClient.swift",
       "line": 12,
+      "symbol": "APIClient.error.twoFactorAuthenticationNeeded",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/APIClient.swift",
+      "line": 13,
       "symbol": "APIClient.error.noInternet",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/APIClient.swift",
-      "line": 15,
+      "line": 17,
       "symbol": "APIClient.deviceStatus",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/APIClient.swift",
-      "line": 16,
+      "line": 18,
       "symbol": "APIClient.deviceStatus.lock",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/APIClient.swift",
-      "line": 17,
+      "line": 19,
       "symbol": "APIClient.deviceStatus.unlock",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -1451,28 +1213,70 @@
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
-      "line": 15,
+      "line": 5,
+      "symbol": "URLManager.verificationMethod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
+      "line": 6,
+      "symbol": "URLManager.verificationMethod.sms",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
+      "line": 7,
+      "symbol": "URLManager.verificationMethod.phone",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
+      "line": 8,
+      "symbol": "URLManager.verificationMethod.email",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
+      "line": 9,
+      "symbol": "URLManager.verificationMethod.whatapp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
+      "line": 10,
+      "symbol": "URLManager.verificationMethod.auto",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
+      "line": 23,
       "symbol": "URLManager.GET",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
-      "line": 16,
+      "line": 24,
       "symbol": "URLManager.PUT",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
-      "line": 17,
+      "line": 25,
       "symbol": "URLManager.POST",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Network/URLManager.swift",
-      "line": 31,
+      "line": 39,
       "symbol": "URLManager.invite",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -2340,21 +2144,21 @@
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/JsonHelper.swift",
-      "line": 43,
+      "line": 48,
       "symbol": "JsonHelper.jsonEncodeArray(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/JsonHelper.swift",
-      "line": 53,
+      "line": 58,
       "symbol": "JsonHelper.jsonDecode(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/JsonHelper.swift",
-      "line": 60,
+      "line": 65,
       "symbol": "JsonHelper.jsonDecode(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2448,83 +2252,6 @@
       "line": 84,
       "symbol": "String.encode(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 119,
-      "symbol": "Double.millisecond",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 120,
-      "symbol": "Double.milliseconds",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 121,
-      "symbol": "Double.ms",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 123,
-      "symbol": "Double.second",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 124,
-      "symbol": "Double.seconds",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 126,
-      "symbol": "Double.minute",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 127,
-      "symbol": "Double.minutes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 129,
-      "symbol": "Double.hour",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 130,
-      "symbol": "Double.hours",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 132,
-      "symbol": "Double.day",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Util/SwiftyTimer.swift",
-      "line": 133,
-      "symbol": "Double.days",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
