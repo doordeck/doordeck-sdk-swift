@@ -3,3 +3,27 @@
 xcschememanagement.plist
 DoNotCommit.swift
 *.xcbkptlist
+Breakpoints_v2.xcbkptlist
+*.pbxproj
+project.pbxproj
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Build generated
+build/
+DerivedData/
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
