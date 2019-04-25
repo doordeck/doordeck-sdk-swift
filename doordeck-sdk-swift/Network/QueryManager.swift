@@ -206,7 +206,8 @@ class Header {
         guard let authToken = token?.getToken() else {
             return [:]
         }
-        return [self.authorization: "\(self.bearer) \(authToken)" ]
+        return [self.authorization: "\(self.bearer) \(authToken)",
+            self.ContentType: self.applicationJson ]
     }
     
     /// Api version

@@ -66,6 +66,37 @@ class APIClient {
         }
     }
     
+    
+    /// Start the process of 2FA
+    ///
+    /// - Parameters:
+    ///   - key: the public ephemeralKey
+    ///   - method: the method you would like to recieve the conformation
+    ///   - completion: completion call back with error
+    func startVerificationProcess(_ key: String,
+                                  method: URLManager.verificationMethod = .auto,
+                             completion: @escaping ([String:AnyObject]?, APIClient.error?) -> Void) {
+        
+        let URL = URLManager.startVerificationProcess(method)
+        
+        AFRequest().request(URL,
+                            method: .post,
+                            params: QueryManager.registerKey(key),
+                            headers: self.header,
+                            jsonReply: false,
+                            onSuccess: { (jsonData) in
+                                
+                                self.requestCompletion(URL,
+                                                       data: jsonData,
+                                                       rootKey: nil,
+                                                       completion: completion)
+                                
+        }) { (error) in
+            completion(nil, error)
+        }
+    }
+    
+    
     /// Find a device from the UUID of a tile
     ///
     /// - Parameters:

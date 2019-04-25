@@ -2,4 +2,182 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../doordeck-sdk-swift/Verification Screen/VerificationViewController.swift"
+            timestampString = "577879364.74453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "sendVerificationRequest()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../doordeck-sdk-swift/InitializeDoordeck.swift"
+            timestampString = "577879364.744984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "checkTokenIsValid(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "doordeck_sdk_swift_sample.Doordeck.(checkTokenIsValid in _69EE43ECBABC0D56DE735BD9CB0A8F04)((doordeck_sdk_swift_sample.Doordeck.State) -&gt; ()) -&gt; ()"
+                  moduleName = "doordeck-sdk-swift-sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift"
+                  timestampString = "577879220.837868"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in doordeck_sdk_swift_sample.Doordeck.(checkTokenIsValid in _69EE43ECBABC0D56DE735BD9CB0A8F04)((doordeck_sdk_swift_sample.Doordeck.State) -&gt; ()) -&gt; ()"
+                  moduleName = "doordeck-sdk-swift-sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift"
+                  timestampString = "577879220.840905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../doordeck-sdk-swift/InitializeDoordeck.swift"
+            timestampString = "577879364.745633"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "checkTokenIsValid(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in doordeck_sdk_swift_sample.Doordeck.(checkTokenIsValid in _69EE43ECBABC0D56DE735BD9CB0A8F04)((doordeck_sdk_swift_sample.Doordeck.State) -&gt; ()) -&gt; ()"
+                  moduleName = "doordeck-sdk-swift-sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift"
+                  timestampString = "577879220.845307"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (doordeck_sdk_swift_sample.Doordeck.State) -&gt; () in closure #1 () -&gt; () in doordeck_sdk_swift_sample.Doordeck.(checkTokenIsValid in _69EE43ECBABC0D56DE735BD9CB0A8F04)((doordeck_sdk_swift_sample.Doordeck.State) -&gt; ()) -&gt; ()"
+                  moduleName = "doordeck-sdk-swift-sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/InitializeDoordeck.swift"
+                  timestampString = "577879220.8471349"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../doordeck-sdk-swift/Security/TokenHelper.swift"
+            timestampString = "577813213.728025"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "tokenActive(_:fail:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "doordeck_sdk_swift_sample.TokenHelper.tokenActive(_: () -&gt; (), fail: () -&gt; ()) -&gt; ()"
+                  moduleName = "doordeck-sdk-swift-sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift"
+                  timestampString = "577879220.852986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "163">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in doordeck_sdk_swift_sample.TokenHelper.tokenActive(_: () -&gt; (), fail: () -&gt; ()) -&gt; ()"
+                  moduleName = "doordeck-sdk-swift-sample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marwan/Documents/iPhoneSoftware/Doordeck/doordeck-sdk-swift/doordeck-sdk-swift/Security/TokenHelper.swift"
+                  timestampString = "577879220.855821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "290">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../doordeck-sdk-swift/InitializeDoordeck.swift"
+            timestampString = "577879364.746419"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "showVerificationScreen(_:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

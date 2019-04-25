@@ -11,6 +11,7 @@ import UIKit
 class VerificationViewController: UIViewController {
     
     var apiClient: APIClient!
+    var sodium: SodiumHelper!
     var delegate: DoordeckProtocol?
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
@@ -22,8 +23,9 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var verificationCode6: UILabel!
     @IBOutlet weak var verificationCodeCentre: UILabel!
     
-    init(_ apiClient: APIClient) {
+    init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
+        self.sodium = sodium
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,12 +36,24 @@ class VerificationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        sendVerificationRequest()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         hiddenTextField.becomeFirstResponder()
         hiddenTextField.delegate = self
+    }
+    
+    func sendVerificationRequest()  {
+        guard let publicKey = sodium.getPublicKey() else {
+            return
+        }
+        
+        apiClient.startVerificationProcess(publicKey) { (json, error) in
+            
+        }
     }
     
     func setUpUI() {

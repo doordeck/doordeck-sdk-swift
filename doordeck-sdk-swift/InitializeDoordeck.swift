@@ -122,6 +122,7 @@ public class Doordeck {
         let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
         vc.delegate = self.delegate
         vc.apiClient = self.apiClient
+        vc.sodium = self.sodium
         
         let navigationController = UINavigationController(rootViewController: vc)
         view.present(navigationController, animated: true, completion: nil)
@@ -156,6 +157,7 @@ public class Doordeck {
                 break
             case .verificationRequired:
                 fail()
+                self?.showVerificationScreen(success, fail: fail)
                 self?.delegate?.verificationNeeded()
                 break
             }

@@ -2,15 +2,23 @@ import UIKit
 
 struct URLManager {
     
+    enum verificationMethod {
+        case sms
+        case phone
+        case email
+        case whatapp
+        case auto
+    }
+    
     fileprivate static let httpsBase = "https://"
     fileprivate static let webBase = "doordeck.com"
     
-//    #if os(iOS)
-////    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
-//    fileprivate static let api = (UIApplication.staging() == true) ? "api.dev." : "api."
-//    #else
+    //    #if os(iOS)
+    ////    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
+    //    fileprivate static let api = (UIApplication.staging() == true) ? "api.dev." : "api."
+    //    #else
     fileprivate static let api = "api.dev."
-//    #endif
+    //    #endif
     
     static let GET = "GET"
     static let PUT = "PUT"
@@ -37,6 +45,11 @@ struct URLManager {
     fileprivate static let password = "/password"
     fileprivate static let shareable = "/shareable"
     fileprivate static let force = "?force"
+    fileprivate static let method = "?method="
+    fileprivate static let smsMethod = "SMS"
+    fileprivate static let telephoneMethod  = "TELEPHONE"
+    fileprivate static let emailMethod  = "EMAIL"
+    fileprivate static let whatspapMethod  = "WHATSAPP"
     
     /// URL string for Device retreval from UUID
     ///
@@ -64,5 +77,26 @@ struct URLManager {
     /// - Returns: URL
     static func registrationWithKey () -> String {
         return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)" }
+    
+
+    /// start verification process
+    ///
+    /// - Parameter method: the method you would like to be contacted
+    /// - Returns: a string of the URL
+    static func startVerificationProcess (_ methodOfContact: verificationMethod = .auto) -> String {
+        
+        switch methodOfContact {
+        case .auto:
+            return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(verify)"
+        case .sms:
+            return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(verify)\(method)\(smsMethod)"
+        case .phone:
+            return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(verify)\(method)\(telephoneMethod)"
+        case .email:
+            return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(verify)\(method)\(emailMethod)"
+        case .whatapp:
+            return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(verify)\(method)\(whatspapMethod)"
+        }
+    }
     
 }
