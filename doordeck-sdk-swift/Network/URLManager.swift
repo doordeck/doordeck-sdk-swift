@@ -44,6 +44,7 @@ struct URLManager {
     fileprivate static let key = "/key"
     fileprivate static let password = "/password"
     fileprivate static let shareable = "/shareable"
+    fileprivate static let check = "/check"
     fileprivate static let force = "?force"
     fileprivate static let method = "?method="
     fileprivate static let smsMethod = "SMS"
@@ -97,6 +98,10 @@ struct URLManager {
         case .whatapp:
             return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(verify)\(method)\(whatspapMethod)"
         }
+    }
+    
+    static func checkVerificationProcess () -> String {
+        return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(check)"
     }
     
 }

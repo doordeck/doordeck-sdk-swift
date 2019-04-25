@@ -14,6 +14,7 @@ struct QueryManager {
     private static let colour = "colour"
     private static let inviteCode = "inviteCode"
     private static let ephemeralKey = "ephemeralKey"
+    private static let verificationSignature = "verificationSignature"
     
     /// Login Query
     ///
@@ -37,6 +38,15 @@ struct QueryManager {
     static func registerKey (_ key: String) -> [String: AnyObject] {
         
         return [ self.ephemeralKey: key as AnyObject ]
+    }
+    
+    /// User public key Query
+    ///
+    /// - Parameter key: Key as a base64 string
+    /// - Returns: Query object
+    static func checkKey (_ key: String) -> [String: AnyObject] {
+        
+        return [ self.verificationSignature: key as AnyObject ]
     }
     
     /// Register new user

@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Read QR code</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>Read NFC </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Geo-fenced locks</string>
 </dict>
 </plist>

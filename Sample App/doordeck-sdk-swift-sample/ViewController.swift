@@ -55,7 +55,4 @@ extension ViewController: DoordeckProtocol {
     func unlockSuccessful() {
         print("unlockSuccessful")
     }
-    
-    
-    
 }

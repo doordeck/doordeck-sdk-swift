@@ -157,7 +157,7 @@ public class Doordeck {
                 break
             case .verificationRequired:
                 fail()
-                self?.showVerificationScreen(success, fail: fail)
+                self?.showUnlockScreenSuccess()
                 self?.delegate?.verificationNeeded()
                 break
             }
