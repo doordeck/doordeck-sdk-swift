@@ -1,5 +1,5 @@
 
-This readme will explain the necessary, to import Doordeck into your app.
+This readme will explain the necessary steps, to import Doordeck into your app.
 *due to a bug in Xcode 10, I cannot create a pod at the minute, this will be coming soon. 
 
 A sample app has been provided to show how to integrate with Doordeck.
@@ -83,5 +83,4 @@ Unlock a door
 
 ```
 
-## Step 8
 Please keep in mind, Doordeck servers can reject a user and ask for permissions, if the Public key sent does not match the one on the server currently.
