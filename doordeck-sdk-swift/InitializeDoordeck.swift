@@ -24,6 +24,11 @@ public protocol DoordeckProtocol {
     func unlockSuccessful()
 }
 
+protocol DoordeckInternalProtocol {
+    func verificationSuccessful()
+    func verificationUnsuccessful()
+}
+
 
 /**
  `Doordeck` is the main class initialised by the application object.
@@ -120,7 +125,7 @@ public class Doordeck {
         guard let view:UIViewController = UIApplication.topViewController() else { return }
         let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
         let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
-        vc.delegate = self.delegate
+        vc.delegate = self
         vc.apiClient = self.apiClient
         vc.sodium = self.sodium
         
@@ -157,7 +162,7 @@ public class Doordeck {
                 break
             case .verificationRequired:
                 fail()
-                self?.showUnlockScreenSuccess()
+                self?.showVerificationScreen(success, fail: fail)
                 self?.delegate?.verificationNeeded()
                 break
             }
@@ -244,5 +249,18 @@ public class Doordeck {
             
         }
     }
+}
+
+extension Doordeck: DoordeckInternalProtocol {
+    func verificationSuccessful() {
+        self.currentState = .authenticated
+        showUnlockScreenSuccess()
+    }
+    
+    func verificationUnsuccessful() {
+        self.currentState = .verificationRequired
+    }
+    
+    
 }
 

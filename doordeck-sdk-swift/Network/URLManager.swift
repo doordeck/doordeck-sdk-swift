@@ -16,7 +16,7 @@ struct URLManager {
     //    #if os(iOS)
     ////    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
     //    #else
-    fileprivate static let api = "api.staging.doordeck.com"
+    fileprivate static let api = "api.dev."
     //    #endif
     
     static let GET = "GET"

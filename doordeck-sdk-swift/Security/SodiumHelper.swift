@@ -28,12 +28,32 @@ class SodiumHelper {
     /// - Returns: Returns Public key of the private public key pair
     func getPublicKey() -> String? {
         if let keyPair = getKeyPairFromKeychain() {
-            return getPublicKey(keyPair)
+            return getPublicKeyFromCombined(keyPair)
         } else {
             return createAndSaveKeyPairReturnPublic()
         }
     }
     
+    func getPrivateKey() -> String? {
+        if let keyPair = getKeyPairFromKeychain() {
+            return keyPair
+        } else {
+            return nil
+        }
+    }
+    
+    func signVerificationCode(_ code: String) -> String? {
+        guard let pKey = getPrivateKey(),
+            let privateKeyBytes = stringTobytes(pKey) else {
+            return nil
+        }
+        
+        let bytes = Array(code.utf8)
+        guard let signature = sodium.sign.sign(message: bytes, secretKey: privateKeyBytes) else {
+            return nil
+        }
+        return bytesToString(signature)
+    }
     
     /// Create new key pair and save it
     ///
@@ -42,12 +62,13 @@ class SodiumHelper {
         let keyPair = sodium.sign.keyPair()!
         let combinByteKey = keyPair.secretKey
         if combinByteKey.count == 64 {
-            let combinedKey = bytesToString(combinByteKey)
+            guard let combinedKey = bytesToString(combinByteKey) else {return nil}
             if let email = tokenHelper.returnUserEmail() {
                 let keychain = KeychainHelper(self.name, tag: email)
                 do {
                     try keychain.saveKey(combinedKey)
-                    return getPublicKey(combinedKey)
+                    guard let publicKey = getPublicKeyFromCombined(combinedKey) else {return nil}
+                    return publicKey
                 } catch {
                     print("Unexpected error: \(error)")
                     return nil
@@ -65,12 +86,12 @@ class SodiumHelper {
     ///
     /// - Parameter key: key with private public key
     /// - Returns: public key as a base64
-    func getPublicKey (_ key: String) -> String {
-        let bytes = stringTobytes(key)
+    private func getPublicKeyFromCombined (_ key: String) -> String? {
+        guard let bytes = stringTobytes(key) else {return nil}
         if bytes.count == 64 {
             return bytesToString(Array(bytes.suffix(32)))
         } else {
-            return ""
+            return nil
         }
     }
     
@@ -78,12 +99,12 @@ class SodiumHelper {
     ///
     /// - Parameter key: key with private public key
     /// - Returns: Private key as a base64
-    func getPrivateKey (_ key: String) -> String {
-        let bytes = stringTobytes(key)
+    private func getPrivateKeyFromCombined (_ key: String) -> String? {
+        guard let bytes = stringTobytes(key) else {return nil}
         if bytes.count == 64 {
             return bytesToString(Array(bytes.prefix(32)))
         } else {
-            return ""
+            return nil
         }
     }
     
@@ -103,16 +124,18 @@ class SodiumHelper {
     ///
     /// - Parameter bytes: key as bytes
     /// - Returns: Key
-    private func bytesToString (_ bytes: [UInt8]) -> String {
-        return sodium.utils.bin2base64(bytes, variant: .ORIGINAL)!
+    private func bytesToString (_ bytes: [UInt8]) -> String? {
+        guard let string = sodium.utils.bin2base64(bytes, variant: .ORIGINAL) else {return nil}
+        return string
     }
     
     /// Converts base64 to bytes
     ///
     /// - Parameter key: key as a string
     /// - Returns: key
-    private func stringTobytes (_ key: String) -> [UInt8] {
-        return sodium.utils.base642bin(key, variant: .ORIGINAL, ignore: " \n")!
+    private func stringTobytes (_ key: String) -> [UInt8]? {
+        guard let bytes =  sodium.utils.base642bin(key, variant: .ORIGINAL, ignore: " \n") else {return nil}
+        return bytes
     }
     
 }

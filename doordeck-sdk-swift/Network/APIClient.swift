@@ -109,7 +109,7 @@ class APIClient {
         
         AFRequest().request(URL,
                             method: .post,
-                            params: QueryManager.registerKey(key),
+                            params: QueryManager.checkKey(key),
                             headers: self.header,
                             jsonReply: false,
                             onSuccess: { (jsonData) in

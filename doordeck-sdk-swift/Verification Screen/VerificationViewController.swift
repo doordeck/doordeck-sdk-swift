@@ -12,7 +12,7 @@ class VerificationViewController: UIViewController {
     
     var apiClient: APIClient!
     var sodium: SodiumHelper!
-    var delegate: DoordeckProtocol?
+    var delegate: DoordeckInternalProtocol?
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
     @IBOutlet weak var verificationCode1: UILabel!
@@ -72,7 +72,18 @@ class VerificationViewController: UIViewController {
     }
     
     @IBAction func sendCodeToServer(_ sender: Any) {
-        
+        guard let signature = sodium.signVerificationCode(hiddenTextField.text!) else {return}
+        apiClient.checkVerificationProcess(signature) { [weak self](json, error) in
+            if error == nil {
+                self?.dismiss(animated: false, completion: {
+                    self?.delegate?.verificationSuccessful()
+                })
+            } else {
+                self?.dismiss(animated: false, completion: {
+                    self?.delegate?.verificationUnsuccessful()
+                })
+            }
+        }
     }
     
     

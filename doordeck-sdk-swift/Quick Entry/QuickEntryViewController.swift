@@ -99,7 +99,6 @@ extension QuickEntryViewController: quickEntryDelegate {
     
     func lockDetected(_ UUID: String) {
         showLockVerificationScreen(UUID, autoUnlock: true)
-        
     }
     
     
