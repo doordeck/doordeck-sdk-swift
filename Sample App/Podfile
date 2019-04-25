@@ -12,21 +12,3 @@ target "doordeck-sdk-swift-sample" do
   pod "Sodium", :git => "https://github.com/Westacular/swift-sodium.git", :branch => "fix_xcode10.2"
 end
 
-
-post_install do |installer|
-  
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings.delete('CODE_SIGNING_ALLOWED')
-    config.build_settings.delete('CODE_SIGNING_REQUIRED')
-  end
-  
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      if target.name == 'JSONWebToken'
-        print "JSONWebToken \n"
-        system("rm -rf Pods/JSONWebToken/CommonCrypto")
-      end
-    end
-  end
-  
-end

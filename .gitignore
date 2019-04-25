@@ -2,3 +2,4 @@
 *.xcuserstate
 xcschememanagement.plist
 DoNotCommit.swift
+*.xcbkptlist
