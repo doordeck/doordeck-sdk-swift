@@ -7,7 +7,7 @@ A sample app has been provided to show how to integrate with Doordeck.
 
 
 ## Step 1
-Import doordeck-sdk-swift into your project. I would suggest adding it in a separate folder.
+Import [doordeck-sdk-swift](https://github.com/doordeck/doordeck-sdk-swift/tree/master/doordeck-sdk-swift) into your project. I would suggest adding this to a separate folder, within your project.
 
 ## Step 2
 Add the following pods to your project 
