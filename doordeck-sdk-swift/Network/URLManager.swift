@@ -15,9 +15,8 @@ struct URLManager {
     
     //    #if os(iOS)
     ////    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
-    //    fileprivate static let api = (UIApplication.staging() == true) ? "api.dev." : "api."
     //    #else
-    fileprivate static let api = "api.dev."
+    fileprivate static let api = "api.staging.doordeck.com"
     //    #endif
     
     static let GET = "GET"
@@ -79,7 +78,7 @@ struct URLManager {
     static func registrationWithKey () -> String {
         return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)" }
     
-
+    
     /// start verification process
     ///
     /// - Parameter method: the method you would like to be contacted
@@ -100,6 +99,9 @@ struct URLManager {
         }
     }
     
+    /// Submit the code sent to the user by the Doordeck servers
+    ///
+    /// - Returns: string of the URL
     static func checkVerificationProcess () -> String {
         return "\(httpsBase)\(api)\(webBase)\(auth)\(certificate)\(check)"
     }

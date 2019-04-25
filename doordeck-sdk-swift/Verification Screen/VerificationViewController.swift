@@ -56,6 +56,10 @@ class VerificationViewController: UIViewController {
         }
     }
     
+    @IBAction func resendVerificationCode(_ sender: Any) {
+        sendVerificationRequest()
+    }
+    
     func setUpUI() {
         topLabel.attributedText = NSAttributedString.doordeckH3(AppStrings.verification)
         hiddenTextField.isHidden = true
@@ -66,6 +70,12 @@ class VerificationViewController: UIViewController {
         
         hiddenTextField.keyboardType = UIKeyboardType.numberPad
     }
+    
+    @IBAction func sendCodeToServer(_ sender: Any) {
+        
+    }
+    
+    
     @IBAction func textFieldEdited(_ textField: UITextField) {
         fillOutCode(textField.text ?? "")
     }
