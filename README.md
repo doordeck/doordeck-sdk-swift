@@ -31,7 +31,7 @@ Add the following to your project plist.
  “Privacy - Location When In Use Usage Description” -> “NSLocationAlwaysAndWhenInUseUsageDescription”
 ```
 
-###Optional - this is helpful if you are using Doordeck in a today widget.
+### Optional - this is helpful if you are using Doordeck in a today widget.
 ```
  “Privacy - Location Always Usage Description” -> “NSLocationAlwaysUsageDescription"
 ```
