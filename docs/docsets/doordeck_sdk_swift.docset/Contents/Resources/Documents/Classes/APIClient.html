@@ -192,6 +192,9 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/DoordeckInternalProtocol.html">DoordeckInternalProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/DoordeckProtocol.html">DoordeckProtocol</a>
               </li>
               <li class="nav-group-task">
@@ -454,7 +457,78 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startVerificationProcess</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                               <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Structs/URLManager.html">URLManager</a></span><span class="o">.</span><span class="n">verificationMethod</span> <span class="o">=</span> <span class="o">.</span><span class="n">auto</span><span class="p">,</span>
-                         <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">]?,</span> <span class="kt">APIClient</span><span class="o">.</span><span class="n"><a href="../Classes/APIClient/error.html">error</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                              <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">]?,</span> <span class="kt">APIClient</span><span class="o">.</span><span class="n"><a href="../Classes/APIClient/error.html">error</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the public ephemeralKey</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the method you would like to recieve the conformation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion call back with error</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18doordeck_sdk_swift9APIClientC24checkVerificationProcess_10completionySS_ySDySSyXlGSg_AC5errorOSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/checkVerificationProcess(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18doordeck_sdk_swift9APIClientC24checkVerificationProcess_10completionySS_ySDySSyXlGSg_AC5errorOSgtctF">checkVerificationProcess(_:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check 2FA code</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">checkVerificationProcess</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                              <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">]?,</span> <span class="kt">APIClient</span><span class="o">.</span><span class="n"><a href="../Classes/APIClient/error.html">error</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -638,9 +712,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:18doordeck_sdk_swift9APIClientC10lockUnlock_7control10completionyAA10LockDeviceC_AC12deviceStatusOySayyXlGSg_AC5errorOSgtctF"></a>
-                    <a name="//apple_ref/swift/Method/lockUnlock(_:control:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:18doordeck_sdk_swift9APIClientC10lockUnlock_7control10completionyAA10LockDeviceC_AC12deviceStatusOySayyXlGSg_AC5errorOSgtctF">lockUnlock(_:control:completion:)</a>
+                    <a name="/s:18doordeck_sdk_swift9APIClientC10lockUnlockyyAA10LockDeviceC_AA12SodiumHelperCXeAC12deviceStatusOySayyXlGSg_AC5errorOSgtctcACF"></a>
+                    <a name="//apple_ref/swift/Method/lockUnlock(_:sodium:chain:control:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18doordeck_sdk_swift9APIClientC10lockUnlockyyAA10LockDeviceC_AA12SodiumHelperCXeAC12deviceStatusOySayyXlGSg_AC5errorOSgtctcACF">lockUnlock(_:sodium:chain:control:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -656,6 +730,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">lockUnlock</span> <span class="p">(</span><span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Classes/LockDevice.html">LockDevice</a></span><span class="p">,</span>
+                 <span class="nv">sodium</span><span class="p">:</span> <span class="kt"><a href="../Classes/SodiumHelper.html">SodiumHelper</a></span><span class="p">,</span>
+                 <span class="nv">chain</span><span class="p">:</span> <span class="kt">CertificateChainClass</span><span class="p">,</span>
                  <span class="nv">control</span><span class="p">:</span> <span class="p">(</span><span class="kt">APIClient</span><span class="o">.</span><span class="n"><a href="../Classes/APIClient/deviceStatus.html">deviceStatus</a></span><span class="p">),</span>
                  <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">AnyObject</span><span class="p">]?,</span> <span class="kt">APIClient</span><span class="o">.</span><span class="n"><a href="../Classes/APIClient/error.html">error</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
@@ -712,7 +788,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/doordeck/doordeck-sdk-swift" target="_blank" rel="external">Doordeck</a>. All rights reserved. (Last updated: 2019-04-25)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/doordeck/doordeck-sdk-swift" target="_blank" rel="external">Doordeck</a>. All rights reserved. (Last updated: 2019-04-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

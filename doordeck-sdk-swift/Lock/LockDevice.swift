@@ -251,7 +251,7 @@ class LockDevice {
         }
     }
     
-    func deviceUnlock(_ completion: @escaping ([AnyObject]?, APIClient.error?, LockManager.deviceError?) -> Void)  {
+    func deviceUnlock(_ certificatechain: CertificateChainClass, sodium: SodiumHelper, completion: @escaping ([AnyObject]?, APIClient.error?, LockManager.deviceError?) -> Void)  {
         deviceStatusUpdate(.lockConnecting)
         GPSCheck({
             if self.currentlyLocked == true {
@@ -275,7 +275,7 @@ class LockDevice {
                 }
                 
                 self.currentlyLocked = false
-                self.apiClient.lockUnlock(self, control: .unlock, completion: { (json, error) in
+                self.apiClient.lockUnlock(self, sodium: sodium,  chain: certificatechain,  control: .unlock, completion: { (json, error) in
                     if (error != nil) {
                         self.currentlyLocked = true
                         self.deviceStatusUpdate(.unlockFail)

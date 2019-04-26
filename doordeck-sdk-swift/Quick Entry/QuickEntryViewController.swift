@@ -9,10 +9,13 @@
 import UIKit
 
 class QuickEntryViewController: UIViewController {
-    fileprivate var lockMan: LockManager!
+    var lockMan: LockManager!
     var apiClient: APIClient!
+    var certificateChain: CertificateChainClass!
     var delegate: DoordeckProtocol?
     var readerType: Doordeck.ReaderType = Doordeck.ReaderType.automatic
+    var sodium: SodiumHelper!
+    
     
     fileprivate let quickStoryboard = "QuickEntryStoryboard"
     fileprivate let bottomNFCView = "bottomViewNFC"
@@ -21,8 +24,10 @@ class QuickEntryViewController: UIViewController {
     fileprivate let lockUnlockStoryboard =  "LockUnlockScreen"
     fileprivate let lockUnlockIdentifier = "LockUnlock"
     
-    init(_ apiClient: APIClient) {
+    init(_ apiClient: APIClient, chain: CertificateChainClass, sodiumTemp: SodiumHelper) {
+        self.sodium = sodiumTemp
         self.apiClient = apiClient
+        self.certificateChain = chain
         self.lockMan = LockManager(self.apiClient)
         super.init(nibName: nil, bundle: nil)
     }
@@ -112,9 +117,11 @@ extension QuickEntryViewController: quickEntryDelegate {
     }
     
     func showLockScreen(_ lockTemp: LockDevice)  {
-        if let viewController = UIStoryboard(name: lockUnlockStoryboard, bundle: nil).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
-            viewController.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
-            present(viewController, animated: true, completion: nil)
+        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: nil).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
+            vc.certificateChain = self.certificateChain
+            vc.sodium = self.sodium
+            vc.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
+            present(vc, animated: true, completion: nil)
         }
         
     }

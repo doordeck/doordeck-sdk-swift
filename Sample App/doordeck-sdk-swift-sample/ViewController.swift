@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let token = MyToken().token
+    let token = MyToken().token //your token as a string
     
     var doordeck:Doordeck?
 

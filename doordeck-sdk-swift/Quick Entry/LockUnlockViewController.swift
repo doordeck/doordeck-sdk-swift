@@ -15,12 +15,15 @@ struct lockUnlockScreen {
         case nfc
         case other
     }
-    var origin:executionOrigin = .other
+    var origin: executionOrigin = .other
     var lock: LockDevice
 }
 
 class LockUnlockViewController: UIViewController {
     var lockVariable: lockUnlockScreen!
+    var certificateChain: CertificateChainClass!
+    var sodium: SodiumHelper!
+    
     fileprivate var countDownTimer: Timer = Timer()
     fileprivate var minTimer: Float  = 2.0
     
@@ -28,7 +31,10 @@ class LockUnlockViewController: UIViewController {
     @IBOutlet weak var lockNameLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
     
-    init(_ lockVariableTemp: lockUnlockScreen) {
+    init(_ lockVariableTemp: lockUnlockScreen,
+         chain: CertificateChainClass, sodiumTemp: SodiumHelper) {
+        self.sodium = sodiumTemp
+        self.certificateChain = chain
         self.lockVariable = lockVariableTemp
         super.init(nibName: nil, bundle: nil)
     }
@@ -85,7 +91,8 @@ class LockUnlockViewController: UIViewController {
     }
     
     func unlock(_ autoUnlock: Bool, lock: LockDevice) {
-        lock.deviceUnlock { (data, apiError, deviceError) in
+        lock.deviceUnlock(certificateChain, sodium: sodium) { (data, apiError, deviceError) in
+            
         }
     }
     

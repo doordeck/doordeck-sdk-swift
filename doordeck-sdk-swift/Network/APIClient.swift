@@ -1,5 +1,4 @@
 import Foundation
-import SwiftyRSA
 
 class APIClient {
     enum error: Error {
@@ -53,7 +52,7 @@ class APIClient {
                             method: .post,
                             params: QueryManager.registerKey(key),
                             headers: self.header,
-                            jsonReply: false,
+                            jsonReply: true,
                             onSuccess: { (jsonData) in
                                 
                                 self.requestCompletion(URL,
@@ -75,7 +74,7 @@ class APIClient {
     ///   - completion: completion call back with error
     func startVerificationProcess(_ key: String,
                                   method: URLManager.verificationMethod = .auto,
-                             completion: @escaping ([String:AnyObject]?, APIClient.error?) -> Void) {
+                                  completion: @escaping ([String:AnyObject]?, APIClient.error?) -> Void) {
         
         let URL = URLManager.startVerificationProcess(method)
         
@@ -83,7 +82,7 @@ class APIClient {
                             method: .post,
                             params: QueryManager.registerKey(key),
                             headers: self.header,
-                            jsonReply: false,
+                            jsonReply: true,
                             onSuccess: { (jsonData) in
                                 
                                 self.requestCompletion(URL,
@@ -186,6 +185,8 @@ class APIClient {
     ///   - control: The call does support both lock and unlock but we currenly only use unlock
     ///   - completion: completion call back with error
     func lockUnlock (_ device: LockDevice,
+                     sodium: SodiumHelper,
+                     chain: CertificateChainClass,
                      control: (APIClient.deviceStatus),
                      completion: @escaping ([AnyObject]?, APIClient.error?) -> Void) {
         
@@ -194,7 +195,7 @@ class APIClient {
             "locked":(control == APIClient.deviceStatus.lock) ? true : false,
             "duration":Int(device.unlockTime)] as [String : Any]
         tokenHelper.tokenActive({
-            deviceControl(device, operation: operationArray as [String : Any], completion: completion)
+            deviceControl(device,sodium: sodium,chain: chain, operation: operationArray as [String : Any], completion: completion)
         }) {
             completion(nil, APIClient.error.invalidAuthToken)
         }
@@ -208,13 +209,13 @@ class APIClient {
     ///   - control: The call does support both lock and unlock but we currenly only use unlock
     ///   - completion: completion call back with error
     fileprivate func deviceControl (_ device: LockDevice,
+                                    sodium: SodiumHelper,
+                                    chain: CertificateChainClass,
                                     operation: [String: Any],
                                     completion: @escaping ([AnyObject]?, APIClient.error?) -> Void) {
         
-        let startTime = Date().timeIntervalSince1970.millisecond
-        
-        var userID = ""
-        guard let pemCert: String = "" //SecuritySinglton.shared.getPemCert()
+        guard let userID: String = chain.getUserID(),
+            let chainTemp: [String] = chain.getCertificateCahin()
             else { return completion (nil, APIClient.error.invalidAuthToken) }
         
         
@@ -222,59 +223,58 @@ class APIClient {
             return completion(nil, error.invalidAuthToken)
         }
         
+        let header = [
+            "typ": "jwt",
+            "x5c": chainTemp,
+            "alg": "EdDSA"
+            ] as [String : Any]
+        
+        let headerJson = JsonHelper().jsonEncodeDictionary(header as NSDictionary)
+        let header64URI = headerJson.toBase64().URIbase64()
         
         let BODY = ["iss":userID,
                     "sub":device.ID,
                     "nbf": Int(Date().timeIntervalSince1970),
                     "iat": Int(Date().timeIntervalSince1970),
                     "exp": Int(Date().timeIntervalSince1970 + 60.0),
-                    "operation":operation] as [String : Any]
+                    "operation":operation,
+                    "jti": UUID().uuidString
+            ] as [String : Any]
         
-        let HeaderString = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9"
+        
         let payload = tokenHelper.createTokenBody(BODY)
-        let payloadArr = payload.components(separatedBy: ".")
         
-        var fudgedToken = ""
+        var jwtToken = header64URI + "." + payload
         
-        if (payloadArr.count) > 1 {
-            fudgedToken = HeaderString + "." + (payloadArr[1])
-        } else {
-            completion(nil, error.invalidAuthToken)
-        }
+        let signature = sodium.signUnlock(jwtToken)
         
-        let data = fudgedToken.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
-        let clear = ClearMessage(data: data)
-        do {
-            let privateKey = try PrivateKey(pemEncoded: pemCert)
-            let digestSignature = try clear.signed(with: privateKey, digestType: .sha256)
-            let datastringTemp = digestSignature.base64String.URIbase64()
-            
-            fudgedToken = fudgedToken + "." + datastringTemp
-            print(PrintChannel.token, object: "fudgedToken \(fudgedToken)")
-            
-            let URL = "\(URLManager.lockContol(device.ID))"
-            let endTime = Date().timeIntervalSince1970.millisecond            
-            
-            AFRequest().request(URL,
-                                method: .post,
-                                params: nil,
-                                encoding: fudgedToken,
-                                headers: self.header,
-                                jsonReply: true,
-                                onSuccess: { (jsonData) in
-                                    
-                                    self.requestCompletion(URL,
-                                                           data: jsonData,
-                                                           rootKey: nil,
-                                                           completion: completion)
-                                    
-            }) { (error) in
-                completion(nil, error)
-            }
-        } catch {
+        guard let signatureCheck: String = signature else {
             completion(nil, APIClient.error.invalidAuthToken)
+            return
         }
         
+        jwtToken = jwtToken + "." + signatureCheck
+        
+        print(PrintChannel.token, object: "jwtToken \(jwtToken)")
+        
+        let URL = "\(URLManager.lockContol(device.ID))"
+        
+        AFRequest().request(URL,
+                            method: .post,
+                            params: nil,
+                            encoding: jwtToken,
+                            headers: self.header,
+                            jsonReply: true,
+                            onSuccess: { (jsonData) in
+                                
+                                self.requestCompletion(URL,
+                                                       data: jsonData,
+                                                       rootKey: nil,
+                                                       completion: completion)
+                                
+        }) { (error) in
+            completion(nil, error)
+        }
     }
     
     /// Complete request after sanity check on the data has been performed

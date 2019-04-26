@@ -25,7 +25,7 @@ public protocol DoordeckProtocol {
 }
 
 protocol DoordeckInternalProtocol {
-    func verificationSuccessful()
+    func verificationSuccessful(_ chain: CertificateChainClass)
     func verificationUnsuccessful()
 }
 
@@ -59,6 +59,7 @@ public class Doordeck {
     
     public var delegate: DoordeckProtocol?
     fileprivate var token: AuthTokenClass
+    fileprivate var chain: CertificateChainClass?
     fileprivate var readerType: ReaderType = ReaderType.automatic
     fileprivate var currentState: State = State.notAuthenticated
     fileprivate var apiClient: APIClient!
@@ -183,12 +184,21 @@ public class Doordeck {
     
     /// Show unlock reader, this will be added to the top view controller.
     fileprivate func showUnlockScreenSuccess () {
+        guard let certificateChainCheck: CertificateChainClass = self.chain else {
+            self.currentState = .notAuthenticated
+            self.updateAuthToken(self.delegate?.newAuthTokenRequired())
+            return
+        }
+        
         guard let view:UIViewController = UIApplication.topViewController() else { return }
         let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
         let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
+        vc.lockMan = LockManager(self.apiClient)
         vc.readerType = self.readerType
         vc.delegate = self.delegate
         vc.apiClient = self.apiClient
+        vc.certificateChain = certificateChainCheck
+        vc.sodium = self.sodium
         
         let navigationController = UINavigationController(rootViewController: vc)
         view.present(navigationController, animated: true, completion: nil)
@@ -232,7 +242,7 @@ public class Doordeck {
             return
         }
         
-        apiClient.registrationWithKey(publicKey) { [weak self]  (Json, error) in
+        apiClient.registrationWithKey(publicKey) { [weak self]  (certificateChain, error) in
             if error != nil {
                 if let authError = error, case .twoFactorAuthenticationNeeded = authError {
                     self?.currentState = .verificationRequired
@@ -243,6 +253,12 @@ public class Doordeck {
                 }
                 
             } else {
+                guard let certificateChainTemp = certificateChain else {
+                    self?.currentState = .notAuthenticated
+                    completion(.notAuthenticated)
+                    return
+                }
+                self?.chain = CertificateChainClass(certificateChainTemp)
                 self?.currentState = .authenticated
                 completion(.authenticated)
             }
@@ -252,7 +268,7 @@ public class Doordeck {
 }
 
 extension Doordeck: DoordeckInternalProtocol {
-    func verificationSuccessful() {
+    func verificationSuccessful(_ chain: CertificateChainClass) {
         self.currentState = .authenticated
         showUnlockScreenSuccess()
     }

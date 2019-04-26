@@ -43,12 +43,20 @@ class SodiumHelper {
     }
     
     func signVerificationCode(_ code: String) -> String? {
+        return sign(code)
+    }
+    
+    func signUnlock(_ jwt: String) -> String? {
+        return sign(jwt)
+    }
+    
+    private func sign (_ string: String) -> String? {
         guard let pKey = getPrivateKey(),
             let privateKeyBytes = stringTobytes(pKey) else {
-            return nil
+                return nil
         }
         
-        let bytes = Array(code.utf8)
+        let bytes = Array(string.utf8)
         guard let signature = sodium.sign.sign(message: bytes, secretKey: privateKeyBytes) else {
             return nil
         }
@@ -124,7 +132,7 @@ class SodiumHelper {
     ///
     /// - Parameter bytes: key as bytes
     /// - Returns: Key
-    private func bytesToString (_ bytes: [UInt8]) -> String? {
+    func bytesToString (_ bytes: [UInt8]) -> String? {
         guard let string = sodium.utils.bin2base64(bytes, variant: .ORIGINAL) else {return nil}
         return string
     }
@@ -133,7 +141,7 @@ class SodiumHelper {
     ///
     /// - Parameter key: key as a string
     /// - Returns: key
-    private func stringTobytes (_ key: String) -> [UInt8]? {
+    func stringTobytes (_ key: String) -> [UInt8]? {
         guard let bytes =  sodium.utils.base642bin(key, variant: .ORIGINAL, ignore: " \n") else {return nil}
         return bytes
     }

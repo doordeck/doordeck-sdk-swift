@@ -73,15 +73,18 @@ class VerificationViewController: UIViewController {
     
     @IBAction func sendCodeToServer(_ sender: Any) {
         guard let signature = sodium.signVerificationCode(hiddenTextField.text!) else {return}
-        apiClient.checkVerificationProcess(signature) { [weak self](json, error) in
+        apiClient.checkVerificationProcess(signature) { [weak self](certificateChain, error) in
             if error == nil {
+                guard let certificateChainTemp = certificateChain else {
+                    self?.delegate?.verificationUnsuccessful()
+                    return
+                }
+
                 self?.dismiss(animated: false, completion: {
-                    self?.delegate?.verificationSuccessful()
+                    self?.delegate?.verificationSuccessful(CertificateChainClass(certificateChainTemp))
                 })
             } else {
-                self?.dismiss(animated: false, completion: {
                     self?.delegate?.verificationUnsuccessful()
-                })
             }
         }
     }
