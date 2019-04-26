@@ -28,9 +28,14 @@ Add the following to your project plist.
 ```
  “Privacy - Camera Usage Description” -> “NSCameraUsageDescription”
  “Privacy - NFC Scan Usage Description” -> “NFCReaderUsageDescription”
- “Privacy - Location Always Usage Description” -> “NSLocationAlwaysUsageDescription"
  “Privacy - Location When In Use Usage Description” -> “NSLocationAlwaysAndWhenInUseUsageDescription”
 ```
+
+###Optional - this is helpful if you are using Doordeck in a today widget.
+```
+ “Privacy - Location Always Usage Description” -> “NSLocationAlwaysUsageDescription"
+```
+
 
 The Camera permission is needed for the QR code reader, the NFC is needed for the NFC reader. The GPS permissions are used for GPS geofenced locks. 
 Please make sure adequate descriptions are added to the keys, as they will be seen by the end user 
