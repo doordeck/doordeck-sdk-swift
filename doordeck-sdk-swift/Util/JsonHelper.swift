@@ -29,10 +29,10 @@ class JsonHelper{
         let json: Data?
         do {
             if #available(iOS 11.0, *) {
-                json = try JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys])
+                json = try JSONSerialization.data(withJSONObject: dict, options: [.sortedKeys])
             } else {
                 let sortedKeys = (dict.allKeys as! [String]).sorted(by: <)
-                json = try JSONSerialization.data(withJSONObject: sortedKeys, options: [.prettyPrinted])
+                json = try JSONSerialization.data(withJSONObject: sortedKeys, options: [])
             }
         } catch _ {
             json = nil
