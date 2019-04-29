@@ -57,7 +57,7 @@ class SodiumHelper {
         }
         
         let bytes = Array(string.utf8)
-        guard let signature = sodium.sign.sign(message: bytes, secretKey: privateKeyBytes) else {
+        guard let signature = sodium.sign.signature(message: bytes, secretKey: privateKeyBytes) else {
             return nil
         }
         return bytesToString(signature)

@@ -255,6 +255,8 @@ class APIClient {
         
         jwtToken = jwtToken + "." + signatureCheck
         
+        jwtToken = jwtToken.URIbase64()
+        
         print(PrintChannel.token, object: "jwtToken \(jwtToken)")
         
         let URL = "\(URLManager.lockContol(device.ID))"

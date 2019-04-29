@@ -94,7 +94,7 @@ class TokenHelper {
     /// - Returns: return base64 token body
     func createTokenBody (_ token: [String:Any]) -> String {
         let payload = JsonHelper().jsonEncodeDictionary(token as NSDictionary)
-        return payload.toBase64()
+        return payload.toBase64().URIbase64()
     }
     
     /// Decrypt base64 token into dictionary
