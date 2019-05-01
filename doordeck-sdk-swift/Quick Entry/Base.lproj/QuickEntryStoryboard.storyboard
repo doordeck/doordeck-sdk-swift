@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Quick Entry View Controller-->
         <scene sceneID="4Fx-42-WKk">
             <objects>
-                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4B-ip-Ybg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,12 +29,12 @@
         <!--Bottom View Controller-->
         <scene sceneID="Dsg-rc-ccz">
             <objects>
-                <viewController restorationIdentifier="bottomViewNFC" storyboardIdentifier="bottomViewNFC" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="bottomViewNFC" storyboardIdentifier="bottomViewNFC" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5D-u4-FUB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nfcIOS" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-4E-wrq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan_NFC" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-4E-wrq">
                                 <rect key="frame" x="112.5" y="36" width="150" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="EVB-gm-TNL"/>
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <action selector="nfcScanClicked:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="Jh0-5g-wMg"/>
                                 </connections>
@@ -71,7 +71,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ur5-gg-LR5"/>
                     </view>
-                    <size key="freeformSize" width="375" height="200"/>
                     <connections>
                         <outlet property="bottomLabel" destination="fKQ-Xj-AQn" id="ZcS-Np-N6T"/>
                         <outlet property="nfcScan" destination="rfO-S6-25y" id="D1f-V7-bAX"/>
@@ -79,23 +78,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaE-3X-jMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3852" y="2266"/>
+            <point key="canvasLocation" x="4038" y="1648"/>
         </scene>
         <!--Bottom View ControllerQR-->
         <scene sceneID="Wlp-4j-NmA">
             <objects>
-                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xVG-TD-7Xb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pvn-rM-Gf1"/>
                     </view>
-                    <size key="freeformSize" width="375" height="250"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOJ-4T-s4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2924" y="2285"/>
+            <point key="canvasLocation" x="2578" y="1648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lum-Ne-JA0">
@@ -117,6 +115,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="nfcIOS" width="100" height="100"/>
+        <image name="Scan_NFC" width="130" height="128"/>
     </resources>
 </document>

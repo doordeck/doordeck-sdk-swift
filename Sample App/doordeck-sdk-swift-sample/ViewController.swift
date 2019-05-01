@@ -38,8 +38,6 @@ class ViewController: UIViewController {
             
         })
     }
-    
-    
 }
 
 extension ViewController: DoordeckProtocol {
