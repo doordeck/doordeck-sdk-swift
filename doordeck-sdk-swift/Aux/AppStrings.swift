@@ -14,9 +14,18 @@ struct AppStrings {
     static let ok: String = NSLocalizedString("OK", comment: "")
     static let readerNotSupported: String = NSLocalizedString("Reader not supported by the current device", comment: "")
     static let NFCScanMessage: String = NSLocalizedString("Click to NFC Scan.", comment: "")
+    static let touchNFC: String = NSLocalizedString("Touch NFC", comment: "")
+    static let touchNFCMessage: String = NSLocalizedString("Touch the NFC Tile next to the door to unlock", comment: "")
+    
+    static let touchQR: String = NSLocalizedString("Scan QR", comment: "")
+    static let touchQRMessage: String = NSLocalizedString("Please scan the QR Tile next to the door to unlock", comment: "")
+    
     static let dismiss: String = NSLocalizedString("Dismiss", comment: "")
     
     // verification Screen
+    static let resendCode: String = NSLocalizedString("RE-SEND CODE", comment: "")
+    static let send: String = NSLocalizedString("SEND", comment: "")
+    static let verificationTitle: String = NSLocalizedString("Verify your new device", comment: "")
     static let verification: String = NSLocalizedString("Enter the verification code that has been sent to you", comment: "")
     
     // lock updates

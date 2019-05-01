@@ -15,4 +15,11 @@ extension UserDefaults {
         }
         return granted
     }
+    
+    class func setDarkUI (_ enabled: Bool) {
+        guard let userDefaults = Foundation.UserDefaults(suiteName: "group.com.doordeck.ios") else {
+            fatalError("Unable to create UserDefaults")
+        }
+        userDefaults.set(enabled, forKey: "darkUI")
+    }
 }

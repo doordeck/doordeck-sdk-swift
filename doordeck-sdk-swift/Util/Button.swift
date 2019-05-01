@@ -59,3 +59,28 @@ extension UIButton {
                       gradient: nil)
         }
 }
+
+extension UIButton {
+    
+    func doordeckStandardButton(_ title: String, backgroundColour: UIColor = UIColor.doordeckButtons()) {
+        CTACustom(NSAttributedString.doordeckH3Bold(title, colour: UIColor.doordeckTextColour(1)),
+                  titleHighlighted: NSAttributedString.doordeckH3Bold(title, colour: UIColor.doordeckTextColour(1)),
+                  titleDisabled: NSAttributedString.doordeckH3Bold(title, colour: UIColor.doordeckTextColour(1)),
+                  backgroundColour: backgroundColour,
+                  cornerRadius: 0,
+                  gradient: nil)
+    }
+    
+    func doordeckButtonWhiteBorder(_ title: String) {
+        
+        createButton(NSAttributedString.doordeckH4Bold(title, colour: .white),
+                     titleHighlighted: NSAttributedString.doordeckH4Bold(title, colour: .white),
+                     titleDisabled: NSAttributedString.doordeckH4Bold(title, colour: .white),
+                     borderColour: .white,
+                     backgroundColour: UIColor.clear,
+                     borderWidth: 1.0,
+                     cornerRadious: 10,
+                     gradient: nil)
+    }
+    
+}

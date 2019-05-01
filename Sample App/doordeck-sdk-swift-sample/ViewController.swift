@@ -32,14 +32,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showUnlockButton(_ sender: Any) {
-        doordeck?.showUnlockScreen(success: {
+        doordeck?.showUnlockScreen(.qr, success: {
             
         }, fail: {
             
         })
     }
-    
-    
 }
 
 extension ViewController: DoordeckProtocol {

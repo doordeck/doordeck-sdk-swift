@@ -39,6 +39,11 @@ class QuickEntryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpQuickEntry()
+        setupUI()
+    }
+    
+    func setupUI() {
+        view.backgroundColor = .doordeckPrimaryColour()
     }
 }
 
