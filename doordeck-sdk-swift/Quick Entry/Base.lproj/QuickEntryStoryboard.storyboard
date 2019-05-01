@@ -34,15 +34,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="nfcScanClicked:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="Jh0-5g-wMg"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan_NFC" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-4E-wrq">
-                                <rect key="frame" x="112.5" y="36" width="150" height="86"/>
+                                <rect key="frame" x="109" y="174" width="157" height="132"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="EVB-gm-TNL"/>
-                                    <constraint firstAttribute="height" constant="86" id="Fba-Xj-CaE"/>
+                                    <constraint firstAttribute="width" constant="157" id="EVB-gm-TNL"/>
+                                    <constraint firstAttribute="height" constant="132" id="Fba-Xj-CaE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_Tile" translatesAutoresizingMaskIntoConstraints="NO" id="hgf-nf-dg4">
+                                <rect key="frame" x="163" y="380" width="49" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NEh-O2-Tqm"/>
+                                    <constraint firstAttribute="width" constant="49" id="tRF-hG-l7E"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKQ-Xj-AQn">
-                                <rect key="frame" x="16" y="140" width="343" height="28"/>
+                                <rect key="frame" x="16" y="468" width="343" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="nfo-BI-lD1"/>
                                 </constraints>
@@ -50,22 +63,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <connections>
-                                    <action selector="nfcScanClicked:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="Jh0-5g-wMg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fKQ-Xj-AQn" firstAttribute="top" secondItem="hgf-nf-dg4" secondAttribute="bottom" constant="48" id="3Ag-2c-HQa"/>
                             <constraint firstAttribute="bottom" secondItem="rfO-S6-25y" secondAttribute="bottom" id="3Wr-h2-nSF"/>
                             <constraint firstItem="qMV-4E-wrq" firstAttribute="centerX" secondItem="Ur5-gg-LR5" secondAttribute="centerX" id="6He-dN-sHI"/>
+                            <constraint firstItem="qMV-4E-wrq" firstAttribute="centerY" secondItem="F5D-u4-FUB" secondAttribute="centerY" constant="-93.5" id="8Lh-LN-wJV"/>
+                            <constraint firstItem="hgf-nf-dg4" firstAttribute="top" secondItem="qMV-4E-wrq" secondAttribute="bottom" constant="74" id="HHM-MU-5Mw"/>
                             <constraint firstItem="rfO-S6-25y" firstAttribute="top" secondItem="F5D-u4-FUB" secondAttribute="top" id="I5B-AU-VRS"/>
                             <constraint firstItem="fKQ-Xj-AQn" firstAttribute="leading" secondItem="Ur5-gg-LR5" secondAttribute="leading" constant="16" id="O9v-HC-lGd"/>
-                            <constraint firstItem="qMV-4E-wrq" firstAttribute="top" secondItem="F5D-u4-FUB" secondAttribute="top" constant="36" id="Rf1-Qb-W6T"/>
                             <constraint firstItem="Ur5-gg-LR5" firstAttribute="trailing" secondItem="fKQ-Xj-AQn" secondAttribute="trailing" constant="16" id="T5n-Zl-Ji2"/>
-                            <constraint firstItem="fKQ-Xj-AQn" firstAttribute="top" secondItem="qMV-4E-wrq" secondAttribute="bottom" constant="18" id="haF-eX-hQg"/>
+                            <constraint firstItem="hgf-nf-dg4" firstAttribute="centerX" secondItem="F5D-u4-FUB" secondAttribute="centerX" id="i25-1E-LtY"/>
                             <constraint firstItem="rfO-S6-25y" firstAttribute="leading" secondItem="Ur5-gg-LR5" secondAttribute="leading" id="p7Z-KB-J4u"/>
                             <constraint firstItem="rfO-S6-25y" firstAttribute="trailing" secondItem="Ur5-gg-LR5" secondAttribute="trailing" id="wPL-qd-h1U"/>
                         </constraints>
@@ -78,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaE-3X-jMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4038" y="1648"/>
+            <point key="canvasLocation" x="4037.5999999999999" y="1647.5262368815593"/>
         </scene>
         <!--Bottom View ControllerQR-->
         <scene sceneID="Wlp-4j-NmA">
@@ -115,6 +124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="QR_Tile" width="37" height="40"/>
         <image name="Scan_NFC" width="130" height="128"/>
     </resources>
 </document>
