@@ -12,21 +12,29 @@ class BottomViewController: UIViewController {
     
     @IBOutlet weak var nfcScan: UIButton!
     @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     var delegate: quickEntryDelegate?
     var payloads = [NFCNDEFPayload]()
     var session: NFCNDEFReaderSession?
     var showNFCBool = true
     
     override func viewDidLoad() {
-        bottomLabel.attributedText = NSAttributedString.doorStandard(AppStrings.NFCScanMessage, colour: .doorGrey())
-        
+        super.viewDidLoad()
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(resetShowNFC), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        
+        setupUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showNFC()
+    }
+    
+    func setupUI() {
+        view.backgroundColor = .doordeckPrimaryColour()
+        bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchNFC)
+        descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchNFCMessage)
     }
     
     @objc func resetShowNFC() {

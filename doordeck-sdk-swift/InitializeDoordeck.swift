@@ -201,6 +201,7 @@ public class Doordeck {
         vc.sodium = self.sodium
         
         let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.isNavigationBarHidden = true
         view.present(navigationController, animated: true, completion: nil)
     }
     

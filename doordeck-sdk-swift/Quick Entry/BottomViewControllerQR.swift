@@ -5,6 +5,8 @@ import QRCodeReader
 
 class BottomViewControllerQR: UIViewController {
     var delegate: quickEntryDelegate?
+    @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
@@ -15,6 +17,11 @@ class BottomViewControllerQR: UIViewController {
     
     var QRsetup = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if QRsetup == false {
@@ -24,7 +31,11 @@ class BottomViewControllerQR: UIViewController {
         }
     }
     
-    
+    func setupUI() {
+        view.backgroundColor = .doordeckPrimaryColour()
+        bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchQR)
+        descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchQRMessage)
+    }
     
 }
 
@@ -62,6 +73,7 @@ extension BottomViewControllerQR: QRCodeReaderViewControllerDelegate {
                 }
                 reader.view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
                 view.addSubview(reader.view)
+                view.sendSubviewToBack(reader.view)
                 QRsetup = true
             }
         } catch {
