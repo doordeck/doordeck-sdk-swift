@@ -61,6 +61,7 @@ class VerificationViewController: UIViewController {
     }
     
     func setUpUI() {
+        view.backgroundColor = .doordeckPrimaryColour()
         topLabel.attributedText = NSAttributedString.doordeckH3(AppStrings.verification)
         hiddenTextField.isHidden = true
         
@@ -69,6 +70,7 @@ class VerificationViewController: UIViewController {
         }
         
         hiddenTextField.keyboardType = UIKeyboardType.numberPad
+
     }
     
     @IBAction func sendCodeToServer(_ sender: Any) {

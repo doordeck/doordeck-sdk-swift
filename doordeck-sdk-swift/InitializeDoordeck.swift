@@ -131,6 +131,7 @@ public class Doordeck {
         vc.sodium = self.sodium
         
         let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.isNavigationBarHidden = true
         view.present(navigationController, animated: true, completion: nil)
     }
     
@@ -271,6 +272,7 @@ public class Doordeck {
 extension Doordeck: DoordeckInternalProtocol {
     func verificationSuccessful(_ chain: CertificateChainClass) {
         self.currentState = .authenticated
+        self.chain = chain
         showUnlockScreenSuccess()
     }
     
