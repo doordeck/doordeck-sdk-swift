@@ -110,7 +110,7 @@ class APIClient {
                             method: .post,
                             params: QueryManager.checkKey(key),
                             headers: self.header,
-                            jsonReply: false,
+                            jsonReply: true,
                             onSuccess: { (jsonData) in
                                 
                                 self.requestCompletion(URL,

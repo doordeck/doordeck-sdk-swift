@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4B-ip-Ybg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0WN-ce-jaP"/>
@@ -31,24 +31,24 @@
             <objects>
                 <viewController restorationIdentifier="bottomViewNFC" storyboardIdentifier="bottomViewNFC" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5D-u4-FUB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfO-S6-25y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <connections>
                                     <action selector="nfcScanClicked:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="Jh0-5g-wMg"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan_NFC" translatesAutoresizingMaskIntoConstraints="NO" id="qMV-4E-wrq">
-                                <rect key="frame" x="109" y="174" width="157" height="132"/>
+                                <rect key="frame" x="128.66666666666666" y="208.66666666666663" width="156.99999999999997" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="157" id="EVB-gm-TNL"/>
                                     <constraint firstAttribute="height" constant="132" id="Fba-Xj-CaE"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKQ-Xj-AQn">
-                                <rect key="frame" x="16" y="468" width="343" height="28"/>
+                                <rect key="frame" x="16" y="502.66666666666674" width="382" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="nfo-BI-lD1"/>
                                 </constraints>
@@ -57,14 +57,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_Tile" translatesAutoresizingMaskIntoConstraints="NO" id="hgf-nf-dg4">
-                                <rect key="frame" x="163" y="380" width="49" height="40"/>
+                                <rect key="frame" x="182.66666666666666" y="414.66666666666669" width="49" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NEh-O2-Tqm"/>
                                     <constraint firstAttribute="width" constant="49" id="tRF-hG-l7E"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RS-9X-owO">
-                                <rect key="frame" x="16" y="504" width="343" height="147"/>
+                                <rect key="frame" x="16" y="538.66666666666663" width="382" height="181.33333333333337"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,15 +105,15 @@
             <objects>
                 <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xVG-TD-7Xb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QSL-5m-zQt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qr_Background_Light" translatesAutoresizingMaskIntoConstraints="NO" id="QSL-5m-zQt">
+                                <rect key="frame" x="0.0" y="5" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-xR-wYU">
-                                <rect key="frame" x="16" y="468" width="343" height="28"/>
+                                <rect key="frame" x="16" y="537" width="382" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="JqZ-8V-DW4"/>
                                 </constraints>
@@ -122,14 +122,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR_Tile" translatesAutoresizingMaskIntoConstraints="NO" id="HqV-Uk-CZs">
-                                <rect key="frame" x="163" y="380" width="49" height="40"/>
+                                <rect key="frame" x="182.66666666666666" y="449" width="49" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="iUl-u0-iJr"/>
                                     <constraint firstAttribute="width" constant="49" id="yB2-6W-fNb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufr-4S-Zx6">
-                                <rect key="frame" x="16" y="504" width="343" height="147"/>
+                                <rect key="frame" x="16" y="573" width="382" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="147" id="gHZ-hq-gkF"/>
                                 </constraints>
@@ -142,15 +142,15 @@
                         <constraints>
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="ufr-4S-Zx6" secondAttribute="trailing" constant="16" id="1dl-Z0-uBo"/>
                             <constraint firstItem="1US-xR-wYU" firstAttribute="leading" secondItem="pvn-rM-Gf1" secondAttribute="leading" constant="16" id="8sA-xZ-tid"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="leading" secondItem="pvn-rM-Gf1" secondAttribute="leading" id="D87-Js-hWl"/>
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="bottom" secondItem="ufr-4S-Zx6" secondAttribute="bottom" constant="16" id="HuN-1f-mtG"/>
                             <constraint firstItem="ufr-4S-Zx6" firstAttribute="top" secondItem="1US-xR-wYU" secondAttribute="bottom" constant="8" id="IAw-uK-e4S"/>
-                            <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="QSL-5m-zQt" secondAttribute="trailing" id="MmS-rn-gwx"/>
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="1US-xR-wYU" secondAttribute="trailing" constant="16" id="Qvm-35-73H"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="bottom" secondItem="pvn-rM-Gf1" secondAttribute="bottom" id="Uuv-m9-kas"/>
                             <constraint firstItem="ufr-4S-Zx6" firstAttribute="leading" secondItem="pvn-rM-Gf1" secondAttribute="leading" constant="16" id="W2o-qE-JhW"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="top" secondItem="pvn-rM-Gf1" secondAttribute="top" constant="-20" id="WhG-lk-wo9"/>
                             <constraint firstItem="HqV-Uk-CZs" firstAttribute="centerX" secondItem="xVG-TD-7Xb" secondAttribute="centerX" id="Wlq-SP-hET"/>
+                            <constraint firstItem="QSL-5m-zQt" firstAttribute="width" secondItem="xVG-TD-7Xb" secondAttribute="width" id="X1q-si-2Pd"/>
+                            <constraint firstItem="QSL-5m-zQt" firstAttribute="centerY" secondItem="pvn-rM-Gf1" secondAttribute="centerY" constant="-5" id="c8h-j5-Udw"/>
+                            <constraint firstItem="QSL-5m-zQt" firstAttribute="height" secondItem="xVG-TD-7Xb" secondAttribute="height" id="eB6-ME-HVf"/>
+                            <constraint firstItem="QSL-5m-zQt" firstAttribute="centerX" secondItem="pvn-rM-Gf1" secondAttribute="centerX" id="f8B-5C-Xn7"/>
                             <constraint firstItem="1US-xR-wYU" firstAttribute="top" secondItem="HqV-Uk-CZs" secondAttribute="bottom" constant="48" id="obj-Tq-DKh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pvn-rM-Gf1"/>
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOJ-4T-s4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2576.8000000000002" y="1647.5262368815593"/>
+            <point key="canvasLocation" x="2575.36231884058" y="1647.3214285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lum-Ne-JA0">
@@ -184,6 +184,7 @@
     </scenes>
     <resources>
         <image name="QR_Tile" width="37" height="40"/>
+        <image name="Qr_Background_Light" width="397" height="686"/>
         <image name="Scan_NFC" width="130" height="128"/>
     </resources>
 </document>
