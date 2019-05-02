@@ -108,8 +108,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Qr_Background_Light" translatesAutoresizingMaskIntoConstraints="NO" id="QSL-5m-zQt">
-                                <rect key="frame" x="0.0" y="5" width="414" height="736"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QSL-5m-zQt">
+                                <rect key="frame" x="0.0" y="-30" width="414" height="766"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W0L-nU-T5K">
+                                <rect key="frame" x="0.0" y="-30" width="414" height="766"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-xR-wYU">
@@ -141,21 +145,27 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="ufr-4S-Zx6" secondAttribute="trailing" constant="16" id="1dl-Z0-uBo"/>
+                            <constraint firstItem="W0L-nU-T5K" firstAttribute="leading" secondItem="xVG-TD-7Xb" secondAttribute="leadingMargin" constant="-20" id="3UB-a2-QhC"/>
+                            <constraint firstItem="QSL-5m-zQt" firstAttribute="leading" secondItem="xVG-TD-7Xb" secondAttribute="leadingMargin" constant="-20" id="4PM-Kx-Vdu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W0L-nU-T5K" secondAttribute="trailing" constant="-20" id="4Tf-JQ-Ntq"/>
                             <constraint firstItem="1US-xR-wYU" firstAttribute="leading" secondItem="pvn-rM-Gf1" secondAttribute="leading" constant="16" id="8sA-xZ-tid"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="QSL-5m-zQt" secondAttribute="bottom" id="EFB-fQ-xjx"/>
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="bottom" secondItem="ufr-4S-Zx6" secondAttribute="bottom" constant="16" id="HuN-1f-mtG"/>
                             <constraint firstItem="ufr-4S-Zx6" firstAttribute="top" secondItem="1US-xR-wYU" secondAttribute="bottom" constant="8" id="IAw-uK-e4S"/>
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="1US-xR-wYU" secondAttribute="trailing" constant="16" id="Qvm-35-73H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QSL-5m-zQt" secondAttribute="trailing" constant="-20" id="VNN-OW-CUn"/>
                             <constraint firstItem="ufr-4S-Zx6" firstAttribute="leading" secondItem="pvn-rM-Gf1" secondAttribute="leading" constant="16" id="W2o-qE-JhW"/>
                             <constraint firstItem="HqV-Uk-CZs" firstAttribute="centerX" secondItem="xVG-TD-7Xb" secondAttribute="centerX" id="Wlq-SP-hET"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="width" secondItem="xVG-TD-7Xb" secondAttribute="width" id="X1q-si-2Pd"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="centerY" secondItem="pvn-rM-Gf1" secondAttribute="centerY" constant="-5" id="c8h-j5-Udw"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="height" secondItem="xVG-TD-7Xb" secondAttribute="height" id="eB6-ME-HVf"/>
-                            <constraint firstItem="QSL-5m-zQt" firstAttribute="centerX" secondItem="pvn-rM-Gf1" secondAttribute="centerX" id="f8B-5C-Xn7"/>
+                            <constraint firstItem="W0L-nU-T5K" firstAttribute="top" secondItem="xVG-TD-7Xb" secondAttribute="topMargin" constant="-50" id="XtM-di-CUe"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="W0L-nU-T5K" secondAttribute="bottom" id="axo-w2-5na"/>
                             <constraint firstItem="1US-xR-wYU" firstAttribute="top" secondItem="HqV-Uk-CZs" secondAttribute="bottom" constant="48" id="obj-Tq-DKh"/>
+                            <constraint firstItem="QSL-5m-zQt" firstAttribute="top" secondItem="xVG-TD-7Xb" secondAttribute="topMargin" constant="-50" id="sBL-jj-fgE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pvn-rM-Gf1"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundQRcodeImage" destination="QSL-5m-zQt" id="HSd-Ox-b6H"/>
+                        <outlet property="backgroundQRcodeImageCrossHair" destination="W0L-nU-T5K" id="3Kd-gy-1ty"/>
                         <outlet property="bottomLabel" destination="1US-xR-wYU" id="aA1-Jb-Ezx"/>
                         <outlet property="descriptionLabel" destination="ufr-4S-Zx6" id="HlF-EN-eUP"/>
                     </connections>
@@ -184,7 +194,6 @@
     </scenes>
     <resources>
         <image name="QR_Tile" width="37" height="40"/>
-        <image name="Qr_Background_Light" width="397" height="686"/>
         <image name="Scan_NFC" width="130" height="128"/>
     </resources>
 </document>

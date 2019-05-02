@@ -7,6 +7,8 @@ class BottomViewControllerQR: UIViewController {
     var delegate: quickEntryDelegate?
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var backgroundQRcodeImage: UIImageView!
+    @IBOutlet weak var backgroundQRcodeImageCrossHair: UIImageView!
     
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
@@ -33,6 +35,13 @@ class BottomViewControllerQR: UIViewController {
     
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
+        backgroundQRcodeImage.image = UIImage(named: "Qr_Background_Back_Light")
+        backgroundQRcodeImage.setImageColor(color: UIColor.doordeckPrimaryColour())
+        backgroundQRcodeImage.contentMode = .scaleAspectFill
+        
+        backgroundQRcodeImageCrossHair.image = UIImage(named: "Qr_Background_Front_Light")
+        backgroundQRcodeImageCrossHair.contentMode = .scaleAspectFill
+        
         bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchQR)
         descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchQRMessage)
     }
