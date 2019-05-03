@@ -2,7 +2,6 @@
 //  doordeck_sdk_swift.h
 //  doordeck-sdk-swift
 //
-//  Created by Marwan on 22/03/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 

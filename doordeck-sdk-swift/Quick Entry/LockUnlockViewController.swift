@@ -2,7 +2,6 @@
 //  LockUnlockViewController.swift
 //  Doordeck
 //
-//  Created by Marwan on 05/11/2018.
 //  Copyright © 2018 Doordeck. All rights reserved.
 //
 

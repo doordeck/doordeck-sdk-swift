@@ -1,9 +1,16 @@
+//
+//  FontStyle.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import Foundation
 import UIKit
 
 //example self.favsLabel.attributedText = NSAttributedString.samH1Light(doorStrings.Favs.rawValue)
 
-extension NSAttributedString{
+extension NSAttributedString {
     
     class func createAttribute (_ font: Fonts,
                                 fontSize: CGFloat,

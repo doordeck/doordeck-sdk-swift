@@ -1,3 +1,10 @@
+//
+//  LockDevice.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import Foundation
 import UIKit
 import CoreLocation
@@ -277,11 +284,13 @@ class LockDevice {
                 self.currentlyLocked = false
                 self.apiClient.lockUnlock(self, sodium: sodium,  chain: certificatechain,  control: .unlock, completion: { (json, error) in
                     if (error != nil) {
+                        SDKEvent().event(.UNLOCK_FAILED)
                         self.currentlyLocked = true
                         self.deviceStatusUpdate(.unlockFail)
                         self.deviceCompletion(nil, error: .unsuccessfull)
                         self.deviceReset()
                     } else {
+                        SDKEvent().event(.UNLOCK_SUCCESS)
                         self.deviceStatusUpdate(.unlockSuccess)
                         let expiryTime = Date().timeIntervalSince1970 + Double(self.unlockTime)
                         self.timeKeeper(expiryTime)
@@ -292,6 +301,7 @@ class LockDevice {
                 self.deviceCompletion(nil, error: .deviceAlreadyUnlocked)
             }
         }) { (deviceError) in
+            SDKEvent().event(.UNLOCK_FAILED)
             self.deviceStatusUpdate(.unlockFail)
             self.deviceReset()
             self.deviceCompletion(nil, error: deviceError)

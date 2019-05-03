@@ -1,3 +1,10 @@
+//
+//  LockManager.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import Foundation
 
 /// A shareable lock object is used to share bare bones lock object

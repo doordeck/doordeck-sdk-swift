@@ -2,7 +2,6 @@
 //  UimageViewExtension.swift
 //  doordeck-sdk-swift-sample
 //
-//  Created by Marwan on 02/05/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 

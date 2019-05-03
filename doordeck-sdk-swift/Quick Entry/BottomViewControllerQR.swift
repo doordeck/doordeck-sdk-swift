@@ -1,3 +1,10 @@
+//
+//  BottomViewControllerQR.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+
+
 import Foundation
 import UIKit
 import AVFoundation
@@ -9,6 +16,7 @@ class BottomViewControllerQR: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var backgroundQRcodeImage: UIImageView!
     @IBOutlet weak var backgroundQRcodeImageCrossHair: UIImageView!
+    @IBOutlet weak var QRCodeImage: UIImageView!
     
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
@@ -38,6 +46,9 @@ class BottomViewControllerQR: UIViewController {
         backgroundQRcodeImage.image = UIImage(named: "Qr_Background_Back_Light")
         backgroundQRcodeImage.setImageColor(color: UIColor.doordeckPrimaryColour())
         backgroundQRcodeImage.contentMode = .scaleAspectFill
+        
+        QRCodeImage.image = UIImage(named: "QR_Tile")
+        QRCodeImage.setImageColor(color: UIColor.doordeckQuaternaryColour())
         
         backgroundQRcodeImageCrossHair.image = UIImage(named: "Qr_Background_Front_Light")
         backgroundQRcodeImageCrossHair.contentMode = .scaleAspectFill

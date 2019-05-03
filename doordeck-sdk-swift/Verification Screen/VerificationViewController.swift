@@ -1,8 +1,7 @@
 //
 //  VerificationViewController.swift
-//  doordeck-sdk-swift-sample
+//  doordeck-sdk-swift
 //
-//  Created by Marwan on 23/04/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 
@@ -105,9 +104,11 @@ class VerificationViewController: UIViewController {
                 }
                 
                 self?.dismiss(animated: false, completion: {
+                    SDKEvent().event(.CODE_VERIFICATION_SUCCESS)
                     self?.delegate?.verificationSuccessful(CertificateChainClass(certificateChainTemp))
                 })
             } else {
+                SDKEvent().event(.CODE_VERIFICATION_FAILED)
                 self?.delegate?.verificationUnsuccessful()
             }
         }

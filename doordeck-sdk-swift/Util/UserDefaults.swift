@@ -2,7 +2,6 @@
 //  UserDefaults.swift
 //  doordeck-sdk-swift
 //
-//  Created by Marwan on 02/04/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 

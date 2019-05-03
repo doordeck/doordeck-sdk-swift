@@ -2,7 +2,6 @@
 //  AuthTokenClass.swift
 //  doordeck-sdk-swift
 //
-//  Created by Marwan on 05/04/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 

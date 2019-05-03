@@ -1,6 +1,13 @@
+//
+//  JsonHelper.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import Foundation
 
-class JsonHelper{
+class JsonHelper {
     //MARK: Json special charachters remover
     //----------------------------------------------------------------------------------------------------------------------
     func removeSpecialCharacters (_ json:String) -> String {

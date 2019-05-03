@@ -91,6 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="Ur5-gg-LR5"/>
                     </view>
                     <connections>
+                        <outlet property="QRCodeImage" destination="hgf-nf-dg4" id="UK4-PL-Dah"/>
                         <outlet property="bottomLabel" destination="fKQ-Xj-AQn" id="ZcS-Np-N6T"/>
                         <outlet property="descriptionLabel" destination="2RS-9X-owO" id="leR-QM-Me5"/>
                         <outlet property="nfcScan" destination="rfO-S6-25y" id="D1f-V7-bAX"/>
@@ -164,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="pvn-rM-Gf1"/>
                     </view>
                     <connections>
+                        <outlet property="QRCodeImage" destination="HqV-Uk-CZs" id="scf-hu-81F"/>
                         <outlet property="backgroundQRcodeImage" destination="QSL-5m-zQt" id="HSd-Ox-b6H"/>
                         <outlet property="backgroundQRcodeImageCrossHair" destination="W0L-nU-T5K" id="3Kd-gy-1ty"/>
                         <outlet property="bottomLabel" destination="1US-xR-wYU" id="aA1-Jb-Ezx"/>

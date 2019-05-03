@@ -2,7 +2,6 @@
 //  InitializeDoordeck.swift
 //  doordeck-sdk-swift
 //
-//  Created by Marwan on 28/03/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 
@@ -230,6 +229,7 @@ public class Doordeck {
                     completion(.notAuthenticated)
                     break
                 case .verificationRequired:
+                    SDKEvent().event(.TWO_FACTOR_AUTH_NEEDED)
                     completion(.verificationRequired)
                     break
                 }
@@ -268,6 +268,7 @@ public class Doordeck {
                     completion(.notAuthenticated)
                     return
                 }
+                SDKEvent().event(.GET_CERTIFICATE_SUCCESS)
                 self?.chain = CertificateChainClass(certificateChainTemp)
                 self?.currentState = .authenticated
                 completion(.authenticated)
@@ -279,6 +280,7 @@ public class Doordeck {
 
 extension Doordeck: DoordeckInternalProtocol {
     func verificationSuccessful(_ chain: CertificateChainClass) {
+        SDKEvent().event(.GET_CERTIFICATE_SUCCESS)
         self.currentState = .authenticated
         self.chain = chain
         showUnlockScreenSuccess()
