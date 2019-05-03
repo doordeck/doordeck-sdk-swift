@@ -11,96 +11,96 @@
 		5939F08522582CDA003FAF13 /* TokenHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F08422582CDA003FAF13 /* TokenHelperTests.swift */; };
 		593B1CC52244FB3300BE5E67 /* doordeck_sdk_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */; };
 		593B1CCC2244FB3300BE5E67 /* doordeck_sdk_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 593B1CBE2244FB3200BE5E67 /* doordeck_sdk_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		595B2038227C8CD800D7297E /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FFF227C8CD800D7297E /* CertificateChainClass.swift */; };
-		595B2039227C8CD800D7297E /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FFF227C8CD800D7297E /* CertificateChainClass.swift */; };
-		595B203A227C8CD800D7297E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2000227C8CD800D7297E /* KeychainHelper.swift */; };
-		595B203B227C8CD800D7297E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2000227C8CD800D7297E /* KeychainHelper.swift */; };
-		595B203C227C8CD900D7297E /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2001227C8CD800D7297E /* TokenHelper.swift */; };
-		595B203D227C8CD900D7297E /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2001227C8CD800D7297E /* TokenHelper.swift */; };
-		595B203E227C8CD900D7297E /* SodiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2002227C8CD800D7297E /* SodiumHelper.swift */; };
-		595B203F227C8CD900D7297E /* SodiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2002227C8CD800D7297E /* SodiumHelper.swift */; };
-		595B2040227C8CD900D7297E /* AuthTokenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2003227C8CD800D7297E /* AuthTokenClass.swift */; };
-		595B2041227C8CD900D7297E /* AuthTokenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2003227C8CD800D7297E /* AuthTokenClass.swift */; };
-		595B2042227C8CD900D7297E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2005227C8CD800D7297E /* VerificationViewController.swift */; };
-		595B2043227C8CD900D7297E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2005227C8CD800D7297E /* VerificationViewController.swift */; };
-		595B2044227C8CD900D7297E /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B2006227C8CD800D7297E /* VerificationStoryboard.storyboard */; };
-		595B2045227C8CD900D7297E /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B2006227C8CD800D7297E /* VerificationStoryboard.storyboard */; };
 		595B2046227C8CD900D7297E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 595B2007227C8CD800D7297E /* Media.xcassets */; };
 		595B2047227C8CD900D7297E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 595B2007227C8CD800D7297E /* Media.xcassets */; };
-		595B2048227C8CD900D7297E /* LockUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2009227C8CD800D7297E /* LockUnlockViewController.swift */; };
-		595B2049227C8CD900D7297E /* LockUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2009227C8CD800D7297E /* LockUnlockViewController.swift */; };
-		595B204A227C8CD900D7297E /* LockUnlockScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B200A227C8CD800D7297E /* LockUnlockScreen.storyboard */; };
-		595B204B227C8CD900D7297E /* LockUnlockScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B200A227C8CD800D7297E /* LockUnlockScreen.storyboard */; };
-		595B204C227C8CD900D7297E /* QuickEntryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B200C227C8CD800D7297E /* QuickEntryStoryboard.storyboard */; };
-		595B204D227C8CD900D7297E /* QuickEntryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B200C227C8CD800D7297E /* QuickEntryStoryboard.storyboard */; };
-		595B204E227C8CD900D7297E /* QuickEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B200E227C8CD800D7297E /* QuickEntryViewController.swift */; };
-		595B204F227C8CD900D7297E /* QuickEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B200E227C8CD800D7297E /* QuickEntryViewController.swift */; };
-		595B2050227C8CD900D7297E /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B200F227C8CD800D7297E /* BottomViewController.swift */; };
-		595B2051227C8CD900D7297E /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B200F227C8CD800D7297E /* BottomViewController.swift */; };
-		595B2052227C8CD900D7297E /* BottomViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2010227C8CD800D7297E /* BottomViewControllerQR.swift */; };
-		595B2053227C8CD900D7297E /* BottomViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2010227C8CD800D7297E /* BottomViewControllerQR.swift */; };
-		595B2054227C8CD900D7297E /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2013227C8CD800D7297E /* WhereAmI.swift */; };
-		595B2055227C8CD900D7297E /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2013227C8CD800D7297E /* WhereAmI.swift */; };
-		595B2056227C8CD900D7297E /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2014227C8CD800D7297E /* LocationProfile.swift */; };
-		595B2057227C8CD900D7297E /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2014227C8CD800D7297E /* LocationProfile.swift */; };
-		595B2058227C8CD900D7297E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2016227C8CD800D7297E /* UIColor.swift */; };
-		595B2059227C8CD900D7297E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2016227C8CD800D7297E /* UIColor.swift */; };
-		595B205A227C8CD900D7297E /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2018227C8CD800D7297E /* SwiftyTimer.swift */; };
-		595B205B227C8CD900D7297E /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2018227C8CD800D7297E /* SwiftyTimer.swift */; };
-		595B205C227C8CD900D7297E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2019227C8CD800D7297E /* FontStyle.swift */; };
-		595B205D227C8CD900D7297E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2019227C8CD800D7297E /* FontStyle.swift */; };
-		595B205E227C8CD900D7297E /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201A227C8CD800D7297E /* CacheHelper.swift */; };
-		595B205F227C8CD900D7297E /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201A227C8CD800D7297E /* CacheHelper.swift */; };
-		595B2060227C8CD900D7297E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201B227C8CD800D7297E /* NotificationCenter.swift */; };
-		595B2061227C8CD900D7297E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201B227C8CD800D7297E /* NotificationCenter.swift */; };
-		595B2062227C8CD900D7297E /* UimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201C227C8CD800D7297E /* UimageViewExtension.swift */; };
-		595B2063227C8CD900D7297E /* UimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201C227C8CD800D7297E /* UimageViewExtension.swift */; };
-		595B2064227C8CD900D7297E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201D227C8CD800D7297E /* Util.swift */; };
-		595B2065227C8CD900D7297E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201D227C8CD800D7297E /* Util.swift */; };
-		595B2066227C8CD900D7297E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201E227C8CD800D7297E /* UserDefaults.swift */; };
-		595B2067227C8CD900D7297E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201E227C8CD800D7297E /* UserDefaults.swift */; };
-		595B2068227C8CD900D7297E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201F227C8CD800D7297E /* StringExtension.swift */; };
-		595B2069227C8CD900D7297E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B201F227C8CD800D7297E /* StringExtension.swift */; };
-		595B206A227C8CD900D7297E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2020227C8CD800D7297E /* Font.swift */; };
-		595B206B227C8CD900D7297E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2020227C8CD800D7297E /* Font.swift */; };
-		595B206C227C8CD900D7297E /* SDKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2021227C8CD800D7297E /* SDKEvent.swift */; };
-		595B206D227C8CD900D7297E /* SDKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2021227C8CD800D7297E /* SDKEvent.swift */; };
-		595B206E227C8CD900D7297E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2022227C8CD800D7297E /* UIApplication.swift */; };
-		595B206F227C8CD900D7297E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2022227C8CD800D7297E /* UIApplication.swift */; };
-		595B2070227C8CD900D7297E /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2023227C8CD800D7297E /* LabelExtension.swift */; };
-		595B2071227C8CD900D7297E /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2023227C8CD800D7297E /* LabelExtension.swift */; };
-		595B2072227C8CD900D7297E /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2024227C8CD800D7297E /* JsonHelper.swift */; };
-		595B2073227C8CD900D7297E /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2024227C8CD800D7297E /* JsonHelper.swift */; };
-		595B2074227C8CD900D7297E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2025227C8CD800D7297E /* DateExtension.swift */; };
-		595B2075227C8CD900D7297E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2025227C8CD800D7297E /* DateExtension.swift */; };
-		595B2076227C8CD900D7297E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2026227C8CD800D7297E /* Button.swift */; };
-		595B2077227C8CD900D7297E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2026227C8CD800D7297E /* Button.swift */; };
-		595B2078227C8CD900D7297E /* UIApplicationiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2027227C8CD800D7297E /* UIApplicationiOS.swift */; };
-		595B2079227C8CD900D7297E /* UIApplicationiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2027227C8CD800D7297E /* UIApplicationiOS.swift */; };
-		595B207A227C8CD900D7297E /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2029227C8CD800D7297E /* AFRequest.swift */; };
-		595B207B227C8CD900D7297E /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2029227C8CD800D7297E /* AFRequest.swift */; };
-		595B207C227C8CD900D7297E /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202A227C8CD800D7297E /* ReachabilityHelper.swift */; };
-		595B207D227C8CD900D7297E /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202A227C8CD800D7297E /* ReachabilityHelper.swift */; };
-		595B207E227C8CD900D7297E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202B227C8CD800D7297E /* APIClient.swift */; };
-		595B207F227C8CD900D7297E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202B227C8CD800D7297E /* APIClient.swift */; };
-		595B2080227C8CD900D7297E /* AmazonRootCA1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 595B202D227C8CD800D7297E /* AmazonRootCA1.cer */; };
-		595B2081227C8CD900D7297E /* AmazonRootCA1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 595B202D227C8CD800D7297E /* AmazonRootCA1.cer */; };
-		595B2082227C8CD900D7297E /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202E227C8CD800D7297E /* QueryManager.swift */; };
-		595B2083227C8CD900D7297E /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202E227C8CD800D7297E /* QueryManager.swift */; };
-		595B2084227C8CD900D7297E /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202F227C8CD800D7297E /* URLManager.swift */; };
-		595B2085227C8CD900D7297E /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B202F227C8CD800D7297E /* URLManager.swift */; };
-		595B2086227C8CD900D7297E /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2031227C8CD800D7297E /* Sites.swift */; };
-		595B2087227C8CD900D7297E /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2031227C8CD800D7297E /* Sites.swift */; };
-		595B2088227C8CD900D7297E /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2032227C8CD800D7297E /* LockManager.swift */; };
-		595B2089227C8CD900D7297E /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2032227C8CD800D7297E /* LockManager.swift */; };
-		595B208A227C8CD900D7297E /* LockDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2033227C8CD800D7297E /* LockDevice.swift */; };
-		595B208B227C8CD900D7297E /* LockDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2033227C8CD800D7297E /* LockDevice.swift */; };
-		595B208C227C8CD900D7297E /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2035227C8CD800D7297E /* AppStrings.swift */; };
-		595B208D227C8CD900D7297E /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2035227C8CD800D7297E /* AppStrings.swift */; };
-		595B208E227C8CD900D7297E /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2036227C8CD800D7297E /* DeviceHelper.swift */; };
-		595B208F227C8CD900D7297E /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2036227C8CD800D7297E /* DeviceHelper.swift */; };
-		595B2090227C8CD900D7297E /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2037227C8CD800D7297E /* CustomPrint.swift */; };
-		595B2091227C8CD900D7297E /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2037227C8CD800D7297E /* CustomPrint.swift */; };
+		595B20CB227C8FB100D7297E /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2093227C8FB000D7297E /* AppStrings.swift */; };
+		595B20CC227C8FB100D7297E /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2093227C8FB000D7297E /* AppStrings.swift */; };
+		595B20CD227C8FB100D7297E /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2094227C8FB000D7297E /* DeviceHelper.swift */; };
+		595B20CE227C8FB100D7297E /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2094227C8FB000D7297E /* DeviceHelper.swift */; };
+		595B20CF227C8FB100D7297E /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2095227C8FB000D7297E /* CustomPrint.swift */; };
+		595B20D0227C8FB100D7297E /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2095227C8FB000D7297E /* CustomPrint.swift */; };
+		595B20D1227C8FB100D7297E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2097227C8FB000D7297E /* VerificationViewController.swift */; };
+		595B20D2227C8FB100D7297E /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B2097227C8FB000D7297E /* VerificationViewController.swift */; };
+		595B20D3227C8FB100D7297E /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B2098227C8FB000D7297E /* VerificationStoryboard.storyboard */; };
+		595B20D4227C8FB100D7297E /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B2098227C8FB000D7297E /* VerificationStoryboard.storyboard */; };
+		595B20D5227C8FB100D7297E /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B209B227C8FB000D7297E /* WhereAmI.swift */; };
+		595B20D6227C8FB100D7297E /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B209B227C8FB000D7297E /* WhereAmI.swift */; };
+		595B20D7227C8FB100D7297E /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B209C227C8FB000D7297E /* LocationProfile.swift */; };
+		595B20D8227C8FB100D7297E /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B209C227C8FB000D7297E /* LocationProfile.swift */; };
+		595B20D9227C8FB100D7297E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B209E227C8FB000D7297E /* UIColor.swift */; };
+		595B20DA227C8FB100D7297E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B209E227C8FB000D7297E /* UIColor.swift */; };
+		595B20DB227C8FB100D7297E /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A0227C8FB000D7297E /* CertificateChainClass.swift */; };
+		595B20DC227C8FB100D7297E /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A0227C8FB000D7297E /* CertificateChainClass.swift */; };
+		595B20DD227C8FB100D7297E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A1227C8FB000D7297E /* KeychainHelper.swift */; };
+		595B20DE227C8FB100D7297E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A1227C8FB000D7297E /* KeychainHelper.swift */; };
+		595B20DF227C8FB100D7297E /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A2227C8FB000D7297E /* TokenHelper.swift */; };
+		595B20E0227C8FB100D7297E /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A2227C8FB000D7297E /* TokenHelper.swift */; };
+		595B20E1227C8FB100D7297E /* SodiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A3227C8FB000D7297E /* SodiumHelper.swift */; };
+		595B20E2227C8FB100D7297E /* SodiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A3227C8FB000D7297E /* SodiumHelper.swift */; };
+		595B20E3227C8FB100D7297E /* AuthTokenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A4227C8FB000D7297E /* AuthTokenClass.swift */; };
+		595B20E4227C8FB100D7297E /* AuthTokenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A4227C8FB000D7297E /* AuthTokenClass.swift */; };
+		595B20E5227C8FB100D7297E /* LockUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A6227C8FB100D7297E /* LockUnlockViewController.swift */; };
+		595B20E6227C8FB100D7297E /* LockUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20A6227C8FB100D7297E /* LockUnlockViewController.swift */; };
+		595B20E7227C8FB100D7297E /* LockUnlockScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B20A7227C8FB100D7297E /* LockUnlockScreen.storyboard */; };
+		595B20E8227C8FB100D7297E /* LockUnlockScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B20A7227C8FB100D7297E /* LockUnlockScreen.storyboard */; };
+		595B20E9227C8FB100D7297E /* QuickEntryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B20A9227C8FB100D7297E /* QuickEntryStoryboard.storyboard */; };
+		595B20EA227C8FB100D7297E /* QuickEntryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595B20A9227C8FB100D7297E /* QuickEntryStoryboard.storyboard */; };
+		595B20EB227C8FB100D7297E /* QuickEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AB227C8FB100D7297E /* QuickEntryViewController.swift */; };
+		595B20EC227C8FB100D7297E /* QuickEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AB227C8FB100D7297E /* QuickEntryViewController.swift */; };
+		595B20ED227C8FB100D7297E /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AC227C8FB100D7297E /* BottomViewController.swift */; };
+		595B20EE227C8FB100D7297E /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AC227C8FB100D7297E /* BottomViewController.swift */; };
+		595B20EF227C8FB100D7297E /* BottomViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AD227C8FB100D7297E /* BottomViewControllerQR.swift */; };
+		595B20F0227C8FB100D7297E /* BottomViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AD227C8FB100D7297E /* BottomViewControllerQR.swift */; };
+		595B20F1227C8FB100D7297E /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AF227C8FB100D7297E /* AFRequest.swift */; };
+		595B20F2227C8FB100D7297E /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20AF227C8FB100D7297E /* AFRequest.swift */; };
+		595B20F3227C8FB100D7297E /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B0227C8FB100D7297E /* ReachabilityHelper.swift */; };
+		595B20F4227C8FB100D7297E /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B0227C8FB100D7297E /* ReachabilityHelper.swift */; };
+		595B20F5227C8FB100D7297E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B1227C8FB100D7297E /* APIClient.swift */; };
+		595B20F6227C8FB100D7297E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B1227C8FB100D7297E /* APIClient.swift */; };
+		595B20F7227C8FB100D7297E /* AmazonRootCA1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 595B20B3227C8FB100D7297E /* AmazonRootCA1.cer */; };
+		595B20F8227C8FB100D7297E /* AmazonRootCA1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 595B20B3227C8FB100D7297E /* AmazonRootCA1.cer */; };
+		595B20F9227C8FB100D7297E /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B4227C8FB100D7297E /* QueryManager.swift */; };
+		595B20FA227C8FB100D7297E /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B4227C8FB100D7297E /* QueryManager.swift */; };
+		595B20FB227C8FB100D7297E /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B5227C8FB100D7297E /* URLManager.swift */; };
+		595B20FC227C8FB100D7297E /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B5227C8FB100D7297E /* URLManager.swift */; };
+		595B20FD227C8FB100D7297E /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B7227C8FB100D7297E /* SwiftyTimer.swift */; };
+		595B20FE227C8FB100D7297E /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B7227C8FB100D7297E /* SwiftyTimer.swift */; };
+		595B20FF227C8FB100D7297E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B8227C8FB100D7297E /* FontStyle.swift */; };
+		595B2100227C8FB100D7297E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B8227C8FB100D7297E /* FontStyle.swift */; };
+		595B2101227C8FB100D7297E /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B9227C8FB100D7297E /* CacheHelper.swift */; };
+		595B2102227C8FB100D7297E /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20B9227C8FB100D7297E /* CacheHelper.swift */; };
+		595B2103227C8FB100D7297E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BA227C8FB100D7297E /* NotificationCenter.swift */; };
+		595B2104227C8FB100D7297E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BA227C8FB100D7297E /* NotificationCenter.swift */; };
+		595B2105227C8FB100D7297E /* UimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BB227C8FB100D7297E /* UimageViewExtension.swift */; };
+		595B2106227C8FB100D7297E /* UimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BB227C8FB100D7297E /* UimageViewExtension.swift */; };
+		595B2107227C8FB100D7297E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BC227C8FB100D7297E /* Util.swift */; };
+		595B2108227C8FB100D7297E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BC227C8FB100D7297E /* Util.swift */; };
+		595B2109227C8FB100D7297E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BD227C8FB100D7297E /* UserDefaults.swift */; };
+		595B210A227C8FB100D7297E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BD227C8FB100D7297E /* UserDefaults.swift */; };
+		595B210B227C8FB100D7297E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BE227C8FB100D7297E /* StringExtension.swift */; };
+		595B210C227C8FB100D7297E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BE227C8FB100D7297E /* StringExtension.swift */; };
+		595B210D227C8FB100D7297E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BF227C8FB100D7297E /* Font.swift */; };
+		595B210E227C8FB100D7297E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20BF227C8FB100D7297E /* Font.swift */; };
+		595B210F227C8FB100D7297E /* SDKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C0227C8FB100D7297E /* SDKEvent.swift */; };
+		595B2110227C8FB100D7297E /* SDKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C0227C8FB100D7297E /* SDKEvent.swift */; };
+		595B2111227C8FB100D7297E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C1227C8FB100D7297E /* UIApplication.swift */; };
+		595B2112227C8FB100D7297E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C1227C8FB100D7297E /* UIApplication.swift */; };
+		595B2113227C8FB100D7297E /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C2227C8FB100D7297E /* LabelExtension.swift */; };
+		595B2114227C8FB100D7297E /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C2227C8FB100D7297E /* LabelExtension.swift */; };
+		595B2115227C8FB100D7297E /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C3227C8FB100D7297E /* JsonHelper.swift */; };
+		595B2116227C8FB100D7297E /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C3227C8FB100D7297E /* JsonHelper.swift */; };
+		595B2117227C8FB100D7297E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C4227C8FB100D7297E /* DateExtension.swift */; };
+		595B2118227C8FB100D7297E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C4227C8FB100D7297E /* DateExtension.swift */; };
+		595B2119227C8FB100D7297E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C5227C8FB100D7297E /* Button.swift */; };
+		595B211A227C8FB100D7297E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C5227C8FB100D7297E /* Button.swift */; };
+		595B211B227C8FB100D7297E /* UIApplicationiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C6227C8FB100D7297E /* UIApplicationiOS.swift */; };
+		595B211C227C8FB100D7297E /* UIApplicationiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C6227C8FB100D7297E /* UIApplicationiOS.swift */; };
+		595B211D227C8FB100D7297E /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C8227C8FB100D7297E /* Sites.swift */; };
+		595B211E227C8FB100D7297E /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C8227C8FB100D7297E /* Sites.swift */; };
+		595B211F227C8FB100D7297E /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C9227C8FB100D7297E /* LockManager.swift */; };
+		595B2120227C8FB100D7297E /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20C9227C8FB100D7297E /* LockManager.swift */; };
+		595B2121227C8FB100D7297E /* LockDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20CA227C8FB100D7297E /* LockDevice.swift */; };
+		595B2122227C8FB100D7297E /* LockDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B20CA227C8FB100D7297E /* LockDevice.swift */; };
 		5966A60A2249AA22008C4665 /* URLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A6092249AA22008C4665 /* URLManagerTests.swift */; };
 		5966A60C224A5C35008C4665 /* QueryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A60B224A5C35008C4665 /* QueryManagerTests.swift */; };
 		5966A614224BAFE9008C4665 /* KeyPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A613224BAFE9008C4665 /* KeyPairTests.swift */; };
@@ -128,51 +128,51 @@
 		593B1CBE2244FB3200BE5E67 /* doordeck_sdk_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = doordeck_sdk_swift.h; sourceTree = "<group>"; };
 		593B1CC42244FB3300BE5E67 /* doordeck-sdk-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "doordeck-sdk-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		593B1CCB2244FB3300BE5E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		595B1FFF227C8CD800D7297E /* CertificateChainClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateChainClass.swift; sourceTree = "<group>"; };
-		595B2000227C8CD800D7297E /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
-		595B2001227C8CD800D7297E /* TokenHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
-		595B2002227C8CD800D7297E /* SodiumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SodiumHelper.swift; sourceTree = "<group>"; };
-		595B2003227C8CD800D7297E /* AuthTokenClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTokenClass.swift; sourceTree = "<group>"; };
-		595B2005227C8CD800D7297E /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
-		595B2006227C8CD800D7297E /* VerificationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationStoryboard.storyboard; sourceTree = "<group>"; };
 		595B2007227C8CD800D7297E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		595B2009227C8CD800D7297E /* LockUnlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockUnlockViewController.swift; sourceTree = "<group>"; };
-		595B200B227C8CD800D7297E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LockUnlockScreen.storyboard; sourceTree = "<group>"; };
-		595B200D227C8CD800D7297E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QuickEntryStoryboard.storyboard; sourceTree = "<group>"; };
-		595B200E227C8CD800D7297E /* QuickEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickEntryViewController.swift; sourceTree = "<group>"; };
-		595B200F227C8CD800D7297E /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
-		595B2010227C8CD800D7297E /* BottomViewControllerQR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewControllerQR.swift; sourceTree = "<group>"; };
-		595B2013227C8CD800D7297E /* WhereAmI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereAmI.swift; sourceTree = "<group>"; };
-		595B2014227C8CD800D7297E /* LocationProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProfile.swift; sourceTree = "<group>"; };
-		595B2016227C8CD800D7297E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		595B2018227C8CD800D7297E /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
-		595B2019227C8CD800D7297E /* FontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
-		595B201A227C8CD800D7297E /* CacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
-		595B201B227C8CD800D7297E /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
-		595B201C227C8CD800D7297E /* UimageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UimageViewExtension.swift; sourceTree = "<group>"; };
-		595B201D227C8CD800D7297E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		595B201E227C8CD800D7297E /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		595B201F227C8CD800D7297E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		595B2020227C8CD800D7297E /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		595B2021227C8CD800D7297E /* SDKEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKEvent.swift; sourceTree = "<group>"; };
-		595B2022227C8CD800D7297E /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
-		595B2023227C8CD800D7297E /* LabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
-		595B2024227C8CD800D7297E /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
-		595B2025227C8CD800D7297E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		595B2026227C8CD800D7297E /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		595B2027227C8CD800D7297E /* UIApplicationiOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationiOS.swift; sourceTree = "<group>"; };
-		595B2029227C8CD800D7297E /* AFRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
-		595B202A227C8CD800D7297E /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
-		595B202B227C8CD800D7297E /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		595B202D227C8CD800D7297E /* AmazonRootCA1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA1.cer; sourceTree = "<group>"; };
-		595B202E227C8CD800D7297E /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
-		595B202F227C8CD800D7297E /* URLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
-		595B2031227C8CD800D7297E /* Sites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
-		595B2032227C8CD800D7297E /* LockManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockManager.swift; sourceTree = "<group>"; };
-		595B2033227C8CD800D7297E /* LockDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockDevice.swift; sourceTree = "<group>"; };
-		595B2035227C8CD800D7297E /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
-		595B2036227C8CD800D7297E /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
-		595B2037227C8CD800D7297E /* CustomPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
+		595B2093227C8FB000D7297E /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		595B2094227C8FB000D7297E /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		595B2095227C8FB000D7297E /* CustomPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
+		595B2097227C8FB000D7297E /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		595B2098227C8FB000D7297E /* VerificationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationStoryboard.storyboard; sourceTree = "<group>"; };
+		595B209B227C8FB000D7297E /* WhereAmI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereAmI.swift; sourceTree = "<group>"; };
+		595B209C227C8FB000D7297E /* LocationProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProfile.swift; sourceTree = "<group>"; };
+		595B209E227C8FB000D7297E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		595B20A0227C8FB000D7297E /* CertificateChainClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificateChainClass.swift; sourceTree = "<group>"; };
+		595B20A1227C8FB000D7297E /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		595B20A2227C8FB000D7297E /* TokenHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
+		595B20A3227C8FB000D7297E /* SodiumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SodiumHelper.swift; sourceTree = "<group>"; };
+		595B20A4227C8FB000D7297E /* AuthTokenClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTokenClass.swift; sourceTree = "<group>"; };
+		595B20A6227C8FB100D7297E /* LockUnlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockUnlockViewController.swift; sourceTree = "<group>"; };
+		595B20A8227C8FB100D7297E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LockUnlockScreen.storyboard; sourceTree = "<group>"; };
+		595B20AA227C8FB100D7297E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QuickEntryStoryboard.storyboard; sourceTree = "<group>"; };
+		595B20AB227C8FB100D7297E /* QuickEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickEntryViewController.swift; sourceTree = "<group>"; };
+		595B20AC227C8FB100D7297E /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
+		595B20AD227C8FB100D7297E /* BottomViewControllerQR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewControllerQR.swift; sourceTree = "<group>"; };
+		595B20AF227C8FB100D7297E /* AFRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
+		595B20B0227C8FB100D7297E /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
+		595B20B1227C8FB100D7297E /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		595B20B3227C8FB100D7297E /* AmazonRootCA1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA1.cer; sourceTree = "<group>"; };
+		595B20B4227C8FB100D7297E /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
+		595B20B5227C8FB100D7297E /* URLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		595B20B7227C8FB100D7297E /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		595B20B8227C8FB100D7297E /* FontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		595B20B9227C8FB100D7297E /* CacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
+		595B20BA227C8FB100D7297E /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		595B20BB227C8FB100D7297E /* UimageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UimageViewExtension.swift; sourceTree = "<group>"; };
+		595B20BC227C8FB100D7297E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		595B20BD227C8FB100D7297E /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		595B20BE227C8FB100D7297E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		595B20BF227C8FB100D7297E /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		595B20C0227C8FB100D7297E /* SDKEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKEvent.swift; sourceTree = "<group>"; };
+		595B20C1227C8FB100D7297E /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		595B20C2227C8FB100D7297E /* LabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
+		595B20C3227C8FB100D7297E /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		595B20C4227C8FB100D7297E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		595B20C5227C8FB100D7297E /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		595B20C6227C8FB100D7297E /* UIApplicationiOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationiOS.swift; sourceTree = "<group>"; };
+		595B20C8227C8FB100D7297E /* Sites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
+		595B20C9227C8FB100D7297E /* LockManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockManager.swift; sourceTree = "<group>"; };
+		595B20CA227C8FB100D7297E /* LockDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockDevice.swift; sourceTree = "<group>"; };
 		5966A6092249AA22008C4665 /* URLManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManagerTests.swift; sourceTree = "<group>"; };
 		5966A60B224A5C35008C4665 /* QueryManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryManagerTests.swift; sourceTree = "<group>"; };
 		5966A613224BAFE9008C4665 /* KeyPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairTests.swift; sourceTree = "<group>"; };
@@ -240,16 +240,16 @@
 		593B1CBD2244FB3200BE5E67 /* doordeck-sdk-swift */ = {
 			isa = PBXGroup;
 			children = (
-				595B2034227C8CD800D7297E /* Aux */,
-				595B2011227C8CD800D7297E /* Dependencies */,
-				595B2030227C8CD800D7297E /* Lock */,
+				595B2092227C8FB000D7297E /* Aux */,
+				595B2099227C8FB000D7297E /* Dependencies */,
+				595B20C7227C8FB100D7297E /* Lock */,
+				595B20AE227C8FB100D7297E /* Network */,
+				595B20A5227C8FB100D7297E /* Quick Entry */,
+				595B209F227C8FB000D7297E /* Security */,
+				595B209D227C8FB000D7297E /* Styles */,
+				595B20B6227C8FB100D7297E /* Util */,
+				595B2096227C8FB000D7297E /* Verification Screen */,
 				595B2007227C8CD800D7297E /* Media.xcassets */,
-				595B2028227C8CD800D7297E /* Network */,
-				595B2008227C8CD800D7297E /* Quick Entry */,
-				595B1FFE227C8CD800D7297E /* Security */,
-				595B2015227C8CD800D7297E /* Styles */,
-				595B2017227C8CD800D7297E /* Util */,
-				595B2004227C8CD800D7297E /* Verification Screen */,
 				59ABB76E2271C2A20048BCF5 /* Info.plist */,
 				593B1CBE2244FB3200BE5E67 /* doordeck_sdk_swift.h */,
 				59B4456A224D137200555081 /* InitializeDoordeck.swift */,
@@ -270,127 +270,127 @@
 			path = "doordeck-sdk-swiftTests";
 			sourceTree = "<group>";
 		};
-		595B1FFE227C8CD800D7297E /* Security */ = {
+		595B2092227C8FB000D7297E /* Aux */ = {
 			isa = PBXGroup;
 			children = (
-				595B1FFF227C8CD800D7297E /* CertificateChainClass.swift */,
-				595B2000227C8CD800D7297E /* KeychainHelper.swift */,
-				595B2001227C8CD800D7297E /* TokenHelper.swift */,
-				595B2002227C8CD800D7297E /* SodiumHelper.swift */,
-				595B2003227C8CD800D7297E /* AuthTokenClass.swift */,
+				595B2093227C8FB000D7297E /* AppStrings.swift */,
+				595B2094227C8FB000D7297E /* DeviceHelper.swift */,
+				595B2095227C8FB000D7297E /* CustomPrint.swift */,
 			);
-			path = Security;
+			path = Aux;
 			sourceTree = "<group>";
 		};
-		595B2004227C8CD800D7297E /* Verification Screen */ = {
+		595B2096227C8FB000D7297E /* Verification Screen */ = {
 			isa = PBXGroup;
 			children = (
-				595B2005227C8CD800D7297E /* VerificationViewController.swift */,
-				595B2006227C8CD800D7297E /* VerificationStoryboard.storyboard */,
+				595B2097227C8FB000D7297E /* VerificationViewController.swift */,
+				595B2098227C8FB000D7297E /* VerificationStoryboard.storyboard */,
 			);
 			path = "Verification Screen";
 			sourceTree = "<group>";
 		};
-		595B2008227C8CD800D7297E /* Quick Entry */ = {
+		595B2099227C8FB000D7297E /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				595B2009227C8CD800D7297E /* LockUnlockViewController.swift */,
-				595B200A227C8CD800D7297E /* LockUnlockScreen.storyboard */,
-				595B200C227C8CD800D7297E /* QuickEntryStoryboard.storyboard */,
-				595B200E227C8CD800D7297E /* QuickEntryViewController.swift */,
-				595B200F227C8CD800D7297E /* BottomViewController.swift */,
-				595B2010227C8CD800D7297E /* BottomViewControllerQR.swift */,
-			);
-			path = "Quick Entry";
-			sourceTree = "<group>";
-		};
-		595B2011227C8CD800D7297E /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				595B2012227C8CD800D7297E /* WhereAmI */,
+				595B209A227C8FB000D7297E /* WhereAmI */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		595B2012227C8CD800D7297E /* WhereAmI */ = {
+		595B209A227C8FB000D7297E /* WhereAmI */ = {
 			isa = PBXGroup;
 			children = (
-				595B2013227C8CD800D7297E /* WhereAmI.swift */,
-				595B2014227C8CD800D7297E /* LocationProfile.swift */,
+				595B209B227C8FB000D7297E /* WhereAmI.swift */,
+				595B209C227C8FB000D7297E /* LocationProfile.swift */,
 			);
 			path = WhereAmI;
 			sourceTree = "<group>";
 		};
-		595B2015227C8CD800D7297E /* Styles */ = {
+		595B209D227C8FB000D7297E /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				595B2016227C8CD800D7297E /* UIColor.swift */,
+				595B209E227C8FB000D7297E /* UIColor.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
 		};
-		595B2017227C8CD800D7297E /* Util */ = {
+		595B209F227C8FB000D7297E /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				595B2018227C8CD800D7297E /* SwiftyTimer.swift */,
-				595B2019227C8CD800D7297E /* FontStyle.swift */,
-				595B201A227C8CD800D7297E /* CacheHelper.swift */,
-				595B201B227C8CD800D7297E /* NotificationCenter.swift */,
-				595B201C227C8CD800D7297E /* UimageViewExtension.swift */,
-				595B201D227C8CD800D7297E /* Util.swift */,
-				595B201E227C8CD800D7297E /* UserDefaults.swift */,
-				595B201F227C8CD800D7297E /* StringExtension.swift */,
-				595B2020227C8CD800D7297E /* Font.swift */,
-				595B2021227C8CD800D7297E /* SDKEvent.swift */,
-				595B2022227C8CD800D7297E /* UIApplication.swift */,
-				595B2023227C8CD800D7297E /* LabelExtension.swift */,
-				595B2024227C8CD800D7297E /* JsonHelper.swift */,
-				595B2025227C8CD800D7297E /* DateExtension.swift */,
-				595B2026227C8CD800D7297E /* Button.swift */,
-				595B2027227C8CD800D7297E /* UIApplicationiOS.swift */,
+				595B20A0227C8FB000D7297E /* CertificateChainClass.swift */,
+				595B20A1227C8FB000D7297E /* KeychainHelper.swift */,
+				595B20A2227C8FB000D7297E /* TokenHelper.swift */,
+				595B20A3227C8FB000D7297E /* SodiumHelper.swift */,
+				595B20A4227C8FB000D7297E /* AuthTokenClass.swift */,
 			);
-			path = Util;
+			path = Security;
 			sourceTree = "<group>";
 		};
-		595B2028227C8CD800D7297E /* Network */ = {
+		595B20A5227C8FB100D7297E /* Quick Entry */ = {
 			isa = PBXGroup;
 			children = (
-				595B2029227C8CD800D7297E /* AFRequest.swift */,
-				595B202A227C8CD800D7297E /* ReachabilityHelper.swift */,
-				595B202B227C8CD800D7297E /* APIClient.swift */,
-				595B202C227C8CD800D7297E /* CER */,
-				595B202E227C8CD800D7297E /* QueryManager.swift */,
-				595B202F227C8CD800D7297E /* URLManager.swift */,
+				595B20A6227C8FB100D7297E /* LockUnlockViewController.swift */,
+				595B20A7227C8FB100D7297E /* LockUnlockScreen.storyboard */,
+				595B20A9227C8FB100D7297E /* QuickEntryStoryboard.storyboard */,
+				595B20AB227C8FB100D7297E /* QuickEntryViewController.swift */,
+				595B20AC227C8FB100D7297E /* BottomViewController.swift */,
+				595B20AD227C8FB100D7297E /* BottomViewControllerQR.swift */,
+			);
+			path = "Quick Entry";
+			sourceTree = "<group>";
+		};
+		595B20AE227C8FB100D7297E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				595B20AF227C8FB100D7297E /* AFRequest.swift */,
+				595B20B0227C8FB100D7297E /* ReachabilityHelper.swift */,
+				595B20B1227C8FB100D7297E /* APIClient.swift */,
+				595B20B2227C8FB100D7297E /* CER */,
+				595B20B4227C8FB100D7297E /* QueryManager.swift */,
+				595B20B5227C8FB100D7297E /* URLManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		595B202C227C8CD800D7297E /* CER */ = {
+		595B20B2227C8FB100D7297E /* CER */ = {
 			isa = PBXGroup;
 			children = (
-				595B202D227C8CD800D7297E /* AmazonRootCA1.cer */,
+				595B20B3227C8FB100D7297E /* AmazonRootCA1.cer */,
 			);
 			path = CER;
 			sourceTree = "<group>";
 		};
-		595B2030227C8CD800D7297E /* Lock */ = {
+		595B20B6227C8FB100D7297E /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				595B2031227C8CD800D7297E /* Sites.swift */,
-				595B2032227C8CD800D7297E /* LockManager.swift */,
-				595B2033227C8CD800D7297E /* LockDevice.swift */,
+				595B20B7227C8FB100D7297E /* SwiftyTimer.swift */,
+				595B20B8227C8FB100D7297E /* FontStyle.swift */,
+				595B20B9227C8FB100D7297E /* CacheHelper.swift */,
+				595B20BA227C8FB100D7297E /* NotificationCenter.swift */,
+				595B20BB227C8FB100D7297E /* UimageViewExtension.swift */,
+				595B20BC227C8FB100D7297E /* Util.swift */,
+				595B20BD227C8FB100D7297E /* UserDefaults.swift */,
+				595B20BE227C8FB100D7297E /* StringExtension.swift */,
+				595B20BF227C8FB100D7297E /* Font.swift */,
+				595B20C0227C8FB100D7297E /* SDKEvent.swift */,
+				595B20C1227C8FB100D7297E /* UIApplication.swift */,
+				595B20C2227C8FB100D7297E /* LabelExtension.swift */,
+				595B20C3227C8FB100D7297E /* JsonHelper.swift */,
+				595B20C4227C8FB100D7297E /* DateExtension.swift */,
+				595B20C5227C8FB100D7297E /* Button.swift */,
+				595B20C6227C8FB100D7297E /* UIApplicationiOS.swift */,
 			);
-			path = Lock;
+			path = Util;
 			sourceTree = "<group>";
 		};
-		595B2034227C8CD800D7297E /* Aux */ = {
+		595B20C7227C8FB100D7297E /* Lock */ = {
 			isa = PBXGroup;
 			children = (
-				595B2035227C8CD800D7297E /* AppStrings.swift */,
-				595B2036227C8CD800D7297E /* DeviceHelper.swift */,
-				595B2037227C8CD800D7297E /* CustomPrint.swift */,
+				595B20C8227C8FB100D7297E /* Sites.swift */,
+				595B20C9227C8FB100D7297E /* LockManager.swift */,
+				595B20CA227C8FB100D7297E /* LockDevice.swift */,
 			);
-			path = Aux;
+			path = Lock;
 			sourceTree = "<group>";
 		};
 		7462FF2056A61920FFE55B28 /* Frameworks */ = {
@@ -499,11 +499,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				59ABB76F2271C2A30048BCF5 /* Info.plist in Resources */,
-				595B204C227C8CD900D7297E /* QuickEntryStoryboard.storyboard in Resources */,
 				595B2046227C8CD900D7297E /* Media.xcassets in Resources */,
-				595B2044227C8CD900D7297E /* VerificationStoryboard.storyboard in Resources */,
-				595B2080227C8CD900D7297E /* AmazonRootCA1.cer in Resources */,
-				595B204A227C8CD900D7297E /* LockUnlockScreen.storyboard in Resources */,
+				595B20F7227C8FB100D7297E /* AmazonRootCA1.cer in Resources */,
+				595B20D3227C8FB100D7297E /* VerificationStoryboard.storyboard in Resources */,
+				595B20E9227C8FB100D7297E /* QuickEntryStoryboard.storyboard in Resources */,
+				595B20E7227C8FB100D7297E /* LockUnlockScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,11 +511,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				595B2045227C8CD900D7297E /* VerificationStoryboard.storyboard in Resources */,
+				595B20E8227C8FB100D7297E /* LockUnlockScreen.storyboard in Resources */,
+				595B20D4227C8FB100D7297E /* VerificationStoryboard.storyboard in Resources */,
+				595B20EA227C8FB100D7297E /* QuickEntryStoryboard.storyboard in Resources */,
+				595B20F8227C8FB100D7297E /* AmazonRootCA1.cer in Resources */,
 				595B2047227C8CD900D7297E /* Media.xcassets in Resources */,
-				595B2081227C8CD900D7297E /* AmazonRootCA1.cer in Resources */,
-				595B204D227C8CD900D7297E /* QuickEntryStoryboard.storyboard in Resources */,
-				595B204B227C8CD900D7297E /* LockUnlockScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,46 +590,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				595B208C227C8CD900D7297E /* AppStrings.swift in Sources */,
-				595B2052227C8CD900D7297E /* BottomViewControllerQR.swift in Sources */,
-				595B2088227C8CD900D7297E /* LockManager.swift in Sources */,
-				595B2074227C8CD900D7297E /* DateExtension.swift in Sources */,
-				595B2058227C8CD900D7297E /* UIColor.swift in Sources */,
-				595B2070227C8CD900D7297E /* LabelExtension.swift in Sources */,
-				595B207C227C8CD900D7297E /* ReachabilityHelper.swift in Sources */,
-				595B207E227C8CD900D7297E /* APIClient.swift in Sources */,
-				595B2082227C8CD900D7297E /* QueryManager.swift in Sources */,
-				595B2076227C8CD900D7297E /* Button.swift in Sources */,
-				595B205E227C8CD900D7297E /* CacheHelper.swift in Sources */,
-				595B208A227C8CD900D7297E /* LockDevice.swift in Sources */,
-				595B206E227C8CD900D7297E /* UIApplication.swift in Sources */,
-				595B206A227C8CD900D7297E /* Font.swift in Sources */,
-				595B205C227C8CD900D7297E /* FontStyle.swift in Sources */,
-				595B2038227C8CD800D7297E /* CertificateChainClass.swift in Sources */,
-				595B2084227C8CD900D7297E /* URLManager.swift in Sources */,
-				595B2066227C8CD900D7297E /* UserDefaults.swift in Sources */,
-				595B204E227C8CD900D7297E /* QuickEntryViewController.swift in Sources */,
-				595B203C227C8CD900D7297E /* TokenHelper.swift in Sources */,
-				595B2064227C8CD900D7297E /* Util.swift in Sources */,
-				595B2078227C8CD900D7297E /* UIApplicationiOS.swift in Sources */,
-				595B2060227C8CD900D7297E /* NotificationCenter.swift in Sources */,
-				595B2056227C8CD900D7297E /* LocationProfile.swift in Sources */,
-				595B2090227C8CD900D7297E /* CustomPrint.swift in Sources */,
-				595B2040227C8CD900D7297E /* AuthTokenClass.swift in Sources */,
-				595B206C227C8CD900D7297E /* SDKEvent.swift in Sources */,
-				595B203E227C8CD900D7297E /* SodiumHelper.swift in Sources */,
-				595B203A227C8CD800D7297E /* KeychainHelper.swift in Sources */,
-				595B2072227C8CD900D7297E /* JsonHelper.swift in Sources */,
-				595B205A227C8CD900D7297E /* SwiftyTimer.swift in Sources */,
-				595B207A227C8CD900D7297E /* AFRequest.swift in Sources */,
-				595B2054227C8CD900D7297E /* WhereAmI.swift in Sources */,
-				595B2062227C8CD900D7297E /* UimageViewExtension.swift in Sources */,
-				595B2048227C8CD900D7297E /* LockUnlockViewController.swift in Sources */,
-				595B2050227C8CD900D7297E /* BottomViewController.swift in Sources */,
-				595B2042227C8CD900D7297E /* VerificationViewController.swift in Sources */,
-				595B2068227C8CD900D7297E /* StringExtension.swift in Sources */,
-				595B208E227C8CD900D7297E /* DeviceHelper.swift in Sources */,
-				595B2086227C8CD900D7297E /* Sites.swift in Sources */,
+				595B2109227C8FB100D7297E /* UserDefaults.swift in Sources */,
+				595B211D227C8FB100D7297E /* Sites.swift in Sources */,
+				595B20CF227C8FB100D7297E /* CustomPrint.swift in Sources */,
+				595B2113227C8FB100D7297E /* LabelExtension.swift in Sources */,
+				595B210B227C8FB100D7297E /* StringExtension.swift in Sources */,
+				595B211B227C8FB100D7297E /* UIApplicationiOS.swift in Sources */,
+				595B2111227C8FB100D7297E /* UIApplication.swift in Sources */,
+				595B20D5227C8FB100D7297E /* WhereAmI.swift in Sources */,
+				595B2119227C8FB100D7297E /* Button.swift in Sources */,
+				595B20FF227C8FB100D7297E /* FontStyle.swift in Sources */,
+				595B20DB227C8FB100D7297E /* CertificateChainClass.swift in Sources */,
+				595B20F5227C8FB100D7297E /* APIClient.swift in Sources */,
+				595B20DF227C8FB100D7297E /* TokenHelper.swift in Sources */,
+				595B2101227C8FB100D7297E /* CacheHelper.swift in Sources */,
+				595B20EF227C8FB100D7297E /* BottomViewControllerQR.swift in Sources */,
+				595B20E3227C8FB100D7297E /* AuthTokenClass.swift in Sources */,
+				595B211F227C8FB100D7297E /* LockManager.swift in Sources */,
+				595B2117227C8FB100D7297E /* DateExtension.swift in Sources */,
+				595B2103227C8FB100D7297E /* NotificationCenter.swift in Sources */,
+				595B20E5227C8FB100D7297E /* LockUnlockViewController.swift in Sources */,
+				595B210F227C8FB100D7297E /* SDKEvent.swift in Sources */,
+				595B2107227C8FB100D7297E /* Util.swift in Sources */,
+				595B20DD227C8FB100D7297E /* KeychainHelper.swift in Sources */,
+				595B20CB227C8FB100D7297E /* AppStrings.swift in Sources */,
+				595B20D1227C8FB100D7297E /* VerificationViewController.swift in Sources */,
+				595B20F3227C8FB100D7297E /* ReachabilityHelper.swift in Sources */,
+				595B20ED227C8FB100D7297E /* BottomViewController.swift in Sources */,
+				595B2105227C8FB100D7297E /* UimageViewExtension.swift in Sources */,
+				595B20FD227C8FB100D7297E /* SwiftyTimer.swift in Sources */,
+				595B2121227C8FB100D7297E /* LockDevice.swift in Sources */,
+				595B2115227C8FB100D7297E /* JsonHelper.swift in Sources */,
+				595B20D7227C8FB100D7297E /* LocationProfile.swift in Sources */,
+				595B20F9227C8FB100D7297E /* QueryManager.swift in Sources */,
+				595B20FB227C8FB100D7297E /* URLManager.swift in Sources */,
+				595B210D227C8FB100D7297E /* Font.swift in Sources */,
+				595B20D9227C8FB100D7297E /* UIColor.swift in Sources */,
+				595B20CD227C8FB100D7297E /* DeviceHelper.swift in Sources */,
+				595B20F1227C8FB100D7297E /* AFRequest.swift in Sources */,
+				595B20E1227C8FB100D7297E /* SodiumHelper.swift in Sources */,
+				595B20EB227C8FB100D7297E /* QuickEntryViewController.swift in Sources */,
 				59B4456B224D137200555081 /* InitializeDoordeck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,51 +638,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				595B20F0227C8FB100D7297E /* BottomViewControllerQR.swift in Sources */,
+				595B2118227C8FB100D7297E /* DateExtension.swift in Sources */,
+				595B20CC227C8FB100D7297E /* AppStrings.swift in Sources */,
+				595B210E227C8FB100D7297E /* Font.swift in Sources */,
+				595B2120227C8FB100D7297E /* LockManager.swift in Sources */,
+				595B2116227C8FB100D7297E /* JsonHelper.swift in Sources */,
+				595B20E6227C8FB100D7297E /* LockUnlockViewController.swift in Sources */,
+				595B2108227C8FB100D7297E /* Util.swift in Sources */,
+				595B2122227C8FB100D7297E /* LockDevice.swift in Sources */,
+				595B20FC227C8FB100D7297E /* URLManager.swift in Sources */,
+				595B20EC227C8FB100D7297E /* QuickEntryViewController.swift in Sources */,
+				595B20DA227C8FB100D7297E /* UIColor.swift in Sources */,
+				595B2102227C8FB100D7297E /* CacheHelper.swift in Sources */,
+				595B210C227C8FB100D7297E /* StringExtension.swift in Sources */,
+				595B2104227C8FB100D7297E /* NotificationCenter.swift in Sources */,
+				595B2100227C8FB100D7297E /* FontStyle.swift in Sources */,
+				595B211E227C8FB100D7297E /* Sites.swift in Sources */,
+				595B211A227C8FB100D7297E /* Button.swift in Sources */,
+				595B20FA227C8FB100D7297E /* QueryManager.swift in Sources */,
 				5966A60C224A5C35008C4665 /* QueryManagerTests.swift in Sources */,
-				595B2049227C8CD900D7297E /* LockUnlockViewController.swift in Sources */,
-				595B2079227C8CD900D7297E /* UIApplicationiOS.swift in Sources */,
-				595B2091227C8CD900D7297E /* CustomPrint.swift in Sources */,
-				595B203F227C8CD900D7297E /* SodiumHelper.swift in Sources */,
-				595B207D227C8CD900D7297E /* ReachabilityHelper.swift in Sources */,
-				595B2041227C8CD900D7297E /* AuthTokenClass.swift in Sources */,
-				595B204F227C8CD900D7297E /* QuickEntryViewController.swift in Sources */,
-				595B2089227C8CD900D7297E /* LockManager.swift in Sources */,
-				595B208B227C8CD900D7297E /* LockDevice.swift in Sources */,
-				595B208F227C8CD900D7297E /* DeviceHelper.swift in Sources */,
-				595B2057227C8CD900D7297E /* LocationProfile.swift in Sources */,
-				595B2071227C8CD900D7297E /* LabelExtension.swift in Sources */,
-				595B2067227C8CD900D7297E /* UserDefaults.swift in Sources */,
-				595B205B227C8CD900D7297E /* SwiftyTimer.swift in Sources */,
-				595B2075227C8CD900D7297E /* DateExtension.swift in Sources */,
-				595B2077227C8CD900D7297E /* Button.swift in Sources */,
-				595B2063227C8CD900D7297E /* UimageViewExtension.swift in Sources */,
+				595B20E0227C8FB100D7297E /* TokenHelper.swift in Sources */,
 				5966A60A2249AA22008C4665 /* URLManagerTests.swift in Sources */,
-				595B2043227C8CD900D7297E /* VerificationViewController.swift in Sources */,
-				595B2051227C8CD900D7297E /* BottomViewController.swift in Sources */,
-				595B2039227C8CD800D7297E /* CertificateChainClass.swift in Sources */,
-				595B208D227C8CD900D7297E /* AppStrings.swift in Sources */,
-				595B2053227C8CD900D7297E /* BottomViewControllerQR.swift in Sources */,
+				595B210A227C8FB100D7297E /* UserDefaults.swift in Sources */,
+				595B2112227C8FB100D7297E /* UIApplication.swift in Sources */,
 				5939F07922579492003FAF13 /* SodiumHelperTests.swift in Sources */,
-				595B2061227C8CD900D7297E /* NotificationCenter.swift in Sources */,
-				595B2055227C8CD900D7297E /* WhereAmI.swift in Sources */,
-				595B2087227C8CD900D7297E /* Sites.swift in Sources */,
-				595B207B227C8CD900D7297E /* AFRequest.swift in Sources */,
-				595B205D227C8CD900D7297E /* FontStyle.swift in Sources */,
-				595B2059227C8CD900D7297E /* UIColor.swift in Sources */,
-				595B205F227C8CD900D7297E /* CacheHelper.swift in Sources */,
-				595B2065227C8CD900D7297E /* Util.swift in Sources */,
-				595B206D227C8CD900D7297E /* SDKEvent.swift in Sources */,
-				595B207F227C8CD900D7297E /* APIClient.swift in Sources */,
-				595B2085227C8CD900D7297E /* URLManager.swift in Sources */,
-				595B206F227C8CD900D7297E /* UIApplication.swift in Sources */,
-				595B203B227C8CD800D7297E /* KeychainHelper.swift in Sources */,
-				595B203D227C8CD900D7297E /* TokenHelper.swift in Sources */,
-				595B206B227C8CD900D7297E /* Font.swift in Sources */,
+				595B20D0227C8FB100D7297E /* CustomPrint.swift in Sources */,
+				595B20DC227C8FB100D7297E /* CertificateChainClass.swift in Sources */,
+				595B20F6227C8FB100D7297E /* APIClient.swift in Sources */,
+				595B20D8227C8FB100D7297E /* LocationProfile.swift in Sources */,
+				595B2106227C8FB100D7297E /* UimageViewExtension.swift in Sources */,
+				595B2114227C8FB100D7297E /* LabelExtension.swift in Sources */,
+				595B20D6227C8FB100D7297E /* WhereAmI.swift in Sources */,
+				595B20CE227C8FB100D7297E /* DeviceHelper.swift in Sources */,
+				595B2110227C8FB100D7297E /* SDKEvent.swift in Sources */,
+				595B20F2227C8FB100D7297E /* AFRequest.swift in Sources */,
+				595B20FE227C8FB100D7297E /* SwiftyTimer.swift in Sources */,
+				595B20D2227C8FB100D7297E /* VerificationViewController.swift in Sources */,
+				595B20F4227C8FB100D7297E /* ReachabilityHelper.swift in Sources */,
+				595B20DE227C8FB100D7297E /* KeychainHelper.swift in Sources */,
 				5939F08522582CDA003FAF13 /* TokenHelperTests.swift in Sources */,
-				595B2083227C8CD900D7297E /* QueryManager.swift in Sources */,
-				595B2069227C8CD900D7297E /* StringExtension.swift in Sources */,
+				595B20E4227C8FB100D7297E /* AuthTokenClass.swift in Sources */,
+				595B211C227C8FB100D7297E /* UIApplicationiOS.swift in Sources */,
+				595B20EE227C8FB100D7297E /* BottomViewController.swift in Sources */,
+				595B20E2227C8FB100D7297E /* SodiumHelper.swift in Sources */,
 				5966A614224BAFE9008C4665 /* KeyPairTests.swift in Sources */,
-				595B2073227C8CD900D7297E /* JsonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,18 +697,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		595B200A227C8CD800D7297E /* LockUnlockScreen.storyboard */ = {
+		595B20A7227C8FB100D7297E /* LockUnlockScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				595B200B227C8CD800D7297E /* Base */,
+				595B20A8227C8FB100D7297E /* Base */,
 			);
 			name = LockUnlockScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		595B200C227C8CD800D7297E /* QuickEntryStoryboard.storyboard */ = {
+		595B20A9227C8FB100D7297E /* QuickEntryStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				595B200D227C8CD800D7297E /* Base */,
+				595B20AA227C8FB100D7297E /* Base */,
 			);
 			name = QuickEntryStoryboard.storyboard;
 			sourceTree = "<group>";
