@@ -69,13 +69,21 @@ public class Doordeck {
     /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server,
     ///
     /// - Parameter token: AuthTokenClass contains user Auth Token.
-    public init(_ token: AuthTokenClass) {
+    public init(_ token: AuthTokenClass, darkMode: Bool = true) {
         self.token = token
         let header = Header().createSDKAuthHeader(.v1, token: token)
         self.apiClient = APIClient(header, token: token)
         self.sodium = SodiumHelper(token)
+        darkModeActive(darkMode)
     }
     
+    
+    /// Dark mode
+    ///
+    /// - Parameter bool: set dark mode on init. 
+    private func darkModeActive (_ bool: Bool) {
+        UserDefaults.setDarkUI(bool)
+    }
     
     /// Use this method to pre-initialise the server checks, this will make unlocking faster.
     public func Initialize() {
@@ -131,6 +139,7 @@ public class Doordeck {
         vc.sodium = self.sodium
         
         let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.isNavigationBarHidden = true
         view.present(navigationController, animated: true, completion: nil)
     }
     
@@ -201,6 +210,7 @@ public class Doordeck {
         vc.sodium = self.sodium
         
         let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.isNavigationBarHidden = true
         view.present(navigationController, animated: true, completion: nil)
     }
     
@@ -270,6 +280,7 @@ public class Doordeck {
 extension Doordeck: DoordeckInternalProtocol {
     func verificationSuccessful(_ chain: CertificateChainClass) {
         self.currentState = .authenticated
+        self.chain = chain
         showUnlockScreenSuccess()
     }
     

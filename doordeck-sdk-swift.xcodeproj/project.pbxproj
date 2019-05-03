@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591838142279AB8000D764E1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591838132279AB8000D764E1 /* Media.xcassets */; };
+		591838152279AB8000D764E1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591838132279AB8000D764E1 /* Media.xcassets */; };
 		5939F07922579492003FAF13 /* SodiumHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F07822579492003FAF13 /* SodiumHelperTests.swift */; };
 		5939F08522582CDA003FAF13 /* TokenHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F08422582CDA003FAF13 /* TokenHelperTests.swift */; };
 		593B1CC52244FB3300BE5E67 /* doordeck_sdk_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */; };
@@ -114,6 +116,7 @@
 
 /* Begin PBXFileReference section */
 		4A9A502C12CD3F118E3495CD /* Pods-doordeck-sdk-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		591838132279AB8000D764E1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		5939F07822579492003FAF13 /* SodiumHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodiumHelperTests.swift; sourceTree = "<group>"; };
 		5939F08422582CDA003FAF13 /* TokenHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelperTests.swift; sourceTree = "<group>"; };
 		593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = doordeck_sdk_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +231,7 @@
 		593B1CBD2244FB3200BE5E67 /* doordeck-sdk-swift */ = {
 			isa = PBXGroup;
 			children = (
+				591838132279AB8000D764E1 /* Media.xcassets */,
 				59ABB7E4227379170048BCF5 /* Aux */,
 				59ABB7D4227379170048BCF5 /* Dependencies */,
 				59ABB7D8227379170048BCF5 /* Lock */,
@@ -486,6 +490,7 @@
 				59ABB76F2271C2A30048BCF5 /* Info.plist in Resources */,
 				59ABB84E227379180048BCF5 /* VerificationStoryboard.storyboard in Resources */,
 				59ABB854227379180048BCF5 /* QuickEntryStoryboard.storyboard in Resources */,
+				591838142279AB8000D764E1 /* Media.xcassets in Resources */,
 				59ABB852227379180048BCF5 /* LockUnlockScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591838152279AB8000D764E1 /* Media.xcassets in Resources */,
 				59ABB853227379180048BCF5 /* LockUnlockScreen.storyboard in Resources */,
 				59ABB84F227379180048BCF5 /* VerificationStoryboard.storyboard in Resources */,
 				59ABB855227379180048BCF5 /* QuickEntryStoryboard.storyboard in Resources */,

@@ -110,7 +110,7 @@ class APIClient {
                             method: .post,
                             params: QueryManager.checkKey(key),
                             headers: self.header,
-                            jsonReply: false,
+                            jsonReply: true,
                             onSuccess: { (jsonData) in
                                 
                                 self.requestCompletion(URL,
@@ -192,8 +192,7 @@ class APIClient {
         
         let operationArray = [
             "type":"MUTATE_LOCK",
-            "locked":(control == APIClient.deviceStatus.lock) ? true : false,
-            "duration":Int(device.unlockTime)] as [String : Any]
+            "locked":(control == APIClient.deviceStatus.lock) ? true : false] as [String : Any]
         tokenHelper.tokenActive({
             deviceControl(device,sodium: sodium,chain: chain, operation: operationArray as [String : Any], completion: completion)
         }) {
