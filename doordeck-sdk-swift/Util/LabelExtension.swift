@@ -2,7 +2,6 @@
 //  LabelExtension.swift
 //  doordeck-sdk-swift-sample
 //
-//  Created by Marwan on 03/05/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 

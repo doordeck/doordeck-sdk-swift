@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  doordeck-sdk-swift-sample
 //
-//  Created by Marwan on 18/04/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 

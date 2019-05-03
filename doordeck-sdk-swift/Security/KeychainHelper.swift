@@ -1,11 +1,10 @@
-
 //
 //  KeychainService.swift
 //  doordeck-sdk-swift
 //
-//  Created by Marwan on 04/04/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
+
 import Foundation
 import Security
 

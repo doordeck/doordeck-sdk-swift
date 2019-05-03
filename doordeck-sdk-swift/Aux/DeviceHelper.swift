@@ -1,3 +1,10 @@
+//
+//  AppStrings.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import UIKit
 
 public extension UIDevice {

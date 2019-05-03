@@ -1,3 +1,10 @@
+//
+//  TokenHelper.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import Foundation
 
 class TokenHelper {

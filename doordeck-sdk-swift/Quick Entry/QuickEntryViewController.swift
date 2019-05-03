@@ -2,7 +2,6 @@
 //  QuickEntryViewController.swift
 //  Doordeck
 //
-//  Created by Marwan on 17/12/2018.
 //  Copyright © 2018 Doordeck. All rights reserved.
 //
 

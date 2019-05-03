@@ -2,7 +2,6 @@
 //  SDKEvent.swift
 //  doordeck-sdk-swift-sample
 //
-//  Created by Marwan on 03/05/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 
@@ -16,8 +15,6 @@ class SDKEvent {
         case INVALID_AUTH_TOKEN
         case NETWORK_ERROR
         case SDK_NETWORK_ERROR
-        case EMAIL_SENT
-        case EMAIL_FAILED_SENDING
         case CODE_VERIFICATION_SUCCESS
         case CODE_VERIFICATION_FAILED
         case UNLOCK_INVALID_TILE_ID

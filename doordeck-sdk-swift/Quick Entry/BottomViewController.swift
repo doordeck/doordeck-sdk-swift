@@ -1,10 +1,16 @@
+//
+//  ButtonViewController.swift
+//  doordeck-sdk-swift
+//
+//  Copyright © 2019 Doordeck. All rights reserved.
+//
+
 import UIKit
 import CoreNFC
 
 protocol quickEntryDelegate {
     func lockDetected(_ UUID: String)
     func showQRCode()
-//    func checkQuickEntryChoice()
 }
 
 @available(iOS 11, *)

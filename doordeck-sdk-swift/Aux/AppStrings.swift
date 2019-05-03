@@ -2,7 +2,6 @@
 //  AppStrings.swift
 //  doordeck-sdk-swift
 //
-//  Created by Marwan on 28/03/2019.
 //  Copyright © 2019 Doordeck. All rights reserved.
 //
 
