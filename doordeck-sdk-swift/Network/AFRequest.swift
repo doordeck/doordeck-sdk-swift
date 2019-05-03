@@ -59,7 +59,6 @@ class AFRequest {
         
         
         if let statusCode = response?.statusCode {
-            
             switch(statusCode) {
                 
             case 200, 201, 202, 203, 204:
@@ -72,7 +71,7 @@ class AFRequest {
                     onError?(APIClient.error.network(networkError: error))
                 }
             case 401:
-                
+                SDKEvent().event(.NETWORK_ERROR)
                 print(PrintChannel.error,
                       object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
@@ -85,14 +84,14 @@ class AFRequest {
                 onError?(APIClient.error.twoFactorAuthenticationNeeded)
                 
             default:
-                
+                SDKEvent().event(.NETWORK_ERROR)
                 print(PrintChannel.error,
                       object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
             }
             
         } else {
-            
+            SDKEvent().event(.NETWORK_ERROR)
             print(PrintChannel.error, object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: 500)) \n URL: \(url)")
             onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: 500))
         }
@@ -106,7 +105,6 @@ class AFRequest {
         
         
         if let statusCode = response?.statusCode {
-            
             switch(statusCode) {
                 
             case 200, 201, 202, 203, 204:
@@ -122,7 +120,7 @@ class AFRequest {
                     onError?(APIClient.error.network(networkError: error))
                 }
             case 401:
-                
+                SDKEvent().event(.NETWORK_ERROR)
                 print(PrintChannel.error, object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
                 
@@ -134,14 +132,14 @@ class AFRequest {
                 onError?(APIClient.error.twoFactorAuthenticationNeeded)
                 
             default:
-                
+                SDKEvent().event(.NETWORK_ERROR)
                 print(PrintChannel.error,
                       object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
             }
             
         } else {
-            
+            SDKEvent().event(.NETWORK_ERROR)
             print(PrintChannel.error,
                   object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: 500)) \n URL: \(url)")
             onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: 500))
@@ -213,7 +211,7 @@ class AFRequest {
                 
             }
         } else {
-            
+            SDKEvent().event(.NO_INTERNET)
             print(PrintChannel.error,
                   object: "NoInternet \(APIClient.error.noInternet) \n URL: \(url)")
             onError?(APIClient.error.noInternet)

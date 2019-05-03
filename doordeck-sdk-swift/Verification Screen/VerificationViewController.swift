@@ -105,9 +105,11 @@ class VerificationViewController: UIViewController {
                 }
                 
                 self?.dismiss(animated: false, completion: {
+                    SDKEvent().event(.CODE_VERIFICATION_SUCCESS)
                     self?.delegate?.verificationSuccessful(CertificateChainClass(certificateChainTemp))
                 })
             } else {
+                SDKEvent().event(.CODE_VERIFICATION_FAILED)
                 self?.delegate?.verificationUnsuccessful()
             }
         }

@@ -13,6 +13,7 @@ class BottomViewController: UIViewController {
     @IBOutlet weak var nfcScan: UIButton!
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var QRCodeImage: UIImageView!
     var delegate: quickEntryDelegate?
     var payloads = [NFCNDEFPayload]()
     var session: NFCNDEFReaderSession?
@@ -35,6 +36,8 @@ class BottomViewController: UIViewController {
         view.backgroundColor = .doordeckPrimaryColour()
         bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchNFC)
         descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchNFCMessage)
+        QRCodeImage.image = UIImage(named: "QR_Tile")
+        QRCodeImage.setImageColor(color: UIColor.doordeckQuaternaryColour())
     }
     
     @objc func resetShowNFC() {

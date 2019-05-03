@@ -37,12 +37,14 @@ class TokenHelper {
         self.decrypt() { (tokenDecrypt, error) in
             
             guard error == nil && tokenDecrypt != nil else {
+                SDKEvent().event(.INVALID_AUTH_TOKEN)
                 fail()
                 return
             }
             if self.tokenStillActive(tokenDecrypt!) {
                 success()
             } else {
+                SDKEvent().event(.INVALID_AUTH_TOKEN)
                 fail()
             }
         }

@@ -24,9 +24,21 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(self.doordeckEvents(_:)), name: SDKEvent().doordeckEventsName, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: SDKEvent().doordeckEventsName, object: nil)
     }
 
+    @objc func doordeckEvents (_ event: NSNotification) {
+        guard let eventAction = event.object as? SDKEvent.EventAction else {
+            return
+        }
+        print(eventAction)
+    }
+    
     @IBAction func initButton(_ sender: Any) {
         doordeck?.Initialize()
     }

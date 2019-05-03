@@ -114,9 +114,11 @@ extension QuickEntryViewController: quickEntryDelegate {
     
     func showLockVerificationScreen(_ UUID: String, autoUnlock:Bool = false) {
         lockMan.findLock(UUID, success: { [weak self] (lock) in
+            SDKEvent().event(.RESOLVE_TILE_SUCCESS)
             self?.showLockScreen(lock)
         }) {
-            //to-do need to do something 
+            //to-do need to do something
+            SDKEvent().event(.RESOLVE_TILE_FAILED)
             return
         }
     }
