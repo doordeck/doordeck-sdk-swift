@@ -96,3 +96,26 @@ Unlock a door
 
 Please keep in mind, Doordeck servers can reject a user and ask for permissions, if the Public key sent does not match the one on the server currently.
 
+## Step 9 - Optional Events 
+This is an optional step, suscribing to events will allow you to get an Enum of the events that the SDK is going through. 
+This is helpful for both debugging problems and events collection.
+
+place the following in viewDidAppear
+```
+NotificationCenter.default.addObserver(self, selector: #selector(self.doordeckEvents(_:)), name: SDKEvent().doordeckEventsName, object: nil)
+```
+
+This is the Method for the events
+```
+    @objc func doordeckEvents (_ event: NSNotification) {
+        guard let eventAction = event.object as? SDKEvent.EventAction else {
+            return
+        }
+        print(eventAction)
+    }
+```
+Place this is in the viewDidDisappear
+```
+NotificationCenter.default.removeObserver(self, name: SDKEvent().doordeckEventsName, object: nil)
+```
+
