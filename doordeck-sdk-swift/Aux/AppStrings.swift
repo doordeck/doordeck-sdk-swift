@@ -23,6 +23,8 @@ struct AppStrings {
     static let dismiss: String = NSLocalizedString("Dismiss", comment: "")
     
     // verification Screen
+    static let resendCode: String = NSLocalizedString("RE-SEND CODE", comment: "")
+    static let verificationTitle: String = NSLocalizedString("Verify your new device", comment: "")
     static let verification: String = NSLocalizedString("Enter the verification code that has been sent to you", comment: "")
     
     // lock updates

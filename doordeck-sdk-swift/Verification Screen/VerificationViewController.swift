@@ -14,6 +14,7 @@ class VerificationViewController: UIViewController {
     var sodium: SodiumHelper!
     var delegate: DoordeckInternalProtocol?
     @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
     @IBOutlet weak var verificationCode1: UILabel!
     @IBOutlet weak var verificationCode2: UILabel!
@@ -22,6 +23,8 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var verificationCode5: UILabel!
     @IBOutlet weak var verificationCode6: UILabel!
     @IBOutlet weak var verificationCodeCentre: UILabel!
+    @IBOutlet weak var resendButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
     
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
@@ -62,6 +65,8 @@ class VerificationViewController: UIViewController {
     
     func setUpUI() {
         view.backgroundColor = .doordeckPrimaryColour()
+        resendButton.doordeckStandardButton(AppStrings.resendCode, backgroundColour: UIColor.clear)
+        titleLabel.attributedText = NSAttributedString.doordeckH1Bold(AppStrings.verificationTitle)
         topLabel.attributedText = NSAttributedString.doordeckH3(AppStrings.verification)
         hiddenTextField.isHidden = true
         
@@ -70,7 +75,15 @@ class VerificationViewController: UIViewController {
         }
         
         hiddenTextField.keyboardType = UIKeyboardType.numberPad
-
+        
+        verificationCodeCentre.attributedText = NSAttributedString.doordeckH3Bold("-")
+        
+        verificationCode1.doordeckLabel()
+        verificationCode2.doordeckLabel()
+        verificationCode3.doordeckLabel()
+        verificationCode4.doordeckLabel()
+        verificationCode5.doordeckLabel()
+        verificationCode6.doordeckLabel()
     }
     
     @IBAction func sendCodeToServer(_ sender: Any) {
@@ -98,38 +111,39 @@ class VerificationViewController: UIViewController {
     
     func fillOutCode(_ code: String)  {
         var characters = Array(code)
+        verificationCodeCentre.attributedText = NSAttributedString.doordeckH3Bold("-")
         if characters.indices.contains(0) {
-            verificationCode1.text = String(characters[0])
+            verificationCode1.attributedText = NSAttributedString.doordeckH3Bold(String(characters[0]))
         } else {
             verificationCode1.text = ""
         }
         
         if characters.indices.contains(1) {
-            verificationCode2.text = String(characters[1])
+            verificationCode2.attributedText = NSAttributedString.doordeckH3Bold(String(characters[1]))
         } else {
             verificationCode2.text = ""
         }
         
         if characters.indices.contains(2) {
-            verificationCode3.text = String(characters[2])
+            verificationCode3.attributedText = NSAttributedString.doordeckH3Bold(String(characters[2]))
         } else {
             verificationCode3.text = ""
         }
         
         if characters.indices.contains(3) {
-            verificationCode4.text = String(characters[3])
+            verificationCode4.attributedText = NSAttributedString.doordeckH3Bold(String(characters[3]))
         } else {
             verificationCode4.text = ""
         }
         
         if characters.indices.contains(4) {
-            verificationCode5.text = String(characters[4])
+            verificationCode5.attributedText = NSAttributedString.doordeckH3Bold(String(characters[4]))
         } else {
             verificationCode5.text = ""
         }
         
         if characters.indices.contains(5) {
-            verificationCode6.text = String(characters[5])
+            verificationCode6.attributedText = NSAttributedString.doordeckH3Bold(String(characters[5]))
         } else {
             verificationCode6.text = ""
         }
