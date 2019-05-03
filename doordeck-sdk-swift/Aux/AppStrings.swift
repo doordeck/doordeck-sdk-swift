@@ -24,6 +24,7 @@ struct AppStrings {
     
     // verification Screen
     static let resendCode: String = NSLocalizedString("RE-SEND CODE", comment: "")
+    static let send: String = NSLocalizedString("SEND", comment: "")
     static let verificationTitle: String = NSLocalizedString("Verify your new device", comment: "")
     static let verification: String = NSLocalizedString("Enter the verification code that has been sent to you", comment: "")
     

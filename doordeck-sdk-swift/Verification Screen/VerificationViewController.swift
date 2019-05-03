@@ -13,6 +13,7 @@ class VerificationViewController: UIViewController {
     var apiClient: APIClient!
     var sodium: SodiumHelper!
     var delegate: DoordeckInternalProtocol?
+    let notifier = NotificationCenter.default
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
@@ -25,6 +26,7 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var verificationCodeCentre: UILabel!
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
@@ -40,6 +42,7 @@ class VerificationViewController: UIViewController {
         super.viewDidLoad()
         setUpUI()
         sendVerificationRequest()
+        registerKeybaord()
     }
     
     
@@ -47,6 +50,11 @@ class VerificationViewController: UIViewController {
         super.viewWillAppear(animated)
         hiddenTextField.becomeFirstResponder()
         hiddenTextField.delegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        removeKeyboard()
+        super.viewDidDisappear(animated)
     }
     
     func sendVerificationRequest()  {
@@ -66,6 +74,7 @@ class VerificationViewController: UIViewController {
     func setUpUI() {
         view.backgroundColor = .doordeckPrimaryColour()
         resendButton.doordeckStandardButton(AppStrings.resendCode, backgroundColour: UIColor.clear)
+        sendButton.doordeckStandardButton(AppStrings.send)
         titleLabel.attributedText = NSAttributedString.doordeckH1Bold(AppStrings.verificationTitle)
         topLabel.attributedText = NSAttributedString.doordeckH3(AppStrings.verification)
         hiddenTextField.isHidden = true
@@ -94,12 +103,12 @@ class VerificationViewController: UIViewController {
                     self?.delegate?.verificationUnsuccessful()
                     return
                 }
-
+                
                 self?.dismiss(animated: false, completion: {
                     self?.delegate?.verificationSuccessful(CertificateChainClass(certificateChainTemp))
                 })
             } else {
-                    self?.delegate?.verificationUnsuccessful()
+                self?.delegate?.verificationUnsuccessful()
             }
         }
     }
@@ -162,3 +171,41 @@ extension VerificationViewController: UITextFieldDelegate {
         }
     }
 }
+
+extension VerificationViewController {
+    func registerKeybaord() {
+        notifier.addObserver(self,
+                             selector: #selector(keyboardWillShow(_:)),
+                             name: UIWindow.keyboardWillShowNotification,
+                             object: nil)
+        notifier.addObserver(self,
+                             selector: #selector(keyboardWillHide(_:)),
+                             name: UIWindow.keyboardWillHideNotification,
+                             object: nil)
+    }
+    
+    func removeKeyboard() {
+        notifier.removeObserver(self)
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        animateContraintChange(duration, contraint: bottomConstraint, endPosition: Double(targetFrame.height))
+        
+    }
+    
+    @objc func keyboardWillHide(_ notification: NSNotification){
+        animateContraintChange(0.25, contraint: bottomConstraint, endPosition: 0)
+    }
+    
+    func animateContraintChange(_ time: Double, contraint:NSLayoutConstraint, endPosition: Double) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: time, animations: {
+            contraint.constant = CGFloat(endPosition)
+            self.view.layoutIfNeeded()
+        })
+    }
+}
+
