@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5909D09222858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */; };
+		5909D09322858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */; };
 		5939F07922579492003FAF13 /* SodiumHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F07822579492003FAF13 /* SodiumHelperTests.swift */; };
 		5939F08522582CDA003FAF13 /* TokenHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F08422582CDA003FAF13 /* TokenHelperTests.swift */; };
 		593B1CC52244FB3300BE5E67 /* doordeck_sdk_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */; };
@@ -122,6 +124,7 @@
 
 /* Begin PBXFileReference section */
 		4A9A502C12CD3F118E3495CD /* Pods-doordeck-sdk-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringsSDKExtension.swift; sourceTree = "<group>"; };
 		5939F07822579492003FAF13 /* SodiumHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodiumHelperTests.swift; sourceTree = "<group>"; };
 		5939F08422582CDA003FAF13 /* TokenHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelperTests.swift; sourceTree = "<group>"; };
 		593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = doordeck_sdk_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				595B2093227C8FB000D7297E /* AppStrings.swift */,
+				5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */,
 				595B2094227C8FB000D7297E /* DeviceHelper.swift */,
 				595B2095227C8FB000D7297E /* CustomPrint.swift */,
 			);
@@ -595,6 +599,7 @@
 				595B20CF227C8FB100D7297E /* CustomPrint.swift in Sources */,
 				595B2113227C8FB100D7297E /* LabelExtension.swift in Sources */,
 				595B210B227C8FB100D7297E /* StringExtension.swift in Sources */,
+				5909D09222858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */,
 				595B211B227C8FB100D7297E /* UIApplicationiOS.swift in Sources */,
 				595B2111227C8FB100D7297E /* UIApplication.swift in Sources */,
 				595B20D5227C8FB100D7297E /* WhereAmI.swift in Sources */,
@@ -661,6 +666,7 @@
 				595B20E0227C8FB100D7297E /* TokenHelper.swift in Sources */,
 				5966A60A2249AA22008C4665 /* URLManagerTests.swift in Sources */,
 				595B210A227C8FB100D7297E /* UserDefaults.swift in Sources */,
+				5909D09322858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */,
 				595B2112227C8FB100D7297E /* UIApplication.swift in Sources */,
 				5939F07922579492003FAF13 /* SodiumHelperTests.swift in Sources */,
 				595B20D0227C8FB100D7297E /* CustomPrint.swift in Sources */,
