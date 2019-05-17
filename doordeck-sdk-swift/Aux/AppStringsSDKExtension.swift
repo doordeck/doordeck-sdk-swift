@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Appstrings {
+extension AppStrings {
     
     static func messageForLockProgress(_ progress: LockDevice.currentUnlockProgress) -> String {
         switch progress {

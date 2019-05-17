@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +13,17 @@
         <!--Lock Unlock View Controller-->
         <scene sceneID="CG0-cQ-jAA">
             <objects>
-                <viewController storyboardIdentifier="LockUnlock" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNw-jB-9vD" customClass="LockUnlockViewController" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LockUnlock" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNw-jB-9vD" customClass="LockUnlockViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNr-rt-sOv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukw-Bo-4up" customClass="unlockAnimations" customModule="doordeck_sdk_swift_sample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHO-do-WdM">
-                                <rect key="frame" x="127.5" y="273.5" width="120" height="120"/>
+                                <rect key="frame" x="147" y="308" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Lf2-gd-nIg"/>
                                     <constraint firstAttribute="height" constant="120" id="sZb-zu-t1s"/>
@@ -29,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2B-hs-D5s">
-                                <rect key="frame" x="43" y="625" width="289" height="42"/>
+                                <rect key="frame" x="43" y="694" width="328" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="MZH-i2-hqd"/>
                                 </constraints>
@@ -39,7 +43,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of3-cu-sXC">
-                                <rect key="frame" x="43" y="409.5" width="289" height="40"/>
+                                <rect key="frame" x="43" y="444" width="328" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RpW-64-T87"/>
                                 </constraints>
@@ -50,12 +54,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ukw-Bo-4up" firstAttribute="leading" secondItem="rUJ-B1-Fic" secondAttribute="leading" id="0ZS-1n-T2k"/>
                             <constraint firstItem="rUJ-B1-Fic" firstAttribute="trailing" secondItem="of3-cu-sXC" secondAttribute="trailing" constant="43" id="3vl-gX-HwR"/>
                             <constraint firstItem="oHO-do-WdM" firstAttribute="centerY" secondItem="xNr-rt-sOv" secondAttribute="centerY" id="4wD-BB-aOJ"/>
                             <constraint firstItem="of3-cu-sXC" firstAttribute="top" secondItem="oHO-do-WdM" secondAttribute="bottom" constant="16" id="5jP-aF-aJA"/>
                             <constraint firstItem="n2B-hs-D5s" firstAttribute="bottom" secondItem="rUJ-B1-Fic" secondAttribute="bottom" id="IRP-fX-ttj"/>
                             <constraint firstItem="rUJ-B1-Fic" firstAttribute="trailing" secondItem="n2B-hs-D5s" secondAttribute="trailing" constant="43" id="RhF-Hs-1Xe"/>
+                            <constraint firstItem="Ukw-Bo-4up" firstAttribute="bottom" secondItem="rUJ-B1-Fic" secondAttribute="bottom" id="V4e-yS-OTf"/>
                             <constraint firstItem="n2B-hs-D5s" firstAttribute="leading" secondItem="rUJ-B1-Fic" secondAttribute="leading" constant="43" id="WMm-HW-efI"/>
+                            <constraint firstItem="Ukw-Bo-4up" firstAttribute="top" secondItem="xNr-rt-sOv" secondAttribute="top" id="YNA-xH-opi"/>
+                            <constraint firstItem="Ukw-Bo-4up" firstAttribute="trailing" secondItem="rUJ-B1-Fic" secondAttribute="trailing" id="cXY-tm-fJC"/>
                             <constraint firstItem="of3-cu-sXC" firstAttribute="leading" secondItem="rUJ-B1-Fic" secondAttribute="leading" constant="43" id="hz5-hm-sRg"/>
                             <constraint firstItem="oHO-do-WdM" firstAttribute="centerX" secondItem="xNr-rt-sOv" secondAttribute="centerX" id="rGP-LA-CJS"/>
                         </constraints>
@@ -63,13 +71,14 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="n2B-hs-D5s" id="epV-IC-0Ak"/>
+                        <outlet property="loadingView" destination="Ukw-Bo-4up" id="vYc-YD-WAH"/>
                         <outlet property="lockNameLabel" destination="of3-cu-sXC" id="hQ9-kv-C8o"/>
                         <outlet property="lockUpdateMessage" destination="oHO-do-WdM" id="3j8-T5-ugq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21f-5g-sdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-852" y="2872"/>
+            <point key="canvasLocation" x="-852" y="2871.8140929535234"/>
         </scene>
     </scenes>
 </document>
