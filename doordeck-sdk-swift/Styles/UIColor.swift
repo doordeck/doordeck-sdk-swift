@@ -152,8 +152,7 @@ extension UIColor {
     /// Text colour Light (black) and Dark (white)
     ///
     /// - Parameters:
-    ///   - text Coloru
-    ///   - Doordeck Green
+    ///   - text Colour
     /// - Returns: UIColor
     class func doordeckTextColour (_ opacity: CGFloat) ->  UIColor {
         if UserDefaults().getDarkUI() {
@@ -163,6 +162,24 @@ extension UIColor {
         }
     }
     
+    
+    /// Green Sucess Colour
+    ///
+    /// - Parameters:
+    ///   - Doordeck Green
+    /// - Returns: UIColor
+    class func doordeckSuccessGreen () ->  UIColor {
+        return UIColor (red: 51.0/255.0, green: 206.0/255.0, blue: 76.0/255.0, alpha: 1.0)
+    }
+    
+    /// Red Fail Colour
+    ///
+    /// - Parameters:
+    ///   - Doordeck Red
+    /// - Returns: UIColor
+    class func doordeckFailRed () ->  UIColor {
+        return UIColor (red: 249.0/255.0, green: 50.0/255.0, blue: 81.0/255.0, alpha: 1.0)
+    }
     
     /////////////////////////////////////////////////////////////////////
     //NewColour Pallet
