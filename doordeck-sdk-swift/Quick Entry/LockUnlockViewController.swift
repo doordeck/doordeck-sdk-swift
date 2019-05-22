@@ -53,11 +53,14 @@ class LockUnlockViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.doordeckPrimaryColour()
-        guard let lockDetails = lockVariable else {return}
+        dismissButton.doorButton(AppStrings.dismiss, textColour: .black, backgroundColour: .doorLightGrey(), cornerRadius: 10.0)
+        
+        guard let lockDetails = lockVariable else {
+            showFailedScreen()
+            return
+        }
         connectDevice(lockDetails)
         readyDevice(lockDetails)
-        
-        dismissButton.doorButton(AppStrings.dismiss, textColour: .black, backgroundColour: .doorLightGrey(), cornerRadius: 10.0)
     }
     
     func connectDevice(_ lockDestils: lockUnlockScreen) {
@@ -127,6 +130,13 @@ class LockUnlockViewController: UIViewController {
         })
     }
     
+    private func startFailTimer () {
+        countDownTimer = Timer.after(Double(minTimer).second, { [weak self] in
+            self?.backgroundColourImage.backgroundColor = UIColor.doordeckPrimaryColour()
+            self?.dismissButtonClicked()
+        })
+    }
+    
     private func setNewColour (_ colour: UIColor) {
         widthConstraints.constant = self.view.bounds.width * 2
         heightConstraint.constant = self.view.bounds.height * 2
@@ -152,6 +162,7 @@ extension LockUnlockViewController {
     }
     
     private func showFailedScreen () {
+        startFailTimer()
         setNewColour(UIColor.doordeckFailRed())
         loadingView.addFailAnimation()
     }
