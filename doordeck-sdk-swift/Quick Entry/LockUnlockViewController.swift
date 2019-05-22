@@ -23,12 +23,19 @@ class LockUnlockViewController: UIViewController {
     var certificateChain: CertificateChainClass!
     var sodium: SodiumHelper!
     
+    
     fileprivate var countDownTimer: Timer = Timer()
     fileprivate var minTimer: Float  = 2.0
     
     @IBOutlet weak var lockUpdateMessage: UILabel!
-    @IBOutlet weak var lockNameLabel: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var loadingView: unlockAnimation!
+    
+    @IBOutlet weak var backgroundColourImage: UIImageView!
+    @IBOutlet weak var widthConstraints: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
+    
     
     init(_ lockVariableTemp: lockUnlockScreen,
          chain: CertificateChainClass, sodiumTemp: SodiumHelper) {
@@ -45,11 +52,15 @@ class LockUnlockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let lockDetails = lockVariable else {return}
+        view.backgroundColor = UIColor.doordeckPrimaryColour()
+        dismissButton.doorButton(AppStrings.dismiss, textColour: .black, backgroundColour: .doorLightGrey(), cornerRadius: 10.0)
+        
+        guard let lockDetails = lockVariable else {
+            showFailedScreen()
+            return
+        }
         connectDevice(lockDetails)
         readyDevice(lockDetails)
-        
-        dismissButton.doorButton(AppStrings.dismiss, textColour: .black, backgroundColour: .doorLightGrey(), cornerRadius: 10.0)
     }
     
     func connectDevice(_ lockDestils: lockUnlockScreen) {
@@ -62,12 +73,18 @@ class LockUnlockViewController: UIViewController {
         }, progress: { (progress) in
             //                print(.lock, object: "progress \(progress)")
         }, currentLockStatus: { [weak self] (update) in
-            if update == .unlockSuccess {
-                self?.lockSuceesfullyUnlocked(lockDestils.lock)
+            if update == .lockConnecting {
+                self?.showLoadingScreen()
             }
+                        if update == .unlockSuccess {
+                            self?.lockSuceesfullyUnlocked(lockDestils.lock)
+                        }
+                        if update == .unlockFail {
+                            self?.showFailedScreen()
+                        }
             print(.lock, object: "progress \(update)")
             let updateString = AppStrings.messageForLockProgress(update)
-            self?.lockUpdateMessage.attributedText = NSAttributedString.doorStandard(updateString, colour: .black)
+            self?.lockUpdateMessage.attributedText = NSAttributedString.doordeckH2Bold(updateString)
             }, reset: {
                 self.dismiss(animated: true, completion: {
                     
@@ -77,7 +94,7 @@ class LockUnlockViewController: UIViewController {
     
     @IBAction func dismissButtonClicked() {
         countDownTimer.invalidate()
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     func readyDevice(_ lockDestils: lockUnlockScreen) {
@@ -90,15 +107,15 @@ class LockUnlockViewController: UIViewController {
     }
     
     func unlock(_ autoUnlock: Bool, lock: LockDevice) {
-        lock.deviceUnlock(certificateChain, sodium: sodium) { (data, apiError, deviceError) in
-            
+        lock.deviceUnlock(certificateChain, sodium: sodium) { [weak self]  (data, apiError, deviceError) in
+            self?.showLoadingScreen()
         }
     }
     
     
     
     func lockSuceesfullyUnlocked(_ lock: LockDevice) {
-        self.view.backgroundColor = .doorOnBoardTeil()
+        showUnlockedScreen()
         startTimer(lock)
     }
     
@@ -108,7 +125,46 @@ class LockUnlockViewController: UIViewController {
         }
         
         countDownTimer = Timer.after(Double(minTimer).second, { [weak self] in
+            self?.backgroundColourImage.backgroundColor = UIColor.doordeckPrimaryColour()
             self?.dismissButtonClicked()
         })
     }
+    
+    private func startFailTimer () {
+        countDownTimer = Timer.after(Double(minTimer).second, { [weak self] in
+            self?.backgroundColourImage.backgroundColor = UIColor.doordeckPrimaryColour()
+            self?.dismissButtonClicked()
+        })
+    }
+    
+    private func setNewColour (_ colour: UIColor) {
+        widthConstraints.constant = self.view.bounds.width * 2
+        heightConstraint.constant = self.view.bounds.height * 2
+        backgroundColourImage.backgroundColor = colour
+        backgroundColourImage.layer.cornerRadius = 120
+        
+        UIView.animate(withDuration: 0.30, delay: 0.5, options: .curveEaseIn, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+}
+
+
+extension LockUnlockViewController {
+    private func showLoadingScreen () {
+        loadingView.addLoadingAnimation()
+    }
+    
+    private func showUnlockedScreen () {
+        setNewColour(UIColor.doordeckSuccessGreen())
+        loadingView.addSuccessAnimation()
+        
+    }
+    
+    private func showFailedScreen () {
+        startFailTimer()
+        setNewColour(UIColor.doordeckFailRed())
+        loadingView.addFailAnimation()
+    }
+    
 }

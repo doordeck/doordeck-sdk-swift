@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5909D09222858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */; };
+		5909D09322858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */; };
+		592A937122946D1E007BA5D3 /* QCMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A936F22946D1E007BA5D3 /* QCMethod.swift */; };
+		592A937222946D1E007BA5D3 /* QCMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A936F22946D1E007BA5D3 /* QCMethod.swift */; };
+		592A937322946D1E007BA5D3 /* unlockAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A937022946D1E007BA5D3 /* unlockAnimations.swift */; };
+		592A937422946D1E007BA5D3 /* unlockAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A937022946D1E007BA5D3 /* unlockAnimations.swift */; };
 		5939F07922579492003FAF13 /* SodiumHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F07822579492003FAF13 /* SodiumHelperTests.swift */; };
 		5939F08522582CDA003FAF13 /* TokenHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939F08422582CDA003FAF13 /* TokenHelperTests.swift */; };
 		593B1CC52244FB3300BE5E67 /* doordeck_sdk_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */; };
@@ -104,7 +110,6 @@
 		5966A60A2249AA22008C4665 /* URLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A6092249AA22008C4665 /* URLManagerTests.swift */; };
 		5966A60C224A5C35008C4665 /* QueryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A60B224A5C35008C4665 /* QueryManagerTests.swift */; };
 		5966A614224BAFE9008C4665 /* KeyPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A613224BAFE9008C4665 /* KeyPairTests.swift */; };
-		59ABB76F2271C2A30048BCF5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59ABB76E2271C2A20048BCF5 /* Info.plist */; };
 		59B4456B224D137200555081 /* InitializeDoordeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4456A224D137200555081 /* InitializeDoordeck.swift */; };
 		CAB464F0F4AA1C05E0998A98 /* Pods_doordeck_sdk_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A92B2BDDB367B06A1EBEA1 /* Pods_doordeck_sdk_swiftTests.framework */; };
 		EB97990A67F712AB267BF46A /* Pods_doordeck_sdk_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE39B7C897DAE9B0C832E2 /* Pods_doordeck_sdk_swift.framework */; };
@@ -122,6 +127,9 @@
 
 /* Begin PBXFileReference section */
 		4A9A502C12CD3F118E3495CD /* Pods-doordeck-sdk-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doordeck-sdk-swift/Pods-doordeck-sdk-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringsSDKExtension.swift; sourceTree = "<group>"; };
+		592A936F22946D1E007BA5D3 /* QCMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCMethod.swift; sourceTree = "<group>"; };
+		592A937022946D1E007BA5D3 /* unlockAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unlockAnimations.swift; sourceTree = "<group>"; };
 		5939F07822579492003FAF13 /* SodiumHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SodiumHelperTests.swift; sourceTree = "<group>"; };
 		5939F08422582CDA003FAF13 /* TokenHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHelperTests.swift; sourceTree = "<group>"; };
 		593B1CBB2244FB3200BE5E67 /* doordeck_sdk_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = doordeck_sdk_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				595B2093227C8FB000D7297E /* AppStrings.swift */,
+				5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */,
 				595B2094227C8FB000D7297E /* DeviceHelper.swift */,
 				595B2095227C8FB000D7297E /* CustomPrint.swift */,
 			);
@@ -386,6 +395,8 @@
 		595B20C7227C8FB100D7297E /* Lock */ = {
 			isa = PBXGroup;
 			children = (
+				592A936F22946D1E007BA5D3 /* QCMethod.swift */,
+				592A937022946D1E007BA5D3 /* unlockAnimations.swift */,
 				595B20C8227C8FB100D7297E /* Sites.swift */,
 				595B20C9227C8FB100D7297E /* LockManager.swift */,
 				595B20CA227C8FB100D7297E /* LockDevice.swift */,
@@ -498,7 +509,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59ABB76F2271C2A30048BCF5 /* Info.plist in Resources */,
 				595B2046227C8CD900D7297E /* Media.xcassets in Resources */,
 				595B20F7227C8FB100D7297E /* AmazonRootCA1.cer in Resources */,
 				595B20D3227C8FB100D7297E /* VerificationStoryboard.storyboard in Resources */,
@@ -594,10 +604,13 @@
 				595B211D227C8FB100D7297E /* Sites.swift in Sources */,
 				595B20CF227C8FB100D7297E /* CustomPrint.swift in Sources */,
 				595B2113227C8FB100D7297E /* LabelExtension.swift in Sources */,
+				592A937322946D1E007BA5D3 /* unlockAnimations.swift in Sources */,
 				595B210B227C8FB100D7297E /* StringExtension.swift in Sources */,
+				5909D09222858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */,
 				595B211B227C8FB100D7297E /* UIApplicationiOS.swift in Sources */,
 				595B2111227C8FB100D7297E /* UIApplication.swift in Sources */,
 				595B20D5227C8FB100D7297E /* WhereAmI.swift in Sources */,
+				592A937122946D1E007BA5D3 /* QCMethod.swift in Sources */,
 				595B2119227C8FB100D7297E /* Button.swift in Sources */,
 				595B20FF227C8FB100D7297E /* FontStyle.swift in Sources */,
 				595B20DB227C8FB100D7297E /* CertificateChainClass.swift in Sources */,
@@ -661,6 +674,7 @@
 				595B20E0227C8FB100D7297E /* TokenHelper.swift in Sources */,
 				5966A60A2249AA22008C4665 /* URLManagerTests.swift in Sources */,
 				595B210A227C8FB100D7297E /* UserDefaults.swift in Sources */,
+				5909D09322858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */,
 				595B2112227C8FB100D7297E /* UIApplication.swift in Sources */,
 				5939F07922579492003FAF13 /* SodiumHelperTests.swift in Sources */,
 				595B20D0227C8FB100D7297E /* CustomPrint.swift in Sources */,
@@ -669,11 +683,13 @@
 				595B20D8227C8FB100D7297E /* LocationProfile.swift in Sources */,
 				595B2106227C8FB100D7297E /* UimageViewExtension.swift in Sources */,
 				595B2114227C8FB100D7297E /* LabelExtension.swift in Sources */,
+				592A937422946D1E007BA5D3 /* unlockAnimations.swift in Sources */,
 				595B20D6227C8FB100D7297E /* WhereAmI.swift in Sources */,
 				595B20CE227C8FB100D7297E /* DeviceHelper.swift in Sources */,
 				595B2110227C8FB100D7297E /* SDKEvent.swift in Sources */,
 				595B20F2227C8FB100D7297E /* AFRequest.swift in Sources */,
 				595B20FE227C8FB100D7297E /* SwiftyTimer.swift in Sources */,
+				592A937222946D1E007BA5D3 /* QCMethod.swift in Sources */,
 				595B20D2227C8FB100D7297E /* VerificationViewController.swift in Sources */,
 				595B20F4227C8FB100D7297E /* ReachabilityHelper.swift in Sources */,
 				595B20DE227C8FB100D7297E /* KeychainHelper.swift in Sources */,
@@ -854,7 +870,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "doordeck-sdk-swift/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -892,7 +908,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "doordeck-sdk-swift/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

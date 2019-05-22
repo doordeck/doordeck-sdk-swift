@@ -115,9 +115,9 @@ extension QuickEntryViewController: quickEntryDelegate {
         lockMan.findLock(UUID, success: { [weak self] (lock) in
             SDKEvent().event(.RESOLVE_TILE_SUCCESS)
             self?.showLockScreen(lock)
-        }) {
-            //to-do need to do something
+        }) { [weak self] in
             SDKEvent().event(.RESOLVE_TILE_FAILED)
+            self?.showLockScreenFail()
             return
         }
     }
@@ -127,6 +127,15 @@ extension QuickEntryViewController: quickEntryDelegate {
             vc.certificateChain = self.certificateChain
             vc.sodium = self.sodium
             vc.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
+            present(vc, animated: true, completion: nil)
+        }
+        
+    }
+    
+    func showLockScreenFail()  {
+        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: nil).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
+            vc.certificateChain = self.certificateChain
+            vc.sodium = self.sodium
             present(vc, animated: true, completion: nil)
         }
         

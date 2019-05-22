@@ -271,6 +271,8 @@ extension WhereAmI : CLLocationManagerDelegate {
             authorizationHandler?(true);
         case .notDetermined, .denied, .restricted:
             authorizationHandler?(false)
+        @unknown default:
+            authorizationHandler?(false)
         }
         
         authorizationHandler = nil;

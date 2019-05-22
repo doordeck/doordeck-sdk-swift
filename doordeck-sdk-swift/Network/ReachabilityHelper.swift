@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if os(iOS)
 import Reachability
+#endif
 
 class ReachabilityHelper {
     fileprivate let reachability: Reachability?
