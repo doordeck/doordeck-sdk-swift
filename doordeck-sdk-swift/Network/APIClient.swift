@@ -26,10 +26,10 @@ class APIClient {
     }
     
     
-    fileprivate var header: [String : String]!
-    fileprivate var token: AuthTokenClass!
-    fileprivate var tokenHelper: TokenHelper!
-    fileprivate var afrequest: AFRequest!
+    var header: [String : String]!
+    var token: AuthTokenClass!
+    var tokenHelper: TokenHelper!
+    var afrequest: AFRequest!
     
     /// init for Api class both a header and a Token has to be passed in
     ///
@@ -214,7 +214,7 @@ class APIClient {
     ///   - device: Device object
     ///   - control: The call does support both lock and unlock but we currenly only use unlock
     ///   - completion: completion call back with error
-    fileprivate func deviceControl (_ device: LockDevice,
+    func deviceControl (_ device: LockDevice,
                                     sodium: SodiumHelper,
                                     chain: CertificateChainClass,
                                     operation: [String: Any],
@@ -292,7 +292,7 @@ class APIClient {
     ///   - data: The Data
     ///   - rootKey: The root of the data if different
     ///   - completion: completion call back with error
-    fileprivate func requestCompletion<T>(_ URL: String?,
+    func requestCompletion<T>(_ URL: String?,
                                           data: AnyObject,
                                           rootKey: String?,
                                           completion: (T?, APIClient.error?) -> Void) {

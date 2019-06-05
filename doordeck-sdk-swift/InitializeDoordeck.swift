@@ -130,6 +130,7 @@ public class Doordeck {
     ///   - fail: called on failure
     fileprivate func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
         success()
+#if os(iOS)
         guard let view:UIViewController = UIApplication.topViewController() else { return }
         let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
         let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
@@ -140,6 +141,9 @@ public class Doordeck {
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.isNavigationBarHidden = true
         view.present(navigationController, animated: true, completion: nil)
+#elseif os(watchOS)
+        
+#endif
     }
     
     /// Show Doordeck reader and unlock UI, authentications have been completed
@@ -198,6 +202,7 @@ public class Doordeck {
             return
         }
         
+#if os(iOS)
         guard let view:UIViewController = UIApplication.topViewController() else { return }
         let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
         let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
@@ -211,6 +216,9 @@ public class Doordeck {
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.isNavigationBarHidden = true
         view.present(navigationController, animated: true, completion: nil)
+#elseif os(watchOS)
+        
+#endif
     }
     
     /// Check if a token is valid, the date of expiry is first checked on device, the device then sends the key to the server on success of token check.
