@@ -46,7 +46,6 @@ class LockManager {
         case invalidData
     }
     
-    //To-Do maybe make private
     var locks: [LockDevice] = []
     var sites: [Site] = []
     var apiClient: APIClient!

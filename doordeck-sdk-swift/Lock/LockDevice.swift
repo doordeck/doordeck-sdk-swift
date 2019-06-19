@@ -191,12 +191,12 @@ class LockDevice {
     }
     
     
-    fileprivate func deviceStatusUpdate(_ status: currentUnlockProgress) {
+    func deviceStatusUpdate(_ status: currentUnlockProgress) {
         guard let update  = self.lockStatus else { return }
         update(status)
     }
     
-    fileprivate func GPSCheck(_ success: @escaping () -> Void, fail : @escaping (LockManager.deviceError) -> Void) {
+    func GPSCheck(_ success: @escaping () -> Void, fail : @escaping (LockManager.deviceError) -> Void) {
         if let locServices = locationServices {
             if locServices.enabled == true {
                 deviceStatusUpdate(.gpsSearching)

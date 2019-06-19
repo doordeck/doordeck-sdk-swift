@@ -64,4 +64,8 @@ extension ViewController: DoordeckProtocol {
     func unlockSuccessful() {
         print("unlockSuccessful")
     }
+    
+    func authenticated() {
+        print("authenticated")
+    }
 }

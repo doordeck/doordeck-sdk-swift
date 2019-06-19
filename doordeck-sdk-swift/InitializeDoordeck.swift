@@ -21,6 +21,7 @@ public protocol DoordeckProtocol {
     func newAuthTokenRequired() -> AuthTokenClass
     func verificationNeeded()
     func unlockSuccessful()
+    func authenticated()
 }
 
 protocol DoordeckInternalProtocol {
@@ -63,6 +64,7 @@ public class Doordeck {
     fileprivate var currentState: State = State.notAuthenticated
     fileprivate var apiClient: APIClient!
     fileprivate var sodium: SodiumHelper!
+    var sdk = false
     
     
     /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server,
@@ -89,6 +91,7 @@ public class Doordeck {
         checkTokenIsValid { [weak self] (currentState) in
             switch currentState {
             case .authenticated:
+                self?.delegate?.authenticated()
                 break
             case .notAuthenticated:
                 self?.updateAuthToken(self?.delegate?.newAuthTokenRequired())
@@ -128,22 +131,30 @@ public class Doordeck {
     /// - Parameters:
     ///   - success: called on success
     ///   - fail: called on failure
-    fileprivate func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
+    func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
         success()
-#if os(iOS)
-        guard let view:UIViewController = UIApplication.topViewController() else { return }
-        let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
-        let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
-        vc.delegate = self
-        vc.apiClient = self.apiClient
-        vc.sodium = self.sodium
-        
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.isNavigationBarHidden = true
-        view.present(navigationController, animated: true, completion: nil)
-#elseif os(watchOS)
-        
-#endif
+        guard #available(watchOS 5, *) else {
+            return
+        }
+        if #available(iOS 10, *) {
+            //To-Do
+            #if WIDGET
+            return
+            #elseif WATCH
+            return
+            #else
+            guard let view : UIViewController = UIApplication.topViewController() else { return }
+            let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
+            let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
+            vc.delegate = self
+            vc.apiClient = self.apiClient
+            vc.sodium = self.sodium
+            
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.isNavigationBarHidden = true
+            view.present(navigationController, animated: true, completion: nil)
+            #endif
+        }
     }
     
     /// Show Doordeck reader and unlock UI, authentications have been completed
@@ -186,7 +197,7 @@ public class Doordeck {
     /// If a token is invalid the delegate will request a new token from the host app.
     ///
     /// - Parameter token: new AuthTokenClass from the Host application
-    fileprivate func updateAuthToken (_ token: AuthTokenClass?) {
+    func updateAuthToken (_ token: AuthTokenClass?) {
         guard let tokenTemp: AuthTokenClass = token else { return }
         self.token = tokenTemp
         let header = Header().createSDKAuthHeader(.v1, token: self.token)
@@ -196,29 +207,32 @@ public class Doordeck {
     
     /// Show unlock reader, this will be added to the top view controller.
     fileprivate func showUnlockScreenSuccess () {
-        guard let certificateChainCheck: CertificateChainClass = self.chain else {
-            self.currentState = .notAuthenticated
-            self.updateAuthToken(self.delegate?.newAuthTokenRequired())
+        if #available(iOS 10, *) {
+            guard let certificateChainCheck: CertificateChainClass = self.chain else {
+                self.currentState = .notAuthenticated
+                self.updateAuthToken(self.delegate?.newAuthTokenRequired())
+                return
+            }
+            #if WIDGET
             return
+            #elseif WATCH
+            return
+            #else
+            guard let view : UIViewController = UIApplication.topViewController() else { return }
+            let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
+            let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
+            vc.lockMan = LockManager(self.apiClient)
+            vc.readerType = self.readerType
+            vc.delegate = self.delegate
+            vc.apiClient = self.apiClient
+            vc.certificateChain = certificateChainCheck
+            vc.sodium = self.sodium
+            
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.isNavigationBarHidden = true
+            view.present(navigationController, animated: true, completion: nil)
+            #endif
         }
-        
-#if os(iOS)
-        guard let view:UIViewController = UIApplication.topViewController() else { return }
-        let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
-        let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
-        vc.lockMan = LockManager(self.apiClient)
-        vc.readerType = self.readerType
-        vc.delegate = self.delegate
-        vc.apiClient = self.apiClient
-        vc.certificateChain = certificateChainCheck
-        vc.sodium = self.sodium
-        
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.isNavigationBarHidden = true
-        view.present(navigationController, animated: true, completion: nil)
-#elseif os(watchOS)
-        
-#endif
     }
     
     /// Check if a token is valid, the date of expiry is first checked on device, the device then sends the key to the server on success of token check.
@@ -291,7 +305,11 @@ extension Doordeck: DoordeckInternalProtocol {
         SDKEvent().event(.GET_CERTIFICATE_SUCCESS)
         self.currentState = .authenticated
         self.chain = chain
-        showUnlockScreenSuccess()
+        if sdk {
+            showUnlockScreenSuccess()
+        } else {
+            self.delegate?.authenticated()
+        }
     }
     
     func verificationUnsuccessful() {

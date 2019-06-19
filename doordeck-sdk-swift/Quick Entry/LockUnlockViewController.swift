@@ -64,32 +64,33 @@ class LockUnlockViewController: UIViewController {
     }
     
     func connectDevice(_ lockDestils: lockUnlockScreen) {
-        lockDestils.lock.deviceConnect({ (json, deviceError) in
-            if (deviceError != nil) {
-                
-            }
-            
-            print(.lock, object: "json \(String(describing: json)) error \(String(describing: deviceError))")
-        }, progress: { (progress) in
-            //                print(.lock, object: "progress \(progress)")
-        }, currentLockStatus: { [weak self] (update) in
-            if update == .lockConnecting {
-                self?.showLoadingScreen()
-            }
-                        if update == .unlockSuccess {
-                            self?.lockSuceesfullyUnlocked(lockDestils.lock)
-                        }
-                        if update == .unlockFail {
-                            self?.showFailedScreen()
-                        }
-            print(.lock, object: "progress \(update)")
-            let updateString = AppStrings.messageForLockProgress(update)
-            self?.lockUpdateMessage.attributedText = NSAttributedString.doordeckH2Bold(updateString)
-            }, reset: {
-                self.dismiss(animated: true, completion: {
-                    
-                })
-        })
+        //To-Do
+//        lockDestils.lock.deviceConnect({ (json, deviceError) in
+//            if (deviceError != nil) {
+//
+//            }
+//
+//            print(.lock, object: "json \(String(describing: json)) error \(String(describing: deviceError))")
+//        }, progress: { (progress) in
+//            //                print(.lock, object: "progress \(progress)")
+//        }, currentLockStatus: { [weak self] (update) in
+//            if update == .lockConnecting {
+//                self?.showLoadingScreen()
+//            }
+//                        if update == .unlockSuccess {
+//                            self?.lockSuceesfullyUnlocked(lockDestils.lock)
+//                        }
+//                        if update == .unlockFail {
+//                            self?.showFailedScreen()
+//                        }
+//            print(.lock, object: "progress \(update)")
+//            let updateString = AppStrings.messageForLockProgress(update)
+//            self?.lockUpdateMessage.attributedText = NSAttributedString.doordeckH2Bold(updateString)
+//            }, reset: {
+//                self.dismiss(animated: true, completion: {
+//
+//                })
+//        })
     }
     
     @IBAction func dismissButtonClicked() {

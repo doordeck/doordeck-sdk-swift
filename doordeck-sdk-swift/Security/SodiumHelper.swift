@@ -25,6 +25,17 @@ class SodiumHelper {
     /// Return
     ///
     /// - Returns: Returns Public key of the private public key pair
+    func keyPresent() -> Bool {
+        if getKeyPairFromKeychain() != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    /// Return
+    ///
+    /// - Returns: Returns Public key of the private public key pair
     func getPublicKey() -> String? {
         if let keyPair = getKeyPairFromKeychain() {
             return getPublicKeyFromCombined(keyPair)
