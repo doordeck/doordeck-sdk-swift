@@ -9,17 +9,7 @@ import UIKit
 
 extension UIApplication {
     class func returnKeyWindowRoot () -> UIViewController?  {
-        if #available(iOS 10, *) {
-            #if WIDGET
-            return nil
-            #elseif WATCH
-            return nil
-            #else
-            return UIApplication.shared.keyWindow?.rootViewController
-            #endif
-        } else {
-            return nil
-        }
+        return UIApplication.shared.keyWindow?.rootViewController
     }
     
     class func topViewController(_ base: UIViewController? = UIApplication.returnKeyWindowRoot()) -> UIViewController? {

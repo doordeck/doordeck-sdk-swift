@@ -132,17 +132,8 @@ public class Doordeck {
     ///   - success: called on success
     ///   - fail: called on failure
     func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
-        success()
-        guard #available(watchOS 5, *) else {
-            return
-        }
         if #available(iOS 10, *) {
-            //To-Do
-            #if WIDGET
-            return
-            #elseif WATCH
-            return
-            #else
+        success()
             guard let view : UIViewController = UIApplication.topViewController() else { return }
             let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
             let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
@@ -153,7 +144,8 @@ public class Doordeck {
             let navigationController = UINavigationController(rootViewController: vc)
             navigationController.isNavigationBarHidden = true
             view.present(navigationController, animated: true, completion: nil)
-            #endif
+        } else {
+            return
         }
     }
     
@@ -213,11 +205,6 @@ public class Doordeck {
                 self.updateAuthToken(self.delegate?.newAuthTokenRequired())
                 return
             }
-            #if WIDGET
-            return
-            #elseif WATCH
-            return
-            #else
             guard let view : UIViewController = UIApplication.topViewController() else { return }
             let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
             let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
@@ -231,7 +218,8 @@ public class Doordeck {
             let navigationController = UINavigationController(rootViewController: vc)
             navigationController.isNavigationBarHidden = true
             view.present(navigationController, animated: true, completion: nil)
-            #endif
+        } else {
+            return
         }
     }
     

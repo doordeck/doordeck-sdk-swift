@@ -166,7 +166,7 @@ class LockDevice {
         completion(strippedLock, nil)
     }
     
-    fileprivate func createLocationService(_ location: [String:AnyObject]) -> LocationServices? {
+    func createLocationService(_ location: [String:AnyObject]) -> LocationServices? {
         guard
             let accuracy = location["accuracy"] as? Int,
             let enabled = location["enabled"] as? Bool,
@@ -360,7 +360,7 @@ class LockDevice {
         progressDevice(percentage)
     }
     
-    fileprivate func createTempLock(_ startDate: AnyObject?,
+    func createTempLock(_ startDate: AnyObject?,
                                     endDate: AnyObject?)  -> VisitorPass {
         
         var VP = VisitorPass()
