@@ -64,7 +64,7 @@ public class Doordeck {
     fileprivate var currentState: State = State.notAuthenticated
     fileprivate var apiClient: APIClient!
     fileprivate var sodium: SodiumHelper!
-    var sdk = false
+    var sdk = true
     
     
     /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server,
