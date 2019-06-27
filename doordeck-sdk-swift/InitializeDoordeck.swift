@@ -197,6 +197,20 @@ public class Doordeck {
         self.sodium = SodiumHelper(self.token)
     }
     
+    /// Return Certificate chain when SDK is being used in different format.
+    ///
+    /// - Parameter Certificate chain
+    func getCertificateChain() -> CertificateChainClass? {
+        guard let chainTemp = self.chain else {
+            return nil
+        }
+        if sdk == false {
+            return chainTemp
+        } else {
+            return nil
+        }
+    }
+    
     /// Show unlock reader, this will be added to the top view controller.
     fileprivate func showUnlockScreenSuccess () {
         if #available(iOS 10, *) {
