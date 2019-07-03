@@ -62,7 +62,7 @@ func print(_ channel: PrintChannel, object: Any) {
             
         case .token:
             channelPre = "😋 Token"
-            printOut = false
+            printOut = true
             
         case .url:
             channelPre = "😜 URL"

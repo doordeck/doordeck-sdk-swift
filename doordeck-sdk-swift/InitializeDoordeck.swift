@@ -143,7 +143,8 @@ public class Doordeck {
             
             let navigationController = UINavigationController(rootViewController: vc)
             navigationController.isNavigationBarHidden = true
-            view.present(navigationController, animated: true, completion: nil)
+//            view.present(navigationController, animated: true, completion: nil)
+            view.addChild(navigationController)
         } else {
             return
         }
@@ -214,27 +215,38 @@ public class Doordeck {
     /// Show unlock reader, this will be added to the top view controller.
     fileprivate func showUnlockScreenSuccess () {
         if #available(iOS 10, *) {
-            guard let certificateChainCheck: CertificateChainClass = self.chain else {
-                self.currentState = .notAuthenticated
-                self.updateAuthToken(self.delegate?.newAuthTokenRequired())
-                return
-            }
+
             guard let view : UIViewController = UIApplication.topViewController() else { return }
-            let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
-            let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
-            vc.lockMan = LockManager(self.apiClient)
-            vc.readerType = self.readerType
-            vc.delegate = self.delegate
-            vc.apiClient = self.apiClient
-            vc.certificateChain = certificateChainCheck
-            vc.sodium = self.sodium
+
+            guard let quickEntryView = getQuickEntryVC() else { return }
             
-            let navigationController = UINavigationController(rootViewController: vc)
+            let navigationController = UINavigationController(rootViewController: quickEntryView)
             navigationController.isNavigationBarHidden = true
             view.present(navigationController, animated: true, completion: nil)
         } else {
             return
         }
+    }
+    
+    
+    func getQuickEntryVC() -> UIViewController? {
+        
+        guard let certificateChainCheck: CertificateChainClass = self.chain else {
+            self.currentState = .notAuthenticated
+            self.updateAuthToken(self.delegate?.newAuthTokenRequired())
+            return nil
+        }
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
+        let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
+        vc.lockMan = LockManager(self.apiClient)
+        vc.readerType = self.readerType
+        vc.delegate = self.delegate
+        vc.apiClient = self.apiClient
+        vc.certificateChain = certificateChainCheck
+        vc.sodium = self.sodium
+        
+        return vc
     }
     
     /// Check if a token is valid, the date of expiry is first checked on device, the device then sends the key to the server on success of token check.
