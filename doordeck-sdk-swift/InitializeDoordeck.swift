@@ -64,13 +64,13 @@ public class Doordeck {
     }
     
     public var delegate: DoordeckProtocol?
-    fileprivate var uiDelegate: DoordeckUI?
-    fileprivate var token: AuthTokenClass
-    fileprivate var chain: CertificateChainClass?
-    fileprivate var readerType: ReaderType = ReaderType.automatic
-    fileprivate var currentState: State = State.notAuthenticated
-    fileprivate var apiClient: APIClient!
-    fileprivate var sodium: SodiumHelper!
+    var uiDelegate: DoordeckUI?
+    var token: AuthTokenClass
+    var chain: CertificateChainClass?
+    var readerType: ReaderType = ReaderType.automatic
+    var currentState: State = State.notAuthenticated
+    var apiClient: APIClient!
+    var sodium: SodiumHelper!
     var sdk = true
     
     
