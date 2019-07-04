@@ -15,7 +15,6 @@ class QuickEntryViewController: UIViewController {
     var readerType: Doordeck.ReaderType = Doordeck.ReaderType.automatic
     var sodium: SodiumHelper!
     
-    
     fileprivate let quickStoryboard = "QuickEntryStoryboard"
     fileprivate let bottomNFCView = "bottomViewNFC"
     fileprivate let bottomQRView = "bottomViewQR"

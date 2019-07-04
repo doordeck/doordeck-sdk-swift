@@ -24,6 +24,12 @@ public protocol DoordeckProtocol {
     func authenticated()
 }
 
+protocol DoordeckUI {
+    func openVerificationStoryboard(_ delegate: DoordeckInternalProtocol, apiClient:APIClient, sodiumHelper: SodiumHelper )
+    func showUnlockScreenSuccess (_ lockManager: LockManager,readerType: Doordeck.ReaderType, delegate: DoordeckProtocol?, apiClient: APIClient,
+    chain: CertificateChainClass, sodium: SodiumHelper)
+}
+
 protocol DoordeckInternalProtocol {
     func verificationSuccessful(_ chain: CertificateChainClass)
     func verificationUnsuccessful()
@@ -58,6 +64,7 @@ public class Doordeck {
     }
     
     public var delegate: DoordeckProtocol?
+    fileprivate var uiDelegate: DoordeckUI?
     fileprivate var token: AuthTokenClass
     fileprivate var chain: CertificateChainClass?
     fileprivate var readerType: ReaderType = ReaderType.automatic
@@ -75,6 +82,7 @@ public class Doordeck {
         let header = Header().createSDKAuthHeader(.v1, token: token)
         self.apiClient = APIClient(header, token: token)
         self.sodium = SodiumHelper(token)
+        self.uiDelegate = DoordeckSDKUI()
         darkModeActive(darkMode)
     }
     
@@ -134,17 +142,7 @@ public class Doordeck {
     func showVerificationScreen (_ success:() -> Void , fail: () -> Void) {
         if #available(iOS 10, *) {
         success()
-            guard let view : UIViewController = UIApplication.topViewController() else { return }
-            let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
-            let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
-            vc.delegate = self
-            vc.apiClient = self.apiClient
-            vc.sodium = self.sodium
-            
-            let navigationController = UINavigationController(rootViewController: vc)
-            navigationController.isNavigationBarHidden = true
-//            view.present(navigationController, animated: true, completion: nil)
-            view.addChild(navigationController)
+            uiDelegate?.openVerificationStoryboard(self, apiClient: self.apiClient, sodiumHelper: self.sodium)
         } else {
             return
         }
@@ -215,38 +213,17 @@ public class Doordeck {
     /// Show unlock reader, this will be added to the top view controller.
     fileprivate func showUnlockScreenSuccess () {
         if #available(iOS 10, *) {
-
-            guard let view : UIViewController = UIApplication.topViewController() else { return }
-
-            guard let quickEntryView = getQuickEntryVC() else { return }
+            guard let certificateChainCheck: CertificateChainClass = self.chain else {
+                self.currentState = .notAuthenticated
+                self.updateAuthToken(self.delegate?.newAuthTokenRequired())
+                return
+            }
             
-            let navigationController = UINavigationController(rootViewController: quickEntryView)
-            navigationController.isNavigationBarHidden = true
-            view.present(navigationController, animated: true, completion: nil)
+            uiDelegate?.showUnlockScreenSuccess(LockManager(self.apiClient), readerType: self.readerType, delegate: self.delegate, apiClient: self.apiClient, chain: certificateChainCheck, sodium: self.sodium)
+            
         } else {
             return
         }
-    }
-    
-    
-    func getQuickEntryVC() -> UIViewController? {
-        
-        guard let certificateChainCheck: CertificateChainClass = self.chain else {
-            self.currentState = .notAuthenticated
-            self.updateAuthToken(self.delegate?.newAuthTokenRequired())
-            return nil
-        }
-        
-        let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
-        let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
-        vc.lockMan = LockManager(self.apiClient)
-        vc.readerType = self.readerType
-        vc.delegate = self.delegate
-        vc.apiClient = self.apiClient
-        vc.certificateChain = certificateChainCheck
-        vc.sodium = self.sodium
-        
-        return vc
     }
     
     /// Check if a token is valid, the date of expiry is first checked on device, the device then sends the key to the server on success of token check.
