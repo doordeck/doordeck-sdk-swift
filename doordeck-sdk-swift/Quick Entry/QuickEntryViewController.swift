@@ -43,6 +43,10 @@ class QuickEntryViewController: UIViewController {
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UserDefaults().getDarkUI() ? .lightContent : .default
+    }
 }
 
 extension QuickEntryViewController: quickEntryDelegate {
@@ -137,7 +141,7 @@ extension QuickEntryViewController: quickEntryDelegate {
             vc.sodium = self.sodium
             present(vc, animated: true, completion: nil)
         }
-        
     }
+    
     
 }

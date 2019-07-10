@@ -41,4 +41,8 @@ struct CertificateChainClass {
         return chain
     }
     
+    func getAllCahin() -> [String:AnyObject] {
+        return certificateChain
+    }
+    
 }

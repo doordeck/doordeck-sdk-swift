@@ -63,6 +63,10 @@ class LockUnlockViewController: UIViewController {
         readyDevice(lockDetails)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UserDefaults().getDarkUI() ? .lightContent : .default
+    }
+    
     func connectDevice(_ lockDestils: lockUnlockScreen) {
         lockDestils.lock.deviceConnect({ (json, deviceError) in
             if (deviceError != nil) {
