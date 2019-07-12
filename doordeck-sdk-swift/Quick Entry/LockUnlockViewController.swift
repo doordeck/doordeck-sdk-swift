@@ -25,7 +25,7 @@ class LockUnlockViewController: UIViewController {
     
     
     fileprivate var countDownTimer: Timer = Timer()
-    fileprivate var minTimer: Float  = 2.0
+    fileprivate var minTimer: Float  = 4.0
     
     @IBOutlet weak var lockUpdateMessage: UILabel!
     @IBOutlet weak var dismissButton: UIButton!

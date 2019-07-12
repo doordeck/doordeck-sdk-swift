@@ -59,6 +59,7 @@ class LockDevice {
     var favourite: Bool = false
     var colour: UIColor = UIColor.doorBlue()
     var tiles: [String] = []
+    var hidden = false
     
     var currentlyLocked: Bool = true
     var expireTime: Data? = nil
@@ -116,6 +117,12 @@ class LockDevice {
             }
         }
         
+        if settingsTemp.keys.contains("hidden") {
+            if let hiddenTemp: Bool = settingsTemp["hidden"] as? Bool {
+                self.hidden = hiddenTemp
+            }
+        }
+        
         
         var connectedTemp: Bool = true
         if let connectedTempCheck = stateTemp["connected"] {
@@ -160,7 +167,8 @@ class LockDevice {
                                                  "endtDate": sanatizedEndDate as AnyObject,
                                                  "role": role as AnyObject,
                                                  "LocationData": locationData as AnyObject,
-                                                 "favourite": favouriteTemp as AnyObject]
+                                                 "favourite": favouriteTemp as AnyObject,
+                                                 "hidden": hidden as AnyObject]
         
         
         completion(strippedLock, nil)
@@ -361,7 +369,7 @@ class LockDevice {
     }
     
     func createTempLock(_ startDate: AnyObject?,
-                                    endDate: AnyObject?)  -> VisitorPass {
+                        endDate: AnyObject?)  -> VisitorPass {
         
         var VP = VisitorPass()
         var temp = false
