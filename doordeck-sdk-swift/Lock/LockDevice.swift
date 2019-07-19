@@ -84,7 +84,9 @@ class LockDevice {
         self.apiClient = apiClient
     }
     
-    func populateFromJson (_ lock: [String: AnyObject], index:Int, locksize: lockSizeOptions = .small,
+    func populateFromJson (_ lock: [String: AnyObject],
+                           index:Int,
+                           locksize: lockSizeOptions = .small,
                            completion: ([String: AnyObject]?, LockManager.deviceError?) -> Void) {
         
         guard
@@ -204,7 +206,9 @@ class LockDevice {
         update(status)
     }
     
-    func GPSCheck(_ success: @escaping () -> Void, fail : @escaping (LockManager.deviceError) -> Void) {
+    func GPSCheck(_ success: @escaping () -> Void,
+                  fail : @escaping (LockManager.deviceError) -> Void) {
+        
         if let locServices = locationServices {
             if locServices.enabled == true {
                 deviceStatusUpdate(.gpsSearching)
@@ -266,7 +270,10 @@ class LockDevice {
         }
     }
     
-    func deviceUnlock(_ certificatechain: CertificateChainClass, sodium: SodiumHelper, completion: @escaping ([AnyObject]?, APIClient.error?, LockManager.deviceError?) -> Void)  {
+    func deviceUnlock(_ certificatechain: CertificateChainClass,
+                      sodium: SodiumHelper,
+                      completion: @escaping ([AnyObject]?, APIClient.error?, LockManager.deviceError?) -> Void)  {
+        
         deviceStatusUpdate(.lockConnecting)
         GPSCheck({
             if self.currentlyLocked == true {
@@ -290,7 +297,12 @@ class LockDevice {
                 }
                 
                 self.currentlyLocked = false
-                self.apiClient.lockUnlock(self, sodium: sodium,  chain: certificatechain,  control: .unlock, completion: { (json, error) in
+                self.apiClient.lockUnlock(self,
+                                          sodium: sodium,
+                                          chain: certificatechain,
+                                          control: .unlock,
+                                          completion: { (json, error) in
+                                            
                     if (error != nil) {
                         SDKEvent().event(.UNLOCK_FAILED)
                         self.currentlyLocked = true
@@ -305,7 +317,8 @@ class LockDevice {
                     }
                 })
             } else {
-                self.deviceStatusUpdate(.lockUnlocked)
+                //self.deviceStatusUpdate(.lockUnlocked)
+                self.deviceStatusUpdate(.unlockSuccess) // change to show the door is still unlocked
                 self.deviceCompletion(nil, error: .deviceAlreadyUnlocked)
             }
         }) { (deviceError) in
@@ -328,6 +341,7 @@ class LockDevice {
     }
     
     fileprivate func startTimer(_ countDown: Double) {
+        
         countDownTime = Int(round(countDown))
         countDownTimer = Timer.every(1.seconds) { (timer: Timer) in
             if self.countDownTime <= 0 {
@@ -347,7 +361,9 @@ class LockDevice {
         self.deviceReset()
     }
     
-    fileprivate func deviceCompletion(_ object: [AnyObject]?, error: LockManager.deviceError?) {
+    fileprivate func deviceCompletion(_ object: [AnyObject]?,
+                                      error: LockManager.deviceError?) {
+        
         guard let comp = self.completion else {
             doordeckNotifications().refreshLocks()
             return
@@ -364,6 +380,7 @@ class LockDevice {
     }
     
     fileprivate func deviceProgress(_ percentage: Double) {
+        
         guard let progressDevice = self.progress else {return}
         progressDevice(percentage)
     }
