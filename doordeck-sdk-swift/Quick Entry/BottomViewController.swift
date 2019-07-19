@@ -73,6 +73,7 @@ extension BottomViewController: NFCNDEFReaderSessionDelegate {
         }
         switch readerError.code {
         case .readerSessionInvalidationErrorFirstNDEFTagRead, .readerSessionInvalidationErrorUserCanceled:
+            showNFCBool = true
             break
         default:
             Util().onMain {
