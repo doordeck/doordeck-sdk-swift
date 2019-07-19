@@ -182,6 +182,7 @@ class Header {
         case refreshToken
         case token
         case tokenJson
+        case integration
     }
     
     enum version {
@@ -194,6 +195,7 @@ class Header {
     let ContentType = "Content-Type"
     let applicationJson = "application/json"
     let applicationPemFile = "application/x-pem-file"
+    let applicationForm = "application/x-www-form-urlencoded"
     let authorization = "Authorization"
     let bearer = "Bearer"
     let accept = "Accept"
