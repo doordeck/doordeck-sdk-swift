@@ -20,11 +20,7 @@ struct URLManager {
     static let httpsBase = "https://"
     static let webBase = "doordeck.com"
     
-    //    #if os(iOS)
-    ////    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
-    //    #else
-    static let api = "api.dev."
-    //    #endif
+    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
     
     static let GET = "GET"
     static let PUT = "PUT"
