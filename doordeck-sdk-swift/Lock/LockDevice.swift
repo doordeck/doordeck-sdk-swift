@@ -59,6 +59,7 @@ class LockDevice {
     var favourite: Bool = false
     var colour: UIColor = UIColor.doorBlue()
     var tiles: [String] = []
+    var hidden = false
     
     var currentlyLocked: Bool = true
     var expireTime: Data? = nil
@@ -83,7 +84,9 @@ class LockDevice {
         self.apiClient = apiClient
     }
     
-    func populateFromJson (_ lock: [String: AnyObject], index:Int, locksize: lockSizeOptions = .small,
+    func populateFromJson (_ lock: [String: AnyObject],
+                           index:Int,
+                           locksize: lockSizeOptions = .small,
                            completion: ([String: AnyObject]?, LockManager.deviceError?) -> Void) {
         
         guard
@@ -113,6 +116,12 @@ class LockDevice {
         if settingsTemp.keys.contains("tiles") {
             if let tilesTemp: [String] = settingsTemp["tiles"] as? [String] {
                 self.tiles = tilesTemp
+            }
+        }
+        
+        if settingsTemp.keys.contains("hidden") {
+            if let hiddenTemp: Bool = settingsTemp["hidden"] as? Bool {
+                self.hidden = hiddenTemp
             }
         }
         
@@ -160,13 +169,14 @@ class LockDevice {
                                                  "endtDate": sanatizedEndDate as AnyObject,
                                                  "role": role as AnyObject,
                                                  "LocationData": locationData as AnyObject,
-                                                 "favourite": favouriteTemp as AnyObject]
+                                                 "favourite": favouriteTemp as AnyObject,
+                                                 "hidden": hidden as AnyObject]
         
         
         completion(strippedLock, nil)
     }
     
-    fileprivate func createLocationService(_ location: [String:AnyObject]) -> LocationServices? {
+    func createLocationService(_ location: [String:AnyObject]) -> LocationServices? {
         guard
             let accuracy = location["accuracy"] as? Int,
             let enabled = location["enabled"] as? Bool,
@@ -191,12 +201,14 @@ class LockDevice {
     }
     
     
-    fileprivate func deviceStatusUpdate(_ status: currentUnlockProgress) {
+    func deviceStatusUpdate(_ status: currentUnlockProgress) {
         guard let update  = self.lockStatus else { return }
         update(status)
     }
     
-    fileprivate func GPSCheck(_ success: @escaping () -> Void, fail : @escaping (LockManager.deviceError) -> Void) {
+    func GPSCheck(_ success: @escaping () -> Void,
+                  fail : @escaping (LockManager.deviceError) -> Void) {
+        
         if let locServices = locationServices {
             if locServices.enabled == true {
                 deviceStatusUpdate(.gpsSearching)
@@ -258,7 +270,10 @@ class LockDevice {
         }
     }
     
-    func deviceUnlock(_ certificatechain: CertificateChainClass, sodium: SodiumHelper, completion: @escaping ([AnyObject]?, APIClient.error?, LockManager.deviceError?) -> Void)  {
+    func deviceUnlock(_ certificatechain: CertificateChainClass,
+                      sodium: SodiumHelper,
+                      completion: @escaping ([AnyObject]?, APIClient.error?, LockManager.deviceError?) -> Void)  {
+        
         deviceStatusUpdate(.lockConnecting)
         GPSCheck({
             if self.currentlyLocked == true {
@@ -282,7 +297,12 @@ class LockDevice {
                 }
                 
                 self.currentlyLocked = false
-                self.apiClient.lockUnlock(self, sodium: sodium,  chain: certificatechain,  control: .unlock, completion: { (json, error) in
+                self.apiClient.lockUnlock(self,
+                                          sodium: sodium,
+                                          chain: certificatechain,
+                                          control: .unlock,
+                                          completion: { (json, error) in
+                                            
                     if (error != nil) {
                         SDKEvent().event(.UNLOCK_FAILED)
                         self.currentlyLocked = true
@@ -297,7 +317,8 @@ class LockDevice {
                     }
                 })
             } else {
-                self.deviceStatusUpdate(.lockUnlocked)
+                //self.deviceStatusUpdate(.lockUnlocked)
+                self.deviceStatusUpdate(.unlockSuccess) // change to show the door is still unlocked
                 self.deviceCompletion(nil, error: .deviceAlreadyUnlocked)
             }
         }) { (deviceError) in
@@ -320,6 +341,7 @@ class LockDevice {
     }
     
     fileprivate func startTimer(_ countDown: Double) {
+        
         countDownTime = Int(round(countDown))
         countDownTimer = Timer.every(1.seconds) { (timer: Timer) in
             if self.countDownTime <= 0 {
@@ -339,7 +361,9 @@ class LockDevice {
         self.deviceReset()
     }
     
-    fileprivate func deviceCompletion(_ object: [AnyObject]?, error: LockManager.deviceError?) {
+    fileprivate func deviceCompletion(_ object: [AnyObject]?,
+                                      error: LockManager.deviceError?) {
+        
         guard let comp = self.completion else {
             doordeckNotifications().refreshLocks()
             return
@@ -356,12 +380,13 @@ class LockDevice {
     }
     
     fileprivate func deviceProgress(_ percentage: Double) {
+        
         guard let progressDevice = self.progress else {return}
         progressDevice(percentage)
     }
     
-    fileprivate func createTempLock(_ startDate: AnyObject?,
-                                    endDate: AnyObject?)  -> VisitorPass {
+    func createTempLock(_ startDate: AnyObject?,
+                        endDate: AnyObject?)  -> VisitorPass {
         
         var VP = VisitorPass()
         var temp = false

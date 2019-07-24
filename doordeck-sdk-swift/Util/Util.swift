@@ -16,7 +16,9 @@ class Util {
     }
     
     func vibrateNow () {
+#if os(iOS)
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+#endif
     }
     
     func isLowPowerModeEnabled() -> Bool {

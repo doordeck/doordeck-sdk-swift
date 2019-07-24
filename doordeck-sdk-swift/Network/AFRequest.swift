@@ -12,7 +12,7 @@ import Alamofire
  */
 class AFRequest {
     #if os(iOS)
-    fileprivate let connectivityManager: ReachabilityHelper
+    let connectivityManager: ReachabilityHelper
     #endif
     var sessionManager = Alamofire.SessionManager.default
     
@@ -168,7 +168,7 @@ class AFRequest {
         }
     }
     
-    fileprivate func isConnected() -> Bool {
+    func isConnected() -> Bool {
         #if os(iOS)
             return connectivityManager.isConnected
         #else

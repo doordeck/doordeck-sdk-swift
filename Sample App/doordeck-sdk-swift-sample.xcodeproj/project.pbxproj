@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CBED8B6BDA24458685AF204 /* Pods_doordeck_sdk_swift_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */; };
+		59029C0A2268B636009FAE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C092268B636009FAE5C /* AppDelegate.swift */; };
+		59029C0C2268B636009FAE5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59029C0B2268B636009FAE5C /* ViewController.swift */; };
+		59029C0F2268B636009FAE5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59029C0D2268B636009FAE5C /* Main.storyboard */; };
+		59029C112268B638009FAE5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59029C102268B638009FAE5C /* Assets.xcassets */; };
+		59029C142268B638009FAE5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59029C122268B638009FAE5C /* LaunchScreen.storyboard */; };
+		591838122278957600D764E1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591838112278957600D764E1 /* Media.xcassets */; };
+		595B1FED227C519100D7297E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FDE227C518F00D7297E /* StringExtension.swift */; };
+		595B1FEE227C519100D7297E /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FDF227C518F00D7297E /* LabelExtension.swift */; };
+		595B1FEF227C519100D7297E /* CacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE0227C518F00D7297E /* CacheHelper.swift */; };
+		595B1FF0227C519100D7297E /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE1227C519000D7297E /* FontStyle.swift */; };
+		595B1FF1227C519100D7297E /* UimageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE2227C519000D7297E /* UimageViewExtension.swift */; };
+		595B1FF2227C519100D7297E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE3227C519000D7297E /* UserDefaults.swift */; };
+		595B1FF3227C519100D7297E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE4227C519000D7297E /* Button.swift */; };
+		595B1FF4227C519100D7297E /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE5227C519000D7297E /* SwiftyTimer.swift */; };
+		595B1FF5227C519100D7297E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE6227C519000D7297E /* Util.swift */; };
+		595B1FF6227C519100D7297E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE7227C519000D7297E /* Font.swift */; };
+		595B1FF7227C519100D7297E /* UIApplicationiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE8227C519000D7297E /* UIApplicationiOS.swift */; };
+		595B1FF8227C519100D7297E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FE9227C519000D7297E /* UIApplication.swift */; };
+		595B1FF9227C519100D7297E /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FEA227C519000D7297E /* NotificationCenter.swift */; };
+		595B1FFA227C519100D7297E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FEB227C519000D7297E /* DateExtension.swift */; };
+		595B1FFB227C519100D7297E /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FEC227C519000D7297E /* JsonHelper.swift */; };
+		595B1FFD227C7CFF00D7297E /* SDKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FFC227C7CFF00D7297E /* SDKEvent.swift */; };
+		595D11A322CD4ACA007D75DB /* DoordeckSDKUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D11A222CD4ACA007D75DB /* DoordeckSDKUI.swift */; };
+		5984AE6A228EB405008066D2 /* QCMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984AE68228EB405008066D2 /* QCMethod.swift */; };
+		5984AE6B228EB405008066D2 /* unlockAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984AE69228EB405008066D2 /* unlockAnimations.swift */; };
+		5984AE6C228EB556008066D2 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09422858A9200D31E81 /* AppStringsSDKExtension.swift */; };
+		59ABB7B52271C3E30048BCF5 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7802271C3E30048BCF5 /* KeychainHelper.swift */; };
+		59ABB7B62271C3E30048BCF5 /* TokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7812271C3E30048BCF5 /* TokenHelper.swift */; };
+		59ABB7B72271C3E30048BCF5 /* SodiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7822271C3E30048BCF5 /* SodiumHelper.swift */; };
+		59ABB7B82271C3E30048BCF5 /* AuthTokenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7832271C3E30048BCF5 /* AuthTokenClass.swift */; };
+		59ABB7B92271C3E30048BCF5 /* AFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7852271C3E30048BCF5 /* AFRequest.swift */; };
+		59ABB7BA2271C3E30048BCF5 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7862271C3E30048BCF5 /* ReachabilityHelper.swift */; };
+		59ABB7BB2271C3E30048BCF5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7872271C3E30048BCF5 /* APIClient.swift */; };
+		59ABB7BC2271C3E30048BCF5 /* AmazonRootCA1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59ABB7892271C3E30048BCF5 /* AmazonRootCA1.cer */; };
+		59ABB7BD2271C3E30048BCF5 /* QueryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB78A2271C3E30048BCF5 /* QueryManager.swift */; };
+		59ABB7BE2271C3E30048BCF5 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB78B2271C3E30048BCF5 /* URLManager.swift */; };
+		59ABB7BF2271C3E30048BCF5 /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB78D2271C3E30048BCF5 /* Sites.swift */; };
+		59ABB7C02271C3E30048BCF5 /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB78E2271C3E30048BCF5 /* LockManager.swift */; };
+		59ABB7C12271C3E30048BCF5 /* LockDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB78F2271C3E30048BCF5 /* LockDevice.swift */; };
+		59ABB7C22271C3E30048BCF5 /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7922271C3E30048BCF5 /* WhereAmI.swift */; };
+		59ABB7C32271C3E30048BCF5 /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7932271C3E30048BCF5 /* LocationProfile.swift */; };
+		59ABB7C42271C3E30048BCF5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7952271C3E30048BCF5 /* UIColor.swift */; };
+		59ABB7C52271C3E30048BCF5 /* InitializeDoordeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7962271C3E30048BCF5 /* InitializeDoordeck.swift */; };
+		59ABB7C62271C3E30048BCF5 /* LockUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7982271C3E30048BCF5 /* LockUnlockViewController.swift */; };
+		59ABB7C72271C3E30048BCF5 /* LockUnlockScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59ABB7992271C3E30048BCF5 /* LockUnlockScreen.storyboard */; };
+		59ABB7C82271C3E30048BCF5 /* QuickEntryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59ABB79B2271C3E30048BCF5 /* QuickEntryStoryboard.storyboard */; };
+		59ABB7C92271C3E30048BCF5 /* QuickEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB79D2271C3E30048BCF5 /* QuickEntryViewController.swift */; };
+		59ABB7CA2271C3E30048BCF5 /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB79E2271C3E30048BCF5 /* BottomViewController.swift */; };
+		59ABB7CB2271C3E30048BCF5 /* BottomViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB79F2271C3E30048BCF5 /* BottomViewControllerQR.swift */; };
+		59ABB7CC2271C3E30048BCF5 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7A12271C3E30048BCF5 /* AppStrings.swift */; };
+		59ABB7CD2271C3E30048BCF5 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7A22271C3E30048BCF5 /* DeviceHelper.swift */; };
+		59ABB7CE2271C3E30048BCF5 /* CustomPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7A32271C3E30048BCF5 /* CustomPrint.swift */; };
+		59ABB7CF2271C3E30048BCF5 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7A52271C3E30048BCF5 /* VerificationViewController.swift */; };
+		59ABB7D02271C3E30048BCF5 /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59ABB7A62271C3E30048BCF5 /* VerificationStoryboard.storyboard */; };
+		59ABB7D322733E550048BCF5 /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */; };
+		59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24D9425644544BD402388FEA /* Pods-doordeck-sdk-swift-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift-sample.release.xcconfig"; path = "Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample.release.xcconfig"; sourceTree = "<group>"; };
+		59029C062268B636009FAE5C /* doordeck-sdk-swift-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doordeck-sdk-swift-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59029C092268B636009FAE5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59029C0B2268B636009FAE5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59029C0E2268B636009FAE5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59029C102268B638009FAE5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59029C132268B638009FAE5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59029C152268B638009FAE5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5909D09422858A9200D31E81 /* AppStringsSDKExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringsSDKExtension.swift; sourceTree = "<group>"; };
+		591838112278957600D764E1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		595B1FDE227C518F00D7297E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		595B1FDF227C518F00D7297E /* LabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
+		595B1FE0227C518F00D7297E /* CacheHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheHelper.swift; sourceTree = "<group>"; };
+		595B1FE1227C519000D7297E /* FontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		595B1FE2227C519000D7297E /* UimageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UimageViewExtension.swift; sourceTree = "<group>"; };
+		595B1FE3227C519000D7297E /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		595B1FE4227C519000D7297E /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		595B1FE5227C519000D7297E /* SwiftyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyTimer.swift; sourceTree = "<group>"; };
+		595B1FE6227C519000D7297E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		595B1FE7227C519000D7297E /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		595B1FE8227C519000D7297E /* UIApplicationiOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationiOS.swift; sourceTree = "<group>"; };
+		595B1FE9227C519000D7297E /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		595B1FEA227C519000D7297E /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		595B1FEB227C519000D7297E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		595B1FEC227C519000D7297E /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		595B1FFC227C7CFF00D7297E /* SDKEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKEvent.swift; sourceTree = "<group>"; };
+		595D11A222CD4ACA007D75DB /* DoordeckSDKUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoordeckSDKUI.swift; sourceTree = "<group>"; };
+		5984AE68228EB405008066D2 /* QCMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCMethod.swift; sourceTree = "<group>"; };
+		5984AE69228EB405008066D2 /* unlockAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unlockAnimations.swift; sourceTree = "<group>"; };
+		59ABB7802271C3E30048BCF5 /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		59ABB7812271C3E30048BCF5 /* TokenHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenHelper.swift; sourceTree = "<group>"; };
+		59ABB7822271C3E30048BCF5 /* SodiumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SodiumHelper.swift; sourceTree = "<group>"; };
+		59ABB7832271C3E30048BCF5 /* AuthTokenClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTokenClass.swift; sourceTree = "<group>"; };
+		59ABB7852271C3E30048BCF5 /* AFRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFRequest.swift; sourceTree = "<group>"; };
+		59ABB7862271C3E30048BCF5 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
+		59ABB7872271C3E30048BCF5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		59ABB7892271C3E30048BCF5 /* AmazonRootCA1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA1.cer; sourceTree = "<group>"; };
+		59ABB78A2271C3E30048BCF5 /* QueryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryManager.swift; sourceTree = "<group>"; };
+		59ABB78B2271C3E30048BCF5 /* URLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		59ABB78D2271C3E30048BCF5 /* Sites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
+		59ABB78E2271C3E30048BCF5 /* LockManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockManager.swift; sourceTree = "<group>"; };
+		59ABB78F2271C3E30048BCF5 /* LockDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockDevice.swift; sourceTree = "<group>"; };
+		59ABB7922271C3E30048BCF5 /* WhereAmI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhereAmI.swift; sourceTree = "<group>"; };
+		59ABB7932271C3E30048BCF5 /* LocationProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProfile.swift; sourceTree = "<group>"; };
+		59ABB7952271C3E30048BCF5 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		59ABB7962271C3E30048BCF5 /* InitializeDoordeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializeDoordeck.swift; sourceTree = "<group>"; };
+		59ABB7982271C3E30048BCF5 /* LockUnlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockUnlockViewController.swift; sourceTree = "<group>"; };
+		59ABB79A2271C3E30048BCF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LockUnlockScreen.storyboard; sourceTree = "<group>"; };
+		59ABB79C2271C3E30048BCF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/QuickEntryStoryboard.storyboard; sourceTree = "<group>"; };
+		59ABB79D2271C3E30048BCF5 /* QuickEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickEntryViewController.swift; sourceTree = "<group>"; };
+		59ABB79E2271C3E30048BCF5 /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
+		59ABB79F2271C3E30048BCF5 /* BottomViewControllerQR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewControllerQR.swift; sourceTree = "<group>"; };
+		59ABB7A12271C3E30048BCF5 /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		59ABB7A22271C3E30048BCF5 /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		59ABB7A32271C3E30048BCF5 /* CustomPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrint.swift; sourceTree = "<group>"; };
+		59ABB7A52271C3E30048BCF5 /* VerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		59ABB7A62271C3E30048BCF5 /* VerificationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerificationStoryboard.storyboard; sourceTree = "<group>"; };
+		59ABB7A72271C3E30048BCF5 /* doordeck_sdk_swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = doordeck_sdk_swift.h; sourceTree = "<group>"; };
+		59ABB7D12271F3770048BCF5 /* doordeck-sdk-swift-sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "doordeck-sdk-swift-sample.entitlements"; sourceTree = "<group>"; };
+		59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateChainClass.swift; sourceTree = "<group>"; };
+		59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotCommit.swift; sourceTree = "<group>"; };
+		7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift-sample.debug.xcconfig"; path = "Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59029C032268B636009FAE5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBED8B6BDA24458685AF204 /* Pods_doordeck_sdk_swift_sample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26B61AE5B2D741B4A046FDCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		472D2AB838BF751F3D282AEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */,
+				24D9425644544BD402388FEA /* Pods-doordeck-sdk-swift-sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59029BFD2268B636009FAE5C = {
+			isa = PBXGroup;
+			children = (
+				59029C082268B636009FAE5C /* doordeck-sdk-swift-sample */,
+				59029C072268B636009FAE5C /* Products */,
+				472D2AB838BF751F3D282AEB /* Pods */,
+				26B61AE5B2D741B4A046FDCB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59029C072268B636009FAE5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59029C062268B636009FAE5C /* doordeck-sdk-swift-sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59029C082268B636009FAE5C /* doordeck-sdk-swift-sample */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7D12271F3770048BCF5 /* doordeck-sdk-swift-sample.entitlements */,
+				59ABB7702271C3E30048BCF5 /* doordeck-sdk-swift */,
+				59029C092268B636009FAE5C /* AppDelegate.swift */,
+				59029C0B2268B636009FAE5C /* ViewController.swift */,
+				59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */,
+				59029C0D2268B636009FAE5C /* Main.storyboard */,
+				59029C102268B638009FAE5C /* Assets.xcassets */,
+				59029C122268B638009FAE5C /* LaunchScreen.storyboard */,
+				59029C152268B638009FAE5C /* Info.plist */,
+			);
+			path = "doordeck-sdk-swift-sample";
+			sourceTree = "<group>";
+		};
+		59ABB7702271C3E30048BCF5 /* doordeck-sdk-swift */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7712271C3E30048BCF5 /* Util */,
+				59ABB77F2271C3E30048BCF5 /* Security */,
+				59ABB7842271C3E30048BCF5 /* Network */,
+				59ABB78C2271C3E30048BCF5 /* Lock */,
+				59ABB7902271C3E30048BCF5 /* Dependencies */,
+				59ABB7942271C3E30048BCF5 /* Styles */,
+				59ABB7962271C3E30048BCF5 /* InitializeDoordeck.swift */,
+				595D11A222CD4ACA007D75DB /* DoordeckSDKUI.swift */,
+				59ABB7972271C3E30048BCF5 /* Quick Entry */,
+				59ABB7A02271C3E30048BCF5 /* Aux */,
+				59ABB7A42271C3E30048BCF5 /* Verification Screen */,
+				59ABB7A72271C3E30048BCF5 /* doordeck_sdk_swift.h */,
+				591838112278957600D764E1 /* Media.xcassets */,
+			);
+			name = "doordeck-sdk-swift";
+			path = "../../doordeck-sdk-swift";
+			sourceTree = "<group>";
+		};
+		59ABB7712271C3E30048BCF5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				595B1FE4227C519000D7297E /* Button.swift */,
+				595B1FE0227C518F00D7297E /* CacheHelper.swift */,
+				595B1FEB227C519000D7297E /* DateExtension.swift */,
+				595B1FE7227C519000D7297E /* Font.swift */,
+				595B1FE1227C519000D7297E /* FontStyle.swift */,
+				595B1FEC227C519000D7297E /* JsonHelper.swift */,
+				595B1FDF227C518F00D7297E /* LabelExtension.swift */,
+				595B1FEA227C519000D7297E /* NotificationCenter.swift */,
+				595B1FFC227C7CFF00D7297E /* SDKEvent.swift */,
+				595B1FDE227C518F00D7297E /* StringExtension.swift */,
+				595B1FE5227C519000D7297E /* SwiftyTimer.swift */,
+				595B1FE9227C519000D7297E /* UIApplication.swift */,
+				595B1FE8227C519000D7297E /* UIApplicationiOS.swift */,
+				595B1FE2227C519000D7297E /* UimageViewExtension.swift */,
+				595B1FE3227C519000D7297E /* UserDefaults.swift */,
+				595B1FE6227C519000D7297E /* Util.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		59ABB77F2271C3E30048BCF5 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7832271C3E30048BCF5 /* AuthTokenClass.swift */,
+				59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */,
+				59ABB7802271C3E30048BCF5 /* KeychainHelper.swift */,
+				59ABB7812271C3E30048BCF5 /* TokenHelper.swift */,
+				59ABB7822271C3E30048BCF5 /* SodiumHelper.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		59ABB7842271C3E30048BCF5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7852271C3E30048BCF5 /* AFRequest.swift */,
+				59ABB7862271C3E30048BCF5 /* ReachabilityHelper.swift */,
+				59ABB7872271C3E30048BCF5 /* APIClient.swift */,
+				59ABB7882271C3E30048BCF5 /* CER */,
+				59ABB78A2271C3E30048BCF5 /* QueryManager.swift */,
+				59ABB78B2271C3E30048BCF5 /* URLManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		59ABB7882271C3E30048BCF5 /* CER */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7892271C3E30048BCF5 /* AmazonRootCA1.cer */,
+			);
+			path = CER;
+			sourceTree = "<group>";
+		};
+		59ABB78C2271C3E30048BCF5 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB78D2271C3E30048BCF5 /* Sites.swift */,
+				59ABB78E2271C3E30048BCF5 /* LockManager.swift */,
+				59ABB78F2271C3E30048BCF5 /* LockDevice.swift */,
+				5984AE68228EB405008066D2 /* QCMethod.swift */,
+				5984AE69228EB405008066D2 /* unlockAnimations.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		59ABB7902271C3E30048BCF5 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7912271C3E30048BCF5 /* WhereAmI */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		59ABB7912271C3E30048BCF5 /* WhereAmI */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7922271C3E30048BCF5 /* WhereAmI.swift */,
+				59ABB7932271C3E30048BCF5 /* LocationProfile.swift */,
+			);
+			path = WhereAmI;
+			sourceTree = "<group>";
+		};
+		59ABB7942271C3E30048BCF5 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7952271C3E30048BCF5 /* UIColor.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		59ABB7972271C3E30048BCF5 /* Quick Entry */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7982271C3E30048BCF5 /* LockUnlockViewController.swift */,
+				59ABB7992271C3E30048BCF5 /* LockUnlockScreen.storyboard */,
+				59ABB79B2271C3E30048BCF5 /* QuickEntryStoryboard.storyboard */,
+				59ABB79D2271C3E30048BCF5 /* QuickEntryViewController.swift */,
+				59ABB79E2271C3E30048BCF5 /* BottomViewController.swift */,
+				59ABB79F2271C3E30048BCF5 /* BottomViewControllerQR.swift */,
+			);
+			path = "Quick Entry";
+			sourceTree = "<group>";
+		};
+		59ABB7A02271C3E30048BCF5 /* Aux */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7A12271C3E30048BCF5 /* AppStrings.swift */,
+				5909D09422858A9200D31E81 /* AppStringsSDKExtension.swift */,
+				59ABB7A22271C3E30048BCF5 /* DeviceHelper.swift */,
+				59ABB7A32271C3E30048BCF5 /* CustomPrint.swift */,
+			);
+			path = Aux;
+			sourceTree = "<group>";
+		};
+		59ABB7A42271C3E30048BCF5 /* Verification Screen */ = {
+			isa = PBXGroup;
+			children = (
+				59ABB7A52271C3E30048BCF5 /* VerificationViewController.swift */,
+				59ABB7A62271C3E30048BCF5 /* VerificationStoryboard.storyboard */,
+			);
+			path = "Verification Screen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59029C052268B636009FAE5C /* doordeck-sdk-swift-sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59029C182268B638009FAE5C /* Build configuration list for PBXNativeTarget "doordeck-sdk-swift-sample" */;
+			buildPhases = (
+				A7C97BEE09232325BA4C7E90 /* [CP] Check Pods Manifest.lock */,
+				59029C022268B636009FAE5C /* Sources */,
+				59029C032268B636009FAE5C /* Frameworks */,
+				59029C042268B636009FAE5C /* Resources */,
+				73DE41AA947E02B14838BA50 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "doordeck-sdk-swift-sample";
+			productName = "doordeck-sdk-swift-sample";
+			productReference = 59029C062268B636009FAE5C /* doordeck-sdk-swift-sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59029BFE2268B636009FAE5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Doordeck;
+				TargetAttributes = {
+					59029C052268B636009FAE5C = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 59029C012268B636009FAE5C /* Build configuration list for PBXProject "doordeck-sdk-swift-sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59029BFD2268B636009FAE5C;
+			productRefGroup = 59029C072268B636009FAE5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59029C052268B636009FAE5C /* doordeck-sdk-swift-sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59029C042268B636009FAE5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59ABB7BC2271C3E30048BCF5 /* AmazonRootCA1.cer in Resources */,
+				59ABB7D02271C3E30048BCF5 /* VerificationStoryboard.storyboard in Resources */,
+				591838122278957600D764E1 /* Media.xcassets in Resources */,
+				59029C142268B638009FAE5C /* LaunchScreen.storyboard in Resources */,
+				59ABB7C82271C3E30048BCF5 /* QuickEntryStoryboard.storyboard in Resources */,
+				59029C112268B638009FAE5C /* Assets.xcassets in Resources */,
+				59029C0F2268B636009FAE5C /* Main.storyboard in Resources */,
+				59ABB7C72271C3E30048BCF5 /* LockUnlockScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73DE41AA947E02B14838BA50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7C97BEE09232325BA4C7E90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-doordeck-sdk-swift-sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59029C022268B636009FAE5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				595B1FF3227C519100D7297E /* Button.swift in Sources */,
+				595B1FFA227C519100D7297E /* DateExtension.swift in Sources */,
+				595D11A322CD4ACA007D75DB /* DoordeckSDKUI.swift in Sources */,
+				59ABB7CF2271C3E30048BCF5 /* VerificationViewController.swift in Sources */,
+				595B1FF1227C519100D7297E /* UimageViewExtension.swift in Sources */,
+				59ABB7C02271C3E30048BCF5 /* LockManager.swift in Sources */,
+				595B1FF6227C519100D7297E /* Font.swift in Sources */,
+				59ABB7BA2271C3E30048BCF5 /* ReachabilityHelper.swift in Sources */,
+				59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */,
+				59ABB7C92271C3E30048BCF5 /* QuickEntryViewController.swift in Sources */,
+				595B1FFB227C519100D7297E /* JsonHelper.swift in Sources */,
+				595B1FF8227C519100D7297E /* UIApplication.swift in Sources */,
+				595B1FF7227C519100D7297E /* UIApplicationiOS.swift in Sources */,
+				59ABB7B62271C3E30048BCF5 /* TokenHelper.swift in Sources */,
+				595B1FEE227C519100D7297E /* LabelExtension.swift in Sources */,
+				59ABB7CA2271C3E30048BCF5 /* BottomViewController.swift in Sources */,
+				59ABB7C32271C3E30048BCF5 /* LocationProfile.swift in Sources */,
+				59ABB7CE2271C3E30048BCF5 /* CustomPrint.swift in Sources */,
+				5984AE6A228EB405008066D2 /* QCMethod.swift in Sources */,
+				595B1FFD227C7CFF00D7297E /* SDKEvent.swift in Sources */,
+				59ABB7C12271C3E30048BCF5 /* LockDevice.swift in Sources */,
+				59ABB7C62271C3E30048BCF5 /* LockUnlockViewController.swift in Sources */,
+				59029C0C2268B636009FAE5C /* ViewController.swift in Sources */,
+				595B1FED227C519100D7297E /* StringExtension.swift in Sources */,
+				59ABB7B72271C3E30048BCF5 /* SodiumHelper.swift in Sources */,
+				595B1FF5227C519100D7297E /* Util.swift in Sources */,
+				59ABB7C22271C3E30048BCF5 /* WhereAmI.swift in Sources */,
+				59ABB7CB2271C3E30048BCF5 /* BottomViewControllerQR.swift in Sources */,
+				59ABB7CD2271C3E30048BCF5 /* DeviceHelper.swift in Sources */,
+				595B1FF0227C519100D7297E /* FontStyle.swift in Sources */,
+				595B1FF9227C519100D7297E /* NotificationCenter.swift in Sources */,
+				5984AE6B228EB405008066D2 /* unlockAnimations.swift in Sources */,
+				59ABB7C52271C3E30048BCF5 /* InitializeDoordeck.swift in Sources */,
+				59029C0A2268B636009FAE5C /* AppDelegate.swift in Sources */,
+				595B1FF2227C519100D7297E /* UserDefaults.swift in Sources */,
+				59ABB7BE2271C3E30048BCF5 /* URLManager.swift in Sources */,
+				59ABB7BF2271C3E30048BCF5 /* Sites.swift in Sources */,
+				59ABB7CC2271C3E30048BCF5 /* AppStrings.swift in Sources */,
+				595B1FF4227C519100D7297E /* SwiftyTimer.swift in Sources */,
+				59ABB7B82271C3E30048BCF5 /* AuthTokenClass.swift in Sources */,
+				59ABB7BD2271C3E30048BCF5 /* QueryManager.swift in Sources */,
+				59ABB7C42271C3E30048BCF5 /* UIColor.swift in Sources */,
+				59ABB7B92271C3E30048BCF5 /* AFRequest.swift in Sources */,
+				59ABB7BB2271C3E30048BCF5 /* APIClient.swift in Sources */,
+				59ABB7B52271C3E30048BCF5 /* KeychainHelper.swift in Sources */,
+				59ABB7D322733E550048BCF5 /* CertificateChainClass.swift in Sources */,
+				5984AE6C228EB556008066D2 /* AppStringsSDKExtension.swift in Sources */,
+				595B1FEF227C519100D7297E /* CacheHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59029C0D2268B636009FAE5C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59029C0E2268B636009FAE5C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59029C122268B638009FAE5C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59029C132268B638009FAE5C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		59ABB7992271C3E30048BCF5 /* LockUnlockScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59ABB79A2271C3E30048BCF5 /* Base */,
+			);
+			name = LockUnlockScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		59ABB79B2271C3E30048BCF5 /* QuickEntryStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59ABB79C2271C3E30048BCF5 /* Base */,
+			);
+			name = QuickEntryStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59029C162268B638009FAE5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59029C172268B638009FAE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59029C192268B638009FAE5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "doordeck-sdk-swift-sample/doordeck-sdk-swift-sample.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "doordeck-sdk-swift-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.doordeck.doordeck-sdk-swift-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		59029C1A2268B638009FAE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D9425644544BD402388FEA /* Pods-doordeck-sdk-swift-sample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "doordeck-sdk-swift-sample/doordeck-sdk-swift-sample.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "doordeck-sdk-swift-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.doordeck.doordeck-sdk-swift-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59029C012268B636009FAE5C /* Build configuration list for PBXProject "doordeck-sdk-swift-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59029C162268B638009FAE5C /* Debug */,
+				59029C172268B638009FAE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59029C182268B638009FAE5C /* Build configuration list for PBXNativeTarget "doordeck-sdk-swift-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59029C192268B638009FAE5C /* Debug */,
+				59029C1A2268B638009FAE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59029BFE2268B636009FAE5C /* Project object */;
+}

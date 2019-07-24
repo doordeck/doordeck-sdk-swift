@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showUnlockButton(_ sender: Any) {
-        doordeck?.showUnlockScreen(.qr, success: {
+        doordeck?.showUnlockScreen(.automatic, success: {
             
         }, fail: {
             
@@ -63,5 +63,9 @@ extension ViewController: DoordeckProtocol {
     
     func unlockSuccessful() {
         print("unlockSuccessful")
+    }
+    
+    func authenticated() {
+        print("authenticated")
     }
 }

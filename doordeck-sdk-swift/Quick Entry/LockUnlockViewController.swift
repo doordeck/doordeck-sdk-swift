@@ -25,7 +25,7 @@ class LockUnlockViewController: UIViewController {
     
     
     fileprivate var countDownTimer: Timer = Timer()
-    fileprivate var minTimer: Float  = 2.0
+    fileprivate var minTimer: Float  = 4.0
     
     @IBOutlet weak var lockUpdateMessage: UILabel!
     @IBOutlet weak var dismissButton: UIButton!
@@ -63,6 +63,10 @@ class LockUnlockViewController: UIViewController {
         readyDevice(lockDetails)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UserDefaults().getDarkUI() ? .lightContent : .default
+    }
+    
     func connectDevice(_ lockDestils: lockUnlockScreen) {
         lockDestils.lock.deviceConnect({ (json, deviceError) in
             if (deviceError != nil) {
@@ -76,12 +80,15 @@ class LockUnlockViewController: UIViewController {
             if update == .lockConnecting {
                 self?.showLoadingScreen()
             }
-                        if update == .unlockSuccess {
-                            self?.lockSuceesfullyUnlocked(lockDestils.lock)
-                        }
-                        if update == .unlockFail {
-                            self?.showFailedScreen()
-                        }
+            
+            if update == .unlockSuccess {
+                self?.lockSuceesfullyUnlocked(lockDestils.lock)
+            }
+            
+            if update == .unlockFail {
+                self?.showFailedScreen()
+            }
+            
             print(.lock, object: "progress \(update)")
             let updateString = AppStrings.messageForLockProgress(update)
             self?.lockUpdateMessage.attributedText = NSAttributedString.doordeckH2Bold(updateString)

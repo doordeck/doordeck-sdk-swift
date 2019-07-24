@@ -25,6 +25,17 @@ class SodiumHelper {
     /// Return
     ///
     /// - Returns: Returns Public key of the private public key pair
+    func keyPresent() -> Bool {
+        if getKeyPairFromKeychain() != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    /// Return
+    ///
+    /// - Returns: Returns Public key of the private public key pair
     func getPublicKey() -> String? {
         if let keyPair = getKeyPairFromKeychain() {
             return getPublicKeyFromCombined(keyPair)
@@ -70,24 +81,28 @@ class SodiumHelper {
         let combinByteKey = keyPair.secretKey
         if combinByteKey.count == 64 {
             guard let combinedKey = bytesToString(combinByteKey) else {return nil}
-            if let email = tokenHelper.returnUserEmail() {
-                let keychain = KeychainHelper(self.name, tag: email)
-                do {
-                    try keychain.saveKey(combinedKey)
-                    guard let publicKey = getPublicKeyFromCombined(combinedKey) else {return nil}
-                    return publicKey
-                } catch {
-                    print("Unexpected error: \(error)")
-                    return nil
-                }
-            } else {
-                return nil
-            }
-            
+            return saveKey(combinedKey)
         } else {
             return nil
         }
     }
+    
+    func saveKey(_ combinedKey: String) -> String? {
+        if let email = tokenHelper.returnUserEmail() {
+            let keychain = KeychainHelper(self.name, tag: email)
+            do {
+                try keychain.saveKey(combinedKey)
+                guard let publicKey = getPublicKeyFromCombined(combinedKey) else {return nil}
+                return publicKey
+            } catch {
+                print("Unexpected error: \(error)")
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+    
     
     /// Return public key given a combined key
     ///

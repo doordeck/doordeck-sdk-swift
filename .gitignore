@@ -4,8 +4,6 @@ xcschememanagement.plist
 DoNotCommit.swift
 *.xcbkptlist
 Breakpoints_v2.xcbkptlist
-*.pbxproj
-project.pbxproj
 
 ## Various settings
 *.pbxuser

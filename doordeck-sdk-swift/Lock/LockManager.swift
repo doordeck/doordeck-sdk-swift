@@ -46,9 +46,8 @@ class LockManager {
         case invalidData
     }
     
-    
-    fileprivate var locks: [LockDevice] = []
-    fileprivate var sites: [Site] = []
+    var locks: [LockDevice] = []
+    var sites: [Site] = []
     var apiClient: APIClient!
     
     /// init of the Lock manager, a api class needs to be passed in

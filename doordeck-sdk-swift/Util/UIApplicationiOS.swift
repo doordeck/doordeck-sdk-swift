@@ -8,9 +8,9 @@
 import UIKit
 
 extension UIApplication {
-        class func returnKeyWindowRoot () -> UIViewController?  {
-            return UIApplication.shared.keyWindow?.rootViewController
-        }
+    class func returnKeyWindowRoot () -> UIViewController?  {
+        return UIApplication.shared.keyWindow?.rootViewController
+    }
     
     class func topViewController(_ base: UIViewController? = UIApplication.returnKeyWindowRoot()) -> UIViewController? {
         
@@ -46,7 +46,7 @@ extension UIApplication {
         }
         return base
     }
-    
+        
     class func returnViewControllerFromStoryboard (storyBoard: String, storyboardID: String) -> UIViewController {
         let storyboard = UIStoryboard(name: storyBoard, bundle: nil)
         let controller: UIViewController = storyboard.instantiateViewController(withIdentifier: storyboardID)

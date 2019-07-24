@@ -17,46 +17,46 @@ struct URLManager {
         case auto
     }
     
-    fileprivate static let httpsBase = "https://"
-    fileprivate static let webBase = "doordeck.com"
+    static let httpsBase = "https://"
+    static let webBase = "doordeck.com"
     
-    //    #if os(iOS)
-    ////    fileprivate static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
-    //    #else
-    fileprivate static let api = "api.dev."
-    //    #endif
+    #if os(iOS)
+    static let api = (UIApplication.staging() == true) ? "api.staging." : "api."
+    #else
+    static let api = "api."
+    #endif
     
     static let GET = "GET"
     static let PUT = "PUT"
     static let POST = "POST"
     
-    fileprivate static let auth = "/auth"
-    fileprivate static let account = "/account"
-    fileprivate static let certificate = "/certificate"
-    fileprivate static let destroy = "/destroy"
-    fileprivate static let email = "/email"
-    fileprivate static let login = "/login"
-    fileprivate static let register = "/register"
-    fileprivate static let refresh = "/refresh"
-    fileprivate static let token = "/token"
-    fileprivate static let verify = "/verify"
-    fileprivate static let share = "/share"
-    fileprivate static let favourite = "/favourite"
+    static let auth = "/auth"
+    static let account = "/account"
+    static let certificate = "/certificate"
+    static let destroy = "/destroy"
+    static let email = "/email"
+    static let login = "/login"
+    static let register = "/register"
+    static let refresh = "/refresh"
+    static let token = "/token"
+    static let verify = "/verify"
+    static let share = "/share"
+    static let favourite = "/favourite"
     static let invite = "/invite"
-    fileprivate static let device = "/device"
-    fileprivate static let site = "/site"
-    fileprivate static let tile = "/tile"
-    fileprivate static let execute = "/execute"
-    fileprivate static let key = "/key"
-    fileprivate static let password = "/password"
-    fileprivate static let shareable = "/shareable"
-    fileprivate static let check = "/check"
-    fileprivate static let force = "?force"
-    fileprivate static let method = "?method="
-    fileprivate static let smsMethod = "SMS"
-    fileprivate static let telephoneMethod  = "TELEPHONE"
-    fileprivate static let emailMethod  = "EMAIL"
-    fileprivate static let whatspapMethod  = "WHATSAPP"
+    static let device = "/device"
+    static let site = "/site"
+    static let tile = "/tile"
+    static let execute = "/execute"
+    static let key = "/key"
+    static let password = "/password"
+    static let shareable = "/shareable"
+    static let check = "/check"
+    static let force = "?force"
+    static let method = "?method="
+    static let smsMethod = "SMS"
+    static let telephoneMethod  = "TELEPHONE"
+    static let emailMethod  = "EMAIL"
+    static let whatspapMethod  = "WHATSAPP"
     
     /// URL string for Device retreval from UUID
     ///

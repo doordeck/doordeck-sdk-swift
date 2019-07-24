@@ -182,22 +182,26 @@ class Header {
         case refreshToken
         case token
         case tokenJson
+        case integration
     }
     
     enum version {
         case v1
         case v2
+        case v3
     }
     
-    fileprivate var token: AuthTokenClass?
-    fileprivate let ContentType = "Content-Type"
-    fileprivate let applicationJson = "application/json"
-    fileprivate let applicationPemFile = "application/x-pem-file"
-    fileprivate let authorization = "Authorization"
-    fileprivate let bearer = "Bearer"
-    fileprivate let accept = "Accept"
-    fileprivate let origin = "origin"
-    fileprivate let v2 = "application/vnd.doordeck.api-v2+json"
+    var token: AuthTokenClass?
+    let ContentType = "Content-Type"
+    let applicationJson = "application/json"
+    let applicationPemFile = "application/x-pem-file"
+    let applicationForm = "application/x-www-form-urlencoded"
+    let authorization = "Authorization"
+    let bearer = "Bearer"
+    let accept = "Accept"
+    let origin = "origin"
+    let v2 = "application/vnd.doordeck.api-v2+json"
+    let v3 = "application/vnd.doordeck.api-v3+json"
     
     /// create SDK header that would contain whats needed
     ///
@@ -237,6 +241,8 @@ class Header {
             return [:]
         case .v2 :
             return [self.accept: self.v2]
+        case .v3 :
+            return [self.accept: self.v3]
         }
     }
     

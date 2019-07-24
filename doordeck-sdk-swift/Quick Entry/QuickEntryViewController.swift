@@ -15,7 +15,6 @@ class QuickEntryViewController: UIViewController {
     var readerType: Doordeck.ReaderType = Doordeck.ReaderType.automatic
     var sodium: SodiumHelper!
     
-    
     fileprivate let quickStoryboard = "QuickEntryStoryboard"
     fileprivate let bottomNFCView = "bottomViewNFC"
     fileprivate let bottomQRView = "bottomViewQR"
@@ -43,6 +42,10 @@ class QuickEntryViewController: UIViewController {
     
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UserDefaults().getDarkUI() ? .lightContent : .default
     }
 }
 
@@ -138,7 +141,7 @@ extension QuickEntryViewController: quickEntryDelegate {
             vc.sodium = self.sodium
             present(vc, animated: true, completion: nil)
         }
-        
     }
+    
     
 }

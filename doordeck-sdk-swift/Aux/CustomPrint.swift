@@ -25,6 +25,7 @@ enum PrintChannel {
     case share
     case NFC
     case GPS
+    case DoordeckSDK
 }
 
 fileprivate func debug () -> Bool {
@@ -61,7 +62,7 @@ func print(_ channel: PrintChannel, object: Any) {
             
         case .token:
             channelPre = "😋 Token"
-            printOut = false
+            printOut = true
             
         case .url:
             channelPre = "😜 URL"
@@ -119,6 +120,10 @@ func print(_ channel: PrintChannel, object: Any) {
         case .GPS:
             channelPre = "😱😈😱 GPS 😱😈😱"
             printOut = false
+            
+        case .DoordeckSDK:
+            channelPre = "😍😈😍😈😍😈😍😈 DoordeckSDK 😍😈😍😈😍😈😍😈😍😈"
+            printOut = true
             
         }
         

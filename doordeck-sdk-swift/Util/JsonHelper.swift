@@ -8,6 +8,17 @@
 import Foundation
 
 class JsonHelper {
+    
+    //MARK: Json any to
+    //----------------------------------------------------------------------------------------------------------------------
+    
+    func jsonAny(_ object:Any) -> String? {
+        guard let data = try? JSONSerialization.data(withJSONObject: object, options: []) else {
+            return nil
+        }
+        return String(data: data, encoding: String.Encoding.utf8)
+    }
+    
     //MARK: Json special charachters remover
     //----------------------------------------------------------------------------------------------------------------------
     func removeSpecialCharacters (_ json:String) -> String {

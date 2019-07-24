@@ -56,6 +56,10 @@ class VerificationViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UserDefaults().getDarkUI() ? .lightContent : .default
+    }
+    
     func sendVerificationRequest()  {
         guard let publicKey = sodium.getPublicKey() else {
             return

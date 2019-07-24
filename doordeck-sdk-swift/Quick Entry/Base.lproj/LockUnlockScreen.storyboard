@@ -13,7 +13,7 @@
         <!--Lock Unlock View Controller-->
         <scene sceneID="CG0-cQ-jAA">
             <objects>
-                <viewController storyboardIdentifier="LockUnlock" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNw-jB-9vD" customClass="LockUnlockViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LockUnlock" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNw-jB-9vD" customClass="LockUnlockViewController" customModule="Doordeck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNr-rt-sOv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                     <action selector="dismissButtonClicked" destination="uNw-jB-9vD" eventType="touchUpInside" id="zOO-DP-NwG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukw-Bo-4up" customClass="unlockAnimation" customModule="doordeck_sdk_swift_sample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukw-Bo-4up" customClass="unlockAnimation" customModule="Doordeck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -73,7 +73,7 @@
                         <outlet property="backgroundColourImage" destination="TTD-II-ktC" id="Pmx-Be-7cM"/>
                         <outlet property="dismissButton" destination="n2B-hs-D5s" id="epV-IC-0Ak"/>
                         <outlet property="heightConstraint" destination="xkK-q4-NUb" id="0ki-xv-g0P"/>
-                        <outlet property="loadingView" destination="Ukw-Bo-4up" id="knM-9b-bGp"/>
+                        <outlet property="loadingView" destination="Ukw-Bo-4up" id="Vtc-aH-ZCu"/>
                         <outlet property="lockUpdateMessage" destination="of3-cu-sXC" id="Sd5-T3-9dt"/>
                         <outlet property="widthConstraints" destination="4hC-V4-gTz" id="f6g-Yc-T1b"/>
                     </connections>
