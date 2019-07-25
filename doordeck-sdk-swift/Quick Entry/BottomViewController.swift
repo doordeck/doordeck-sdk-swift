@@ -38,6 +38,10 @@ class BottomViewController: UIViewController {
         showNFC()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
         bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchNFC)
