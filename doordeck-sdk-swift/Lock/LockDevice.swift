@@ -308,7 +308,7 @@ class LockDevice {
                         self.currentlyLocked = true
                         self.deviceStatusUpdate(.unlockFail)
                         self.deviceCompletion(nil, error: .unsuccessfull)
-                        self.deviceReset()
+//                        self.deviceReset() // this was removed to not reset the fail screen to fast
                     } else {
                         SDKEvent().event(.UNLOCK_SUCCESS)
                         self.deviceStatusUpdate(.unlockSuccess)
@@ -324,7 +324,7 @@ class LockDevice {
         }) { (deviceError) in
             SDKEvent().event(.UNLOCK_FAILED)
             self.deviceStatusUpdate(.unlockFail)
-            self.deviceReset()
+//            self.deviceReset() // this was removed to not reset the fail screen to fast
             self.deviceCompletion(nil, error: deviceError)
         }
     }
