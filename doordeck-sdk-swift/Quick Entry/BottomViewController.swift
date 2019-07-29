@@ -24,13 +24,11 @@ class BottomViewController: UIViewController {
     var payloads = [NFCNDEFPayload]()
     var session: NFCNDEFReaderSession?
     var showNFCBool = true
-    var showNFCOnNextActiveSession = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(resetShowNFC), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(detectAppState), name: UIApplication.didBecomeActiveNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(showNFC), name: .showNFCReader, object: nil)
         setupUI()
     }
@@ -38,19 +36,9 @@ class BottomViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showNFC()
+        viewDidDissapear = false
     }
-    
-    @objc func detectAppState() {
-        let state: UIApplication.State = UIApplication.shared.applicationState
-        
-        if state == .active {
-            if showNFCOnNextActiveSession == true {
-                showNFCOnNextActiveSession = false
-                showNFC()
-            }
-        }
-    }
-    
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
