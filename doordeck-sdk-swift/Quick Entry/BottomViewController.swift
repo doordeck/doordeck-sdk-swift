@@ -36,7 +36,6 @@ class BottomViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showNFC()
-        viewDidDissapear = false
     }
 
     deinit {
@@ -54,7 +53,6 @@ class BottomViewController: UIViewController {
     @objc func resetShowNFC() {
         session?.invalidate()
         showNFCBool = true
-        showNFCOnNextActiveSession = true
     }
     
     @IBAction func nfcScanClicked(_ sender: Any) {
