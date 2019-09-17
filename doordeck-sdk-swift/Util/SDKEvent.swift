@@ -25,6 +25,7 @@ class SDKEvent {
         case RESOLVE_TILE_SUCCESS
         case CLOSE_QR_CODE_VIEW
         case CLOSE_NFC_VIEW
+        case CLOSE_VERIFICATION
     }
     
     let nc = NotificationCenter.default

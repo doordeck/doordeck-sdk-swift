@@ -12,6 +12,7 @@ class QuickEntryViewController: UIViewController {
     var apiClient: APIClient!
     var certificateChain: CertificateChainClass!
     var delegate: DoordeckProtocol?
+    var controlDelegate: DoordeckControl?
     var readerType: Doordeck.ReaderType = Doordeck.ReaderType.automatic
     var sodium: SodiumHelper!
     
@@ -22,7 +23,10 @@ class QuickEntryViewController: UIViewController {
     fileprivate let lockUnlockStoryboard =  "LockUnlockScreen"
     fileprivate let lockUnlockIdentifier = "LockUnlock"
     
-    init(_ apiClient: APIClient, chain: CertificateChainClass, sodiumTemp: SodiumHelper) {
+    init(_ apiClient: APIClient,
+         chain: CertificateChainClass,
+         sodiumTemp: SodiumHelper) {
+        
         self.sodium = sodiumTemp
         self.apiClient = apiClient
         self.certificateChain = chain
@@ -83,6 +87,7 @@ extension QuickEntryViewController: quickEntryDelegate {
             bottomViewVC.view.frame = self.view.frame
             bottomViewVC.view.layoutIfNeeded()
             bottomViewVC.delegate = self
+            bottomViewVC.controlDelegate = self.controlDelegate
             addChild(bottomViewVC)
             self.view.addSubview(bottomViewVC.view)
             
@@ -101,6 +106,7 @@ extension QuickEntryViewController: quickEntryDelegate {
         bottomViewVC.view.frame = self.view.frame
         bottomViewVC.view.layoutIfNeeded()
         bottomViewVC.delegate = self
+        bottomViewVC.controlDelegate = self.controlDelegate
         addChild(bottomViewVC)
         self.view.addSubview(bottomViewVC.view)
         
