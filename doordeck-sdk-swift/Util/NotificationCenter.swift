@@ -12,7 +12,7 @@ extension NSNotification.Name {
     static let logOut = NSNotification.Name(rawValue: "logOut")
     static let colourChange = NSNotification.Name(rawValue: "colourChange")
     static let readerChange = NSNotification.Name(rawValue: "readerChange")
-    
+    static let showNFCReader = NSNotification.Name(rawValue: "showNFCReader")
 }
 
 class doordeckNotifications {
@@ -33,6 +33,10 @@ class doordeckNotifications {
     
     func readerChange() {
         nc.post(name: .readerChange, object: nil)
+    }
+    
+    func showNFCReader() {
+        nc.post(name: .showNFCReader, object: nil)
     }
 }
 

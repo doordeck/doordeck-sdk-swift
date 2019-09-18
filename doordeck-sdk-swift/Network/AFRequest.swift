@@ -155,7 +155,16 @@ class AFRequest {
     
     func serverTrustPolicy() -> [String: ServerTrustPolicy]{
         let amazonRootCA1Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA1", withExtension: "cer")!)
-        let amazonRootCA1 = ServerTrustPolicy.pinCertificates(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!], validateCertificateChain: true, validateHost: true)
+        let amazonRootCA2Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA2", withExtension: "cer")!)
+        let amazonRootCA3Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA3", withExtension: "cer")!)
+        let amazonRootCA4Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA4", withExtension: "cer")!)
+        let amazonRootCA5Data = NSData(contentsOf: Bundle.main.url(forResource: "SFSRootCAG2", withExtension: "cer")!)
+        let amazonRootCA1 = ServerTrustPolicy.pinCertificates(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA2Data!)!,
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA3Data!)!,
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA3Data!)!,
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA4Data!)!,
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA5Data!)!], validateCertificateChain: true, validateHost: true)
         
         return ["api.doordeck.com" : amazonRootCA1,
                 "api.staging.doordeck.com" : amazonRootCA1,

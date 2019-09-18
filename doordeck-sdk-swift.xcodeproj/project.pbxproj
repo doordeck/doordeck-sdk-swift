@@ -111,6 +111,11 @@
 		5966A60C224A5C35008C4665 /* QueryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A60B224A5C35008C4665 /* QueryManagerTests.swift */; };
 		5966A614224BAFE9008C4665 /* KeyPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A613224BAFE9008C4665 /* KeyPairTests.swift */; };
 		59B4456B224D137200555081 /* InitializeDoordeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4456A224D137200555081 /* InitializeDoordeck.swift */; };
+		59FE8F1B233121C3008F7AB8 /* AmazonRootCA2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F17233121C3008F7AB8 /* AmazonRootCA2.cer */; };
+		59FE8F1C233121C3008F7AB8 /* SFSRootCAG2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F18233121C3008F7AB8 /* SFSRootCAG2.cer */; };
+		59FE8F1D233121C3008F7AB8 /* AmazonRootCA3.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F19233121C3008F7AB8 /* AmazonRootCA3.cer */; };
+		59FE8F1E233121C3008F7AB8 /* AmazonRootCA4.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F1A233121C3008F7AB8 /* AmazonRootCA4.cer */; };
+		59FE8F28233125E5008F7AB8 /* DoordeckSDKUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE8F27233125E5008F7AB8 /* DoordeckSDKUI.swift */; };
 		CAB464F0F4AA1C05E0998A98 /* Pods_doordeck_sdk_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A92B2BDDB367B06A1EBEA1 /* Pods_doordeck_sdk_swiftTests.framework */; };
 		EB97990A67F712AB267BF46A /* Pods_doordeck_sdk_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BE39B7C897DAE9B0C832E2 /* Pods_doordeck_sdk_swift.framework */; };
 /* End PBXBuildFile section */
@@ -186,6 +191,11 @@
 		5966A613224BAFE9008C4665 /* KeyPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairTests.swift; sourceTree = "<group>"; };
 		59ABB76E2271C2A20048BCF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		59B4456A224D137200555081 /* InitializeDoordeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeDoordeck.swift; sourceTree = "<group>"; };
+		59FE8F17233121C3008F7AB8 /* AmazonRootCA2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA2.cer; sourceTree = "<group>"; };
+		59FE8F18233121C3008F7AB8 /* SFSRootCAG2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSRootCAG2.cer; sourceTree = "<group>"; };
+		59FE8F19233121C3008F7AB8 /* AmazonRootCA3.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA3.cer; sourceTree = "<group>"; };
+		59FE8F1A233121C3008F7AB8 /* AmazonRootCA4.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA4.cer; sourceTree = "<group>"; };
+		59FE8F27233125E5008F7AB8 /* DoordeckSDKUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoordeckSDKUI.swift; sourceTree = "<group>"; };
 		84A92B2BDDB367B06A1EBEA1 /* Pods_doordeck_sdk_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BE39B7C897DAE9B0C832E2 /* Pods_doordeck_sdk_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A88D220266CE84316D9604 /* Pods-doordeck-sdk-swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +271,7 @@
 				59ABB76E2271C2A20048BCF5 /* Info.plist */,
 				593B1CBE2244FB3200BE5E67 /* doordeck_sdk_swift.h */,
 				59B4456A224D137200555081 /* InitializeDoordeck.swift */,
+				59FE8F27233125E5008F7AB8 /* DoordeckSDKUI.swift */,
 			);
 			path = "doordeck-sdk-swift";
 			sourceTree = "<group>";
@@ -365,6 +376,10 @@
 			isa = PBXGroup;
 			children = (
 				595B20B3227C8FB100D7297E /* AmazonRootCA1.cer */,
+				59FE8F17233121C3008F7AB8 /* AmazonRootCA2.cer */,
+				59FE8F19233121C3008F7AB8 /* AmazonRootCA3.cer */,
+				59FE8F1A233121C3008F7AB8 /* AmazonRootCA4.cer */,
+				59FE8F18233121C3008F7AB8 /* SFSRootCAG2.cer */,
 			);
 			path = CER;
 			sourceTree = "<group>";
@@ -511,9 +526,13 @@
 			files = (
 				595B2046227C8CD900D7297E /* Media.xcassets in Resources */,
 				595B20F7227C8FB100D7297E /* AmazonRootCA1.cer in Resources */,
+				59FE8F1E233121C3008F7AB8 /* AmazonRootCA4.cer in Resources */,
+				59FE8F1D233121C3008F7AB8 /* AmazonRootCA3.cer in Resources */,
 				595B20D3227C8FB100D7297E /* VerificationStoryboard.storyboard in Resources */,
+				59FE8F1C233121C3008F7AB8 /* SFSRootCAG2.cer in Resources */,
 				595B20E9227C8FB100D7297E /* QuickEntryStoryboard.storyboard in Resources */,
 				595B20E7227C8FB100D7297E /* LockUnlockScreen.storyboard in Resources */,
+				59FE8F1B233121C3008F7AB8 /* AmazonRootCA2.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +642,7 @@
 				595B2117227C8FB100D7297E /* DateExtension.swift in Sources */,
 				595B2103227C8FB100D7297E /* NotificationCenter.swift in Sources */,
 				595B20E5227C8FB100D7297E /* LockUnlockViewController.swift in Sources */,
+				59FE8F28233125E5008F7AB8 /* DoordeckSDKUI.swift in Sources */,
 				595B210F227C8FB100D7297E /* SDKEvent.swift in Sources */,
 				595B2107227C8FB100D7297E /* Util.swift in Sources */,
 				595B20DD227C8FB100D7297E /* KeychainHelper.swift in Sources */,
@@ -933,7 +953,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1A88D220266CE84316D9604 /* Pods-doordeck-sdk-swiftTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAF26EV36B;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -963,7 +983,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1C7E06E97768503365FB709 /* Pods-doordeck-sdk-swiftTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EAF26EV36B;
 				FRAMEWORK_SEARCH_PATHS = (

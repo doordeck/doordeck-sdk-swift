@@ -69,6 +69,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-wd-R4R">
+                                <rect key="frame" x="328" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="S6c-on-hD0"/>
+                                    <constraint firstAttribute="width" constant="70" id="zxV-Kh-vek"/>
+                                </constraints>
+                                <state key="normal" image="Close_Button"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="QPZ-G4-Ea5" eventType="touchUpInside" id="P1c-Tv-T4Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -82,6 +93,8 @@
                             <constraint firstItem="fKQ-Xj-AQn" firstAttribute="leading" secondItem="Ur5-gg-LR5" secondAttribute="leading" constant="16" id="O9v-HC-lGd"/>
                             <constraint firstItem="Ur5-gg-LR5" firstAttribute="trailing" secondItem="fKQ-Xj-AQn" secondAttribute="trailing" constant="16" id="T5n-Zl-Ji2"/>
                             <constraint firstItem="Ur5-gg-LR5" firstAttribute="bottom" secondItem="2RS-9X-owO" secondAttribute="bottom" constant="16" id="Tq0-O1-Lfv"/>
+                            <constraint firstItem="UdF-wd-R4R" firstAttribute="top" secondItem="Ur5-gg-LR5" secondAttribute="top" id="VdD-v3-oEN"/>
+                            <constraint firstItem="Ur5-gg-LR5" firstAttribute="trailing" secondItem="UdF-wd-R4R" secondAttribute="trailing" constant="16" id="XKd-6p-vO6"/>
                             <constraint firstItem="Ur5-gg-LR5" firstAttribute="trailing" secondItem="2RS-9X-owO" secondAttribute="trailing" constant="16" id="f1F-hh-WXj"/>
                             <constraint firstItem="2RS-9X-owO" firstAttribute="top" secondItem="fKQ-Xj-AQn" secondAttribute="bottom" constant="8" id="h4h-Ed-uot"/>
                             <constraint firstItem="hgf-nf-dg4" firstAttribute="centerX" secondItem="F5D-u4-FUB" secondAttribute="centerX" id="i25-1E-LtY"/>
@@ -93,6 +106,7 @@
                     <connections>
                         <outlet property="QRCodeImage" destination="hgf-nf-dg4" id="UK4-PL-Dah"/>
                         <outlet property="bottomLabel" destination="fKQ-Xj-AQn" id="ZcS-Np-N6T"/>
+                        <outlet property="closeButton" destination="UdF-wd-R4R" id="G0T-ze-y2O"/>
                         <outlet property="descriptionLabel" destination="2RS-9X-owO" id="leR-QM-Me5"/>
                         <outlet property="nfcScan" destination="rfO-S6-25y" id="D1f-V7-bAX"/>
                     </connections>
@@ -142,6 +156,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSq-56-fng">
+                                <rect key="frame" x="324" y="20" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0ru-r7-ZPs"/>
+                                    <constraint firstAttribute="width" constant="70" id="LQM-Ab-LmC"/>
+                                </constraints>
+                                <state key="normal" image="Close_Button"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="irD-Ip-HAZ" eventType="touchUpInside" id="CrQ-vw-XXh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -156,9 +181,11 @@
                             <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="1US-xR-wYU" secondAttribute="trailing" constant="16" id="Qvm-35-73H"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QSL-5m-zQt" secondAttribute="trailing" constant="-20" id="VNN-OW-CUn"/>
                             <constraint firstItem="ufr-4S-Zx6" firstAttribute="leading" secondItem="pvn-rM-Gf1" secondAttribute="leading" constant="16" id="W2o-qE-JhW"/>
+                            <constraint firstItem="fSq-56-fng" firstAttribute="top" secondItem="pvn-rM-Gf1" secondAttribute="top" id="WiG-oZ-p1k"/>
                             <constraint firstItem="HqV-Uk-CZs" firstAttribute="centerX" secondItem="xVG-TD-7Xb" secondAttribute="centerX" id="Wlq-SP-hET"/>
                             <constraint firstItem="W0L-nU-T5K" firstAttribute="top" secondItem="xVG-TD-7Xb" secondAttribute="topMargin" constant="-50" id="XtM-di-CUe"/>
                             <constraint firstAttribute="bottomMargin" secondItem="W0L-nU-T5K" secondAttribute="bottom" id="axo-w2-5na"/>
+                            <constraint firstItem="pvn-rM-Gf1" firstAttribute="trailing" secondItem="fSq-56-fng" secondAttribute="trailing" constant="20" id="l1v-nc-H77"/>
                             <constraint firstItem="1US-xR-wYU" firstAttribute="top" secondItem="HqV-Uk-CZs" secondAttribute="bottom" constant="48" id="obj-Tq-DKh"/>
                             <constraint firstItem="QSL-5m-zQt" firstAttribute="top" secondItem="xVG-TD-7Xb" secondAttribute="topMargin" constant="-50" id="sBL-jj-fgE"/>
                         </constraints>
@@ -169,12 +196,13 @@
                         <outlet property="backgroundQRcodeImage" destination="QSL-5m-zQt" id="HSd-Ox-b6H"/>
                         <outlet property="backgroundQRcodeImageCrossHair" destination="W0L-nU-T5K" id="3Kd-gy-1ty"/>
                         <outlet property="bottomLabel" destination="1US-xR-wYU" id="aA1-Jb-Ezx"/>
+                        <outlet property="closeButton" destination="fSq-56-fng" id="0gc-6b-GPa"/>
                         <outlet property="descriptionLabel" destination="ufr-4S-Zx6" id="HlF-EN-eUP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOJ-4T-s4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2575.36231884058" y="1647.3214285714284"/>
+            <point key="canvasLocation" x="2575.36231884058" y="1646.7391304347827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lum-Ne-JA0">
@@ -195,6 +223,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Close_Button" width="72" height="72"/>
         <image name="QR_Tile" width="37" height="40"/>
         <image name="Scan_NFC" width="130" height="128"/>
     </resources>

@@ -12,11 +12,13 @@ import QRCodeReader
 
 class BottomViewControllerQR: UIViewController {
     var delegate: quickEntryDelegate?
+    var controlDelegate: DoordeckControl?
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var backgroundQRcodeImage: UIImageView!
     @IBOutlet weak var backgroundQRcodeImageCrossHair: UIImageView!
     @IBOutlet weak var QRCodeImage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
@@ -34,6 +36,16 @@ class BottomViewControllerQR: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        guard let control = self.controlDelegate else { return }
+        if control.showCloseButton == true {
+            closeButton.isHidden = false
+            closeButton.isEnabled = true
+        } else {
+            closeButton.isHidden = true
+            closeButton.isEnabled = false
+        }
+        
         if QRsetup == false {
             self.setUpQR()
         } else {
@@ -57,6 +69,11 @@ class BottomViewControllerQR: UIViewController {
         descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchQRMessage)
     }
     
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        self.dismiss(animated: false) {
+            SDKEvent().event(.CLOSE_QR_CODE_VIEW)
+        }
+    }
 }
 
 extension BottomViewControllerQR: QRCodeReaderViewControllerDelegate {

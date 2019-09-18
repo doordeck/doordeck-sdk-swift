@@ -12,6 +12,7 @@ class VerificationViewController: UIViewController {
     var apiClient: APIClient!
     var sodium: SodiumHelper!
     var delegate: DoordeckInternalProtocol?
+    var controlDelegate: DoordeckControl?
     let notifier = NotificationCenter.default
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,6 +27,7 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var resendButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var closeButton: UIButton!
     
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
@@ -49,6 +51,15 @@ class VerificationViewController: UIViewController {
         super.viewWillAppear(animated)
         hiddenTextField.becomeFirstResponder()
         hiddenTextField.delegate = self
+        
+        guard let control = self.controlDelegate else { return }
+        if control.showCloseButton == true {
+            closeButton.isHidden = false
+            closeButton.isEnabled = true
+        } else {
+            closeButton.isHidden = true
+            closeButton.isEnabled = false
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -96,6 +107,12 @@ class VerificationViewController: UIViewController {
         verificationCode4.doordeckLabel()
         verificationCode5.doordeckLabel()
         verificationCode6.doordeckLabel()
+    }
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        self.dismiss(animated: false) {
+            SDKEvent().event(.CLOSE_VERIFICATION)
+        }
     }
     
     @IBAction func sendCodeToServer(_ sender: Any) {

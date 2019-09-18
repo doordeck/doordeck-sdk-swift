@@ -64,6 +64,10 @@
 		59ABB7D02271C3E30048BCF5 /* VerificationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59ABB7A62271C3E30048BCF5 /* VerificationStoryboard.storyboard */; };
 		59ABB7D322733E550048BCF5 /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */; };
 		59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */; };
+		59FE8F23233121DA008F7AB8 /* AmazonRootCA3.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F1F233121D9008F7AB8 /* AmazonRootCA3.cer */; };
+		59FE8F24233121DA008F7AB8 /* AmazonRootCA2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F20233121DA008F7AB8 /* AmazonRootCA2.cer */; };
+		59FE8F25233121DA008F7AB8 /* AmazonRootCA4.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F21233121DA008F7AB8 /* AmazonRootCA4.cer */; };
+		59FE8F26233121DA008F7AB8 /* SFSRootCAG2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F22233121DA008F7AB8 /* SFSRootCAG2.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +132,10 @@
 		59ABB7D12271F3770048BCF5 /* doordeck-sdk-swift-sample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "doordeck-sdk-swift-sample.entitlements"; sourceTree = "<group>"; };
 		59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateChainClass.swift; sourceTree = "<group>"; };
 		59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotCommit.swift; sourceTree = "<group>"; };
+		59FE8F1F233121D9008F7AB8 /* AmazonRootCA3.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA3.cer; sourceTree = "<group>"; };
+		59FE8F20233121DA008F7AB8 /* AmazonRootCA2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA2.cer; sourceTree = "<group>"; };
+		59FE8F21233121DA008F7AB8 /* AmazonRootCA4.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA4.cer; sourceTree = "<group>"; };
+		59FE8F22233121DA008F7AB8 /* SFSRootCAG2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSRootCAG2.cer; sourceTree = "<group>"; };
 		7661777C43BE58BFEEC6A8C5 /* Pods_doordeck_sdk_swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_doordeck_sdk_swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BFF401225D210C4F0CB45E /* Pods-doordeck-sdk-swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doordeck-sdk-swift-sample.debug.xcconfig"; path = "Target Support Files/Pods-doordeck-sdk-swift-sample/Pods-doordeck-sdk-swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +275,10 @@
 		59ABB7882271C3E30048BCF5 /* CER */ = {
 			isa = PBXGroup;
 			children = (
+				59FE8F20233121DA008F7AB8 /* AmazonRootCA2.cer */,
+				59FE8F1F233121D9008F7AB8 /* AmazonRootCA3.cer */,
+				59FE8F21233121DA008F7AB8 /* AmazonRootCA4.cer */,
+				59FE8F22233121DA008F7AB8 /* SFSRootCAG2.cer */,
 				59ABB7892271C3E30048BCF5 /* AmazonRootCA1.cer */,
 			);
 			path = CER;
@@ -407,11 +419,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FE8F25233121DA008F7AB8 /* AmazonRootCA4.cer in Resources */,
 				59ABB7BC2271C3E30048BCF5 /* AmazonRootCA1.cer in Resources */,
+				59FE8F24233121DA008F7AB8 /* AmazonRootCA2.cer in Resources */,
 				59ABB7D02271C3E30048BCF5 /* VerificationStoryboard.storyboard in Resources */,
 				591838122278957600D764E1 /* Media.xcassets in Resources */,
 				59029C142268B638009FAE5C /* LaunchScreen.storyboard in Resources */,
 				59ABB7C82271C3E30048BCF5 /* QuickEntryStoryboard.storyboard in Resources */,
+				59FE8F23233121DA008F7AB8 /* AmazonRootCA3.cer in Resources */,
+				59FE8F26233121DA008F7AB8 /* SFSRootCAG2.cer in Resources */,
 				59029C112268B638009FAE5C /* Assets.xcassets in Resources */,
 				59029C0F2268B636009FAE5C /* Main.storyboard in Resources */,
 				59ABB7C72271C3E30048BCF5 /* LockUnlockScreen.storyboard in Resources */,
