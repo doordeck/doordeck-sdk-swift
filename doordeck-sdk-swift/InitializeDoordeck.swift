@@ -88,9 +88,13 @@ public class Doordeck {
     var doordeckControl: DoordeckControl!
     var sdk = true
     
-    /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server,
+
+    /// The doordeck init expects an AuthToken, this is something expected from to be retrieved from the host application server
     ///
-    /// - Parameter token: AuthTokenClass contains user Auth Token.
+    /// - Parameters:
+    ///   - token: AuthTokenClass contains user Auth Token.
+    ///   - darkMode: shoudl the SDK load in Dark or Light mode
+    ///   - closeButton: When the SDK is not used in a TabBar, you can have close buttons on the VC's
     public init(_ token: AuthTokenClass,
                 darkMode: Bool = true,
                 closeButton: Bool = false) {
