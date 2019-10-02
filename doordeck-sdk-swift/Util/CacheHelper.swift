@@ -17,10 +17,11 @@ class cacheHelper {
             name: sites,
             expiry: .never,
             maxSize: 200 * 1024 * 1024,
-            directory: try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask,
-                                                    appropriateFor: nil, create: true),
-            protectionType: .complete
-        )
+            directory: try! FileManager.default.url(for: .documentDirectory,
+                                                    in: .userDomainMask,
+                                                    appropriateFor: nil,
+                                                    create: true),
+            protectionType: .complete)
         
         let memoryConfig = MemoryConfig(expiry: .never, countLimit: 0, totalCostLimit: 0)
         

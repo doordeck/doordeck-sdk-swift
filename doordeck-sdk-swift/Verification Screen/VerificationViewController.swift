@@ -141,7 +141,7 @@ class VerificationViewController: UIViewController {
     }
     
     func fillOutCode(_ code: String)  {
-        var characters = Array(code)
+        let characters = Array(code)
         verificationCodeCentre.attributedText = NSAttributedString.doordeckH3Bold("-")
         if characters.indices.contains(0) {
             verificationCode1.attributedText = NSAttributedString.doordeckH3Bold(String(characters[0]))
