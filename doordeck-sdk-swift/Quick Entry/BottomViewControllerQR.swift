@@ -37,6 +37,12 @@ class BottomViewControllerQR: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        if QRsetup == false {
+            self.setUpQR()
+        } else {
+            reader.startScanning()
+        }
+        
         guard let control = self.controlDelegate else { return }
         if control.showCloseButton == true {
             closeButton.isHidden = false
@@ -44,12 +50,6 @@ class BottomViewControllerQR: UIViewController {
         } else {
             closeButton.isHidden = true
             closeButton.isEnabled = false
-        }
-        
-        if QRsetup == false {
-            self.setUpQR()
-        } else {
-            reader.startScanning()
         }
     }
     

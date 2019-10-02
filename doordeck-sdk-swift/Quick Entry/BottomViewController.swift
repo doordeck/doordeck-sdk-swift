@@ -38,6 +38,8 @@ class BottomViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        showNFC()
+        
         guard let control = self.controlDelegate else { return }
         if control.showCloseButton == true {
             closeButton.isHidden = false
@@ -46,8 +48,7 @@ class BottomViewController: UIViewController {
             closeButton.isHidden = true
             closeButton.isEnabled = false
         }
-        
-        showNFC()
+
     }
 
     deinit {
