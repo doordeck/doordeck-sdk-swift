@@ -49,19 +49,19 @@ class cacheHelper {
     
     
     fileprivate func store (_ object: Data, key: String) {
-        try? storege?.setObject(object, forKey: key)
+        ((try? storege?.setObject(object, forKey: key)) as ()??)
     }
     
     fileprivate func retreive (_ key: String) -> Data? {
-        guard let store = try? storege?.object(forKey: key) else { return nil }
+        guard let store = ((try? storege?.object(forKey: key)) as Data??) else { return nil }
         return store
     }
     
     fileprivate func removeObject (_ key:String) {
-        try? storege?.removeObject(forKey: key)
+        ((try? storege?.removeObject(forKey: key)) as ()??)
     }
     
     func removeAll() {
-        try? storege?.removeAll()
+        ((try? storege?.removeAll()) as ()??)
     }
 }
