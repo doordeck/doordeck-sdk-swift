@@ -35,11 +35,10 @@ extension NSAttributedString {
     /// - Returns: NSAttributedString
     class func doordeckTextFieldDefault (_ colour: UIColor = UIColor.doordeckTextColour(0.9)) -> [NSAttributedString.Key: AnyObject]   {
         
-        let preferredDescriptor = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.subheadline)
+        let preferredDescriptor = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.caption2)
         return createAttributeWithSystemFont(UIFont.systemFont(ofSize: preferredDescriptor.pointSize, weight: UIFont.Weight.regular),
                                              colour: colour,
                                              kerning: 0.2)
-        
     }
     
     
