@@ -49,8 +49,7 @@ class JsonHelper {
             if #available(iOS 11.0, *) {
                 json = try JSONSerialization.data(withJSONObject: dict, options: [.sortedKeys])
             } else {
-                let sortedKeys = (dict.allKeys as! [String]).sorted(by: <)
-                json = try JSONSerialization.data(withJSONObject: sortedKeys, options: [])
+                json = try JSONSerialization.data(withJSONObject: dict, options: [])
             }
         } catch _ {
             json = nil

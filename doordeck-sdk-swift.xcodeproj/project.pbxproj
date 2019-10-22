@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5909D09222858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */; };
 		5909D09322858A7500D31E81 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09122858A7500D31E81 /* AppStringsSDKExtension.swift */; };
+		590B745B2344BAEB00E172FB /* InitializeDoordeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4456A224D137200555081 /* InitializeDoordeck.swift */; };
+		590B745C2344BB8000E172FB /* DoordeckSDKUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE8F27233125E5008F7AB8 /* DoordeckSDKUI.swift */; };
 		592A937122946D1E007BA5D3 /* QCMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A936F22946D1E007BA5D3 /* QCMethod.swift */; };
 		592A937222946D1E007BA5D3 /* QCMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A936F22946D1E007BA5D3 /* QCMethod.swift */; };
 		592A937322946D1E007BA5D3 /* unlockAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A937022946D1E007BA5D3 /* unlockAnimations.swift */; };
@@ -493,10 +495,11 @@
 				TargetAttributes = {
 					593B1CBA2244FB3200BE5E67 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					593B1CC32244FB3300BE5E67 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -709,10 +712,12 @@
 				595B2110227C8FB100D7297E /* SDKEvent.swift in Sources */,
 				595B20F2227C8FB100D7297E /* AFRequest.swift in Sources */,
 				595B20FE227C8FB100D7297E /* SwiftyTimer.swift in Sources */,
+				590B745B2344BAEB00E172FB /* InitializeDoordeck.swift in Sources */,
 				592A937222946D1E007BA5D3 /* QCMethod.swift in Sources */,
 				595B20D2227C8FB100D7297E /* VerificationViewController.swift in Sources */,
 				595B20F4227C8FB100D7297E /* ReachabilityHelper.swift in Sources */,
 				595B20DE227C8FB100D7297E /* KeychainHelper.swift in Sources */,
+				590B745C2344BB8000E172FB /* DoordeckSDKUI.swift in Sources */,
 				5939F08522582CDA003FAF13 /* TokenHelperTests.swift in Sources */,
 				595B20E4227C8FB100D7297E /* AuthTokenClass.swift in Sources */,
 				595B211C227C8FB100D7297E /* UIApplicationiOS.swift in Sources */,
@@ -907,7 +912,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -944,7 +949,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.doordeck.doordeck-sdk-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -974,7 +979,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.doordeck.doordeck-sdk-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1004,7 +1009,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.doordeck.doordeck-sdk-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

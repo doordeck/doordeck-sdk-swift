@@ -14,7 +14,7 @@ class SodiumHelperTests: XCTestCase {
     func testSodium() {
         let dummyToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJlbWFpbCI6IlN1cHBvcnRAZG9vcmRlY2suY29tIn0.qRnj46F2qmD5SE9HXJAhgG5V1iPrzBvL91SEG5XH5t0"
         let token = AuthTokenClass(dummyToken)
-        SodiumHelper(token).getKeyPair()
+        _ = SodiumHelper(token).getPublicKey()
     }
 
 

@@ -12,16 +12,6 @@ import UIKit
 
 extension NSAttributedString {
     
-    class func createAttribute (_ font: Fonts,
-                                fontSize: CGFloat,
-                                colour: UIColor,
-                                kerning: CGFloat) ->  [NSAttributedString.Key: AnyObject] {
-        
-        return  [.font : UIFont(name: font.rawValue, size: fontSize)!,
-                 .foregroundColor : colour,
-                 .kern : kerning as AnyObject]
-    }
-    
     class func createAttributeWithSystemFont (_ uiFont: UIFont,
                                               colour: UIColor,
                                               kerning: CGFloat) ->  [NSAttributedString.Key: AnyObject] {
@@ -45,11 +35,10 @@ extension NSAttributedString {
     /// - Returns: NSAttributedString
     class func doordeckTextFieldDefault (_ colour: UIColor = UIColor.doordeckTextColour(0.9)) -> [NSAttributedString.Key: AnyObject]   {
         
-        let preferredDescriptor = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.subheadline)
+        let preferredDescriptor = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.caption2)
         return createAttributeWithSystemFont(UIFont.systemFont(ofSize: preferredDescriptor.pointSize, weight: UIFont.Weight.regular),
                                              colour: colour,
                                              kerning: 0.2)
-        
     }
     
     

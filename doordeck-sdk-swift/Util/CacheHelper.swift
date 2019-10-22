@@ -17,10 +17,11 @@ class cacheHelper {
             name: sites,
             expiry: .never,
             maxSize: 200 * 1024 * 1024,
-            directory: try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask,
-                                                    appropriateFor: nil, create: true),
-            protectionType: .complete
-        )
+            directory: try! FileManager.default.url(for: .documentDirectory,
+                                                    in: .userDomainMask,
+                                                    appropriateFor: nil,
+                                                    create: true),
+            protectionType: .complete)
         
         let memoryConfig = MemoryConfig(expiry: .never, countLimit: 0, totalCostLimit: 0)
         
@@ -49,19 +50,19 @@ class cacheHelper {
     
     
     fileprivate func store (_ object: Data, key: String) {
-        try? storege?.setObject(object, forKey: key)
+        ((try? storege?.setObject(object, forKey: key)) as ()??)
     }
     
     fileprivate func retreive (_ key: String) -> Data? {
-        guard let store = try? storege?.object(forKey: key) else { return nil }
+        guard let store = ((try? storege?.object(forKey: key)) as Data??) else { return nil }
         return store
     }
     
     fileprivate func removeObject (_ key:String) {
-        try? storege?.removeObject(forKey: key)
+        ((try? storege?.removeObject(forKey: key)) as ()??)
     }
     
     func removeAll() {
-        try? storege?.removeAll()
+        ((try? storege?.removeAll()) as ()??)
     }
 }
