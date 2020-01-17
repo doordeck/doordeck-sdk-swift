@@ -22,7 +22,7 @@ class BottomViewControllerQR: UIViewController {
     
     lazy var reader = QRCodeReaderViewController(builder: QRCodeReaderViewControllerBuilder {
         $0.reader          = QRCodeReader(metadataObjectTypes: [AVMetadataObject.ObjectType.qr])
-        $0.showTorchButton = false
+        $0.showTorchButton = true
         $0.showCancelButton = false
         $0.showSwitchCameraButton = false
     })
