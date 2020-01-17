@@ -16,14 +16,16 @@ class ReachabilityHelper {
     /// Reachability wrapper init
     init()
     {
-        guard let tempReach = Reachability() else {
+        do {
+            let tempReach = try Reachability()
+            reachability = tempReach
+        } catch  {
             print(PrintChannel.error, object: "Unable to create Reachability")
             reachability = nil
             return
         }
-        
-        reachability = tempReach
     }
+
     
     /// The type of connection
     var connectionType: String {
@@ -38,7 +40,7 @@ class ReachabilityHelper {
     
     /// Is there a Data connection
     var isConnected: Bool {
-        return reachability?.connection != Reachability.Connection.none ? true : false
+        return reachability?.connection != Reachability.Connection.unavailable ? true : false
     }
     
     /// Notification of Data drops
