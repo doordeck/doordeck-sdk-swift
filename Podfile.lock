@@ -2,15 +2,15 @@ PODS:
   - Alamofire (4.9.1)
   - Cache (5.2.0)
   - QRCodeReader.swift (10.1.0)
-  - ReachabilitySwift (4.3.1)
+  - ReachabilitySwift (5.0.0)
   - Sodium (0.8.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.8)
-  - Cache (~> 5.2)
-  - QRCodeReader.swift (~> 10.0)
-  - ReachabilitySwift (~> 4.3)
-  - Sodium (~> 0.8)
+  - Alamofire
+  - Cache
+  - QRCodeReader.swift
+  - ReachabilitySwift
+  - Sodium
 
 SPEC REPOS:
   trunk:
@@ -24,9 +24,9 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
-  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Sodium: 63c0ca312a932e6da481689537d4b35568841bdc
 
-PODFILE CHECKSUM: 99c76cf7027fb3ec9521caf61d388f30a4ab246a
+PODFILE CHECKSUM: fbddd10d40056c15b6debe43cbf417a116fed93d
 
 COCOAPODS: 1.8.4
