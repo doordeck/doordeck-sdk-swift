@@ -14,6 +14,7 @@ extension NSNotification.Name {
     static let readerChange = NSNotification.Name(rawValue: "readerChange")
     static let showNFCReader = NSNotification.Name(rawValue: "showNFCReader")
     static let deeplinkCheck = NSNotification.Name(rawValue: "deepLinkCheck")
+    static let dismissLockUnlockScreen = NSNotification.Name(rawValue: "dismissLockUnlockScreen")
 }
 
 class doordeckNotifications {
@@ -41,6 +42,10 @@ class doordeckNotifications {
     
     func deeplinkCheck() {
         nc.post(name: .deeplinkCheck, object: nil)
+    }
+    
+    func dismissLock() {
+        nc.post(name: .dismissLockUnlockScreen, object: nil)
     }
 }
 

@@ -37,11 +37,7 @@ class BottomViewControllerQR: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if QRsetup == false {
-            self.setUpQR()
-        } else {
-            reader.startScanning()
-        }
+        startScanning()
         
         guard let control = self.controlDelegate else { return }
         if control.showCloseButton == true {
@@ -67,6 +63,9 @@ class BottomViewControllerQR: UIViewController {
         
         bottomLabel.attributedText = NSAttributedString.doordeckH3Bold(AppStrings.touchQR)
         descriptionLabel.attributedText = NSAttributedString.doordeckH4(AppStrings.touchQRMessage)
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(startScanning), name: .dismissLockUnlockScreen, object: nil)
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
@@ -83,6 +82,14 @@ extension BottomViewControllerQR: QRCodeReaderViewControllerDelegate {
     
     func readerDidCancel(_ reader: QRCodeReaderViewController) {
         reader.stopScanning()
+    }
+    
+    @objc func startScanning() {
+    if QRsetup == false {
+            self.setUpQR()
+        } else {
+            reader.startScanning()
+        }
     }
     
     fileprivate func setUpQR() {

@@ -32,6 +32,7 @@ class BottomViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(resetShowNFC), name: UIApplication.didEnterBackgroundNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(showNFC), name: .showNFCReader, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(showNFC), name: .dismissLockUnlockScreen, object: nil)
         setupUI()
     }
     
@@ -48,9 +49,9 @@ class BottomViewController: UIViewController {
             closeButton.isHidden = true
             closeButton.isEnabled = false
         }
-
+        
     }
-
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -95,13 +96,13 @@ extension BottomViewController: NFCNDEFReaderSessionDelegate {
             return
         }
         switch readerError.code {
-        case .readerSessionInvalidationErrorFirstNDEFTagRead, .readerSessionInvalidationErrorUserCanceled:
+        case .readerSessionInvalidationErrorFirstNDEFTagRead :
             showNFCBool = true
             break
-        default:
-            Util().onMain {
-                //error
-            }
+        case .readerSessionInvalidationErrorUserCanceled:
+            showNFCBool = false
+            break
+        default: break
         }
     }
     
@@ -114,7 +115,9 @@ extension BottomViewController: NFCNDEFReaderSessionDelegate {
     
     func NFCDetected(_ payloads: [NFCNDEFPayload]) {
         
-        session?.invalidate()
+        
+        self.session?.invalidate()
+        
         for payload in payloads {
             let record = payload
             let payloadTemp = String(data: record.payload, encoding: .utf8) ?? "No payload"
