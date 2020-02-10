@@ -32,6 +32,7 @@ class BottomViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(resetShowNFC), name: UIApplication.didEnterBackgroundNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(showNFC), name: .showNFCReader, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(resetShowNFC), name: .hideNFCReader, object: nil)
         notificationCenter.addObserver(self, selector: #selector(showNFC), name: .dismissLockUnlockScreen, object: nil)
         setupUI()
     }
