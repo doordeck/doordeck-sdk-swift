@@ -43,4 +43,5 @@ struct AppStrings {
     static let timeWindowsuccess: String = NSLocalizedString("Timer success", comment: "")
     static let timeWindowFailed: String = NSLocalizedString("Timer failed", comment: "")
     static let other: String = NSLocalizedString("Other errors", comment: "")
+    static let nfcString: String = NSLocalizedString("Hold your device near a tile to scan it.", comment: "")
 }

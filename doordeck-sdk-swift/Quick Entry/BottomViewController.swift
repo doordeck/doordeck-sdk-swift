@@ -84,6 +84,9 @@ class BottomViewController: UIViewController {
     @objc func showNFC() {
         if showNFCBool {
             session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
+            if #available(iOS 12.0, *) {
+                session?.alertMessage = AppStrings.nfcString
+            }
             session?.begin()
             showNFCBool = false
         }
