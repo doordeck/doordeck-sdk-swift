@@ -22,6 +22,7 @@ class LockUnlockViewController: UIViewController {
     var lockVariable: lockUnlockScreen!
     var certificateChain: CertificateChainClass!
     var sodium: SodiumHelper!
+    var sdk = true
     
     
     fileprivate var countDownTimer: Timer = Timer()
@@ -103,8 +104,10 @@ class LockUnlockViewController: UIViewController {
     }
     
     func dismissMe() {
-        self.dismiss(animated: true, completion: {
-            doordeckNotifications().dismissLock()
+        self.dismiss(animated: true, completion: { [weak self] in
+            if self?.sdk ?? true {
+                doordeckNotifications().dismissLock()
+            }
         })
     }
     
