@@ -18,7 +18,7 @@ class AFRequest {
     
     init() {
         #if os(iOS)
-            self.connectivityManager = ReachabilityHelper()
+        self.connectivityManager = ReachabilityHelper()
         #endif
         append(additional:[:])
     }
@@ -39,10 +39,7 @@ class AFRequest {
         configuration.requestCachePolicy = .useProtocolCachePolicy
         configuration.urlCache = cache
         
-        sessionManager = Alamofire.Session(configuration: configuration, serverTrustManager: ServerTrustManager(evaluators: serverTrustPolicy()))
-        
-        
-        sessionManager.delegate.taskWillPerformHTTPRedirection = { session, task, response, request in
+        let redirector = Redirector(behavior: .modify { task, request, response in
             var redirectedRequest = request
             
             if
@@ -56,14 +53,14 @@ class AFRequest {
             }
             
             return redirectedRequest
-        }
+            })
         
-        
+        sessionManager = Alamofire.Session(configuration: configuration, serverTrustManager: ServerTrustManager(evaluators: serverTrustPolicy()), redirectHandler: redirector)
     }
     
     func handleJsonResponse(_ url: String,
                             response: HTTPURLResponse?,
-                            result: Result<Any>,
+                            result: Result<Any, AFError>,
                             onSuccess: @escaping (_ jsonData: AnyObject) -> Void,
                             onError: ((_ error: APIClient.error) -> Void)?) {
         
@@ -72,10 +69,12 @@ class AFRequest {
             switch(statusCode) {
                 
             case 200, 201, 202, 203, 204:
-                if result.isSuccess {
-                    onSuccess(result.value as AnyObject)
-                } else if result.isFailure {
-                    let error = result.error! as NSError
+                
+                switch result {
+                case let .success(value):
+                    onSuccess(value as AnyObject)
+                case let .failure(error):
+                    let error = error as NSError
                     
                     print(PrintChannel.error, object: "AFRequest Error \(error) \n URL: \(url)")
                     onError?(APIClient.error.network(networkError: error))
@@ -109,7 +108,7 @@ class AFRequest {
     
     func handleResponse(_ url: String,
                         response: HTTPURLResponse?,
-                        result: Result<String>,
+                        result: Result<String, AFError>,
                         onSuccess: @escaping (_ jsonData: AnyObject) -> Void,
                         onError: ((_ error: APIClient.error) -> Void)?) {
         
@@ -119,11 +118,11 @@ class AFRequest {
                 
             case 200, 201, 202, 203, 204:
                 
-                
-                if result.isSuccess {
-                    onSuccess(result.value as AnyObject)
-                } else if result.isFailure {
-                    let error = result.error! as NSError
+                switch result {
+                case let .success(value):
+                    onSuccess(value as AnyObject)
+                case let .failure(error):
+                    let error = error as NSError
                     
                     print(PrintChannel.error,
                           object: "AFRequest Error \(error) \n URL: \(url)")
@@ -184,9 +183,9 @@ class AFRequest {
     
     func isConnected() -> Bool {
         #if os(iOS)
-            return connectivityManager.isConnected
+        return connectivityManager.isConnected
         #else
-            return true
+        return true
         #endif
     }
     
