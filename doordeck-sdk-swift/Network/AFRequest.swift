@@ -14,7 +14,7 @@ class AFRequest {
     #if os(iOS)
     let connectivityManager: ReachabilityHelper
     #endif
-    var sessionManager = Alamofire.SessionManager.default
+    var sessionManager = Alamofire.Session.default //Alamofire.SessionManager.default
     
     init() {
         #if os(iOS)
@@ -24,7 +24,7 @@ class AFRequest {
     }
     
     func append(additional headers: [String: String]) {
-        var defaultHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        var defaultHeaders = HTTPHeaders.default
         
         for (key, value) in headers {
             defaultHeaders[key] = value
@@ -35,11 +35,12 @@ class AFRequest {
         let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: nil)
         
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = defaultHeaders
+        configuration.httpAdditionalHeaders = defaultHeaders.dictionary
         configuration.requestCachePolicy = .useProtocolCachePolicy
         configuration.urlCache = cache
         
-        sessionManager = Alamofire.SessionManager(configuration: configuration, serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicy()))
+        sessionManager = Alamofire.Session(configuration: configuration, serverTrustManager: ServerTrustManager(evaluators: serverTrustPolicy()))
+        
         
         sessionManager.delegate.taskWillPerformHTTPRedirection = { session, task, response, request in
             var redirectedRequest = request
@@ -56,6 +57,8 @@ class AFRequest {
             
             return redirectedRequest
         }
+        
+        
     }
     
     func handleJsonResponse(_ url: String,
@@ -153,18 +156,20 @@ class AFRequest {
         }
     }
     
-    func serverTrustPolicy() -> [String: ServerTrustPolicy]{
+    func serverTrustPolicy() -> [String: PinnedCertificatesTrustEvaluator]{
         let amazonRootCA1Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA1", withExtension: "cer")!)
         let amazonRootCA2Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA2", withExtension: "cer")!)
         let amazonRootCA3Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA3", withExtension: "cer")!)
         let amazonRootCA4Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA4", withExtension: "cer")!)
         let amazonRootCA5Data = NSData(contentsOf: Bundle.main.url(forResource: "SFSRootCAG2", withExtension: "cer")!)
-        let amazonRootCA1 = ServerTrustPolicy.pinCertificates(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
+        
+        let amazonRootCA1 = PinnedCertificatesTrustEvaluator(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA2Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA3Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA3Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA4Data!)!,
-                                                                            SecCertificateCreateWithData(nil, amazonRootCA5Data!)!], validateCertificateChain: true, validateHost: true)
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA5Data!)!], acceptSelfSignedCertificates: false, performDefaultValidation: true, validateHost: true)
+        
         
         return ["api.doordeck.com" : amazonRootCA1,
                 "api.staging.doordeck.com" : amazonRootCA1,
@@ -194,13 +199,15 @@ class AFRequest {
                  onSuccess: @escaping (_ jsonData: AnyObject) -> Void,
                  onError: ((_ error: APIClient.error) -> Void)?) {
         
+        let headersTemp = HTTPHeaders.init(headers ?? [:])
+        
         if isConnected() {
             if jsonReply == true {
                 sessionManager.request(url,
                                        method: method,
                                        parameters: params,
                                        encoding: encoding,
-                                       headers: headers)
+                                       headers: headersTemp)
                     .responseJSON(options: JSONSerialization.ReadingOptions())
                     { (response) in
                         self.handleJsonResponse(url,
@@ -215,7 +222,7 @@ class AFRequest {
                                        method: method,
                                        parameters: params,
                                        encoding: encoding,
-                                       headers: headers)
+                                       headers: headersTemp)
                     .responseString(completionHandler:
                         { (response) in
                             self.handleResponse(url,
