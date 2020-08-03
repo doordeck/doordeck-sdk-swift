@@ -172,6 +172,9 @@ extension LockUnlockViewController {
     private func showUnlockedScreen () {
         setNewColour(UIColor.doordeckSuccessGreen())
         loadingView.addSuccessAnimation()
+        if self.sdk == false {
+            doordeckNotifications().unlockSuccessful()
+        }
     }
     
     private func showFailedScreen () {
