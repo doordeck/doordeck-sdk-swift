@@ -14,17 +14,17 @@ class AFRequest {
     #if os(iOS)
     let connectivityManager: ReachabilityHelper
     #endif
-    var sessionManager = Alamofire.SessionManager.default
+    var sessionManager = Alamofire.Session.default //Alamofire.SessionManager.default
     
     init() {
         #if os(iOS)
-            self.connectivityManager = ReachabilityHelper()
+        self.connectivityManager = ReachabilityHelper()
         #endif
         append(additional:[:])
     }
     
     func append(additional headers: [String: String]) {
-        var defaultHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        var defaultHeaders = HTTPHeaders.default
         
         for (key, value) in headers {
             defaultHeaders[key] = value
@@ -35,13 +35,11 @@ class AFRequest {
         let cache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: nil)
         
         let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = defaultHeaders
+        configuration.httpAdditionalHeaders = defaultHeaders.dictionary
         configuration.requestCachePolicy = .useProtocolCachePolicy
         configuration.urlCache = cache
         
-        sessionManager = Alamofire.SessionManager(configuration: configuration, serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicy()))
-        
-        sessionManager.delegate.taskWillPerformHTTPRedirection = { session, task, response, request in
+        let redirector = Redirector(behavior: .modify { task, request, response in
             var redirectedRequest = request
             
             if
@@ -55,12 +53,14 @@ class AFRequest {
             }
             
             return redirectedRequest
-        }
+            })
+        
+        sessionManager = Alamofire.Session(configuration: configuration, serverTrustManager: ServerTrustManager(evaluators: serverTrustPolicy()), redirectHandler: redirector)
     }
     
     func handleJsonResponse(_ url: String,
                             response: HTTPURLResponse?,
-                            result: Result<Any>,
+                            result: Result<Any, AFError>,
                             onSuccess: @escaping (_ jsonData: AnyObject) -> Void,
                             onError: ((_ error: APIClient.error) -> Void)?) {
         
@@ -69,10 +69,12 @@ class AFRequest {
             switch(statusCode) {
                 
             case 200, 201, 202, 203, 204:
-                if result.isSuccess {
-                    onSuccess(result.value as AnyObject)
-                } else if result.isFailure {
-                    let error = result.error! as NSError
+                
+                switch result {
+                case let .success(value):
+                    onSuccess(value as AnyObject)
+                case let .failure(error):
+                    let error = error as NSError
                     
                     print(PrintChannel.error, object: "AFRequest Error \(error) \n URL: \(url)")
                     onError?(APIClient.error.network(networkError: error))
@@ -106,7 +108,7 @@ class AFRequest {
     
     func handleResponse(_ url: String,
                         response: HTTPURLResponse?,
-                        result: Result<String>,
+                        result: Result<String, AFError>,
                         onSuccess: @escaping (_ jsonData: AnyObject) -> Void,
                         onError: ((_ error: APIClient.error) -> Void)?) {
         
@@ -116,11 +118,11 @@ class AFRequest {
                 
             case 200, 201, 202, 203, 204:
                 
-                
-                if result.isSuccess {
-                    onSuccess(result.value as AnyObject)
-                } else if result.isFailure {
-                    let error = result.error! as NSError
+                switch result {
+                case let .success(value):
+                    onSuccess(value as AnyObject)
+                case let .failure(error):
+                    let error = error as NSError
                     
                     print(PrintChannel.error,
                           object: "AFRequest Error \(error) \n URL: \(url)")
@@ -153,18 +155,20 @@ class AFRequest {
         }
     }
     
-    func serverTrustPolicy() -> [String: ServerTrustPolicy]{
+    func serverTrustPolicy() -> [String: PinnedCertificatesTrustEvaluator]{
         let amazonRootCA1Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA1", withExtension: "cer")!)
         let amazonRootCA2Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA2", withExtension: "cer")!)
         let amazonRootCA3Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA3", withExtension: "cer")!)
         let amazonRootCA4Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA4", withExtension: "cer")!)
         let amazonRootCA5Data = NSData(contentsOf: Bundle.main.url(forResource: "SFSRootCAG2", withExtension: "cer")!)
-        let amazonRootCA1 = ServerTrustPolicy.pinCertificates(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
+        
+        let amazonRootCA1 = PinnedCertificatesTrustEvaluator(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA2Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA3Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA3Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA4Data!)!,
-                                                                            SecCertificateCreateWithData(nil, amazonRootCA5Data!)!], validateCertificateChain: true, validateHost: true)
+                                                                            SecCertificateCreateWithData(nil, amazonRootCA5Data!)!], acceptSelfSignedCertificates: false, performDefaultValidation: true, validateHost: true)
+        
         
         return ["api.doordeck.com" : amazonRootCA1,
                 "api.staging.doordeck.com" : amazonRootCA1,
@@ -179,9 +183,9 @@ class AFRequest {
     
     func isConnected() -> Bool {
         #if os(iOS)
-            return connectivityManager.isConnected
+        return connectivityManager.isConnected
         #else
-            return true
+        return true
         #endif
     }
     
@@ -194,13 +198,15 @@ class AFRequest {
                  onSuccess: @escaping (_ jsonData: AnyObject) -> Void,
                  onError: ((_ error: APIClient.error) -> Void)?) {
         
+        let headersTemp = HTTPHeaders.init(headers ?? [:])
+        
         if isConnected() {
             if jsonReply == true {
                 sessionManager.request(url,
                                        method: method,
                                        parameters: params,
                                        encoding: encoding,
-                                       headers: headers)
+                                       headers: headersTemp)
                     .responseJSON(options: JSONSerialization.ReadingOptions())
                     { (response) in
                         self.handleJsonResponse(url,
@@ -215,7 +221,7 @@ class AFRequest {
                                        method: method,
                                        parameters: params,
                                        encoding: encoding,
-                                       headers: headers)
+                                       headers: headersTemp)
                     .responseString(completionHandler:
                         { (response) in
                             self.handleResponse(url,

@@ -22,6 +22,7 @@ class LockUnlockViewController: UIViewController {
     var lockVariable: lockUnlockScreen!
     var certificateChain: CertificateChainClass!
     var sodium: SodiumHelper!
+    var sdk = true
     
     
     fileprivate var countDownTimer: Timer = Timer()
@@ -92,16 +93,22 @@ class LockUnlockViewController: UIViewController {
             print(.lock, object: "progress \(update)")
             let updateString = AppStrings.messageForLockProgress(update)
             self?.lockUpdateMessage.attributedText = NSAttributedString.doordeckH2Bold(updateString)
-            }, reset: {
-                self.dismiss(animated: true, completion: {
-                    
-                })
+            }, reset: { [weak self] in
+                self?.dismissMe()
         })
     }
     
     @IBAction func dismissButtonClicked() {
         countDownTimer.invalidate()
-        self.dismiss(animated: false, completion: nil)
+        dismissMe()
+    }
+    
+    func dismissMe() {
+        self.dismiss(animated: true, completion: { [weak self] in
+            if self?.sdk ?? true {
+                doordeckNotifications().dismissLock()
+            }
+        })
     }
     
     func readyDevice(_ lockDestils: lockUnlockScreen) {
@@ -165,7 +172,6 @@ extension LockUnlockViewController {
     private func showUnlockedScreen () {
         setNewColour(UIColor.doordeckSuccessGreen())
         loadingView.addSuccessAnimation()
-        
     }
     
     private func showFailedScreen () {
