@@ -28,6 +28,8 @@ public class SDKEvent {
         case CLOSE_VERIFICATION
     }
     
+    public init() {}
+    
     let nc = NotificationCenter.default
     public let doordeckEventsName = NSNotification.Name(rawValue: "DoordeckEvents")
     
