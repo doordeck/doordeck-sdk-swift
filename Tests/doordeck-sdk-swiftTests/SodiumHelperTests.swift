@@ -9,6 +9,7 @@
 import XCTest
 import Foundation
 import Sodium
+import doordeck_sdk_swift
 
 class SodiumHelperTests: XCTestCase {
     func testSodium() {

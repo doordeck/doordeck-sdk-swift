@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import doordeck_sdk_swift
 
 class TokenHelperTests: XCTestCase {
     

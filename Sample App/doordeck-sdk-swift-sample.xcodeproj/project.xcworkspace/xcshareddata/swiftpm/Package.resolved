@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "doordeck-sdk-swift",
+        "repositoryURL": "https://github.com/doordeck/doordeck-sdk-swift",
+        "state": {
+          "branch": null,
+          "revision": "785462aea87d324d0355ae18be64c12f94bf6c6e",
+          "version": "1.6.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
