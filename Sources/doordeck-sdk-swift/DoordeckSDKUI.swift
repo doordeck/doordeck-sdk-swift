@@ -22,6 +22,7 @@ class DoordeckSDKUI: DoordeckUI {
                                        controlDelegate: controlDelegate,
                                        apiClient: apiClient,
                                        sodiumHelper: sodiumHelper)
+    
         
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.isNavigationBarHidden = true
@@ -38,13 +39,14 @@ class DoordeckSDKUI: DoordeckUI {
                                sodiumHelper: SodiumHelper ) -> VerificationViewController {
         
         let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: Util().getNSBundle())
-        let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
+//        let vc  = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") //as! VerificationViewController
+        let vc  = storyboard.instantiateViewController(identifier: "VerificationNoNavigation") as! VerificationViewController
         vc.delegate = delegate
         vc.controlDelegate = controlDelegate
         vc.apiClient = apiClient
         vc.sodium = sodiumHelper
         
-        return vc
+        return vc as! VerificationViewController
     }
     
     func showUnlockScreenSuccess (_ lockManager: LockManager,

@@ -28,9 +28,7 @@ class Util {
     
     func getBundle() -> URL? {
         #if SWIFT_PACKAGE
-        var url = Bundle.main.bundleURL
-        url.appendPathComponent("doordeck-sdk-swift_doordeck-sdk-swift.bundle")
-        return url
+        return Bundle.module.bundleURL
         #else
         return nil
         #endif
@@ -38,7 +36,7 @@ class Util {
     
     func getNSBundle() -> Bundle? {
         #if SWIFT_PACKAGE
-        return Bundle(url: getBundle()!)
+        return Bundle.module
         #else
         return nil
         #endif
