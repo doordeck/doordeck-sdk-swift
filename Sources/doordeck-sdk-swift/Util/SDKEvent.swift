@@ -29,9 +29,9 @@ public class SDKEvent {
     }
     
     let nc = NotificationCenter.default
-    let doordeckEventsName = NSNotification.Name(rawValue: "DoordeckEvents")
+    public let doordeckEventsName = NSNotification.Name(rawValue: "DoordeckEvents")
     
-    public func event(_ action: EventAction) {
+    func event(_ action: EventAction) {
         nc.post(name: doordeckEventsName, object: action)
     }
 }

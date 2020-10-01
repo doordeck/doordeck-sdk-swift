@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.doordeckEvents(_:)), name: doordeck_sdk_swift. SDKEvent().doordeckEventsName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.doordeckEvents(_:)), name: SDKEvent().doordeckEventsName, object: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
