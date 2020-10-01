@@ -165,12 +165,23 @@ class AFRequest {
         }
     }
     
+    private func getResourceURL (_ name: String) -> URL? {
+        #if SWIFT_PACKAGE
+        var url = Bundle.main.bundleURL
+        url.appendPathComponent("doordeck-sdk-swift_doordeck-sdk-swift" + ".bundle")
+        url.appendPathComponent("CER")
+        url.appendPathComponent("\(name).cer")
+        #else
+        return Bundle.main.url(forResource: name, withExtension: "cer")
+        #endif
+    }
+    
     func serverTrustPolicy() -> [String: PinnedCertificatesTrustEvaluator]{
-        let amazonRootCA1Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA1", withExtension: "cer")!)
-        let amazonRootCA2Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA2", withExtension: "cer")!)
-        let amazonRootCA3Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA3", withExtension: "cer")!)
-        let amazonRootCA4Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA4", withExtension: "cer")!)
-        let amazonRootCA5Data = NSData(contentsOf: Bundle.main.url(forResource: "SFSRootCAG2", withExtension: "cer")!)
+        let amazonRootCA1Data = NSData(contentsOf: getResourceURL("AmazonRootCA1")!)
+        let amazonRootCA2Data = NSData(contentsOf: getResourceURL("AmazonRootCA2")!)
+        let amazonRootCA3Data = NSData(contentsOf: getResourceURL("AmazonRootCA3")!)
+        let amazonRootCA4Data = NSData(contentsOf: getResourceURL("AmazonRootCA4")!)
+        let amazonRootCA5Data = NSData(contentsOf: getResourceURL("SFSRootCAG2")!)
         
         let amazonRootCA1 = PinnedCertificatesTrustEvaluator(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA2Data!)!,
