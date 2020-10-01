@@ -50,7 +50,7 @@ let package = Package(
             name: "doordeck-sdk-swift",
             dependencies: ["QRCodeReader","Reachability","Alamofire","Cache","Sodium"],
             resources: [
-                .copy("doordeck-sdk-swift/Network/CER")
+                .copy("Network/CER")
             ]),
         .testTarget(
             name: "doordeck-sdk-swiftTests",
