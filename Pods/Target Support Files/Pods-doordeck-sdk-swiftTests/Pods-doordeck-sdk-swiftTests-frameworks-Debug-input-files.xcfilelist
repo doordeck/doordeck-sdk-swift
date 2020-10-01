@@ -1,6 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-doordeck-sdk-swiftTests/Pods-doordeck-sdk-swiftTests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/Cache/Cache.framework
-${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework
-${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
-${BUILT_PRODUCTS_DIR}/Sodium/Sodium.framework
