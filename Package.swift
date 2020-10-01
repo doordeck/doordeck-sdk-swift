@@ -48,7 +48,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "doordeck-sdk-swift",
-            dependencies: ["QRCodeReader","Reachability","Alamofire","Cache","Sodium"]),
+            dependencies: ["QRCodeReader","Reachability","Alamofire","Cache","Sodium"],
+            resources: [
+                .copy("doordeck-sdk-swift/Network/CER")
+            ]),
         .testTarget(
             name: "doordeck-sdk-swiftTests",
             dependencies: ["doordeck-sdk-swift"]),
