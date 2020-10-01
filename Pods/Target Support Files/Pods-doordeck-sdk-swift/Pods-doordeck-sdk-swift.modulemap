@@ -1,6 +1,0 @@
-framework module Pods_doordeck_sdk_swift {
-  umbrella header "Pods-doordeck-sdk-swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

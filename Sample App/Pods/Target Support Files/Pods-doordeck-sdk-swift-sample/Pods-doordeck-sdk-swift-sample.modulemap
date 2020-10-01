@@ -1,6 +1,0 @@
-framework module Pods_doordeck_sdk_swift_sample {
-  umbrella header "Pods-doordeck-sdk-swift-sample-umbrella.h"
-
-  export *
-  module * { export * }
-}
