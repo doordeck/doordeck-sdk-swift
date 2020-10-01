@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		59029C0F2268B636009FAE5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59029C0D2268B636009FAE5C /* Main.storyboard */; };
 		59029C112268B638009FAE5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59029C102268B638009FAE5C /* Assets.xcassets */; };
 		59029C142268B638009FAE5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59029C122268B638009FAE5C /* LaunchScreen.storyboard */; };
+		5904B75425262C41006C7810 /* doordeck-sdk-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 5904B75325262C41006C7810 /* doordeck-sdk-swift */; };
 		59FCBE48226F49A400D7BFA5 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCBE47226F49A400D7BFA5 /* DoNotCommit.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5904B75425262C41006C7810 /* doordeck-sdk-swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +90,7 @@
 			);
 			name = "doordeck-sdk-swift-sample";
 			packageProductDependencies = (
+				5904B75325262C41006C7810 /* doordeck-sdk-swift */,
 			);
 			productName = "doordeck-sdk-swift-sample";
 			productReference = 59C563B3251A0E2700C59255 /* doordeck-sdk-swift-sample.app */;
@@ -123,6 +126,7 @@
 			);
 			mainGroup = 59029BFD2268B636009FAE5C;
 			packageReferences = (
+				5904B75225262C41006C7810 /* XCRemoteSwiftPackageReference "doordeck-sdk-swift" */,
 			);
 			productRefGroup = 59029BFD2268B636009FAE5C;
 			projectDirPath = "";
@@ -359,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5904B75225262C41006C7810 /* XCRemoteSwiftPackageReference "doordeck-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doordeck/doordeck-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5904B75325262C41006C7810 /* doordeck-sdk-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5904B75225262C41006C7810 /* XCRemoteSwiftPackageReference "doordeck-sdk-swift" */;
+			productName = "doordeck-sdk-swift";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59029BFE2268B636009FAE5C /* Project object */;
 }

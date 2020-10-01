@@ -7,9 +7,9 @@
 
 import Foundation
 
-class SDKEvent {
+public class SDKEvent {
     
-    enum EventAction {
+    public enum EventAction {
         case TWO_FACTOR_AUTH_NEEDED
         case NO_INTERNET
         case INVALID_AUTH_TOKEN
@@ -31,7 +31,7 @@ class SDKEvent {
     let nc = NotificationCenter.default
     let doordeckEventsName = NSNotification.Name(rawValue: "DoordeckEvents")
     
-    func event(_ action: EventAction) {
+    public func event(_ action: EventAction) {
         nc.post(name: doordeckEventsName, object: action)
     }
 }
