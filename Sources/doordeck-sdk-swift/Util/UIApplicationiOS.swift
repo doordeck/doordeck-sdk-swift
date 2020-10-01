@@ -48,7 +48,7 @@ extension UIApplication {
     }
         
     class func returnViewControllerFromStoryboard (storyBoard: String, storyboardID: String) -> UIViewController {
-        let storyboard = UIStoryboard(name: storyBoard, bundle: nil)
+        let storyboard = UIStoryboard(name: storyBoard, bundle: Util().getNSBundle())
         let controller: UIViewController = storyboard.instantiateViewController(withIdentifier: storyboardID)
         return controller
     }

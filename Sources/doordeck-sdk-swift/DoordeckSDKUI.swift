@@ -37,7 +37,7 @@ class DoordeckSDKUI: DoordeckUI {
                                apiClient:APIClient,
                                sodiumHelper: SodiumHelper ) -> VerificationViewController {
         
-        let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: nil)
+        let storyboard : UIStoryboard = UIStoryboard(name: "VerificationStoryboard", bundle: Util().getNSBundle())
         let vc : VerificationViewController = storyboard.instantiateViewController(withIdentifier: "VerificationNoNavigation") as! VerificationViewController
         vc.delegate = delegate
         vc.controlDelegate = controlDelegate
@@ -78,7 +78,7 @@ class DoordeckSDKUI: DoordeckUI {
                          chain: CertificateChainClass,
                          sodium: SodiumHelper) -> QuickEntryViewController {
         
-        let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: nil)
+        let storyboard : UIStoryboard = UIStoryboard(name: "QuickEntryStoryboard", bundle: Util().getNSBundle())
         let vc : QuickEntryViewController = storyboard.instantiateViewController(withIdentifier: "QuickEntryNoNavigation") as! QuickEntryViewController
         vc.lockMan = lockManager
         vc.readerType = readerType

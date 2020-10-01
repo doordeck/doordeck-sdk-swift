@@ -167,9 +167,7 @@ class AFRequest {
     
     private func getResourceURL (_ name: String) -> URL? {
         #if SWIFT_PACKAGE
-        var url = Bundle.main.bundleURL
-        url.appendPathComponent("doordeck-sdk-swift_doordeck-sdk-swift.bundle")
-        url.appendPathComponent("CER")
+        var url = Util().getCertsFolder()
         url.appendPathComponent("\(name).cer")
         return url
         #else

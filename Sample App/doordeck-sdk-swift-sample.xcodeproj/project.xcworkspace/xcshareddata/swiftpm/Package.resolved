@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/doordeck/doordeck-sdk-swift",
         "state": {
           "branch": null,
-          "revision": "3cc508ea3e89f5a564fc817988274aa8403a39b1",
-          "version": "1.6.4"
+          "revision": "a33c2376e3e9fb60315ca2a3530fe541c8910e43",
+          "version": "1.6.8"
         }
       },
       {
