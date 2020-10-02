@@ -11,7 +11,7 @@
         <!--Lock Unlock View Controller-->
         <scene sceneID="CG0-cQ-jAA">
             <objects>
-                <viewController storyboardIdentifier="LockUnlock" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNw-jB-9vD" customClass="LockUnlockViewController" customModule="doordeck-sdk-swift" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LockUnlock" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNw-jB-9vD" customClass="LockUnlockViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNr-rt-sOv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

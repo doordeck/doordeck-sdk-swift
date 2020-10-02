@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import doordeck_sdk_swift
 
 class ViewController: UIViewController {
     

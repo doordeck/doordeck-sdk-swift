@@ -11,7 +11,7 @@
         <!--Quick Entry View Controller-->
         <scene sceneID="4Fx-42-WKk">
             <objects>
-                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="doordeck-sdk-swift" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuickEntryNoNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xy-cO-xXT" customClass="QuickEntryViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f4B-ip-Ybg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--Bottom View Controller-->
         <scene sceneID="Dsg-rc-ccz">
             <objects>
-                <viewController storyboardIdentifier="bottomViewNFC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="doordeck-sdk-swift" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bottomViewNFC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QPZ-G4-Ea5" customClass="BottomViewController" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5D-u4-FUB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
         <!--Bottom View ControllerQR-->
         <scene sceneID="Wlp-4j-NmA">
             <objects>
-                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="doordeck-sdk-swift" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bottomViewQR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="irD-Ip-HAZ" customClass="BottomViewControllerQR" customModule="doordeck_sdk_swift_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xVG-TD-7Xb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
