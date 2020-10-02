@@ -42,19 +42,23 @@ class Util {
         #endif
     }
     
-    func getCertsFolder() -> URL {
+    func getCertsFolder() -> URL? {
         #if SWIFT_PACKAGE
         var url = Util().getBundle()!
         url.appendPathComponent("CER")
         return url
+        #else
+        return nil
         #endif
     }
     
-    func getStoryBoardFolder() -> URL {
+    func getStoryBoardFolder() -> URL? {
         #if SWIFT_PACKAGE
         var url = Util().getBundle()!
         url.appendPathComponent("Base.lproj")
         return url
+        #else
+        return nil
         #endif
     }
 }

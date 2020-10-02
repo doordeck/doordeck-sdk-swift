@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,15 +35,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROf-Co-NhN">
-                                <rect key="frame" x="20" y="832" width="374" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="828" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textFieldEdited:" destination="oSH-Yq-yNP" eventType="editingChanged" id="Ut4-vh-RX3"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR7-M6-fT8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR7-M6-fT8">
                                 <rect key="frame" x="73" y="208" width="268" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Aek-oQ-FtV"/>
@@ -118,7 +115,7 @@
                                     <constraint firstItem="IoN-hY-pIB" firstAttribute="height" secondItem="wga-cc-Ewc" secondAttribute="height" id="zBF-TD-LuQ"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa2-fe-8J5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa2-fe-8J5">
                                 <rect key="frame" x="0.0" y="846" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bYt-5T-6hw"/>
@@ -141,6 +138,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dZv-2c-Dal"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NGh-8h-6sH" firstAttribute="top" secondItem="36J-Zv-9BF" secondAttribute="bottom" constant="10" id="2FY-pu-jVf"/>
@@ -164,7 +162,6 @@
                             <constraint firstItem="36J-Zv-9BF" firstAttribute="leading" secondItem="dZv-2c-Dal" secondAttribute="leading" constant="20" id="wCi-jT-YM8"/>
                             <constraint firstItem="ROf-Co-NhN" firstAttribute="leading" secondItem="dZv-2c-Dal" secondAttribute="leading" constant="20" id="xBm-8n-0jw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dZv-2c-Dal"/>
                     </view>
                     <navigationItem key="navigationItem" id="WBu-02-cdi"/>
                     <connections>
