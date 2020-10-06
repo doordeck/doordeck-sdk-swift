@@ -20,12 +20,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NFCReaderUsageDescription</key>
-	<string>Read NFC </string>
-	<key>NSCameraUsageDescription</key>
-	<string>Read QR code</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Geo-fenced locks</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -47,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Read QR code</string>
+	<key>NFCReaderUsageDescription</key>
+	<string>Read NFC </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Geo-fenced locks</string>
 </dict>
 </plist>

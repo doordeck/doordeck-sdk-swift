@@ -21,7 +21,7 @@
       },
       {
         "package": "QRCodeReader",
-        "repositoryURL": "https://github.com/yannickl/QRCodeReader.swift",
+        "repositoryURL": "https://github.com/yannickl/QRCodeReader.swift.git",
         "state": {
           "branch": null,
           "revision": "5020b5a47199d8ba80c83a4b4fafd70e9dc9dc7f",
