@@ -101,9 +101,9 @@ class LockDevice {
             let settingsTemp = lock["settings"] as? [String: AnyObject],
             let unlockTimeTemp = settingsTemp["unlockTime"] as? Float,
             let stateTemp = lock["state"] as? [String: AnyObject]
-            else {
-                completion(nil, .invalidData)
-                return
+        else {
+            completion(nil, .invalidData)
+            return
         }
         
         var locationData: [String:AnyObject] = [:]
@@ -312,25 +312,25 @@ class LockDevice {
                                           control: .unlock,
                                           completion: { [weak self] (json, error) in
                                             
-                    if (error != nil) {
-                        SDKEvent().event(.UNLOCK_FAILED)
-                        self?.currentlyLocked = true
-                        self?.deviceStatusUpdate(.unlockFail)
-                        self?.deviceCompletion(nil, error: .unsuccessfull)
-//                        self.deviceReset() // this was removed to not reset the fail screen to fast
-                    } else {
-                        if self?.delayUntilUnlock ?? 0 > 0 {
-                            if let delay = self?.delayUntilUnlock ?? 0 {
-                                self?.deviceStatusUpdate(.delayUnlock)
-                                Timer.after(TimeInterval(delay).seconds)  {
-                                    self?.unlockSucess()
-                                }
-                            }
-                        } else {
-                            self?.unlockSucess()
-                        }
-                    }
-                })
+                                            if (error != nil) {
+                                                SDKEvent().event(.UNLOCK_FAILED)
+                                                self?.currentlyLocked = true
+                                                self?.deviceStatusUpdate(.unlockFail)
+                                                self?.deviceCompletion(nil, error: .unsuccessfull)
+                                                //                        self.deviceReset() // this was removed to not reset the fail screen to fast
+                                            } else {
+                                                var delay = Double(0)
+                                                delay = self?.delayUntilUnlock ?? 0
+                                                if delay > 0 {
+                                                    self?.deviceStatusUpdate(.delayUnlock)
+                                                    Timer.after(TimeInterval(delay).seconds)  {
+                                                        self?.unlockSucess()
+                                                    }
+                                                } else {
+                                                    self?.unlockSucess()
+                                                }
+                                            }
+                                          })
             } else {
                 //self.deviceStatusUpdate(.lockUnlocked)
                 self.deviceStatusUpdate(.unlockSuccess) // change to show the door is still unlocked
@@ -339,7 +339,7 @@ class LockDevice {
         }) { (deviceError) in
             SDKEvent().event(.UNLOCK_FAILED)
             self.deviceStatusUpdate(.unlockFail)
-//            self.deviceReset() // this was removed to not reset the fail screen to fast
+            //            self.deviceReset() // this was removed to not reset the fail screen to fast
             self.deviceCompletion(nil, error: deviceError)
         }
     }

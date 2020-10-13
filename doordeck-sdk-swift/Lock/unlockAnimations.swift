@@ -279,17 +279,17 @@ class unlockAnimation: UIView, CAAnimationDelegate {
             self.addSubview(delayTimerLabel)
             Timer.every(1.second) { (dtimer) in
                 print(.debug, object: delayTimer)
-                if delayTimer < 1 {
+                if delayTimer <= 1 {
                     dtimer.invalidate()
                     delayTimerLabel.removeFromSuperview()
                     hideLock.removeFromSuperview()
                 } else {
+                    delayTimer = delayTimer - 1
                     if pointSize < 30 {
                         delayTimerLabel.attributedText = NSAttributedString.doorHugeTitle("\(Int(delayTimer))", colour: .doorBlue())
                     } else {
                         delayTimerLabel.attributedText = NSAttributedString.doorGinormousTitle("\(Int(delayTimer))", colour: .doorBlue(), pointSize: pointSize)
                     }
-                    delayTimer = delayTimer - 1
                 }
             }
         }

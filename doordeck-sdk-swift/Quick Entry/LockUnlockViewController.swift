@@ -170,7 +170,7 @@ class LockUnlockViewController: UIViewController {
 
 extension LockUnlockViewController {
     private func showWaitScreen (_ delay: Double) {
-        loadingView.addDelayTimer(delay - 1)
+        loadingView.addDelayTimer(delay)
     }
     
     private func showLoadingScreen () {
