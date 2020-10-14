@@ -68,7 +68,6 @@
 		59ABB7D322733E550048BCF5 /* CertificateChainClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */; };
 		59C563A3251A0BAB00C59255 /* Sodium in Frameworks */ = {isa = PBXBuildFile; productRef = 59C563A2251A0BAB00C59255 /* Sodium */; };
 		59C563A5251A0BAB00C59255 /* Clibsodium in Frameworks */ = {isa = PBXBuildFile; productRef = 59C563A4251A0BAB00C59255 /* Clibsodium */; };
-		59D9D87A2527A08A006F8228 /* DoNotCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D9D8792527A08A006F8228 /* DoNotCommit.swift */; };
 		59FE8F23233121DA008F7AB8 /* AmazonRootCA3.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F1F233121D9008F7AB8 /* AmazonRootCA3.cer */; };
 		59FE8F24233121DA008F7AB8 /* AmazonRootCA2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F20233121DA008F7AB8 /* AmazonRootCA2.cer */; };
 		59FE8F25233121DA008F7AB8 /* AmazonRootCA4.cer in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8F21233121DA008F7AB8 /* AmazonRootCA4.cer */; };
@@ -136,7 +135,6 @@
 		59ABB7D222733E550048BCF5 /* CertificateChainClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateChainClass.swift; sourceTree = "<group>"; };
 		59C563B0251A0E1A00C59255 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		59C563B3251A0E2700C59255 /* doordeck-sdk-swift-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "doordeck-sdk-swift-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		59D9D8792527A08A006F8228 /* DoNotCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoNotCommit.swift; sourceTree = "<group>"; };
 		59FE8F1F233121D9008F7AB8 /* AmazonRootCA3.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA3.cer; sourceTree = "<group>"; };
 		59FE8F20233121DA008F7AB8 /* AmazonRootCA2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA2.cer; sourceTree = "<group>"; };
 		59FE8F21233121DA008F7AB8 /* AmazonRootCA4.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA4.cer; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 		59029C082268B636009FAE5C /* doordeck-sdk-swift-sample */ = {
 			isa = PBXGroup;
 			children = (
-				59D9D8792527A08A006F8228 /* DoNotCommit.swift */,
 				59ABB7D12271F3770048BCF5 /* doordeck-sdk-swift-sample.entitlements */,
 				59ABB7702271C3E30048BCF5 /* doordeck-sdk-swift */,
 				59029C092268B636009FAE5C /* AppDelegate.swift */,
@@ -453,7 +450,6 @@
 				595B1FF6227C519100D7297E /* Font.swift in Sources */,
 				59ABB7BA2271C3E30048BCF5 /* ReachabilityHelper.swift in Sources */,
 				59ABB7C92271C3E30048BCF5 /* QuickEntryViewController.swift in Sources */,
-				59D9D87A2527A08A006F8228 /* DoNotCommit.swift in Sources */,
 				595B1FFB227C519100D7297E /* JsonHelper.swift in Sources */,
 				595B1FF8227C519100D7297E /* UIApplication.swift in Sources */,
 				595B1FF7227C519100D7297E /* UIApplicationiOS.swift in Sources */,
