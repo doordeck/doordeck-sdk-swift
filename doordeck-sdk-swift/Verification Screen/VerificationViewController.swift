@@ -32,7 +32,7 @@ class VerificationViewController: UIViewController {
     init(_ apiClient: APIClient, sodium: SodiumHelper) {
         self.apiClient = apiClient
         self.sodium = sodium
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder aDecoder: NSCoder) {
