@@ -31,7 +31,7 @@ class QuickEntryViewController: UIViewController {
         self.apiClient = apiClient
         self.certificateChain = chain
         self.lockMan = LockManager(self.apiClient)
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -82,7 +82,7 @@ extension QuickEntryViewController: quickEntryDelegate {
 
     fileprivate func addNFCVC () {
         if #available(iOS 11, *) {
-            let storyboard: UIStoryboard = UIStoryboard(name: quickStoryboard, bundle:nil )
+            let storyboard: UIStoryboard = UIStoryboard(name: quickStoryboard, bundle: Bundle(for: type(of: self)) )
             let bottomViewVC = storyboard.instantiateViewController(withIdentifier: bottomNFCView) as! BottomViewController
             bottomViewVC.view.frame = self.view.frame
             bottomViewVC.view.layoutIfNeeded()
@@ -101,7 +101,7 @@ extension QuickEntryViewController: quickEntryDelegate {
     }
     
     fileprivate func addQRVC () {
-        let storyboard: UIStoryboard = UIStoryboard(name: quickStoryboard, bundle:nil )
+        let storyboard: UIStoryboard = UIStoryboard(name: quickStoryboard, bundle: Bundle(for: type(of: self)) )
         let bottomViewVC = storyboard.instantiateViewController(withIdentifier: bottomQRView) as! BottomViewControllerQR
         bottomViewVC.view.frame = self.view.frame
         bottomViewVC.view.layoutIfNeeded()
@@ -132,7 +132,7 @@ extension QuickEntryViewController: quickEntryDelegate {
     }
     
     func showLockScreen(_ lockTemp: LockDevice)  {
-        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: nil).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
+        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: Bundle(for: type(of: self))).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
             vc.certificateChain = self.certificateChain
             vc.sodium = self.sodium
             vc.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
@@ -142,7 +142,7 @@ extension QuickEntryViewController: quickEntryDelegate {
     }
     
     func showLockScreenFail()  {
-        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: nil).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
+        if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: Bundle(for: type(of: self))).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
             vc.certificateChain = self.certificateChain
             vc.sodium = self.sodium
             present(vc, animated: true, completion: nil)

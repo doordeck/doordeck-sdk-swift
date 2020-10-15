@@ -166,11 +166,12 @@ class AFRequest {
     }
     
     func serverTrustPolicy() -> [String: PinnedCertificatesTrustEvaluator]{
-        let amazonRootCA1Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA1", withExtension: "cer")!)
-        let amazonRootCA2Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA2", withExtension: "cer")!)
-        let amazonRootCA3Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA3", withExtension: "cer")!)
-        let amazonRootCA4Data = NSData(contentsOf: Bundle.main.url(forResource: "AmazonRootCA4", withExtension: "cer")!)
-        let amazonRootCA5Data = NSData(contentsOf: Bundle.main.url(forResource: "SFSRootCAG2", withExtension: "cer")!)
+        let bundle: Bundle = Bundle(for: type(of: self))
+        let amazonRootCA1Data = NSData(contentsOf: bundle.url(forResource: "AmazonRootCA1", withExtension: "cer")!)
+        let amazonRootCA2Data = NSData(contentsOf: bundle.url(forResource: "AmazonRootCA2", withExtension: "cer")!)
+        let amazonRootCA3Data = NSData(contentsOf: bundle.url(forResource: "AmazonRootCA3", withExtension: "cer")!)
+        let amazonRootCA4Data = NSData(contentsOf: bundle.url(forResource: "AmazonRootCA4", withExtension: "cer")!)
+        let amazonRootCA5Data = NSData(contentsOf: bundle.url(forResource: "SFSRootCAG2", withExtension: "cer")!)
         
         let amazonRootCA1 = PinnedCertificatesTrustEvaluator(certificates: [SecCertificateCreateWithData(nil, amazonRootCA1Data!)!,
                                                                             SecCertificateCreateWithData(nil, amazonRootCA2Data!)!,
