@@ -79,7 +79,7 @@ class LockManager {
             }
         }
         
-        apiClient.getDeviceForTile(uuid) { (json, error) in
+        apiClient.getDevicesForUUID(uuid) { (json, error) in
             if error == nil {
                 guard let jsonLock: [String: AnyObject] = json else {
                     fail()
@@ -94,6 +94,7 @@ class LockManager {
                         fail()
                     }
                 })
+                
             } else {
                 fail()
             }

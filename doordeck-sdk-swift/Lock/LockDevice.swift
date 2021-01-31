@@ -50,7 +50,7 @@ class LockDevice {
         case small
     }
     
-    fileprivate var apiClient: APIClient!
+    var apiClient: APIClient!
     var ID: String = "00000000-0000-0000-0000-000000000000"
     var name: String = "Home"
     var admin: Bool = false
