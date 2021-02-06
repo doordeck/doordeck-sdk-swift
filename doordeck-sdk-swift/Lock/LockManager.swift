@@ -72,8 +72,18 @@ class LockManager {
             return
         }
         
+        if let lock: LockDevice = locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
+            success(lock)
+            return
+        }
+       
         for siteTemp in sites {
             if let lock: LockDevice = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
+                success(lock)
+                return
+            }
+            
+            if let lock: LockDevice = siteTemp.locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
                 success(lock)
                 return
             }
@@ -94,6 +104,7 @@ class LockManager {
                         fail()
                     }
                 })
+                
             } else {
                 fail()
             }

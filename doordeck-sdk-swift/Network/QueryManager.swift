@@ -10,7 +10,7 @@ import Foundation
 struct QueryManager {
     
     private static let unlockTime = "unlockTime"
-    private static let email = "email"
+    static let email = "email"
     private static let password = "password"
     private static let oldPassword = "oldPassword"
     private static let newPassword = "newPassword"
