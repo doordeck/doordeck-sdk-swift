@@ -72,14 +72,24 @@ class LockManager {
             return
         }
         
+        if let lock: LockDevice = locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
+            success(lock)
+            return
+        }
+       
         for siteTemp in sites {
             if let lock: LockDevice = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
                 success(lock)
                 return
             }
+            
+            if let lock: LockDevice = siteTemp.locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
+                success(lock)
+                return
+            }
         }
         
-        apiClient.getDevicesForUUID(uuid) { (json, error) in
+        apiClient.getDeviceForTile(uuid) { (json, error) in
             if error == nil {
                 guard let jsonLock: [String: AnyObject] = json else {
                     fail()
