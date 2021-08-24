@@ -76,7 +76,7 @@ class LockManager {
             success(lock)
             return
         }
-       
+        
         for siteTemp in sites {
             if let lock: LockDevice = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
                 success(lock)
@@ -89,21 +89,30 @@ class LockManager {
             }
         }
         
-        apiClient.getDeviceForTile(uuid) { (json, error) in
+        guard let tokenTemp: AuthTokenClass = apiClient.token else { return }
+        let header = Header().createSDKAuthHeader(.v3, token: tokenTemp)
+        let apiclientTemp = APIClient(header, token: tokenTemp)
+        
+        apiclientTemp.getDeviceForTile(uuid) { [self] (json, error) in
             if error == nil {
                 guard let jsonLock: [String: AnyObject] = json else {
                     fail()
                     return
                 }
                 
-                let tempLock = LockDevice(self.apiClient)
-                tempLock.populateFromJson(jsonLock, index: 0, completion: { (json, error) in
-                    if error == nil {
-                        success(tempLock)
-                    } else {
-                        fail()
+                if let tempLocks = jsonLock["deviceIds"] as? [String]  {
+                var locksCollection: [LockDevice] = [LockDevice]()
+                    for lockUUID in tempLocks{
+                        let tempLock = LockDevice(self.apiClient, uuid: lockUUID)
+                        locksCollection.append(tempLock)
                     }
-                })
+                    print(.debug, object: locksCollection)
+                    
+                } else {
+                    fail()
+                }
+                
+
                 
             } else {
                 fail()

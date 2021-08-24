@@ -86,6 +86,26 @@ class LockDevice {
         self.apiClient = apiClient
     }
     
+    init(_ apiClient: APIClient, uuid: String) {
+        self.apiClient = apiClient
+        self.getDeviceDetials(uuid: uuid)
+    }
+    
+    func getDeviceDetials(uuid: String) {
+        apiClient.getDevicesForUUID(uuid) { json, error in
+            if error == nil {
+                guard let deviceData = json else {return}
+                self.populateFromJson(deviceData, index: 0) { jsonTemp, error in
+                    if error == nil {
+                        
+                    } else {
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     func populateFromJson (_ lock: [String: AnyObject],
                            index:Int,
                            locksize: lockSizeOptions = .small,

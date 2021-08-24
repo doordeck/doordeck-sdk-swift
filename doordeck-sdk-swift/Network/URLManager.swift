@@ -58,6 +58,12 @@ struct URLManager {
     static let emailMethod  = "EMAIL"
     static let whatspapMethod  = "WHATSAPP"
     
+    /// Get Device from UUID
+    /// - Parameter uuid: UUID
+    /// - Returns: URL
+    static func getDevicesForUUID (_ uuid: String) -> String {
+        return "\(httpsBase)\(api)\(webBase)\(device)/\(uuid)" }
+    
     /// URL string for Device retreval from UUID
     ///
     /// - Parameter uuid: Device UUID
