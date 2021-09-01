@@ -45,4 +45,6 @@ struct AppStrings {
     static let timeWindowFailed: String = NSLocalizedString("Timer failed", comment: "")
     static let other: String = NSLocalizedString("Other errors", comment: "")
     static let nfcString: String = NSLocalizedString("Touch tile to unlock", comment: "")
+    static let lockInfoRetrieved: String = NSLocalizedString("Lock information retrieved", comment: "")
+    static let lockInfoRetrievalFailed: String = NSLocalizedString("Lock information failed", comment: "")
 }

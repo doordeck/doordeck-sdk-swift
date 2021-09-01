@@ -64,28 +64,36 @@ class LockManager {
     ///   - success: The lock has been found
     ///   - fail: The lock has not been found
     func findLock(_ uuid: String,
-                  success: @escaping (LockDevice) -> Void,
+                  success: @escaping ([LockDevice]) -> Void,
                   fail: @escaping () -> Void) {
         
-        if let lock: LockDevice = locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
-            success(lock)
-            return
-        }
-        
-        if let lock: LockDevice = locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
-            success(lock)
-            return
-        }
-        
-        for siteTemp in sites {
-            if let lock: LockDevice = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
+        if let lock: [LockDevice] = locks.filter({$0.ID.lowercased() == uuid.lowercased()}) as [LockDevice]? {
+            if locks.count > 0 {
                 success(lock)
                 return
             }
-            
-            if let lock: LockDevice = siteTemp.locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
+        }
+        
+        if let lock: [LockDevice] = locks.filter({ $0.tiles.contains(uuid.lowercased())}) as [LockDevice]? {
+            if locks.count > 0 {
                 success(lock)
                 return
+            }
+        }
+        
+        for siteTemp in sites {
+            if let lock: [LockDevice] = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}) as [LockDevice]? {
+                if locks.count > 0 {
+                    success(lock)
+                    return
+                }
+            }
+            
+            if let lock: [LockDevice] = siteTemp.locks.filter({$0.tiles.contains(uuid.lowercased())}) as [LockDevice]? {
+                if locks.count > 0 {
+                    success(lock)
+                    return
+                }
             }
         }
         
@@ -93,7 +101,7 @@ class LockManager {
         let header = Header().createSDKAuthHeader(.v3, token: tokenTemp)
         let apiclientTemp = APIClient(header, token: tokenTemp)
         
-        apiclientTemp.getDeviceForTile(uuid) { [self] (json, error) in
+        apiclientTemp.getDeviceForTile(uuid) { [weak self] (json, error) in
             if error == nil {
                 guard let jsonLock: [String: AnyObject] = json else {
                     fail()
@@ -101,19 +109,17 @@ class LockManager {
                 }
                 
                 if let tempLocks = jsonLock["deviceIds"] as? [String]  {
-                var locksCollection: [LockDevice] = [LockDevice]()
+                    var locksCollection: [LockDevice] = [LockDevice]()
                     for lockUUID in tempLocks{
-                        let tempLock = LockDevice(self.apiClient, uuid: lockUUID)
+                        guard let apiClient = self?.apiClient else {return}
+                        let tempLock = LockDevice(apiClient, uuid: lockUUID)
                         locksCollection.append(tempLock)
                     }
                     print(.debug, object: locksCollection)
-                    
+                    success(locksCollection)
                 } else {
                     fail()
                 }
-                
-
-                
             } else {
                 fail()
             }

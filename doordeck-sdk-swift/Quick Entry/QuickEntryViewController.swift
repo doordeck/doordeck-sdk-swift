@@ -121,14 +121,29 @@ extension QuickEntryViewController: quickEntryDelegate {
     
     
     func showLockVerificationScreen(_ UUID: String, autoUnlock:Bool = false) {
-        lockMan.findLock(UUID, success: { [weak self] (lock) in
+        lockMan.findLock("04fad495-f241-42f8-88bd-1180583e62c1", success: { [weak self] (locks) in
             SDKEvent().event(.RESOLVE_TILE_SUCCESS)
-            self?.showLockScreen(lock)
+            if locks.count == 1 {
+                guard let lock = locks.first else {
+                    SDKEvent().event(.RESOLVE_TILE_FAILED)
+                    self?.showLockScreenFail()
+                    return
+                }
+                self?.showLockScreen(lock)
+            } else {
+                print(.debug, object: locks)
+                self?.showMultiLockScreen(locks)
+            }
         }) { [weak self] in
             SDKEvent().event(.RESOLVE_TILE_FAILED)
             self?.showLockScreenFail()
             return
         }
+    }
+    
+    func showMultiLockScreen(_ locks: [LockDevice]) {
+        let vc = MultiDoorUnlockViewController(locks)
+        present(vc, animated: true, completion: nil)
     }
     
     func showLockScreen(_ lockTemp: LockDevice)  {
@@ -138,7 +153,6 @@ extension QuickEntryViewController: quickEntryDelegate {
             vc.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
             present(vc, animated: true, completion: nil)
         }
-        
     }
     
     func showLockScreenFail()  {
