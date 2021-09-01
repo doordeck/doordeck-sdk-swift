@@ -13,10 +13,12 @@ class MultiDoorUnlockViewController: UIViewController, UICollectionViewDelegate 
     var headerView: UIView!
     var titleLabel: UILabel!
     var locksCollection: UICollectionView!
+    var delegate: DoordeckMultiLock!
     
-    init(_ locks: [LockDevice]) {
+    init(_ locks: [LockDevice], delegate: DoordeckMultiLock) {
         
         self.locks = locks
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,6 +32,13 @@ class MultiDoorUnlockViewController: UIViewController, UICollectionViewDelegate 
         setupCollection()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed {
+            delegate.failedToPick()
+        }
+    }
+    
     func setupCollection() {
         let frame = self.view.frame
         let layout = UICollectionViewFlowLayout()
@@ -41,37 +50,41 @@ class MultiDoorUnlockViewController: UIViewController, UICollectionViewDelegate 
         locksCollection.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         locksCollection.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         locksCollection.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
-
+        
         locksCollection.register(LockCollectionViewCell.self, forCellWithReuseIdentifier: "myCell")
         locksCollection.delegate = self
         locksCollection.dataSource = self
+        locksCollection.backgroundColor = UIColor.doordeckPrimaryColour()
     }
     
     func setupHeaderAndTitleLabel() {
-            // Initialize views and add them to the ViewController's view
-            headerView = UIView()
-            headerView.backgroundColor = .red
-            self.view.addSubview(headerView)
-            
-            titleLabel = UILabel()
-            titleLabel.text = "Please pick a lock to unlock"
-            titleLabel.textAlignment = .center
-            titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 20)
-            headerView.addSubview(titleLabel)
-            
-            // Set position of views using constraints
-            headerView.translatesAutoresizingMaskIntoConstraints = false
-            headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-            headerView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-            headerView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-            headerView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
-            
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            titleLabel.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
-            titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
-            titleLabel.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 0.4).isActive = true
-            titleLabel.heightAnchor.constraint(equalTo: headerView.heightAnchor, multiplier: 0.5).isActive = true
-        }
+        // Initialize views and add them to the ViewController's view
+        headerView = UIView()
+        headerView.backgroundColor = UIColor.doorDarkGrey()
+        self.view.addSubview(headerView)
+        
+        titleLabel = UILabel()
+        titleLabel.attributedText = NSAttributedString.doordeckH1Bold(AppStrings.pickOne)
+        titleLabel.textAlignment = .center
+        headerView.addSubview(titleLabel)
+        
+        // Set position of views using constraints
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        headerView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        headerView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
+        headerView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.1).isActive = true
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 0.4).isActive = true
+        titleLabel.heightAnchor.constraint(equalTo: headerView.heightAnchor, multiplier: 0.5).isActive = true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 25, left: 15, bottom: 0, right: 5)
+    }
 }
 
 extension MultiDoorUnlockViewController: UICollectionViewDataSource {
@@ -88,6 +101,19 @@ extension MultiDoorUnlockViewController: UICollectionViewDataSource {
         cell.lock = locks[indexPath.row]
         cell.commonInit()
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.dismiss(animated: true, completion: nil)
+        delegate.pickedALock(lock: locks[indexPath.row])
+    }
+}
+
+extension MultiDoorUnlockViewController: UICollectionViewDelegateFlowLayout
+{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: 300.0, height: 100.0)
     }
 }
 
@@ -106,27 +132,39 @@ class LockCollectionViewCell: UICollectionViewCell {
     }
     
     func commonInit() {
+        
+        self.layer.cornerRadius = 12
+        self.layer.masksToBounds = true
+        
         label = UILabel(frame: contentView.frame)
         contentView.addSubview(label)
         label.textAlignment = .center
-        label.font = UIFont(name: label.font.fontName, size: 12)
         label.isHidden = true
+        label.numberOfLines = 0
+        self.isUserInteractionEnabled = false
         
         guard let lockTemp = lock else { return }
         lockTemp.deviceConnect { json, error in
-                
-            } progress: { Progress in
-                
-            } currentLockStatus: { [weak self]  currentStatus in
-                if currentStatus == .lockInfoRetrieved {
-                    self?.label?.text = self?.lock.name
-                    self?.label?.isHidden = true
-                } else if currentStatus == .lockInfoRetrievalFailed {
-                    
-                }
-            } reset: {
-                
+            
+        } progress: { Progress in
+            
+        } currentLockStatus: { [weak self]  currentStatus in
+            if currentStatus == .lockInfoRetrieved {
+                self?.label?.attributedText = NSAttributedString.doordeckH3(self?.lock.name ?? "")
+                self?.label?.isHidden = false
+                self?.label?.backgroundColor = self?.lock.colour
+                self?.contentView.backgroundColor = self?.lock.colour
+                self?.isUserInteractionEnabled = true
+            } else if currentStatus == .lockInfoRetrievalFailed {
+                self?.label?.attributedText = NSAttributedString.doordeckH3(AppStrings.permission)
+                self?.label?.isHidden = false
+                self?.label?.backgroundColor = UIColor.doorGrey()
+                self?.contentView.backgroundColor = UIColor.doorGrey()
+                self?.isUserInteractionEnabled = false
             }
-        self.contentView.backgroundColor = .white
+        } reset: {
+            
+        }
+        
     }
 }

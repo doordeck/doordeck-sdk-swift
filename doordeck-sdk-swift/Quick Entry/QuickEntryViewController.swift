@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol DoordeckMultiLock {
+    func failedToPick ()
+    func pickedALock (lock: LockDevice)
+}
+
 class QuickEntryViewController: UIViewController {
     var lockMan: LockManager!
     var apiClient: APIClient!
@@ -121,7 +126,7 @@ extension QuickEntryViewController: quickEntryDelegate {
     
     
     func showLockVerificationScreen(_ UUID: String, autoUnlock:Bool = false) {
-        lockMan.findLock("04fad495-f241-42f8-88bd-1180583e62c1", success: { [weak self] (locks) in
+        lockMan.findLock(UUID, success: { [weak self] (locks) in
             SDKEvent().event(.RESOLVE_TILE_SUCCESS)
             if locks.count == 1 {
                 guard let lock = locks.first else {
@@ -142,7 +147,7 @@ extension QuickEntryViewController: quickEntryDelegate {
     }
     
     func showMultiLockScreen(_ locks: [LockDevice]) {
-        let vc = MultiDoorUnlockViewController(locks)
+        let vc = MultiDoorUnlockViewController(locks, delegate: self)
         present(vc, animated: true, completion: nil)
     }
     
@@ -162,6 +167,16 @@ extension QuickEntryViewController: quickEntryDelegate {
             present(vc, animated: true, completion: nil)
         }
     }
+}
+
+
+extension QuickEntryViewController: DoordeckMultiLock {
+    func failedToPick() {
+        SDKEvent().event(.RESOLVE_TILE_FAILED)
+        self.showLockScreenFail()
+    }
     
-    
+    func pickedALock(lock: LockDevice) {
+        self.showLockScreen(lock)
+    }
 }

@@ -47,4 +47,7 @@ struct AppStrings {
     static let nfcString: String = NSLocalizedString("Touch tile to unlock", comment: "")
     static let lockInfoRetrieved: String = NSLocalizedString("Lock information retrieved", comment: "")
     static let lockInfoRetrievalFailed: String = NSLocalizedString("Lock information failed", comment: "")
+    
+    static let pickOne: String = NSLocalizedString("Pick a lock", comment: "")
+    static let permission: String = NSLocalizedString("You have not been granted permission to this device", comment: "")
 }
