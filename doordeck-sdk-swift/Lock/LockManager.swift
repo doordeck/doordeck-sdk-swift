@@ -109,14 +109,7 @@ class LockManager {
                 }
                 
                 if let tempLocks = jsonLock["deviceIds"] as? [String]  {
-                    var locksCollection: [LockDevice] = [LockDevice]()
-                    for lockUUID in tempLocks{
-                        guard let apiClient = self?.apiClient else {return}
-                        let tempLock = LockDevice(apiClient, uuid: lockUUID)
-                        locksCollection.append(tempLock)
-                    }
-                    print(.debug, object: locksCollection)
-                    success(locksCollection)
+                    self?.parseMultiDoor(tempLocks, success: success, fail: fail)
                 } else {
                     fail()
                 }
@@ -125,6 +118,46 @@ class LockManager {
             }
         }
         
+    }
+    
+    
+    func parseMultiDoor(_ locks: [String],
+                        success: @escaping ([LockDevice]) -> Void,
+                        fail: @escaping () -> Void) {
+        
+        var locksCollection: [LockDevice] = [LockDevice]()
+        let group = DispatchGroup()
+        DispatchQueue.global(qos: .default).async {
+            
+            for lockUUID in locks{
+                
+                group.enter()
+                guard let apiClientV2 = self.apiClient else {return}
+                let tempLock = LockDevice(apiClientV2, uuid: lockUUID)
+                
+                tempLock.deviceConnect { json, error in
+                    
+                } progress: { Progress in
+                    
+                } currentLockStatus: { currentStatus in
+                    if currentStatus == .lockInfoRetrieved {
+                        locksCollection.append(tempLock)
+                        group.leave()
+                    } else if currentStatus == .lockInfoRetrievalFailed {
+                        group.leave()
+                    }
+                } reset: {
+                    
+                }
+                
+            }
+            
+            group.notify(queue: .main) {
+                locksCollection = locksCollection.sorted { $0.name < $1.name }
+                print(.debug, object: locksCollection)
+                success(locksCollection)
+            }
+        }
     }
     
 }

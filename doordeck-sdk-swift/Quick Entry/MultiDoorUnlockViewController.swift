@@ -141,30 +141,12 @@ class LockCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .center
         label.isHidden = true
         label.numberOfLines = 0
-        self.isUserInteractionEnabled = false
         
         guard let lockTemp = lock else { return }
-        lockTemp.deviceConnect { json, error in
-            
-        } progress: { Progress in
-            
-        } currentLockStatus: { [weak self]  currentStatus in
-            if currentStatus == .lockInfoRetrieved {
-                self?.label?.attributedText = NSAttributedString.doordeckH3(self?.lock.name ?? "")
-                self?.label?.isHidden = false
-                self?.label?.backgroundColor = self?.lock.colour
-                self?.contentView.backgroundColor = self?.lock.colour
-                self?.isUserInteractionEnabled = true
-            } else if currentStatus == .lockInfoRetrievalFailed {
-                self?.label?.attributedText = NSAttributedString.doordeckH3(AppStrings.permission)
-                self?.label?.isHidden = false
-                self?.label?.backgroundColor = UIColor.doorGrey()
-                self?.contentView.backgroundColor = UIColor.doorGrey()
-                self?.isUserInteractionEnabled = false
-            }
-        } reset: {
-            
-        }
         
+        self.label.attributedText = NSAttributedString.doordeckH3(lockTemp.name)
+        self.label.isHidden = false
+        self.label?.backgroundColor = lockTemp.colour
+        self.contentView.backgroundColor = lockTemp.colour
     }
 }
