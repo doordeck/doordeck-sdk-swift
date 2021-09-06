@@ -44,6 +44,10 @@ extension AppStrings {
             return AppStrings.timeWindowFailed
         case .other:
             return AppStrings.other
+        case .lockInfoRetrieved:
+            return AppStrings.lockInfoRetrieved
+        case .lockInfoRetrievalFailed:
+            return AppStrings.lockInfoRetrievalFailed
         }
     }
 }

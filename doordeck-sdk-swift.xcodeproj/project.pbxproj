@@ -112,6 +112,7 @@
 		5966A60A2249AA22008C4665 /* URLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A6092249AA22008C4665 /* URLManagerTests.swift */; };
 		5966A60C224A5C35008C4665 /* QueryManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A60B224A5C35008C4665 /* QueryManagerTests.swift */; };
 		5966A614224BAFE9008C4665 /* KeyPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966A613224BAFE9008C4665 /* KeyPairTests.swift */; };
+		596772A026E04A9100C111CC /* MultiDoorUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967729F26E04A9100C111CC /* MultiDoorUnlockViewController.swift */; };
 		5981C110251A07C900DF431F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C10F251A07C900DF431F /* Alamofire */; };
 		5981C115251A07E700DF431F /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C114251A07E700DF431F /* Cache */; };
 		5981C13B251A0A3100DF431F /* Clibsodium in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C13A251A0A3100DF431F /* Clibsodium */; };
@@ -194,6 +195,7 @@
 		5966A6092249AA22008C4665 /* URLManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManagerTests.swift; sourceTree = "<group>"; };
 		5966A60B224A5C35008C4665 /* QueryManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryManagerTests.swift; sourceTree = "<group>"; };
 		5966A613224BAFE9008C4665 /* KeyPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairTests.swift; sourceTree = "<group>"; };
+		5967729F26E04A9100C111CC /* MultiDoorUnlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDoorUnlockViewController.swift; sourceTree = "<group>"; };
 		59ABB76E2271C2A20048BCF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		59B4456A224D137200555081 /* InitializeDoordeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeDoordeck.swift; sourceTree = "<group>"; };
 		59FE8F17233121C3008F7AB8 /* AmazonRootCA2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA2.cer; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		595B20A5227C8FB100D7297E /* Quick Entry */ = {
 			isa = PBXGroup;
 			children = (
+				5967729F26E04A9100C111CC /* MultiDoorUnlockViewController.swift */,
 				595B20A6227C8FB100D7297E /* LockUnlockViewController.swift */,
 				595B20A7227C8FB100D7297E /* LockUnlockScreen.storyboard */,
 				595B20A9227C8FB100D7297E /* QuickEntryStoryboard.storyboard */,
@@ -580,6 +583,7 @@
 				595B20CB227C8FB100D7297E /* AppStrings.swift in Sources */,
 				595B20D1227C8FB100D7297E /* VerificationViewController.swift in Sources */,
 				595B20F3227C8FB100D7297E /* ReachabilityHelper.swift in Sources */,
+				596772A026E04A9100C111CC /* MultiDoorUnlockViewController.swift in Sources */,
 				595B20ED227C8FB100D7297E /* BottomViewController.swift in Sources */,
 				595B2105227C8FB100D7297E /* UimageViewExtension.swift in Sources */,
 				595B20FD227C8FB100D7297E /* SwiftyTimer.swift in Sources */,

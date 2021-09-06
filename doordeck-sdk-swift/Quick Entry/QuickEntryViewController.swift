@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol DoordeckMultiLock {
+    func failedToPick ()
+    func pickedALock (lock: LockDevice)
+}
+
 class QuickEntryViewController: UIViewController {
     var lockMan: LockManager!
     var apiClient: APIClient!
@@ -121,14 +126,33 @@ extension QuickEntryViewController: quickEntryDelegate {
     
     
     func showLockVerificationScreen(_ UUID: String, autoUnlock:Bool = false) {
-        lockMan.findLock(UUID, success: { [weak self] (lock) in
+        lockMan.findLock(UUID, success: { [weak self] (locks) in
             SDKEvent().event(.RESOLVE_TILE_SUCCESS)
-            self?.showLockScreen(lock)
+            if locks.count == 0 {
+                SDKEvent().event(.RESOLVE_TILE_FAILED)
+                self?.showLockScreenFail()
+                return
+            } else if locks.count == 1 {
+                guard let lock = locks.first else {
+                    SDKEvent().event(.RESOLVE_TILE_FAILED)
+                    self?.showLockScreenFail()
+                    return
+                }
+                self?.showLockScreen(lock)
+            } else {
+                print(.debug, object: locks)
+                self?.showMultiLockScreen(locks)
+            }
         }) { [weak self] in
             SDKEvent().event(.RESOLVE_TILE_FAILED)
             self?.showLockScreenFail()
             return
         }
+    }
+    
+    func showMultiLockScreen(_ locks: [LockDevice]) {
+        let vc = MultiDoorUnlockViewController(locks, delegate: self)
+        present(vc, animated: true, completion: nil)
     }
     
     func showLockScreen(_ lockTemp: LockDevice)  {
@@ -138,7 +162,6 @@ extension QuickEntryViewController: quickEntryDelegate {
             vc.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
             present(vc, animated: true, completion: nil)
         }
-        
     }
     
     func showLockScreenFail()  {
@@ -148,6 +171,16 @@ extension QuickEntryViewController: quickEntryDelegate {
             present(vc, animated: true, completion: nil)
         }
     }
+}
+
+
+extension QuickEntryViewController: DoordeckMultiLock {
+    func failedToPick() {
+        SDKEvent().event(.RESOLVE_TILE_FAILED)
+        self.showLockScreenFail()
+    }
     
-    
+    func pickedALock(lock: LockDevice) {
+        self.showLockScreen(lock)
+    }
 }

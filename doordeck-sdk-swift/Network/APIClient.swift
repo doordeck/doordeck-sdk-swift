@@ -130,13 +130,38 @@ class APIClient {
         }
     }
     
+    /// Get device from UUIs
+    /// - Parameters:
+    ///   - uuid: UUID
+    ///   - completion: Returns Lock
+    func getDevicesForUUID (_ uuid:String,
+                               completion: @escaping ([String: AnyObject]?, APIClient.error?) -> Void) {
+        
+        let URL = URLManager.getDevicesForUUID(uuid)
+        
+        afrequest.request (URL,
+                           method: .get,
+                           params:nil,
+                           headers: self.header,
+                           onSuccess: { (jsonData) in
+                            
+                            self.requestCompletion(URL,
+                                                   data: jsonData,
+                                                   rootKey: nil,
+                                                   completion: completion)
+                            
+        }) { (error) in
+            completion(nil, error)
+        }
+    }
+    
     
     /// Find a device from the UUID of a tile
     ///
     /// - Parameters:
     ///   - uuid: UUID of the device
     ///   - completion: completion call back with error
-    func getDeviceForTile (_ uuid:String,
+    func getDeviceForTile (_ uuid: String,
                            completion: @escaping ([String:AnyObject]?, APIClient.error?) -> Void) {
         
         let URL = URLManager.getDeviceForTile(uuid)
