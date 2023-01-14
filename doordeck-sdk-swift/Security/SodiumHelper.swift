@@ -6,10 +6,7 @@
 //
 
 import Foundation
-#if DOORDECKAPP
-#else
 import Sodium
-#endif
 
 class SodiumHelper {
     fileprivate let sodium = Sodium()

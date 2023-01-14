@@ -30,6 +30,7 @@
 		595B1FFB227C519100D7297E /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FEC227C519000D7297E /* JsonHelper.swift */; };
 		595B1FFD227C7CFF00D7297E /* SDKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B1FFC227C7CFF00D7297E /* SDKEvent.swift */; };
 		595D11A322CD4ACA007D75DB /* DoordeckSDKUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595D11A222CD4ACA007D75DB /* DoordeckSDKUI.swift */; };
+		5967729E26DEF0BE00C111CC /* MultiDoorUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967729D26DEF0BE00C111CC /* MultiDoorUnlockViewController.swift */; };
 		5981C11C251A08AA00DF431F /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C11B251A08AA00DF431F /* Cache */; };
 		5981C124251A08D300DF431F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C123251A08D300DF431F /* Alamofire */; };
 		5981C128251A08E200DF431F /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C127251A08E200DF431F /* Reachability */; };
@@ -100,6 +101,7 @@
 		595B1FEC227C519000D7297E /* JsonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		595B1FFC227C7CFF00D7297E /* SDKEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKEvent.swift; sourceTree = "<group>"; };
 		595D11A222CD4ACA007D75DB /* DoordeckSDKUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoordeckSDKUI.swift; sourceTree = "<group>"; };
+		5967729D26DEF0BE00C111CC /* MultiDoorUnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDoorUnlockViewController.swift; sourceTree = "<group>"; };
 		5984AE68228EB405008066D2 /* QCMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QCMethod.swift; sourceTree = "<group>"; };
 		5984AE69228EB405008066D2 /* unlockAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = unlockAnimations.swift; sourceTree = "<group>"; };
 		59ABB7802271C3E30048BCF5 /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				59ABB7982271C3E30048BCF5 /* LockUnlockViewController.swift */,
+				5967729D26DEF0BE00C111CC /* MultiDoorUnlockViewController.swift */,
 				59ABB7992271C3E30048BCF5 /* LockUnlockScreen.storyboard */,
 				59ABB79B2271C3E30048BCF5 /* QuickEntryStoryboard.storyboard */,
 				59ABB79D2271C3E30048BCF5 /* QuickEntryViewController.swift */,
@@ -452,6 +455,7 @@
 				59ABB7C92271C3E30048BCF5 /* QuickEntryViewController.swift in Sources */,
 				595B1FFB227C519100D7297E /* JsonHelper.swift in Sources */,
 				595B1FF8227C519100D7297E /* UIApplication.swift in Sources */,
+				5967729E26DEF0BE00C111CC /* MultiDoorUnlockViewController.swift in Sources */,
 				595B1FF7227C519100D7297E /* UIApplicationiOS.swift in Sources */,
 				59ABB7B62271C3E30048BCF5 /* TokenHelper.swift in Sources */,
 				595B1FEE227C519100D7297E /* LabelExtension.swift in Sources */,

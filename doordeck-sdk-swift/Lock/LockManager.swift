@@ -64,52 +64,100 @@ class LockManager {
     ///   - success: The lock has been found
     ///   - fail: The lock has not been found
     func findLock(_ uuid: String,
-                  success: @escaping (LockDevice) -> Void,
+                  success: @escaping ([LockDevice]) -> Void,
                   fail: @escaping () -> Void) {
         
-        if let lock: LockDevice = locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
-            success(lock)
-            return
-        }
-        
-        if let lock: LockDevice = locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
-            success(lock)
-            return
-        }
-       
-        for siteTemp in sites {
-            if let lock: LockDevice = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}).first {
+        if let lock: [LockDevice] = locks.filter({$0.ID.lowercased() == uuid.lowercased()}) as [LockDevice]? {
+            if locks.count > 0 {
                 success(lock)
                 return
+            }
+        }
+        
+        if let lock: [LockDevice] = locks.filter({ $0.tiles.contains(uuid.lowercased())}) as [LockDevice]? {
+            if locks.count > 0 {
+                success(lock)
+                return
+            }
+        }
+        
+        for siteTemp in sites {
+            if let lock: [LockDevice] = siteTemp.locks.filter({$0.ID.lowercased() == uuid.lowercased()}) as [LockDevice]? {
+                if locks.count > 0 {
+                    success(lock)
+                    return
+                }
             }
             
-            if let lock: LockDevice = siteTemp.locks.filter({ $0.tiles.contains(uuid.lowercased())}).first {
-                success(lock)
-                return
+            if let lock: [LockDevice] = siteTemp.locks.filter({$0.tiles.contains(uuid.lowercased())}) as [LockDevice]? {
+                if locks.count > 0 {
+                    success(lock)
+                    return
+                }
             }
         }
         
-        apiClient.getDeviceForTile(uuid) { (json, error) in
+        guard let tokenTemp: AuthTokenClass = apiClient.token else { return }
+        let header = Header().createSDKAuthHeader(.v3, token: tokenTemp)
+        let apiclientTemp = APIClient(header, token: tokenTemp)
+        
+        apiclientTemp.getDeviceForTile(uuid) { [weak self] (json, error) in
             if error == nil {
                 guard let jsonLock: [String: AnyObject] = json else {
                     fail()
                     return
                 }
                 
-                let tempLock = LockDevice(self.apiClient)
-                tempLock.populateFromJson(jsonLock, index: 0, completion: { (json, error) in
-                    if error == nil {
-                        success(tempLock)
-                    } else {
-                        fail()
-                    }
-                })
-                
+                if let tempLocks = jsonLock["deviceIds"] as? [String]  {
+                    self?.parseMultiDoor(tempLocks, success: success, fail: fail)
+                } else {
+                    fail()
+                }
             } else {
                 fail()
             }
         }
         
+    }
+    
+    
+    func parseMultiDoor(_ locks: [String],
+                        success: @escaping ([LockDevice]) -> Void,
+                        fail: @escaping () -> Void) {
+        
+        var locksCollection: [LockDevice] = [LockDevice]()
+        let group = DispatchGroup()
+        DispatchQueue.global(qos: .default).async {
+            
+            for lockUUID in locks{
+                
+                group.enter()
+                guard let apiClientV2 = self.apiClient else {return}
+                let tempLock = LockDevice(apiClientV2, uuid: lockUUID)
+                
+                tempLock.deviceConnect { json, error in
+                    
+                } progress: { Progress in
+                    
+                } currentLockStatus: { currentStatus in
+                    if currentStatus == .lockInfoRetrieved {
+                        locksCollection.append(tempLock)
+                        group.leave()
+                    } else if currentStatus == .lockInfoRetrievalFailed {
+                        group.leave()
+                    }
+                } reset: {
+                    
+                }
+                
+            }
+            
+            group.notify(queue: .main) {
+                locksCollection = locksCollection.sorted { $0.name < $1.name }
+                print(.debug, object: locksCollection)
+                success(locksCollection)
+            }
+        }
     }
     
 }

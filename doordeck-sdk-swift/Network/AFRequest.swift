@@ -95,8 +95,6 @@ class AFRequest {
                       object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
                 
-                doordeckNotifications().logout()
-                
             case 423:
                 print(PrintChannel.error,
                       object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
@@ -142,8 +140,6 @@ class AFRequest {
                 SDKEvent().event(.NETWORK_ERROR)
                 print(PrintChannel.error, object: "AFRequest Error \(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode)) \n URL: \(url)")
                 onError?(APIClient.error.unsuccessfulHTTPStatusCode(statusCode: statusCode))
-                
-                doordeckNotifications().logout()
                 
             case 423:
                 print(PrintChannel.error,

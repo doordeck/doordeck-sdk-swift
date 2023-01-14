@@ -42,6 +42,8 @@ class LockDevice {
         case timeWindowsuccess
         case timeWindowFailed
         case other
+        case lockInfoRetrieved
+        case lockInfoRetrievalFailed
     }
     
     enum lockSizeOptions {
@@ -81,9 +83,31 @@ class LockDevice {
     var progress: ((Double) -> Void)?
     var lockStatus: ((currentUnlockProgress) -> Void)?
     var reset: (() -> Void)?
-    
+        
     init(_ apiClient: APIClient) {
         self.apiClient = apiClient
+    }
+    
+    init(_ apiClient: APIClient, uuid: String) {
+        self.apiClient = apiClient
+        self.getDeviceDetials(uuid: uuid)
+    }
+    
+    func getDeviceDetials(uuid: String) {
+        apiClient.getDevicesForUUID(uuid) { [weak self] (json, error) in
+            if error == nil {
+                guard let deviceData = json else {return}
+                self?.populateFromJson(deviceData, index: 0) { [weak self] (jsonTemp, error) in
+                    if error == nil {
+                        self?.deviceStatusUpdate(.lockInfoRetrieved)
+                    } else {
+                        self?.deviceStatusUpdate(.lockInfoRetrievalFailed)
+                    }
+                }
+            } else {
+                self?.deviceStatusUpdate(.lockInfoRetrievalFailed)
+            }
+        }
     }
     
     func populateFromJson (_ lock: [String: AnyObject],
