@@ -52,6 +52,15 @@ class QuickEntryViewController: UIViewController {
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()    
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive), name: UIApplication.willResignActiveNotification, object: nil)
+    }
+    
+    @objc func appWillResignActive(_ notification: Notification) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UserDefaults().getDarkUI() ? .lightContent : .default
