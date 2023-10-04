@@ -54,11 +54,12 @@ class QuickEntryViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        super.viewDidLoad()    
-        NotificationCenter.default.addObserver(self, selector: #selector(appWillResignActive), name: UIApplication.willEnterForegroundNotification, object: nil)
+        super.viewDidLoad()
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appWillResignActive), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
-    @objc func appWillResignActive(_ notification: Notification) {
+    @objc func appWillResignActive() {
         self.dismiss(animated: true, completion: nil)
     }
     
