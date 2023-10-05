@@ -113,6 +113,10 @@ public class Doordeck {
         darkModeActive(darkMode)
     }
     
+    public func deeplink (_ tileID: String) {
+        NotificationCenter.default.post(name: .deeplinkSDKCheck, object: tileID)
+    }
+    
     
     /// Dark mode
     ///
