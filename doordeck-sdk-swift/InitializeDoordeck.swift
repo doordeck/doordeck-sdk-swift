@@ -117,10 +117,9 @@ public class Doordeck {
     ///
     /// - Parameters:
     ///   - tileID: Tile UUID is UUID for a ile from a deeplink or QR or background NFC
-    public func deeplink (_ tileID: String) {
+    public func unlockTileID (_ tileID: String) {
         NotificationCenter.default.post(name: .deeplinkSDKCheck, object: tileID)
     }
-    
     
     /// Dark mode
     ///
