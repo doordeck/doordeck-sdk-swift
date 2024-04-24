@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -117,6 +117,7 @@
 		5981C115251A07E700DF431F /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C114251A07E700DF431F /* Cache */; };
 		5981C13B251A0A3100DF431F /* Clibsodium in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C13A251A0A3100DF431F /* Clibsodium */; };
 		5981C13D251A0A3100DF431F /* Sodium in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C13C251A0A3100DF431F /* Sodium */; };
+		59B369E72BD8123300FAD632 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 59B369E62BD8123300FAD632 /* PrivacyInfo.xcprivacy */; };
 		59B4456B224D137200555081 /* InitializeDoordeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4456A224D137200555081 /* InitializeDoordeck.swift */; };
 		59DD8F5F251A0563001E4131 /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 59DD8F5E251A0563001E4131 /* QRCodeReader */; };
 		59DD8F64251A05AB001E4131 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 59DD8F63251A05AB001E4131 /* Reachability */; };
@@ -197,6 +198,7 @@
 		5966A613224BAFE9008C4665 /* KeyPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPairTests.swift; sourceTree = "<group>"; };
 		5967729F26E04A9100C111CC /* MultiDoorUnlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiDoorUnlockViewController.swift; sourceTree = "<group>"; };
 		59ABB76E2271C2A20048BCF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		59B369E62BD8123300FAD632 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		59B4456A224D137200555081 /* InitializeDoordeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeDoordeck.swift; sourceTree = "<group>"; };
 		59FE8F17233121C3008F7AB8 /* AmazonRootCA2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmazonRootCA2.cer; sourceTree = "<group>"; };
 		59FE8F18233121C3008F7AB8 /* SFSRootCAG2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFSRootCAG2.cer; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		593B1CB12244FB3200BE5E67 = {
 			isa = PBXGroup;
 			children = (
+				59B369E62BD8123300FAD632 /* PrivacyInfo.xcprivacy */,
 				593B1CBD2244FB3200BE5E67 /* doordeck-sdk-swift */,
 				593B1CC82244FB3300BE5E67 /* doordeck-sdk-swiftTests */,
 				593B1CBC2244FB3200BE5E67 /* Products */,
@@ -530,6 +533,7 @@
 				59FE8F1C233121C3008F7AB8 /* SFSRootCAG2.cer in Resources */,
 				595B20E9227C8FB100D7297E /* QuickEntryStoryboard.storyboard in Resources */,
 				595B20E7227C8FB100D7297E /* LockUnlockScreen.storyboard in Resources */,
+				59B369E72BD8123300FAD632 /* PrivacyInfo.xcprivacy in Resources */,
 				59FE8F1B233121C3008F7AB8 /* AmazonRootCA2.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
