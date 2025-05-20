@@ -11,7 +11,7 @@ import CoreLocation
 
 /// possible errors for the device
 ///
-/// - unsuccessfull: Unsuccessfull error on unlock
+/// - unsuccessful: unsuccessful error on unlock
 /// - gpsDenied: The device does not have permission to access the GPS
 /// - gpsNotDetermined: GPS caanot be obtined
 /// - gpsFailedPosition: The GPS lock has timed out or failed
@@ -97,7 +97,7 @@ class LockUnlockViewController: UIViewController {
                 completionHandler: { error in
                     DispatchQueue.main.async {
                         if error != nil {
-                            self.showFailedScreen(.unsuccessfull)
+                            self.showFailedScreen(.unsuccessful)
                         } else {
                             self.lockSuccessfullyUnlocked(lockDestils.lock)
                         }
@@ -190,6 +190,7 @@ class LockUnlockViewController: UIViewController {
 
                 switch response {
                 case .locationUpdated(let watchLocation):
+                    print(.debug, object: watchLocation.horizontalAccuracy)
                     WhereAmI.sharedInstance.stopUpdatingLocation()
                     self.gpsCountDownTimer.invalidate()
                     let lockLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)

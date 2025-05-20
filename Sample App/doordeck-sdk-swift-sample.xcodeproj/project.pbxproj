@@ -33,7 +33,6 @@
 		5981C12C251A08F100DF431F /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 5981C12B251A08F100DF431F /* QRCodeReader */; };
 		5984AE6A228EB405008066D2 /* QCMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984AE68228EB405008066D2 /* QCMethod.swift */; };
 		5984AE6B228EB405008066D2 /* unlockAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984AE69228EB405008066D2 /* unlockAnimations.swift */; };
-		5984AE6C228EB556008066D2 /* AppStringsSDKExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909D09422858A9200D31E81 /* AppStringsSDKExtension.swift */; };
 		59ABB7B82271C3E30048BCF5 /* AuthTokenClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7832271C3E30048BCF5 /* AuthTokenClass.swift */; };
 		59ABB7C22271C3E30048BCF5 /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7922271C3E30048BCF5 /* WhereAmI.swift */; };
 		59ABB7C32271C3E30048BCF5 /* LocationProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABB7932271C3E30048BCF5 /* LocationProfile.swift */; };
@@ -392,7 +391,6 @@
 				595B1FF4227C519100D7297E /* SwiftyTimer.swift in Sources */,
 				59ABB7B82271C3E30048BCF5 /* AuthTokenClass.swift in Sources */,
 				59ABB7C42271C3E30048BCF5 /* UIColor.swift in Sources */,
-				5984AE6C228EB556008066D2 /* AppStringsSDKExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
