@@ -6,81 +6,74 @@
 //
 
 import UIKit
+import DoordeckSDK
 
 protocol DoordeckMultiLock {
     func failedToPick ()
-    func pickedALock (lock: LockDevice)
+    func pickedALock (lock: LockResponse)
 }
 
 class QuickEntryViewController: UIViewController {
-    var lockMan: LockManager!
-    var apiClient: APIClient!
-    var certificateChain: CertificateChainClass!
+    var doordeck: DoordeckSDK.Doordeck?
     var delegate: DoordeckProtocol?
     var controlDelegate: DoordeckControl?
     var readerType: Doordeck.ReaderType = Doordeck.ReaderType.automatic
-    var sodium: SodiumHelper!
-    
+
     fileprivate let quickStoryboard = "QuickEntryStoryboard"
     fileprivate let bottomNFCView = "bottomViewNFC"
     fileprivate let bottomQRView = "bottomViewQR"
     fileprivate let VerificationScreen = "VerificationScreen"
     fileprivate let lockUnlockStoryboard =  "LockUnlockScreen"
     fileprivate let lockUnlockIdentifier = "LockUnlock"
-    
-    init(_ apiClient: APIClient,
-         chain: CertificateChainClass,
-         sodiumTemp: SodiumHelper) {
-        
-        self.sodium = sodiumTemp
-        self.apiClient = apiClient
-        self.certificateChain = chain
-        self.lockMan = LockManager(self.apiClient)
+
+    init(_ doordeck: DoordeckSDK.Doordeck) {
+
+        self.doordeck = doordeck
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUpQuickEntry()
         setupUI()
     }
-    
+
     func setupUI() {
         view.backgroundColor = .doordeckPrimaryColour()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNotifications()
     }
-    
+
     func setupNotifications() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self,
                                        selector: #selector(appWillResignActive),
                                        name: UIApplication.didEnterBackgroundNotification,
                                        object: nil)
-        
+
         notificationCenter.addObserver(self,
                                        selector: #selector(deeplinkCheck(_:)),
                                        name: .deeplinkSDKCheck,
                                        object: nil)
     }
-    
+
     @objc func deeplinkCheck(_ notification: NSNotification) {
         if let tileUUID = notification.object as? String {
             lockDetected(tileUUID)
         }
     }
-    
+
     @objc func appWillResignActive() {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UserDefaults().getDarkUI() ? .lightContent : .default
     }
@@ -88,16 +81,16 @@ class QuickEntryViewController: UIViewController {
 
 extension QuickEntryViewController: quickEntryDelegate {
     func showQRCode() {
-        
+
     }
-    
+
     func checkQuickEntryChoice() {
         setUpQuickEntry()
     }
-    
+
     fileprivate func setUpQuickEntry() {
         if UIDevice.supportNFC() == true {
-            
+
             if view.subviews.count > 0 {
                 for view in view.subviews {
                     view.removeFromSuperview()
@@ -112,7 +105,7 @@ extension QuickEntryViewController: quickEntryDelegate {
             addQRVC()
         }
     }
-    
+
     fileprivate func addNFCVC () {
         if #available(iOS 11, *) {
             let storyboard: UIStoryboard = UIStoryboard(name: quickStoryboard, bundle: Bundle(for: type(of: self)) )
@@ -123,16 +116,16 @@ extension QuickEntryViewController: quickEntryDelegate {
             bottomViewVC.controlDelegate = self.controlDelegate
             addChild(bottomViewVC)
             self.view.addSubview(bottomViewVC.view)
-            
+
             UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: { [weak self] () -> Void in
                 self?.view.layoutIfNeeded()
             }, completion: nil)
-            
+
         } else {
             addQRVC()
         }
     }
-    
+
     fileprivate func addQRVC () {
         let storyboard: UIStoryboard = UIStoryboard(name: quickStoryboard, bundle: Bundle(for: type(of: self)) )
         let bottomViewVC = storyboard.instantiateViewController(withIdentifier: bottomQRView) as! BottomViewControllerQR
@@ -142,61 +135,101 @@ extension QuickEntryViewController: quickEntryDelegate {
         bottomViewVC.controlDelegate = self.controlDelegate
         addChild(bottomViewVC)
         self.view.addSubview(bottomViewVC.view)
-        
+
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: { [weak self]  () -> Void in
             self?.view.layoutIfNeeded()
         }, completion: nil)
     }
-    
+
     func lockDetected(_ UUID: String) {
         showLockVerificationScreen(UUID, autoUnlock: true)
     }
-    
-    
+
+
     func showLockVerificationScreen(_ UUID: String, autoUnlock:Bool = false) {
-        lockMan.findLock(UUID, success: { [weak self] (locks) in
-            SDKEvent().event(.RESOLVE_TILE_SUCCESS)
-            if locks.count == 0 {
+        doordeck?.tiles().getLocksBelongingToTile(tileId: UUID) { locksResponse, error in
+            if (error != nil) {
                 SDKEvent().event(.RESOLVE_TILE_FAILED)
-                self?.showLockScreenFail()
-                return
-            } else if locks.count == 1 {
-                guard let lock = locks.first else {
-                    SDKEvent().event(.RESOLVE_TILE_FAILED)
-                    self?.showLockScreenFail()
+                self.showLockScreenFail()
+            } else {
+                guard let deviceIds = locksResponse?.deviceIds else {
+                    self.showLockScreenFail()
                     return
                 }
-                self?.showLockScreen(lock)
-            } else {
-                print(.debug, object: locks)
-                self?.showMultiLockScreen(locks)
+
+                SDKEvent().event(.RESOLVE_TILE_SUCCESS)
+
+                self.getLockResponses(for: deviceIds) { lockResponses, error in
+                    if (error != nil) {
+                        self.showLockScreenFail()
+                    } else {
+                        if (lockResponses.count == 0) {
+                            SDKEvent().event(.RESOLVE_TILE_FAILED)
+                            self.showLockScreenFail()
+                        } else if (lockResponses.count == 1) {
+                            guard let lock = lockResponses.first else {
+                                SDKEvent().event(.RESOLVE_TILE_FAILED)
+                                self.showLockScreenFail()
+                                return
+                            }
+                            self.showLockScreen(lock)
+                        } else {
+                            print(.debug, object: lockResponses)
+                            self.showMultiLockScreen(lockResponses)
+                        }
+                    }
+                }
+
             }
-        }) { [weak self] in
-            SDKEvent().event(.RESOLVE_TILE_FAILED)
-            self?.showLockScreenFail()
-            return
         }
     }
-    
-    func showMultiLockScreen(_ locks: [LockDevice]) {
+
+    func showMultiLockScreen(_ locks: [LockResponse]) {
         let vc = MultiDoorUnlockViewController(locks, delegate: self)
         present(vc, animated: true, completion: nil)
     }
-    
-    func showLockScreen(_ lockTemp: LockDevice)  {
+
+    func showLockScreen(_ lockTemp: LockResponse)  {
         if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: Bundle(for: type(of: self))).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
-            vc.certificateChain = self.certificateChain
-            vc.sodium = self.sodium
+            vc.doordeck = doordeck
             vc.lockVariable = lockUnlockScreen(origin: .internalApp, lock: lockTemp)
             present(vc, animated: true, completion: nil)
         }
     }
-    
+
     func showLockScreenFail()  {
         if let vc = UIStoryboard(name: lockUnlockStoryboard, bundle: Bundle(for: type(of: self))).instantiateViewController(withIdentifier: lockUnlockIdentifier) as? LockUnlockViewController {
-            vc.certificateChain = self.certificateChain
-            vc.sodium = self.sodium
             present(vc, animated: true, completion: nil)
+        }
+    }
+
+    private func getLockResponses(
+        for lockIds: [String],
+        completion: @escaping ([LockResponse], Error?) -> Void
+    ) {
+        let group = DispatchGroup()
+        var responses: [LockResponse] = []
+        var capturedError: Error? = nil
+        let queue = DispatchQueue(label: "lockResponses.sync")
+
+        for id in lockIds {
+            group.enter()
+            doordeck?.lockOperations().getSingleLock(lockId: id) { response, error in
+                queue.async {
+                    if let response = response {
+                        responses.append(response)
+                    } else if let error = error {
+                        if capturedError == nil {
+                            capturedError = error
+                        }
+                    }
+                    group.leave()
+                }
+            }
+        }
+
+        group.notify(queue: .main) {
+            completion(responses, capturedError)
         }
     }
 }
@@ -207,8 +240,8 @@ extension QuickEntryViewController: DoordeckMultiLock {
         SDKEvent().event(.RESOLVE_TILE_FAILED)
         self.showLockScreenFail()
     }
-    
-    func pickedALock(lock: LockDevice) {
+
+    func pickedALock(lock: LockResponse) {
         self.showLockScreen(lock)
     }
 }

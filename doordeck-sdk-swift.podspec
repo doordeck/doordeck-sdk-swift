@@ -8,7 +8,7 @@ spec.summary = "Doordeck allows you to unlock your access control doors via your
 spec.requires_arc = true
 
 
-spec.version = "0.0.3"
+spec.version = "0.1.0"
 
 spec.license = { :type => "Apache", :file => "LICENSE" }
 
@@ -16,15 +16,13 @@ spec.author = { "Doordeck" => "support@doordeck.com" }
 
 spec.homepage = "https://github.com/doordeck/doordeck-sdk-swift"
 
-spec.source = { :git => "https://github.com/doordeck/doordeck-sdk-swift.git" , 
+spec.source = { :git => "https://github.com/doordeck/doordeck-sdk-swift.git" ,
              :tag => "#{spec.version}" }
 
 spec.ios.framework = "UIKit"
-spec.dependency 'Alamofire', '~> 4.8'
-spec.dependency 'Cache', '~> 5.2'
+spec.dependency 'DoordeckSDK' , '~> 0.106.0'
 spec.dependency 'QRCodeReader.swift', '~> 10.0'
 spec.dependency 'ReachabilitySwift', '~> 4.3'
-spec.dependency 'SwiftyRSA', '~> 1.5'
 
 spec.source_files = "doordeck-sdk-swift/**/*.{h,swift,storyboard,xib,xcassets,plist,png,jpeg,jpg}"
 

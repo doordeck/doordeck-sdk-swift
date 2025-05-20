@@ -7,15 +7,16 @@
 
 import Foundation
 import UIKit
+import DoordeckSDK
 
 class MultiDoorUnlockViewController: UIViewController, UICollectionViewDelegate {
-    var locks: [LockDevice]!
+    var locks: [LockResponse]!
     var headerView: UIView!
     var titleLabel: UILabel!
     var locksCollection: UICollectionView!
     var delegate: DoordeckMultiLock!
     
-    init(_ locks: [LockDevice], delegate: DoordeckMultiLock) {
+    init(_ locks: [LockResponse], delegate: DoordeckMultiLock) {
         
         self.locks = locks
         self.delegate = delegate
@@ -121,7 +122,7 @@ extension MultiDoorUnlockViewController: UICollectionViewDelegateFlowLayout
 class LockCollectionViewCell: UICollectionViewCell {
     
     var label: UILabel!
-    var lock: LockDevice!
+    var lock: LockResponse!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -146,7 +147,9 @@ class LockCollectionViewCell: UICollectionViewCell {
         
         self.label.attributedText = NSAttributedString.doordeckH3(lockTemp.name)
         self.label.isHidden = false
-        self.label?.backgroundColor = lockTemp.colour
-        self.contentView.backgroundColor = lockTemp.colour
+        if let hex = lockTemp.colour, let color = UIColor(named: hex) {
+            self.label?.backgroundColor = color
+            self.contentView.backgroundColor = color
+        }
     }
 }
