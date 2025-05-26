@@ -222,7 +222,6 @@ public class Doordeck {
     }
     
     var currentState: State {
-        doordeckSDK.contextManager().getCertificateChain()
         if (doordeckSDK.contextManager().isCloudAuthTokenAboutToExpire()) {
             return .notAuthenticated
         } else if (doordeckSDK.contextManager().isCertificateChainAboutToExpire()) {
