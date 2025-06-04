@@ -1,52 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
-        "state": {
-          "branch": null,
-          "revision": "f82c23a8a7ef8dc1a49a8bfc6a96883e79121864",
-          "version": "5.5.0"
-        }
-      },
-      {
-        "package": "Cache",
-        "repositoryURL": "https://github.com/hyperoslo/Cache",
-        "state": {
-          "branch": null,
-          "revision": "042b2cd22d3c8c30fdcead0c613de94a1d648123",
-          "version": "5.3.0"
-        }
-      },
-      {
-        "package": "QRCodeReader",
-        "repositoryURL": "https://github.com/yannickl/QRCodeReader.swift",
-        "state": {
-          "branch": null,
-          "revision": "5020b5a47199d8ba80c83a4b4fafd70e9dc9dc7f",
-          "version": "10.1.1"
-        }
-      },
-      {
-        "package": "Reachability",
-        "repositoryURL": "https://github.com/ashleymills/Reachability.swift",
-        "state": {
-          "branch": null,
-          "revision": "c01bbdf2d633cf049ae1ed1a68a2020a8bda32e2",
-          "version": "5.1.0"
-        }
-      },
-      {
-        "package": "Sodium",
-        "repositoryURL": "https://github.com/jedisct1/swift-sodium",
-        "state": {
-          "branch": null,
-          "revision": "4f9164a0a2c9a6a7ff53a2833d54a5c79c957342",
-          "version": "0.9.1"
-        }
+  "originHash" : "4718caf9344d1452d2c2aec8e7e2796185f844200c4b2acba37ee480fd65998d",
+  "pins" : [
+    {
+      "identity" : "doordeck-headless-sdk-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/doordeck/doordeck-headless-sdk-spm",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bd3ba2ec93cca7227db1762f8be2f3268909318d"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "qrcodereader.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yannickl/QRCodeReader.swift",
+      "state" : {
+        "revision" : "5020b5a47199d8ba80c83a4b4fafd70e9dc9dc7f",
+        "version" : "10.1.1"
+      }
+    },
+    {
+      "identity" : "reachability.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ashleymills/Reachability.swift",
+      "state" : {
+        "revision" : "c01bbdf2d633cf049ae1ed1a68a2020a8bda32e2"
+      }
+    }
+  ],
+  "version" : 3
 }

@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import DoordeckSDK
 
 class VerificationViewController: UIViewController {
-    
-    var apiClient: APIClient!
-    var sodium: SodiumHelper!
+
+    var doordeck: DoordeckSDK.Doordeck?
     var delegate: DoordeckInternalProtocol?
     var controlDelegate: DoordeckControl?
     let notifier = NotificationCenter.default
@@ -28,30 +28,29 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var closeButton: UIButton!
-    
-    init(_ apiClient: APIClient, sodium: SodiumHelper) {
-        self.apiClient = apiClient
-        self.sodium = sodium
+
+    init(_ doordeck: DoordeckSDK.Doordeck) {
+        self.doordeck = doordeck
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
         sendVerificationRequest()
         registerKeybaord()
     }
-    
-    
+
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         hiddenTextField.becomeFirstResponder()
         hiddenTextField.delegate = self
-        
+
         guard let control = self.controlDelegate else { return }
         if control.showCloseButton == true {
             closeButton.isHidden = false
@@ -61,30 +60,27 @@ class VerificationViewController: UIViewController {
             closeButton.isEnabled = false
         }
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         removeKeyboard()
         super.viewDidDisappear(animated)
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UserDefaults().getDarkUI() ? .lightContent : .default
     }
-    
+
     func sendVerificationRequest()  {
-        guard let publicKey = sodium.getPublicKey() else {
-            return
-        }
-        
-        apiClient.startVerificationProcess(publicKey) { (json, error) in
-            
+        guard let publicKey = self.doordeck?.contextManager().getKeyPair()?.public_ else { return }
+        self.doordeck?.helper().assistedRegisterEphemeralKey(publicKey: publicKey) { response, error in
+
         }
     }
-    
+
     @IBAction func resendVerificationCode(_ sender: Any) {
         sendVerificationRequest()
     }
-    
+
     func setUpUI() {
         view.backgroundColor = .doordeckPrimaryColour()
         resendButton.doordeckStandardButton(AppStrings.resendCode, backgroundColour: UIColor.clear)
@@ -92,15 +88,15 @@ class VerificationViewController: UIViewController {
         titleLabel.attributedText = NSAttributedString.doordeckH1Bold(AppStrings.verificationTitle)
         topLabel.attributedText = NSAttributedString.doordeckH3(AppStrings.verification)
         hiddenTextField.isHidden = true
-        
+
         if #available(iOS 12.0, *) {
             hiddenTextField.textContentType = UITextContentType.oneTimeCode
         }
-        
+
         hiddenTextField.keyboardType = UIKeyboardType.numberPad
-        
+
         verificationCodeCentre.attributedText = NSAttributedString.doordeckH3Bold("-")
-        
+
         verificationCode1.doordeckLabel()
         verificationCode2.doordeckLabel()
         verificationCode3.doordeckLabel()
@@ -108,38 +104,35 @@ class VerificationViewController: UIViewController {
         verificationCode5.doordeckLabel()
         verificationCode6.doordeckLabel()
     }
-    
+
     @IBAction func closeButtonPressed(_ sender: Any) {
         self.dismiss(animated: false) {
             SDKEvent().event(.CLOSE_VERIFICATION)
         }
     }
-    
+
     @IBAction func sendCodeToServer(_ sender: Any) {
-        guard let signature = sodium.signVerificationCode(hiddenTextField.text!) else {return}
-        apiClient.checkVerificationProcess(signature) { [weak self](certificateChain, error) in
-            if error == nil {
-                guard let certificateChainTemp = certificateChain else {
-                    self?.delegate?.verificationUnsuccessful()
-                    return
+        guard let privateKey = self.doordeck?.contextManager().getKeyPair()?.private_ else { return }
+        self.doordeck?.account().verifyEphemeralKeyRegistration(code: hiddenTextField.text!, privateKey: privateKey) { response, error in
+            DispatchQueue.main.async {
+                if (error == nil) {
+                    self.dismiss(animated: false, completion: {
+                        SDKEvent().event(.CODE_VERIFICATION_SUCCESS)
+                        self.delegate?.verificationSuccessful()
+                    })
+                } else {
+                    SDKEvent().event(.CODE_VERIFICATION_FAILED)
+                    self.delegate?.verificationUnsuccessful()
                 }
-                
-                self?.dismiss(animated: false, completion: {
-                    SDKEvent().event(.CODE_VERIFICATION_SUCCESS)
-                    self?.delegate?.verificationSuccessful(CertificateChainClass(certificateChainTemp))
-                })
-            } else {
-                SDKEvent().event(.CODE_VERIFICATION_FAILED)
-                self?.delegate?.verificationUnsuccessful()
             }
         }
     }
-    
-    
+
+
     @IBAction func textFieldEdited(_ textField: UITextField) {
         fillOutCode(textField.text ?? "")
     }
-    
+
     func fillOutCode(_ code: String)  {
         let characters = Array(code)
         verificationCodeCentre.attributedText = NSAttributedString.doordeckH3Bold("-")
@@ -148,31 +141,31 @@ class VerificationViewController: UIViewController {
         } else {
             verificationCode1.text = ""
         }
-        
+
         if characters.indices.contains(1) {
             verificationCode2.attributedText = NSAttributedString.doordeckH3Bold(String(characters[1]))
         } else {
             verificationCode2.text = ""
         }
-        
+
         if characters.indices.contains(2) {
             verificationCode3.attributedText = NSAttributedString.doordeckH3Bold(String(characters[2]))
         } else {
             verificationCode3.text = ""
         }
-        
+
         if characters.indices.contains(3) {
             verificationCode4.attributedText = NSAttributedString.doordeckH3Bold(String(characters[3]))
         } else {
             verificationCode4.text = ""
         }
-        
+
         if characters.indices.contains(4) {
             verificationCode5.attributedText = NSAttributedString.doordeckH3Bold(String(characters[4]))
         } else {
             verificationCode5.text = ""
         }
-        
+
         if characters.indices.contains(5) {
             verificationCode6.attributedText = NSAttributedString.doordeckH3Bold(String(characters[5]))
         } else {
@@ -205,23 +198,23 @@ extension VerificationViewController {
                              name: UIWindow.keyboardWillHideNotification,
                              object: nil)
     }
-    
+
     func removeKeyboard() {
         notifier.removeObserver(self)
     }
-    
+
     @objc func keyboardWillShow(_ notification: NSNotification) {
         let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
         let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        
+
         animateContraintChange(duration, contraint: bottomConstraint, endPosition: Double(targetFrame.height))
-        
+
     }
-    
+
     @objc func keyboardWillHide(_ notification: NSNotification){
         animateContraintChange(0.25, contraint: bottomConstraint, endPosition: 0)
     }
-    
+
     func animateContraintChange(_ time: Double, contraint:NSLayoutConstraint, endPosition: Double) {
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: time, animations: {
