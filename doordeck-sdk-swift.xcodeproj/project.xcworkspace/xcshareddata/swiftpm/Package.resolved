@@ -1,22 +1,13 @@
 {
-  "originHash" : "49ed250a482d2eae2d6a8b74e091e092a119ac7a6c2eced27ebed95eaf57f504",
+  "originHash" : "b3b4a59bd65e4c0a6d01616fa730401f0f8abc42fde8ea61699b964d430ff6ed",
   "pins" : [
     {
-      "identity" : "alamofire",
+      "identity" : "doordeck-headless-sdk-spm",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire",
+      "location" : "https://github.com/doordeck/doordeck-headless-sdk-spm",
       "state" : {
-        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
-        "version" : "5.9.1"
-      }
-    },
-    {
-      "identity" : "cache",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/hyperoslo/Cache",
-      "state" : {
-        "revision" : "042b2cd22d3c8c30fdcead0c613de94a1d648123",
-        "version" : "5.3.0"
+        "revision" : "f95bf7b1dd65baf30ec161f46131716da4e883aa",
+        "version" : "1.74.0"
       }
     },
     {
@@ -35,15 +26,6 @@
       "state" : {
         "revision" : "57da4b1270cab7c2228919eabc0e4e1bf93e48ea",
         "version" : "5.2.2"
-      }
-    },
-    {
-      "identity" : "swift-sodium",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jedisct1/swift-sodium",
-      "state" : {
-        "revision" : "4f9164a0a2c9a6a7ff53a2833d54a5c79c957342",
-        "version" : "0.9.1"
       }
     }
   ],

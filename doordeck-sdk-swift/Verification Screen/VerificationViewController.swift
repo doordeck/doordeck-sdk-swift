@@ -72,7 +72,7 @@ class VerificationViewController: UIViewController {
 
     func sendVerificationRequest()  {
         guard let publicKey = self.doordeck?.contextManager().getKeyPair()?.public_ else { return }
-        self.doordeck?.helper().assistedRegisterEphemeralKey(publicKey: publicKey) { response, error in
+        self.doordeck?.helper().assistedRegisterEphemeralKey(publicKey: publicKey, privateKey: nil) { response, error in
 
         }
     }
@@ -113,7 +113,9 @@ class VerificationViewController: UIViewController {
 
     @IBAction func sendCodeToServer(_ sender: Any) {
         guard let privateKey = self.doordeck?.contextManager().getKeyPair()?.private_ else { return }
-        self.doordeck?.account().verifyEphemeralKeyRegistration(code: hiddenTextField.text!, privateKey: privateKey) { response, error in
+        self.doordeck?.account().verifyEphemeralKeyRegistration(code: hiddenTextField.text!,
+                                                                publicKey: nil,
+                                                                privateKey: privateKey) { response, error in
             DispatchQueue.main.async {
                 if (error == nil) {
                     self.dismiss(animated: false, completion: {

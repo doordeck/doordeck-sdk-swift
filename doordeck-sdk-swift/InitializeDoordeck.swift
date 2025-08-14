@@ -88,9 +88,9 @@ public class Doordeck {
     ///   - closeButton: When the SDK is not used in a TabBar, you can have close buttons on the VC's
     public init(_ token: AuthTokenClass,
                 darkMode: Bool = true,
-                closeButton: Bool = false) {
+                closeButton: Bool = false) async {
         
-        doordeckSDK = KDoordeckFactory().initialize(sdkConfig: SdkConfig.Builder().setCloudAuthToken(cloudAuthToken: token.getToken()).build())
+        doordeckSDK = try! await KDoordeckFactory().initialize(sdkConfig: SdkConfig.Builder().setCloudAuthToken(cloudAuthToken: token.getToken()).build())
         setKeyPairIfNeeded()
         
         #if os(iOS)
@@ -222,9 +222,9 @@ public class Doordeck {
     }
     
     var currentState: State {
-        if (doordeckSDK.contextManager().isCloudAuthTokenAboutToExpire()) {
+        if (doordeckSDK.contextManager().isCloudAuthTokenInvalidOrExpired()) {
             return .notAuthenticated
-        } else if (doordeckSDK.contextManager().isCertificateChainAboutToExpire()) {
+        } else if (doordeckSDK.contextManager().isCertificateChainInvalidOrExpired()) {
             return .verificationRequired
         } else {
             return .authenticated
@@ -254,7 +254,7 @@ public class Doordeck {
             let newKeyPair = doordeckSDK.crypto().generateKeyPair()
             doordeckSDK.contextManager().setKeyPair(
                 publicKey: newKeyPair.public_,
-                privateKey: newKeyPair.private_,
+                privateKey: newKeyPair.private_
             )
         }
     }
