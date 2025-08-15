@@ -128,7 +128,8 @@ class LockUnlockViewController: UIViewController {
     }
 
     func startTimer(_ lock: LockResponse) {
-        if let unlockTime = lock.unlockTime?.floatValue, minTimer > unlockTime {
+        let unlockTime = Float(lock.settings.unlockTime)
+        if minTimer > unlockTime {
             minTimer = unlockTime
         }
 
